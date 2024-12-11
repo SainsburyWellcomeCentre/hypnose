@@ -1,0 +1,4 @@
+Packages
+*.exe
+
+.bonsai/Bonsai.exe.settings
