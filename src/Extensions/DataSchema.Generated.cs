@@ -226,12 +226,115 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    public partial class OlfactometerStateCommand
+    {
+    
+        private string _name;
+    
+        private System.Collections.Generic.List<string> _valvesOpen = new System.Collections.Generic.List<string>();
+    
+        private System.Collections.Generic.List<string> _endValvesOpen = new System.Collections.Generic.List<string>();
+    
+        public OlfactometerStateCommand()
+        {
+        }
+    
+        protected OlfactometerStateCommand(OlfactometerStateCommand other)
+        {
+            _name = other._name;
+            _valvesOpen = other._valvesOpen;
+            _endValvesOpen = other._endValvesOpen;
+        }
+    
+        /// <summary>
+        /// The alias of this olfactometer command
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="name")]
+        [System.ComponentModel.DescriptionAttribute("The alias of this olfactometer command")]
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="valvesOpen")]
+        public System.Collections.Generic.List<string> ValvesOpen
+        {
+            get
+            {
+                return _valvesOpen;
+            }
+            set
+            {
+                _valvesOpen = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="endValvesOpen")]
+        public System.Collections.Generic.List<string> EndValvesOpen
+        {
+            get
+            {
+                return _endValvesOpen;
+            }
+            set
+            {
+                _endValvesOpen = value;
+            }
+        }
+    
+        public System.IObservable<OlfactometerStateCommand> Process()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new OlfactometerStateCommand(this)));
+        }
+    
+        public System.IObservable<OlfactometerStateCommand> Process<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new OlfactometerStateCommand(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("name = " + _name + ", ");
+            stringBuilder.Append("valvesOpen = " + _valvesOpen + ", ");
+            stringBuilder.Append("endValvesOpen = " + _endValvesOpen);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [Bonsai.CombinatorAttribute()]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class HypnoseSession
     {
     
         private object _metadata;
     
         private OlfactometerMapping _olfactometerMapping;
+    
+        private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
     
         public HypnoseSession()
         {
@@ -241,6 +344,7 @@ namespace DataSchema
         {
             _metadata = other._metadata;
             _olfactometerMapping = other._olfactometerMapping;
+            _olfactometerCommands = other._olfactometerCommands;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -271,6 +375,20 @@ namespace DataSchema
             }
         }
     
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="olfactometerCommands")]
+        public System.Collections.Generic.List<OlfactometerStateCommand> OlfactometerCommands
+        {
+            get
+            {
+                return _olfactometerCommands;
+            }
+            set
+            {
+                _olfactometerCommands = value;
+            }
+        }
+    
         public System.IObservable<HypnoseSession> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new HypnoseSession(this)));
@@ -284,7 +402,8 @@ namespace DataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("metadata = " + _metadata + ", ");
-            stringBuilder.Append("olfactometerMapping = " + _olfactometerMapping);
+            stringBuilder.Append("olfactometerMapping = " + _olfactometerMapping + ", ");
+            stringBuilder.Append("olfactometerCommands = " + _olfactometerCommands);
             return true;
         }
     
@@ -413,6 +532,11 @@ namespace DataSchema
             return Process<EndValveMapping>(source);
         }
 
+        public System.IObservable<string> Process(System.IObservable<OlfactometerStateCommand> source)
+        {
+            return Process<OlfactometerStateCommand>(source);
+        }
+
         public System.IObservable<string> Process(System.IObservable<HypnoseSession> source)
         {
             return Process<HypnoseSession>(source);
@@ -434,6 +558,7 @@ namespace DataSchema
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<ValveMapping>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<EndValveMapping>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerStateCommand>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<HypnoseSession>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerMapping>))]
     public partial class DeserializeFromYaml : Bonsai.Expressions.SingleArgumentExpressionBuilder

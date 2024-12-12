@@ -4,9 +4,9 @@
 
 metadata:
   animalId: plimbo
-  rootOath: 
+  rootPath: test
 
-valveMapping:
+olfactometerMapping:
   odorValveMap:
     - {name: OdorA, olfactometer: 0, valve: 0}
     - {name: OdorB, olfactometer: 0, valve: 1}
@@ -21,4 +21,11 @@ valveMapping:
     - {name: Manifold1, olfactometer: 0, valve: 1}
     - {name: Odor, olfactometer: 1, valve: 0}
     - {name: Carrier, olfactometer: 1, valve: 1}
+
+olfactometerCommands:
+  - {name: CloseAll, valvesOpen: [], endValvesOpen: []}
+  - {name: OdorA, valvesOpen: [OdorA], endValvesOpen: [Manifold0, Odor]}
+  - {name: OdorE, valvesOpen: [OdorE], endValvesOpen: [Manifold1, Odor]}
+  - {name: Rest, valvesOpen: [Aux], endValvesOpen: [Carrier]}
+  
     

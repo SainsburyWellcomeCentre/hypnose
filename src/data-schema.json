@@ -43,6 +43,26 @@
                 }
             },
             "required": ["name", "olfactometer", "valve"]
+        },
+        "olfactometerStateCommand": {
+            "properties": {
+                "name": {
+                    "description": "The alias of this olfactometer command",
+                    "type": "string"
+                },
+                "valvesOpen": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "endValvesOpen": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            }   
         }
     },
     "properties": {
@@ -74,6 +94,12 @@
                 }
             },
             "required": ["odorValveMap", "endValveMap"]
+        },
+        "olfactometerCommands": {
+            "items": {
+                "$ref": "#/definitions/olfactometerStateCommand"
+            },
+            "type": "array"
         }
     },
     "title": "HypnoseSession",
