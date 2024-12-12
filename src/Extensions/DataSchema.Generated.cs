@@ -12,228 +12,18 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
-    public partial class ValveMapping
-    {
-    
-        private string _name;
-    
-        private int _olfactometer;
-    
-        private int _valve;
-    
-        public ValveMapping()
-        {
-        }
-    
-        protected ValveMapping(ValveMapping other)
-        {
-            _name = other._name;
-            _olfactometer = other._olfactometer;
-            _valve = other._valve;
-        }
-    
-        /// <summary>
-        /// The alias of this valve (e.g. OdorA)
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="name")]
-        [System.ComponentModel.DescriptionAttribute("The alias of this valve (e.g. OdorA)")]
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
-        }
-    
-        /// <summary>
-        /// The HARP olfactometer this mapping targets
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="olfactometer")]
-        [System.ComponentModel.DescriptionAttribute("The HARP olfactometer this mapping targets")]
-        public int Olfactometer
-        {
-            get
-            {
-                return _olfactometer;
-            }
-            set
-            {
-                _olfactometer = value;
-            }
-        }
-    
-        /// <summary>
-        /// The physical valve associate with this mapping
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="valve")]
-        [System.ComponentModel.DescriptionAttribute("The physical valve associate with this mapping")]
-        public int Valve
-        {
-            get
-            {
-                return _valve;
-            }
-            set
-            {
-                _valve = value;
-            }
-        }
-    
-        public System.IObservable<ValveMapping> Process()
-        {
-            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new ValveMapping(this)));
-        }
-    
-        public System.IObservable<ValveMapping> Process<TSource>(System.IObservable<TSource> source)
-        {
-            return System.Reactive.Linq.Observable.Select(source, _ => new ValveMapping(this));
-        }
-    
-        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
-        {
-            stringBuilder.Append("name = " + _name + ", ");
-            stringBuilder.Append("olfactometer = " + _olfactometer + ", ");
-            stringBuilder.Append("valve = " + _valve);
-            return true;
-        }
-    
-        public override string ToString()
-        {
-            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
-            stringBuilder.Append(GetType().Name);
-            stringBuilder.Append(" { ");
-            if (PrintMembers(stringBuilder))
-            {
-                stringBuilder.Append(" ");
-            }
-            stringBuilder.Append("}");
-            return stringBuilder.ToString();
-        }
-    }
-
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
-    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
-    public partial class EndValveMapping
-    {
-    
-        private string _name;
-    
-        private int _olfactometer;
-    
-        private int _valve;
-    
-        public EndValveMapping()
-        {
-        }
-    
-        protected EndValveMapping(EndValveMapping other)
-        {
-            _name = other._name;
-            _olfactometer = other._olfactometer;
-            _valve = other._valve;
-        }
-    
-        /// <summary>
-        /// The alias of this valve (e.g. Carrier)
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="name")]
-        [System.ComponentModel.DescriptionAttribute("The alias of this valve (e.g. Carrier)")]
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
-        }
-    
-        /// <summary>
-        /// The HARP olfactometer this mapping targets
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="olfactometer")]
-        [System.ComponentModel.DescriptionAttribute("The HARP olfactometer this mapping targets")]
-        public int Olfactometer
-        {
-            get
-            {
-                return _olfactometer;
-            }
-            set
-            {
-                _olfactometer = value;
-            }
-        }
-    
-        /// <summary>
-        /// The physical valve associate with this mapping
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="valve")]
-        [System.ComponentModel.DescriptionAttribute("The physical valve associate with this mapping")]
-        public int Valve
-        {
-            get
-            {
-                return _valve;
-            }
-            set
-            {
-                _valve = value;
-            }
-        }
-    
-        public System.IObservable<EndValveMapping> Process()
-        {
-            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new EndValveMapping(this)));
-        }
-    
-        public System.IObservable<EndValveMapping> Process<TSource>(System.IObservable<TSource> source)
-        {
-            return System.Reactive.Linq.Observable.Select(source, _ => new EndValveMapping(this));
-        }
-    
-        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
-        {
-            stringBuilder.Append("name = " + _name + ", ");
-            stringBuilder.Append("olfactometer = " + _olfactometer + ", ");
-            stringBuilder.Append("valve = " + _valve);
-            return true;
-        }
-    
-        public override string ToString()
-        {
-            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
-            stringBuilder.Append(GetType().Name);
-            stringBuilder.Append(" { ");
-            if (PrintMembers(stringBuilder))
-            {
-                stringBuilder.Append(" ");
-            }
-            stringBuilder.Append("}");
-            return stringBuilder.ToString();
-        }
-    }
-
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
-    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class OlfactometerStateCommand
     {
     
         private string _name;
     
-        private System.Collections.Generic.List<string> _valvesOpen = new System.Collections.Generic.List<string>();
+        private System.Collections.Generic.List<int> _valvesOpenO0 = new System.Collections.Generic.List<int>();
     
-        private System.Collections.Generic.List<string> _endValvesOpen = new System.Collections.Generic.List<string>();
+        private System.Collections.Generic.List<int> _valvesOpenO1 = new System.Collections.Generic.List<int>();
+    
+        private System.Collections.Generic.List<int> _endValvesOpenO0 = new System.Collections.Generic.List<int>();
+    
+        private System.Collections.Generic.List<int> _endValvesOpenO1 = new System.Collections.Generic.List<int>();
     
         public OlfactometerStateCommand()
         {
@@ -242,8 +32,10 @@ namespace DataSchema
         protected OlfactometerStateCommand(OlfactometerStateCommand other)
         {
             _name = other._name;
-            _valvesOpen = other._valvesOpen;
-            _endValvesOpen = other._endValvesOpen;
+            _valvesOpenO0 = other._valvesOpenO0;
+            _valvesOpenO1 = other._valvesOpenO1;
+            _endValvesOpenO0 = other._endValvesOpenO0;
+            _endValvesOpenO1 = other._endValvesOpenO1;
         }
     
         /// <summary>
@@ -264,30 +56,58 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="valvesOpen")]
-        public System.Collections.Generic.List<string> ValvesOpen
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="valvesOpenO0")]
+        public System.Collections.Generic.List<int> ValvesOpenO0
         {
             get
             {
-                return _valvesOpen;
+                return _valvesOpenO0;
             }
             set
             {
-                _valvesOpen = value;
+                _valvesOpenO0 = value;
             }
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="endValvesOpen")]
-        public System.Collections.Generic.List<string> EndValvesOpen
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="valvesOpenO1")]
+        public System.Collections.Generic.List<int> ValvesOpenO1
         {
             get
             {
-                return _endValvesOpen;
+                return _valvesOpenO1;
             }
             set
             {
-                _endValvesOpen = value;
+                _valvesOpenO1 = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="endValvesOpenO0")]
+        public System.Collections.Generic.List<int> EndValvesOpenO0
+        {
+            get
+            {
+                return _endValvesOpenO0;
+            }
+            set
+            {
+                _endValvesOpenO0 = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="endValvesOpenO1")]
+        public System.Collections.Generic.List<int> EndValvesOpenO1
+        {
+            get
+            {
+                return _endValvesOpenO1;
+            }
+            set
+            {
+                _endValvesOpenO1 = value;
             }
         }
     
@@ -304,8 +124,10 @@ namespace DataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("name = " + _name + ", ");
-            stringBuilder.Append("valvesOpen = " + _valvesOpen + ", ");
-            stringBuilder.Append("endValvesOpen = " + _endValvesOpen);
+            stringBuilder.Append("valvesOpenO0 = " + _valvesOpenO0 + ", ");
+            stringBuilder.Append("valvesOpenO1 = " + _valvesOpenO1 + ", ");
+            stringBuilder.Append("endValvesOpenO0 = " + _endValvesOpenO0 + ", ");
+            stringBuilder.Append("endValvesOpenO1 = " + _endValvesOpenO1);
             return true;
         }
     
@@ -332,8 +154,6 @@ namespace DataSchema
     
         private object _metadata;
     
-        private OlfactometerMapping _olfactometerMapping;
-    
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
     
         public HypnoseSession()
@@ -343,7 +163,6 @@ namespace DataSchema
         protected HypnoseSession(HypnoseSession other)
         {
             _metadata = other._metadata;
-            _olfactometerMapping = other._olfactometerMapping;
             _olfactometerCommands = other._olfactometerCommands;
         }
     
@@ -358,20 +177,6 @@ namespace DataSchema
             set
             {
                 _metadata = value;
-            }
-        }
-    
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="olfactometerMapping")]
-        public OlfactometerMapping OlfactometerMapping
-        {
-            get
-            {
-                return _olfactometerMapping;
-            }
-            set
-            {
-                _olfactometerMapping = value;
             }
         }
     
@@ -402,88 +207,7 @@ namespace DataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("metadata = " + _metadata + ", ");
-            stringBuilder.Append("olfactometerMapping = " + _olfactometerMapping + ", ");
             stringBuilder.Append("olfactometerCommands = " + _olfactometerCommands);
-            return true;
-        }
-    
-        public override string ToString()
-        {
-            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
-            stringBuilder.Append(GetType().Name);
-            stringBuilder.Append(" { ");
-            if (PrintMembers(stringBuilder))
-            {
-                stringBuilder.Append(" ");
-            }
-            stringBuilder.Append("}");
-            return stringBuilder.ToString();
-        }
-    }
-
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
-    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
-    public partial class OlfactometerMapping
-    {
-    
-        private System.Collections.Generic.List<ValveMapping> _odorValveMap = new System.Collections.Generic.List<ValveMapping>();
-    
-        private System.Collections.Generic.List<EndValveMapping> _endValveMap = new System.Collections.Generic.List<EndValveMapping>();
-    
-        public OlfactometerMapping()
-        {
-        }
-    
-        protected OlfactometerMapping(OlfactometerMapping other)
-        {
-            _odorValveMap = other._odorValveMap;
-            _endValveMap = other._endValveMap;
-        }
-    
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="odorValveMap")]
-        public System.Collections.Generic.List<ValveMapping> OdorValveMap
-        {
-            get
-            {
-                return _odorValveMap;
-            }
-            set
-            {
-                _odorValveMap = value;
-            }
-        }
-    
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="endValveMap")]
-        public System.Collections.Generic.List<EndValveMapping> EndValveMap
-        {
-            get
-            {
-                return _endValveMap;
-            }
-            set
-            {
-                _endValveMap = value;
-            }
-        }
-    
-        public System.IObservable<OlfactometerMapping> Process()
-        {
-            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new OlfactometerMapping(this)));
-        }
-    
-        public System.IObservable<OlfactometerMapping> Process<TSource>(System.IObservable<TSource> source)
-        {
-            return System.Reactive.Linq.Observable.Select(source, _ => new OlfactometerMapping(this));
-        }
-    
-        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
-        {
-            stringBuilder.Append("odorValveMap = " + _odorValveMap + ", ");
-            stringBuilder.Append("endValveMap = " + _endValveMap);
             return true;
         }
     
@@ -522,16 +246,6 @@ namespace DataSchema
             });
         }
 
-        public System.IObservable<string> Process(System.IObservable<ValveMapping> source)
-        {
-            return Process<ValveMapping>(source);
-        }
-
-        public System.IObservable<string> Process(System.IObservable<EndValveMapping> source)
-        {
-            return Process<EndValveMapping>(source);
-        }
-
         public System.IObservable<string> Process(System.IObservable<OlfactometerStateCommand> source)
         {
             return Process<OlfactometerStateCommand>(source);
@@ -540,11 +254,6 @@ namespace DataSchema
         public System.IObservable<string> Process(System.IObservable<HypnoseSession> source)
         {
             return Process<HypnoseSession>(source);
-        }
-
-        public System.IObservable<string> Process(System.IObservable<OlfactometerMapping> source)
-        {
-            return Process<OlfactometerMapping>(source);
         }
     }
 
@@ -556,11 +265,8 @@ namespace DataSchema
     [System.ComponentModel.DescriptionAttribute("Deserializes a sequence of YAML strings into data model objects.")]
     [System.ComponentModel.DefaultPropertyAttribute("Type")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<ValveMapping>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<EndValveMapping>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerStateCommand>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<HypnoseSession>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerMapping>))]
     public partial class DeserializeFromYaml : Bonsai.Expressions.SingleArgumentExpressionBuilder
     {
     

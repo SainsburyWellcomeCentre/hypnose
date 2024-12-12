@@ -6,26 +6,9 @@ metadata:
   animalId: plimbo
   rootPath: test
 
-olfactometerMapping:
-  odorValveMap:
-    - {name: OdorA, olfactometer: 0, valve: 0}
-    - {name: OdorB, olfactometer: 0, valve: 1}
-    - {name: OdorC, olfactometer: 0, valve: 2}
-    - {name: OdorD, olfactometer: 0, valve: 3}
-    - {name: OdorE, olfactometer: 1, valve: 0}
-    - {name: OdorF, olfactometer: 1, valve: 1}
-    - {name: OdorG, olfactometer: 1, valve: 2}
-    - {name: Aux, olfactometer: 1, valve: 3}
-  endValveMap:
-    - {name: Manifold0, olfactometer: 0, valve: 0}
-    - {name: Manifold1, olfactometer: 0, valve: 1}
-    - {name: Odor, olfactometer: 1, valve: 0}
-    - {name: Carrier, olfactometer: 1, valve: 1}
-
 olfactometerCommands:
-  - {name: CloseAll, valvesOpen: [], endValvesOpen: []}
-  - {name: OdorA, valvesOpen: [OdorA], endValvesOpen: [Manifold0, Odor]}
-  - {name: OdorE, valvesOpen: [OdorE], endValvesOpen: [Manifold1, Odor]}
-  - {name: Rest, valvesOpen: [Aux], endValvesOpen: [Carrier]}
-  
+  - {name: Rest, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [1]}
+  - {name: Purge, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0, 1], endValvesOpenO1: [1]}
+  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0]}
+  - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [1], endValvesOpenO1: [0]}
     
