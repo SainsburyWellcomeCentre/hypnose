@@ -1,0 +1,81 @@
+{
+    "$id": "h...",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "definitions": {
+        "valveMapping": {
+            "properties": {
+                "name": {
+                    "description": "The alias of this valve (e.g. OdorA)",
+                    "type": "string"
+                },
+                "olfactometer": {
+                    "description": "The HARP olfactometer this mapping targets",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "type": "integer"
+                },
+                "valve": {
+                    "description": "The physical valve associate with this mapping",
+                    "minimum": 0,
+                    "maximum": 3,
+                    "type": "integer"
+                }
+            },
+            "required": ["name", "olfactometer", "valve"]
+        },
+        "endValveMapping": {
+            "properties": {
+                "name": {
+                    "description": "The alias of this valve (e.g. Carrier)",
+                    "type": "string"
+                },
+                "olfactometer": {
+                    "description": "The HARP olfactometer this mapping targets",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "type": "integer"
+                },
+                "valve": {
+                    "description": "The physical valve associate with this mapping",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "type": "integer"
+                }
+            },
+            "required": ["name", "olfactometer", "valve"]
+        }
+    },
+    "properties": {
+        "metadata": {
+            "animalId": {
+                "default": "",
+                "type": "string"
+                },
+            "rootPath": {
+                "default": "",
+                "type": "string"
+            }
+        },
+        "olfactometerMapping": {
+            "properties": {
+                "odorValveMap": {
+                    "items": {
+                        "$ref": "#/definitions/valveMapping"
+                    },
+                    "type": "array",
+                    "minItems": 8
+                },
+                "endValveMap": {
+                    "items": {
+                        "$ref": "#/definitions/endValveMapping"
+                    },
+                    "type": "array",
+                    "minItems": 4
+                }
+            },
+            "required": ["odorValveMap", "endValveMap"]
+        }
+    },
+    "title": "HypnoseSession",
+    "type": "object"
+}
