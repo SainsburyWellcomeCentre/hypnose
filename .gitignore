@@ -2,3 +2,5 @@ Packages
 *.exe
 
 .bonsai/Bonsai.exe.settings
+
+src/obj/

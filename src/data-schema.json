@@ -1,0 +1,66 @@
+{
+    "$id": "h...",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "definitions": {
+        "olfactometerStateCommand": {
+            "properties": {
+                "name": {
+                    "description": "The alias of this olfactometer command",
+                    "type": "string"
+                },
+                "valvesOpenO0": {
+                    "items": {
+                        "minimum": 0,
+                        "maximum": 3,
+                        "type": "integer"
+                    },
+                    "type": "array"
+                },
+                "valvesOpenO1": {
+                    "items": {
+                        "minimum": 0,
+                        "maximum": 3,
+                        "type": "integer"
+                    },
+                    "type": "array"
+                },
+                "endValvesOpenO0": {
+                    "items": {
+                        "minimum": 0,
+                        "maximum": 1,
+                        "type": "integer"
+                    },
+                    "type": "array"
+                },
+                "endValvesOpenO1": {
+                    "items": {
+                        "minimum": 0,
+                        "maximum": 1,
+                        "type": "integer"
+                    },
+                    "type": "array"
+                }
+            }   
+        }
+    },
+    "properties": {
+        "metadata": {
+            "animalId": {
+                "default": "",
+                "type": "string"
+                },
+            "rootPath": {
+                "default": "",
+                "type": "string"
+            }
+        },
+        "olfactometerCommands": {
+            "items": {
+                "$ref": "#/definitions/olfactometerStateCommand"
+            },
+            "type": "array"
+        }
+    },
+    "title": "HypnoseSession",
+    "type": "object"
+}
