@@ -24,11 +24,11 @@ sequence:
   interCommand: Purge
   interCommandTime: 0.2
   rewardCondition1: [
-    [{command: OdorB, rewarded: False}, {command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+    [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
     [{command: OdorA, rewarded: True}]
   ]
   rewardCondition2: [
-    [{command: OdorA, rewarded: False}, {command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+    [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
     [{command: OdorB, rewarded: True}]
   ]
 
