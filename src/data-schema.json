@@ -41,6 +41,58 @@
                     "type": "array"
                 }
             }   
+        },
+        "valence": {
+            "properties": {
+                "command": {
+                    "type": "string"
+                },
+                "rewarded": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "sequence": {
+            "properties": {
+                "name": {
+                    "description": "The alias of this sequence",
+                    "type": "string"
+                },
+                "defaultCommand": {
+                    "description": "The default olfactometer command",
+                    "default": "Default",
+                    "type": "string"
+                },
+                "presentationTime": {
+                    "description": "Presentation time in seconds of each sequence element",
+                    "default": 1,
+                    "type": "number"
+                },
+                "interCommand": {
+                    "description": "Command in between presentations",
+                    "default": "Purge",
+                    "type": "string"
+                },
+                "interCommandTime": {
+                    "description": "Time for inter-command in seconds",
+                    "default": 0.2,
+                    "type": "number"
+                },
+                "interTrialInterval": {
+                    "description": "Time between trials in seconds",
+                    "default": 5,
+                    "type": "number"
+                },
+                "rewardCondition1": {
+                    "items": {
+                        "items": {
+                            "$ref": "#/definitions/valence"
+                        },
+                        "type": "array"
+                    },
+                    "type": "array"
+                }
+            }
         }
     },
     "properties": {
@@ -59,6 +111,9 @@
                 "$ref": "#/definitions/olfactometerStateCommand"
             },
             "type": "array"
+        },
+        "sequence": {
+            "$ref": "#/definitions/sequence"
         }
     },
     "title": "HypnoseSession",

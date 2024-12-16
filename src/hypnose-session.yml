@@ -7,7 +7,7 @@ metadata:
   rootPath: test
 
 olfactometerCommands:
-  - {name: Rest, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [1]}
+  - {name: Default, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [1]}
   - {name: Purge, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0, 1], endValvesOpenO1: [1]}
   - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0]}
   - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0]}
@@ -16,3 +16,69 @@ olfactometerCommands:
   - {name: OdorE, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [1], endValvesOpenO1: [0]}
   - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [1], endValvesOpenO1: [0]}
   - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [1], endValvesOpenO1: [0]}
+
+sequence:
+  name: Doubles
+  defaultCommand: Default
+  presentationTime: 0.8
+  interCommand: Purge
+  interCommandTime: 0.2
+  rewardCondition1: [
+    [{OdorB, False}, {OdorC, False}, {OdorD, False}, {OdorE, False}, {OdorF, False}, {OdorG, False}],
+    [{OdorA, True}]
+  ]
+
+# commandSequence:
+#   # odor discrimination
+#   - {
+#     rewardCondition1: [
+#       [{OdorA: 1}]
+#     ],
+#     rewardCondition2: [
+#       [{OdorE: 1}]
+#     ],
+#     defaultCommand: Default,
+#     presentationTime: 0.8,
+#     interCommand: Purge,
+#     interCommandTime: 0.2,
+#     interTrialInterval: 5
+#   }
+#   # doubles
+#   - {
+#     rewardCondition1: [
+#       [{OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}],
+#       [{OdorA: 1}]
+#     ],
+#     rewardCondition2: [
+#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorF: 0}, {OdorG: 0}],
+#       [{OdorE: 1}]
+#     ]
+#   }
+#   # free run
+#   - {
+#     rewardCondition1: [
+#       [{OdorA: 1}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}]
+#     ],
+#     rewardCondition2: [
+#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorE: 1}, {OdorF: 0}, {OdorG: 0}]
+#     ]
+#   }
+#   # hidden-rule
+#   - {
+#     rewardCondition1: [
+#       [{OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}],
+#       [{OdorB: 1}],
+#       [{OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}],
+#       [{OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}],
+#       [{OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}],
+#       [{OdorA: 1}]
+#     ],
+#     rewardCondition2: [
+#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorG: 0}],
+#       [{OdorE: 1}],
+#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorG: 0}],
+#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorG: 0}],
+#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorG: 0}],
+#       [{OdorF: 1}],
+#     ]
+#   }

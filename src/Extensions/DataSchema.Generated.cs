@@ -149,12 +149,280 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    public partial class Valence
+    {
+    
+        private string _command;
+    
+        private bool _rewarded;
+    
+        public Valence()
+        {
+        }
+    
+        protected Valence(Valence other)
+        {
+            _command = other._command;
+            _rewarded = other._rewarded;
+        }
+    
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="command")]
+        public string Command
+        {
+            get
+            {
+                return _command;
+            }
+            set
+            {
+                _command = value;
+            }
+        }
+    
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewarded")]
+        public bool Rewarded
+        {
+            get
+            {
+                return _rewarded;
+            }
+            set
+            {
+                _rewarded = value;
+            }
+        }
+    
+        public System.IObservable<Valence> Process()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Valence(this)));
+        }
+    
+        public System.IObservable<Valence> Process<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new Valence(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("command = " + _command + ", ");
+            stringBuilder.Append("rewarded = " + _rewarded);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [Bonsai.CombinatorAttribute()]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    public partial class Sequence
+    {
+    
+        private string _name;
+    
+        private string _defaultCommand = "Default";
+    
+        private double _presentationTime = 1D;
+    
+        private string _interCommand = "Purge";
+    
+        private double _interCommandTime = 0.2D;
+    
+        private double _interTrialInterval = 5D;
+    
+        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition1 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
+    
+        public Sequence()
+        {
+        }
+    
+        protected Sequence(Sequence other)
+        {
+            _name = other._name;
+            _defaultCommand = other._defaultCommand;
+            _presentationTime = other._presentationTime;
+            _interCommand = other._interCommand;
+            _interCommandTime = other._interCommandTime;
+            _interTrialInterval = other._interTrialInterval;
+            _rewardCondition1 = other._rewardCondition1;
+        }
+    
+        /// <summary>
+        /// The alias of this sequence
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="name")]
+        [System.ComponentModel.DescriptionAttribute("The alias of this sequence")]
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+    
+        /// <summary>
+        /// The default olfactometer command
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="defaultCommand")]
+        [System.ComponentModel.DescriptionAttribute("The default olfactometer command")]
+        public string DefaultCommand
+        {
+            get
+            {
+                return _defaultCommand;
+            }
+            set
+            {
+                _defaultCommand = value;
+            }
+        }
+    
+        /// <summary>
+        /// Presentation time in seconds of each sequence element
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="presentationTime")]
+        [System.ComponentModel.DescriptionAttribute("Presentation time in seconds of each sequence element")]
+        public double PresentationTime
+        {
+            get
+            {
+                return _presentationTime;
+            }
+            set
+            {
+                _presentationTime = value;
+            }
+        }
+    
+        /// <summary>
+        /// Command in between presentations
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interCommand")]
+        [System.ComponentModel.DescriptionAttribute("Command in between presentations")]
+        public string InterCommand
+        {
+            get
+            {
+                return _interCommand;
+            }
+            set
+            {
+                _interCommand = value;
+            }
+        }
+    
+        /// <summary>
+        /// Time for inter-command in seconds
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interCommandTime")]
+        [System.ComponentModel.DescriptionAttribute("Time for inter-command in seconds")]
+        public double InterCommandTime
+        {
+            get
+            {
+                return _interCommandTime;
+            }
+            set
+            {
+                _interCommandTime = value;
+            }
+        }
+    
+        /// <summary>
+        /// Time between trials in seconds
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interTrialInterval")]
+        [System.ComponentModel.DescriptionAttribute("Time between trials in seconds")]
+        public double InterTrialInterval
+        {
+            get
+            {
+                return _interTrialInterval;
+            }
+            set
+            {
+                _interTrialInterval = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardCondition1")]
+        public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> RewardCondition1
+        {
+            get
+            {
+                return _rewardCondition1;
+            }
+            set
+            {
+                _rewardCondition1 = value;
+            }
+        }
+    
+        public System.IObservable<Sequence> Process()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
+        }
+    
+        public System.IObservable<Sequence> Process<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new Sequence(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("name = " + _name + ", ");
+            stringBuilder.Append("defaultCommand = " + _defaultCommand + ", ");
+            stringBuilder.Append("presentationTime = " + _presentationTime + ", ");
+            stringBuilder.Append("interCommand = " + _interCommand + ", ");
+            stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
+            stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
+            stringBuilder.Append("rewardCondition1 = " + _rewardCondition1);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [Bonsai.CombinatorAttribute()]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class HypnoseSession
     {
     
         private object _metadata;
     
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
+    
+        private Sequence _sequence;
     
         public HypnoseSession()
         {
@@ -164,6 +432,7 @@ namespace DataSchema
         {
             _metadata = other._metadata;
             _olfactometerCommands = other._olfactometerCommands;
+            _sequence = other._sequence;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -194,6 +463,20 @@ namespace DataSchema
             }
         }
     
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="sequence")]
+        public Sequence Sequence
+        {
+            get
+            {
+                return _sequence;
+            }
+            set
+            {
+                _sequence = value;
+            }
+        }
+    
         public System.IObservable<HypnoseSession> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new HypnoseSession(this)));
@@ -207,7 +490,8 @@ namespace DataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("metadata = " + _metadata + ", ");
-            stringBuilder.Append("olfactometerCommands = " + _olfactometerCommands);
+            stringBuilder.Append("olfactometerCommands = " + _olfactometerCommands + ", ");
+            stringBuilder.Append("sequence = " + _sequence);
             return true;
         }
     
@@ -251,6 +535,16 @@ namespace DataSchema
             return Process<OlfactometerStateCommand>(source);
         }
 
+        public System.IObservable<string> Process(System.IObservable<Valence> source)
+        {
+            return Process<Valence>(source);
+        }
+
+        public System.IObservable<string> Process(System.IObservable<Sequence> source)
+        {
+            return Process<Sequence>(source);
+        }
+
         public System.IObservable<string> Process(System.IObservable<HypnoseSession> source)
         {
             return Process<HypnoseSession>(source);
@@ -266,6 +560,8 @@ namespace DataSchema
     [System.ComponentModel.DefaultPropertyAttribute("Type")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerStateCommand>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Valence>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Sequence>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<HypnoseSession>))]
     public partial class DeserializeFromYaml : Bonsai.Expressions.SingleArgumentExpressionBuilder
     {
