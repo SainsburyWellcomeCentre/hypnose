@@ -244,6 +244,8 @@ namespace DataSchema
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition1 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
     
+        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition2 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
+    
         public Sequence()
         {
         }
@@ -257,6 +259,7 @@ namespace DataSchema
             _interCommandTime = other._interCommandTime;
             _interTrialInterval = other._interTrialInterval;
             _rewardCondition1 = other._rewardCondition1;
+            _rewardCondition2 = other._rewardCondition2;
         }
     
         /// <summary>
@@ -375,6 +378,20 @@ namespace DataSchema
             }
         }
     
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardCondition2")]
+        public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> RewardCondition2
+        {
+            get
+            {
+                return _rewardCondition2;
+            }
+            set
+            {
+                _rewardCondition2 = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -393,7 +410,8 @@ namespace DataSchema
             stringBuilder.Append("interCommand = " + _interCommand + ", ");
             stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
             stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
-            stringBuilder.Append("rewardCondition1 = " + _rewardCondition1);
+            stringBuilder.Append("rewardCondition1 = " + _rewardCondition1 + ", ");
+            stringBuilder.Append("rewardCondition2 = " + _rewardCondition2);
             return true;
         }
     

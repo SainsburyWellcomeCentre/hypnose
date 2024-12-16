@@ -91,6 +91,15 @@
                         "type": "array"
                     },
                     "type": "array"
+                },
+                "rewardCondition2": {
+                    "items": {
+                        "items": {
+                            "$ref": "#/definitions/valence"
+                        },
+                        "type": "array"
+                    },
+                    "type": "array"
                 }
             }
         }

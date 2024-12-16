@@ -1,0 +1,20 @@
+using Bonsai;
+using System;
+using System.ComponentModel;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reactive.Linq;
+using DataSchema;
+
+[Combinator]
+[Description("")]
+[WorkflowElementCategory(ElementCategory.Transform)]
+public class SampleValence
+{
+    Random random = new Random();
+
+    public IObservable<Valence> Process(IObservable<List<Valence>> source)
+    {
+        return source.Select(x => x[random.Next(x.Count)]);
+    }
+}
