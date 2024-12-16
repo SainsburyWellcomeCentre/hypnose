@@ -126,7 +126,7 @@
                   <Expression xsi:type="p1:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="p1:CreateOdorValveStatePayload">
-                      <p1:OdorValveState>Valve3</p1:OdorValveState>
+                      <p1:OdorValveState>None</p1:OdorValveState>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -148,7 +148,7 @@
                   <Expression xsi:type="p1:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="p1:CreateEndValveStatePayload">
-                      <p1:EndValveState>None</p1:EndValveState>
+                      <p1:EndValveState>EndValve0 EndValve1</p1:EndValveState>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -254,7 +254,7 @@
             </Expression>
             <Expression xsi:type="Index">
               <Operand xsi:type="StringProperty">
-                <Value>Default</Value>
+                <Value>Purge</Value>
               </Operand>
             </Expression>
             <Expression xsi:type="Combinator">
