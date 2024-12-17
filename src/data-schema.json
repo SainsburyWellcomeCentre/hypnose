@@ -84,9 +84,9 @@
                     "type": "number"
                 },
                 "repeat": {
-                    "description": "Boolean specifying whether sequence should repeat indefinitely",
-                    "default": false,
-                    "type": "boolean"
+                    "description": "Integer specifying the number of repetitions required for a given sequence",
+                    "default": 0,
+                    "type": "integer"
                 },
                 "rewardCondition1": {
                     "items": {

@@ -23,7 +23,7 @@ sequence:
   presentationTime: 0.8
   interCommand: Purge
   interCommandTime: 0.2
-  repeat: false
+  repeat: 0
   rewardCondition1: [
     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
     [{command: OdorA, rewarded: True}]
