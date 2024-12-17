@@ -225,17 +225,25 @@
       <Expression xsi:type="rx:AsyncSubject">
         <Name>CommandDictionary</Name>
       </Expression>
-      <Expression xsi:type="SubscribeSubject">
-        <Name>CommandDictionary</Name>
-      </Expression>
       <Expression xsi:type="ExternalizedMapping">
         <Property Name="Name" DisplayName="OlfactometerCommand" />
       </Expression>
       <Expression xsi:type="rx:BehaviorSubject" TypeArguments="sys:String">
         <rx:Name>OlfactometerCommand</rx:Name>
       </Expression>
+      <Expression xsi:type="SubscribeSubject">
+        <Name>CommandDictionary</Name>
+      </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:SubscribeWhen" />
+        <Combinator xsi:type="rx:WithLatestFrom" />
+      </Expression>
+      <Expression xsi:type="MemberSelector">
+        <Selector>Item2</Selector>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="Value" />
+        </PropertyMappings>
       </Expression>
       <Expression xsi:type="Index">
         <Operand xsi:type="StringProperty">
@@ -244,9 +252,6 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Merge" />
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:Repeat" />
       </Expression>
     </Nodes>
     <Edges>
@@ -272,12 +277,14 @@
       <Edge From="19" To="20" Label="Source2" />
       <Edge From="20" To="21" Label="Source1" />
       <Edge From="21" To="22" Label="Source1" />
-      <Edge From="23" To="26" Label="Source1" />
-      <Edge From="24" To="25" Label="Source1" />
+      <Edge From="23" To="24" Label="Source1" />
+      <Edge From="24" To="26" Label="Source1" />
+      <Edge From="24" To="28" Label="Source1" />
       <Edge From="25" To="26" Label="Source2" />
       <Edge From="26" To="27" Label="Source1" />
-      <Edge From="27" To="28" Label="Source1" />
-      <Edge From="28" To="29" Label="Source1" />
+      <Edge From="27" To="29" Label="Source1" />
+      <Edge From="28" To="29" Label="Source2" />
+      <Edge From="29" To="30" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>

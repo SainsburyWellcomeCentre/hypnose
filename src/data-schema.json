@@ -83,6 +83,11 @@
                     "default": 5,
                     "type": "number"
                 },
+                "repeat": {
+                    "description": "Boolean specifying whether sequence should repeat indefinitely",
+                    "default": false,
+                    "type": "boolean"
+                },
                 "rewardCondition1": {
                     "items": {
                         "items": {

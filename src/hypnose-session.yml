@@ -23,6 +23,7 @@ sequence:
   presentationTime: 0.8
   interCommand: Purge
   interCommandTime: 0.2
+  repeat: false
   rewardCondition1: [
     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
     [{command: OdorA, rewarded: True}]
@@ -32,57 +33,16 @@ sequence:
     [{command: OdorB, rewarded: True}]
   ]
 
-# commandSequence:
-#   # odor discrimination
-#   - {
-#     rewardCondition1: [
-#       [{OdorA: 1}]
-#     ],
-#     rewardCondition2: [
-#       [{OdorE: 1}]
-#     ],
-#     defaultCommand: Default,
-#     presentationTime: 0.8,
-#     interCommand: Purge,
-#     interCommandTime: 0.2,
-#     interTrialInterval: 5
-#   }
-#   # doubles
-#   - {
-#     rewardCondition1: [
-#       [{OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}],
-#       [{OdorA: 1}]
-#     ],
-#     rewardCondition2: [
-#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorF: 0}, {OdorG: 0}],
-#       [{OdorE: 1}]
-#     ]
-#   }
-#   # free run
-#   - {
-#     rewardCondition1: [
-#       [{OdorA: 1}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}]
-#     ],
-#     rewardCondition2: [
-#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorE: 1}, {OdorF: 0}, {OdorG: 0}]
-#     ]
-#   }
-#   # hidden-rule
-#   - {
-#     rewardCondition1: [
-#       [{OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}],
-#       [{OdorB: 1}],
-#       [{OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}],
-#       [{OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}],
-#       [{OdorC: 0}, {OdorD: 0}, {OdorE: 0}, {OdorF: 0}, {OdorG: 0}],
-#       [{OdorA: 1}]
-#     ],
-#     rewardCondition2: [
-#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorG: 0}],
-#       [{OdorE: 1}],
-#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorG: 0}],
-#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorG: 0}],
-#       [{OdorA: 0}, {OdorB: 0}, {OdorC: 0}, {OdorD: 0}, {OdorG: 0}],
-#       [{OdorF: 1}],
-#     ]
-#   }
+# sequence:
+#   name: FreeRun
+#   defaultCommand: Default
+#   presentationTime: 0.8
+#   interCommand: Purge
+#   interCommandTime: 0.2
+#   repeat: true
+#   rewardCondition1: [
+#     [{command: OdorA, rewarded: True}, {command: OdorB, rewarded: False}, {command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+#   ]
+#   rewardCondition2: [
+#     [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: True}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+#   ]
