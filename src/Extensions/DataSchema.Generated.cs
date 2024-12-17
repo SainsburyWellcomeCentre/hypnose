@@ -457,7 +457,7 @@ namespace DataSchema
     public partial class HypnoseSession
     {
     
-        private object _metadata;
+        private Metadata _metadata;
     
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
     
@@ -476,7 +476,7 @@ namespace DataSchema
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="metadata")]
-        public object Metadata
+        public Metadata Metadata
         {
             get
             {
@@ -549,6 +549,128 @@ namespace DataSchema
     }
 
 
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [Bonsai.CombinatorAttribute()]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    public partial class Metadata
+    {
+    
+        private string _animalId = "";
+    
+        private string _rootPath = "";
+    
+        private double _minimumSampleTime = 0.1D;
+    
+        private double _sampleOffsetTime = 0.1D;
+    
+        public Metadata()
+        {
+        }
+    
+        protected Metadata(Metadata other)
+        {
+            _animalId = other._animalId;
+            _rootPath = other._rootPath;
+            _minimumSampleTime = other._minimumSampleTime;
+            _sampleOffsetTime = other._sampleOffsetTime;
+        }
+    
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="animalId")]
+        public string AnimalId
+        {
+            get
+            {
+                return _animalId;
+            }
+            set
+            {
+                _animalId = value;
+            }
+        }
+    
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rootPath")]
+        public string RootPath
+        {
+            get
+            {
+                return _rootPath;
+            }
+            set
+            {
+                _rootPath = value;
+            }
+        }
+    
+        /// <summary>
+        /// Minimum amount of time in seconds an animal must sample the poke to initiate a trial
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="minimumSampleTime")]
+        [System.ComponentModel.DescriptionAttribute("Minimum amount of time in seconds an animal must sample the poke to initiate a tr" +
+            "ial")]
+        public double MinimumSampleTime
+        {
+            get
+            {
+                return _minimumSampleTime;
+            }
+            set
+            {
+                _minimumSampleTime = value;
+            }
+        }
+    
+        /// <summary>
+        /// Time in seconds after sampling offset when subject is considered to have disengaged sampling
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="sampleOffsetTime")]
+        [System.ComponentModel.DescriptionAttribute("Time in seconds after sampling offset when subject is considered to have disengag" +
+            "ed sampling")]
+        public double SampleOffsetTime
+        {
+            get
+            {
+                return _sampleOffsetTime;
+            }
+            set
+            {
+                _sampleOffsetTime = value;
+            }
+        }
+    
+        public System.IObservable<Metadata> Process()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
+        }
+    
+        public System.IObservable<Metadata> Process<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new Metadata(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("animalId = " + _animalId + ", ");
+            stringBuilder.Append("rootPath = " + _rootPath + ", ");
+            stringBuilder.Append("minimumSampleTime = " + _minimumSampleTime + ", ");
+            stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
     /// <summary>
     /// Serializes a sequence of data model objects into YAML strings.
     /// </summary>
@@ -588,6 +710,11 @@ namespace DataSchema
         {
             return Process<HypnoseSession>(source);
         }
+
+        public System.IObservable<string> Process(System.IObservable<Metadata> source)
+        {
+            return Process<Metadata>(source);
+        }
     }
 
 
@@ -602,6 +729,7 @@ namespace DataSchema
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Valence>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Sequence>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<HypnoseSession>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Metadata>))]
     public partial class DeserializeFromYaml : Bonsai.Expressions.SingleArgumentExpressionBuilder
     {
     

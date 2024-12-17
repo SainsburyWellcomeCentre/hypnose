@@ -111,13 +111,25 @@
     },
     "properties": {
         "metadata": {
-            "animalId": {
-                "default": "",
-                "type": "string"
+            "properties": {
+                "animalId": {
+                    "default": "",
+                    "type": "string"
+                    },
+                "rootPath": {
+                    "default": "",
+                    "type": "string"
                 },
-            "rootPath": {
-                "default": "",
-                "type": "string"
+                "minimumSampleTime": {
+                    "description": "Minimum amount of time in seconds an animal must sample the poke to initiate a trial",
+                    "default": 0.1,
+                    "type": "number"
+                },
+                "sampleOffsetTime": {
+                    "description": "Time in seconds after sampling offset when subject is considered to have disengaged sampling",
+                    "default": 0.1,
+                    "type": "number"
+                }
             }
         },
         "olfactometerCommands": {
