@@ -561,6 +561,8 @@ namespace DataSchema
     
         private double _minimumSampleTime = 0.1D;
     
+        private double _sampleOffsetTime = 0.1D;
+    
         public Metadata()
         {
         }
@@ -570,6 +572,7 @@ namespace DataSchema
             _animalId = other._animalId;
             _rootPath = other._rootPath;
             _minimumSampleTime = other._minimumSampleTime;
+            _sampleOffsetTime = other._sampleOffsetTime;
         }
     
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="animalId")]
@@ -616,6 +619,24 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Time in seconds after sampling offset when subject is considered to have disengaged sampling
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="sampleOffsetTime")]
+        [System.ComponentModel.DescriptionAttribute("Time in seconds after sampling offset when subject is considered to have disengag" +
+            "ed sampling")]
+        public double SampleOffsetTime
+        {
+            get
+            {
+                return _sampleOffsetTime;
+            }
+            set
+            {
+                _sampleOffsetTime = value;
+            }
+        }
+    
         public System.IObservable<Metadata> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
@@ -630,7 +651,8 @@ namespace DataSchema
         {
             stringBuilder.Append("animalId = " + _animalId + ", ");
             stringBuilder.Append("rootPath = " + _rootPath + ", ");
-            stringBuilder.Append("minimumSampleTime = " + _minimumSampleTime);
+            stringBuilder.Append("minimumSampleTime = " + _minimumSampleTime + ", ");
+            stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime);
             return true;
         }
     

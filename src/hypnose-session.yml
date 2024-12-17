@@ -6,6 +6,7 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.1
+  sampleOffsetTime: 0.1
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [1]}
