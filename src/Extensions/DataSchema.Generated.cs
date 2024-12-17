@@ -563,6 +563,8 @@ namespace DataSchema
     
         private double _sampleOffsetTime = 0.1D;
     
+        private double _rewardTime = 0.1D;
+    
         public Metadata()
         {
         }
@@ -573,6 +575,7 @@ namespace DataSchema
             _rootPath = other._rootPath;
             _minimumSampleTime = other._minimumSampleTime;
             _sampleOffsetTime = other._sampleOffsetTime;
+            _rewardTime = other._rewardTime;
         }
     
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="animalId")]
@@ -637,6 +640,23 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Time in seconds to deliver rewards
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardTime")]
+        [System.ComponentModel.DescriptionAttribute("Time in seconds to deliver rewards")]
+        public double RewardTime
+        {
+            get
+            {
+                return _rewardTime;
+            }
+            set
+            {
+                _rewardTime = value;
+            }
+        }
+    
         public System.IObservable<Metadata> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
@@ -652,7 +672,8 @@ namespace DataSchema
             stringBuilder.Append("animalId = " + _animalId + ", ");
             stringBuilder.Append("rootPath = " + _rootPath + ", ");
             stringBuilder.Append("minimumSampleTime = " + _minimumSampleTime + ", ");
-            stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime);
+            stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime + ", ");
+            stringBuilder.Append("rewardTime = " + _rewardTime);
             return true;
         }
     
