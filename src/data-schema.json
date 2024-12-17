@@ -2,6 +2,19 @@
     "$id": "h...",
     "$schema": "https://json-schema.org/draft-07/schema",
     "definitions": {
+        "rewardCommand": {
+            "properties": {
+                "rewardTime": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "rewardPosition": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1
+                }
+            }
+        },
         "olfactometerStateCommand": {
             "properties": {
                 "name": {

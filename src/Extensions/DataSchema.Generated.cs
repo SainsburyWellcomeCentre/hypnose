@@ -12,6 +12,84 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    public partial class RewardCommand
+    {
+    
+        private double _rewardTime;
+    
+        private int _rewardPosition;
+    
+        public RewardCommand()
+        {
+        }
+    
+        protected RewardCommand(RewardCommand other)
+        {
+            _rewardTime = other._rewardTime;
+            _rewardPosition = other._rewardPosition;
+        }
+    
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardTime")]
+        public double RewardTime
+        {
+            get
+            {
+                return _rewardTime;
+            }
+            set
+            {
+                _rewardTime = value;
+            }
+        }
+    
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardPosition")]
+        public int RewardPosition
+        {
+            get
+            {
+                return _rewardPosition;
+            }
+            set
+            {
+                _rewardPosition = value;
+            }
+        }
+    
+        public System.IObservable<RewardCommand> Process()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new RewardCommand(this)));
+        }
+    
+        public System.IObservable<RewardCommand> Process<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new RewardCommand(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
+            stringBuilder.Append("rewardPosition = " + _rewardPosition);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [Bonsai.CombinatorAttribute()]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class OlfactometerStateCommand
     {
     
@@ -712,6 +790,11 @@ namespace DataSchema
             });
         }
 
+        public System.IObservable<string> Process(System.IObservable<RewardCommand> source)
+        {
+            return Process<RewardCommand>(source);
+        }
+
         public System.IObservable<string> Process(System.IObservable<OlfactometerStateCommand> source)
         {
             return Process<OlfactometerStateCommand>(source);
@@ -746,6 +829,7 @@ namespace DataSchema
     [System.ComponentModel.DescriptionAttribute("Deserializes a sequence of YAML strings into data model objects.")]
     [System.ComponentModel.DefaultPropertyAttribute("Type")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RewardCommand>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerStateCommand>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Valence>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Sequence>))]
