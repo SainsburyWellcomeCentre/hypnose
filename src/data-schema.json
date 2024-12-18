@@ -2,6 +2,19 @@
     "$id": "h...",
     "$schema": "https://json-schema.org/draft-07/schema",
     "definitions": {
+        "rewardCommand": {
+            "properties": {
+                "rewardTime": {
+                    "type": "number",
+                    "minimum": 0
+                },
+                "rewardPosition": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1
+                }
+            }
+        },
         "olfactometerStateCommand": {
             "properties": {
                 "name": {
@@ -41,17 +54,100 @@
                     "type": "array"
                 }
             }   
+        },
+        "valence": {
+            "properties": {
+                "command": {
+                    "type": "string"
+                },
+                "rewarded": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "sequence": {
+            "properties": {
+                "name": {
+                    "description": "The alias of this sequence",
+                    "type": "string"
+                },
+                "defaultCommand": {
+                    "description": "The default olfactometer command",
+                    "default": "Default",
+                    "type": "string"
+                },
+                "presentationTime": {
+                    "description": "Presentation time in seconds of each sequence element",
+                    "default": 1,
+                    "type": "number"
+                },
+                "interCommand": {
+                    "description": "Command in between presentations",
+                    "default": "Purge",
+                    "type": "string"
+                },
+                "interCommandTime": {
+                    "description": "Time for inter-command in seconds",
+                    "default": 0.2,
+                    "type": "number"
+                },
+                "interTrialInterval": {
+                    "description": "Time between trials in seconds",
+                    "default": 5,
+                    "type": "number"
+                },
+                "repeat": {
+                    "description": "Integer specifying the number of repetitions required for a given sequence",
+                    "default": 0,
+                    "type": "integer"
+                },
+                "rewardCondition1": {
+                    "items": {
+                        "items": {
+                            "$ref": "#/definitions/valence"
+                        },
+                        "type": "array"
+                    },
+                    "type": "array"
+                },
+                "rewardCondition2": {
+                    "items": {
+                        "items": {
+                            "$ref": "#/definitions/valence"
+                        },
+                        "type": "array"
+                    },
+                    "type": "array"
+                }
+            }
         }
     },
     "properties": {
         "metadata": {
-            "animalId": {
-                "default": "",
-                "type": "string"
+            "properties": {
+                "animalId": {
+                    "default": "",
+                    "type": "string"
+                    },
+                "rootPath": {
+                    "default": "",
+                    "type": "string"
                 },
-            "rootPath": {
-                "default": "",
-                "type": "string"
+                "minimumSampleTime": {
+                    "description": "Minimum amount of time in seconds an animal must sample the poke to initiate a trial",
+                    "default": 0.1,
+                    "type": "number"
+                },
+                "sampleOffsetTime": {
+                    "description": "Time in seconds after sampling offset when subject is considered to have disengaged sampling",
+                    "default": 0.1,
+                    "type": "number"
+                },
+                "rewardTime": {
+                    "description": "Time in seconds to deliver rewards",
+                    "default": 0.1,
+                    "type": "number"
+                }
             }
         },
         "olfactometerCommands": {
@@ -59,6 +155,9 @@
                 "$ref": "#/definitions/olfactometerStateCommand"
             },
             "type": "array"
+        },
+        "sequence": {
+            "$ref": "#/definitions/sequence"
         }
     },
     "title": "HypnoseSession",

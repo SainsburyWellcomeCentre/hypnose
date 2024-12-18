@@ -5,12 +5,15 @@
                  xmlns:harp="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp"
                  xmlns:p1="clr-namespace:Harp.Olfactometer;assembly=Harp.Olfactometer"
                  xmlns:p2="clr-namespace:;assembly=Extensions"
-                 xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
+                 xmlns:sys="clr-namespace:System;assembly=mscorlib"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
       <Expression xsi:type="rx:BehaviorSubject" TypeArguments="harp:HarpMessage">
         <rx:Name>CommandsO0</rx:Name>
+      </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="PortName" DisplayName="PortO0" />
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p1:Device">
@@ -23,11 +26,17 @@
           <harp:PortName>COM10</harp:PortName>
         </Combinator>
       </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Name" DisplayName="EventsO0" />
+      </Expression>
       <Expression xsi:type="rx:PublishSubject">
         <Name>EventsO0</Name>
       </Expression>
       <Expression xsi:type="rx:BehaviorSubject" TypeArguments="harp:HarpMessage">
         <rx:Name>CommandsO1</rx:Name>
+      </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="PortName" DisplayName="PortO1" />
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p1:Device">
@@ -40,21 +49,23 @@
           <harp:PortName>COM13</harp:PortName>
         </Combinator>
       </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Name" DisplayName="EventsO1" />
+      </Expression>
       <Expression xsi:type="rx:PublishSubject">
         <Name>EventsO1</Name>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="p2:LoadSessionSettings">
-          <p2:Path>hypnose-session.yml</p2:Path>
-        </Combinator>
+        <Combinator xsi:type="rx:Merge" />
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:Take">
-          <rx:Count>1</rx:Count>
-        </Combinator>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Name" DisplayName="OlfactometerEvents" />
       </Expression>
-      <Expression xsi:type="rx:AsyncSubject">
-        <Name>SessionSettings</Name>
+      <Expression xsi:type="rx:PublishSubject">
+        <Name>OlfactometerEvents</Name>
+      </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Name" DisplayName="SessionSettings" />
       </Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>SessionSettings</Name>
@@ -214,17 +225,25 @@
       <Expression xsi:type="rx:AsyncSubject">
         <Name>CommandDictionary</Name>
       </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Name" DisplayName="OlfactometerCommand" />
+      </Expression>
+      <Expression xsi:type="rx:BehaviorSubject" TypeArguments="sys:String">
+        <rx:Name>OlfactometerCommand</rx:Name>
+      </Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>CommandDictionary</Name>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="wie:KeyDown">
-          <wie:Filter>LButton A Control</wie:Filter>
-          <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
-        </Combinator>
+        <Combinator xsi:type="rx:WithLatestFrom" />
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:SubscribeWhen" />
+      <Expression xsi:type="MemberSelector">
+        <Selector>Item2</Selector>
+      </Expression>
+      <Expression xsi:type="PropertyMapping">
+        <PropertyMappings>
+          <Property Name="Value" />
+        </PropertyMappings>
       </Expression>
       <Expression xsi:type="Index">
         <Operand xsi:type="StringProperty">
@@ -234,31 +253,38 @@
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Merge" />
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:Repeat" />
-      </Expression>
     </Nodes>
     <Edges>
-      <Edge From="0" To="1" Label="Source1" />
-      <Edge From="1" To="2" Label="Source1" />
-      <Edge From="3" To="4" Label="Source1" />
-      <Edge From="4" To="5" Label="Source1" />
-      <Edge From="6" To="7" Label="Source1" />
-      <Edge From="7" To="8" Label="Source1" />
-      <Edge From="9" To="10" Label="Source1" />
-      <Edge From="10" To="11" Label="Source1" />
-      <Edge From="11" To="12" Label="Source1" />
-      <Edge From="11" To="14" Label="Source1" />
-      <Edge From="12" To="13" Label="Source1" />
-      <Edge From="13" To="15" Label="Source1" />
-      <Edge From="14" To="15" Label="Source2" />
+      <Edge From="0" To="2" Label="Source1" />
+      <Edge From="1" To="2" Label="Source2" />
+      <Edge From="2" To="4" Label="Source1" />
+      <Edge From="3" To="4" Label="Source2" />
+      <Edge From="4" To="10" Label="Source1" />
+      <Edge From="5" To="7" Label="Source1" />
+      <Edge From="6" To="7" Label="Source2" />
+      <Edge From="7" To="9" Label="Source1" />
+      <Edge From="8" To="9" Label="Source2" />
+      <Edge From="9" To="10" Label="Source2" />
+      <Edge From="10" To="12" Label="Source1" />
+      <Edge From="11" To="12" Label="Source2" />
+      <Edge From="13" To="14" Label="Source1" />
+      <Edge From="14" To="15" Label="Source1" />
       <Edge From="15" To="16" Label="Source1" />
       <Edge From="16" To="17" Label="Source1" />
+      <Edge From="16" To="19" Label="Source1" />
+      <Edge From="17" To="18" Label="Source1" />
       <Edge From="18" To="20" Label="Source1" />
       <Edge From="19" To="20" Label="Source2" />
       <Edge From="20" To="21" Label="Source1" />
       <Edge From="21" To="22" Label="Source1" />
-      <Edge From="22" To="23" Label="Source1" />
+      <Edge From="23" To="24" Label="Source1" />
+      <Edge From="24" To="26" Label="Source1" />
+      <Edge From="24" To="28" Label="Source1" />
+      <Edge From="25" To="26" Label="Source2" />
+      <Edge From="26" To="27" Label="Source1" />
+      <Edge From="27" To="29" Label="Source1" />
+      <Edge From="28" To="29" Label="Source2" />
+      <Edge From="29" To="30" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
