@@ -9,6 +9,8 @@
                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
                  xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
+                 xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
+                 xmlns:harp="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp"
                  xmlns:p4="clr-namespace:DataSchema;assembly=Extensions"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
@@ -22,7 +24,9 @@
         <SessionSettings>SessionSettings</SessionSettings>
         <OlfactometerCommand>OlfactometerCommand</OlfactometerCommand>
       </Expression>
-      <Expression xsi:type="IncludeWorkflow" Path="Extensions\Behavior.bonsai" />
+      <Expression xsi:type="IncludeWorkflow" Path="Extensions\Behavior.bonsai">
+        <PortName>COM14</PortName>
+      </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>Logging</Name>
         <Workflow>
@@ -389,6 +393,35 @@
               <Selector>Item2</Selector>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="SubscribeSubject">
+              <Name>CurrentSequence</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>EnableTrialIndicator</Selector>
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Name>IndicatorEnabled</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreateOutputSetPayload">
+                <beh:OutputSet>DOPort0</beh:OutputSet>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>BehaviorCommands</Name>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="5" Label="Source1" />
@@ -403,6 +436,10 @@
             <Edge From="9" To="10" Label="Source2" />
             <Edge From="10" To="11" Label="Source1" />
             <Edge From="11" To="12" Label="Source1" />
+            <Edge From="13" To="14" Label="Source1" />
+            <Edge From="14" To="15" Label="Source1" />
+            <Edge From="15" To="16" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -668,6 +705,15 @@
           </Edges>
         </Workflow>
       </Expression>
+      <Expression xsi:type="beh:CreateMessage">
+        <harp:MessageType>Write</harp:MessageType>
+        <harp:Payload xsi:type="beh:CreateOutputClearPayload">
+          <beh:OutputClear>DOPort0</beh:OutputClear>
+        </harp:Payload>
+      </Expression>
+      <Expression xsi:type="MulticastSubject">
+        <Name>BehaviorCommands</Name>
+      </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="StringProperty">
           <Value>Default</Value>
@@ -706,6 +752,197 @@
       <Expression xsi:type="Unit" />
       <Expression xsi:type="MulticastSubject">
         <Name>StartSequence</Name>
+      </Expression>
+      <Expression xsi:type="GroupWorkflow">
+        <Name>RewardIndicators</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>RewardAvailable</Name>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>RewardPosition</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:WithLatestFrom" />
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Name>RewardLocation1</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item2</Selector>
+                  </Expression>
+                  <Expression xsi:type="Equal">
+                    <Operand xsi:type="IntProperty">
+                      <Value>0</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Name>RewardOn</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item1</Selector>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreateOutputSetPayload">
+                <beh:OutputSet>DOPort1</beh:OutputSet>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Name>RewardOff</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item1</Selector>
+                  </Expression>
+                  <Expression xsi:type="BitwiseNot" />
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreateOutputClearPayload">
+                <beh:OutputClear>DOPort1</beh:OutputClear>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Name>RewardLocation2</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item2</Selector>
+                  </Expression>
+                  <Expression xsi:type="Equal">
+                    <Operand xsi:type="IntProperty">
+                      <Value>1</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Name>RewardOn</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item1</Selector>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreateOutputSetPayload">
+                <beh:OutputSet>DOPort2</beh:OutputSet>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Name>RewardOff</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item1</Selector>
+                  </Expression>
+                  <Expression xsi:type="BitwiseNot" />
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreateOutputClearPayload">
+                <beh:OutputClear>DOPort2</beh:OutputClear>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>BehaviorCommands</Name>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="2" Label="Source1" />
+            <Edge From="1" To="2" Label="Source2" />
+            <Edge From="2" To="3" Label="Source1" />
+            <Edge From="2" To="8" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="3" To="6" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="5" To="13" Label="Source1" />
+            <Edge From="6" To="7" Label="Source1" />
+            <Edge From="7" To="13" Label="Source2" />
+            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="8" To="11" Label="Source1" />
+            <Edge From="9" To="10" Label="Source1" />
+            <Edge From="10" To="13" Label="Source3" />
+            <Edge From="11" To="12" Label="Source1" />
+            <Edge From="12" To="13" Label="Source4" />
+            <Edge From="13" To="14" Label="Source1" />
+            <Edge From="14" To="15" Label="Source1" />
+          </Edges>
+        </Workflow>
       </Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>RewardPort0</Name>
@@ -958,24 +1195,26 @@
       <Edge From="45" To="46" Label="Source1" />
       <Edge From="46" To="47" Label="Source1" />
       <Edge From="47" To="48" Label="Source1" />
-      <Edge From="48" To="53" Label="Source1" />
+      <Edge From="48" To="49" Label="Source1" />
       <Edge From="49" To="50" Label="Source1" />
-      <Edge From="50" To="51" Label="Source1" />
+      <Edge From="50" To="55" Label="Source1" />
       <Edge From="51" To="52" Label="Source1" />
-      <Edge From="52" To="53" Label="Source2" />
+      <Edge From="52" To="53" Label="Source1" />
       <Edge From="53" To="54" Label="Source1" />
-      <Edge From="54" To="55" Label="Source1" />
+      <Edge From="54" To="55" Label="Source2" />
       <Edge From="55" To="56" Label="Source1" />
       <Edge From="56" To="57" Label="Source1" />
+      <Edge From="57" To="58" Label="Source1" />
       <Edge From="58" To="59" Label="Source1" />
-      <Edge From="59" To="60" Label="Source1" />
-      <Edge From="60" To="64" Label="Source1" />
       <Edge From="61" To="62" Label="Source1" />
       <Edge From="62" To="63" Label="Source1" />
-      <Edge From="63" To="64" Label="Source2" />
+      <Edge From="63" To="67" Label="Source1" />
       <Edge From="64" To="65" Label="Source1" />
       <Edge From="65" To="66" Label="Source1" />
-      <Edge From="66" To="67" Label="Source1" />
+      <Edge From="66" To="67" Label="Source2" />
+      <Edge From="67" To="68" Label="Source1" />
+      <Edge From="68" To="69" Label="Source1" />
+      <Edge From="69" To="70" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>

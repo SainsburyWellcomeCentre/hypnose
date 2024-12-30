@@ -416,6 +416,10 @@ namespace DataSchema
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition2 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
     
+        private bool _enableTrialIndicator = false;
+    
+        private bool _enableRewardLocationIndicator = false;
+    
         public Sequence()
         {
         }
@@ -431,6 +435,8 @@ namespace DataSchema
             _repeat = other._repeat;
             _rewardCondition1 = other._rewardCondition1;
             _rewardCondition2 = other._rewardCondition2;
+            _enableTrialIndicator = other._enableTrialIndicator;
+            _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
         }
     
         /// <summary>
@@ -580,6 +586,41 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Boolean specifying whether to enable indicator for when a trial is ready to be initiated
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="enableTrialIndicator")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable indicator for when a trial is ready to be in" +
+            "itiated")]
+        public bool EnableTrialIndicator
+        {
+            get
+            {
+                return _enableTrialIndicator;
+            }
+            set
+            {
+                _enableTrialIndicator = value;
+            }
+        }
+    
+        /// <summary>
+        /// Boolean specifying whether to enable indicator for where a reward is available
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="enableRewardLocationIndicator")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable indicator for where a reward is available")]
+        public bool EnableRewardLocationIndicator
+        {
+            get
+            {
+                return _enableRewardLocationIndicator;
+            }
+            set
+            {
+                _enableRewardLocationIndicator = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -600,7 +641,9 @@ namespace DataSchema
             stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
             stringBuilder.Append("repeat = " + _repeat + ", ");
             stringBuilder.Append("rewardCondition1 = " + _rewardCondition1 + ", ");
-            stringBuilder.Append("rewardCondition2 = " + _rewardCondition2);
+            stringBuilder.Append("rewardCondition2 = " + _rewardCondition2 + ", ");
+            stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
+            stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator);
             return true;
         }
     

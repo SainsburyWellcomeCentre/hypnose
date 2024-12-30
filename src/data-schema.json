@@ -150,6 +150,16 @@
                         "type": "array"
                     },
                     "type": "array"
+                },
+                "enableTrialIndicator": {
+                    "description": "Boolean specifying whether to enable indicator for when a trial is ready to be initiated",
+                    "default": "False",
+                    "type": "boolean"
+                },
+                "enableRewardLocationIndicator": {
+                    "description": "Boolean specifying whether to enable indicator for where a reward is available",
+                    "default": "False",
+                    "type": "boolean"
                 }
             }
         }
