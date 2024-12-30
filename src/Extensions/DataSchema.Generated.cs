@@ -733,6 +733,8 @@ namespace DataSchema
     
         private double _rewardTime = 0.1D;
     
+        private string _loggingRootPath = "";
+    
         public Metadata()
         {
         }
@@ -744,6 +746,7 @@ namespace DataSchema
             _minimumSampleTime = other._minimumSampleTime;
             _sampleOffsetTime = other._sampleOffsetTime;
             _rewardTime = other._rewardTime;
+            _loggingRootPath = other._loggingRootPath;
         }
     
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="animalId")]
@@ -825,6 +828,23 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// The local root folder to save data for this session
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="loggingRootPath")]
+        [System.ComponentModel.DescriptionAttribute("The local root folder to save data for this session")]
+        public string LoggingRootPath
+        {
+            get
+            {
+                return _loggingRootPath;
+            }
+            set
+            {
+                _loggingRootPath = value;
+            }
+        }
+    
         public System.IObservable<Metadata> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
@@ -841,7 +861,8 @@ namespace DataSchema
             stringBuilder.Append("rootPath = " + _rootPath + ", ");
             stringBuilder.Append("minimumSampleTime = " + _minimumSampleTime + ", ");
             stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime + ", ");
-            stringBuilder.Append("rewardTime = " + _rewardTime);
+            stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
+            stringBuilder.Append("loggingRootPath = " + _loggingRootPath);
             return true;
         }
     
