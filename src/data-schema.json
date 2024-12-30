@@ -21,6 +21,16 @@
                     "description": "The alias of this olfactometer command",
                     "type": "string"
                 },
+                "flowEnabledO0": {
+                    "description": "Boolean specifying whether to enable airflow across all channels in olfactometer 0",
+                    "type": "boolean",
+                    "default": "True"
+                },
+                "flowEnabledO1": {
+                    "description": "Boolean specifying whether to enable airflow across all channels in olfactometer 1",
+                    "type": "boolean",
+                    "default": "True"
+                },
                 "valvesOpenO0": {
                     "items": {
                         "minimum": 0,

@@ -9,7 +9,7 @@ using DataSchema;
 [Combinator]
 [Description("")]
 [WorkflowElementCategory(ElementCategory.Transform)]
-public class ParseOlfactometerCommand
+public class ParseOlfactometerBitmask
 {
     public IObservable<OlfactometerBitMask> Process(IObservable<OlfactometerStateCommand> source)
     {

@@ -95,6 +95,10 @@ namespace DataSchema
     
         private string _name;
     
+        private bool _flowEnabledO0 = true;
+    
+        private bool _flowEnabledO1 = true;
+    
         private System.Collections.Generic.List<int> _valvesOpenO0 = new System.Collections.Generic.List<int>();
     
         private System.Collections.Generic.List<int> _valvesOpenO1 = new System.Collections.Generic.List<int>();
@@ -110,6 +114,8 @@ namespace DataSchema
         protected OlfactometerStateCommand(OlfactometerStateCommand other)
         {
             _name = other._name;
+            _flowEnabledO0 = other._flowEnabledO0;
+            _flowEnabledO1 = other._flowEnabledO1;
             _valvesOpenO0 = other._valvesOpenO0;
             _valvesOpenO1 = other._valvesOpenO1;
             _endValvesOpenO0 = other._endValvesOpenO0;
@@ -130,6 +136,42 @@ namespace DataSchema
             set
             {
                 _name = value;
+            }
+        }
+    
+        /// <summary>
+        /// Boolean specifying whether to enable airflow across all channels in olfactometer 0
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="flowEnabledO0")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable airflow across all channels in olfactometer " +
+            "0")]
+        public bool FlowEnabledO0
+        {
+            get
+            {
+                return _flowEnabledO0;
+            }
+            set
+            {
+                _flowEnabledO0 = value;
+            }
+        }
+    
+        /// <summary>
+        /// Boolean specifying whether to enable airflow across all channels in olfactometer 1
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="flowEnabledO1")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable airflow across all channels in olfactometer " +
+            "1")]
+        public bool FlowEnabledO1
+        {
+            get
+            {
+                return _flowEnabledO1;
+            }
+            set
+            {
+                _flowEnabledO1 = value;
             }
         }
     
@@ -202,6 +244,8 @@ namespace DataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("name = " + _name + ", ");
+            stringBuilder.Append("flowEnabledO0 = " + _flowEnabledO0 + ", ");
+            stringBuilder.Append("flowEnabledO1 = " + _flowEnabledO1 + ", ");
             stringBuilder.Append("valvesOpenO0 = " + _valvesOpenO0 + ", ");
             stringBuilder.Append("valvesOpenO1 = " + _valvesOpenO1 + ", ");
             stringBuilder.Append("endValvesOpenO0 = " + _endValvesOpenO0 + ", ");
