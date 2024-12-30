@@ -328,10 +328,8 @@
       <Expression xsi:type="MemberSelector">
         <Selector>Sequences</Selector>
       </Expression>
-      <Expression xsi:type="Index">
-        <Operand xsi:type="IntProperty">
-          <Value>0</Value>
-        </Operand>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="p2:UniformSampleList" />
       </Expression>
       <Expression xsi:type="rx:BehaviorSubject">
         <Name>CurrentSequence</Name>
@@ -554,7 +552,7 @@
               <Combinator xsi:type="rx:Merge" />
             </Expression>
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="p2:SampleValence" />
+              <Combinator xsi:type="p2:UniformSampleList" />
             </Expression>
             <Expression xsi:type="rx:CreateObservable">
               <Name>TrialElements</Name>

@@ -54,6 +54,24 @@ sequences:
       [{command: OdorB, rewarded: True}]
     ]
     }
+  - {name: Triples2,
+    defaultCommand: Default,
+    presentationTime: 0.8,
+    interCommand: Purge,
+    interCommandTime: 0.2,
+    repeat: 0,
+    interTrialInterval: 20,
+    rewardCondition1: [
+      [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+      [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+      [{command: OdorC, rewarded: True}]
+    ],
+      rewardCondition2: [
+      [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+      [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+      [{command: OdorD, rewarded: True}]
+    ]
+    }
 
 # sequence:
 #   name: Triples

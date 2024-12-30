@@ -9,9 +9,14 @@ using DataSchema;
 [Combinator]
 [Description("")]
 [WorkflowElementCategory(ElementCategory.Transform)]
-public class SampleValence
+public class UniformSampleList
 {
     Random random = new Random();
+
+    public IObservable<Sequence> Process(IObservable<List<Sequence>> source)
+    {
+        return source.Select(x => x[random.Next(x.Count)]);
+    }
 
     public IObservable<Valence> Process(IObservable<List<Valence>> source)
     {
