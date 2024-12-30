@@ -107,6 +107,10 @@ namespace DataSchema
     
         private System.Collections.Generic.List<int> _endValvesOpenO1 = new System.Collections.Generic.List<int>();
     
+        private System.Collections.Generic.List<double> _targetFlowO0 = new System.Collections.Generic.List<double>();
+    
+        private System.Collections.Generic.List<double> _targetFlowO1 = new System.Collections.Generic.List<double>();
+    
         public OlfactometerStateCommand()
         {
         }
@@ -120,6 +124,8 @@ namespace DataSchema
             _valvesOpenO1 = other._valvesOpenO1;
             _endValvesOpenO0 = other._endValvesOpenO0;
             _endValvesOpenO1 = other._endValvesOpenO1;
+            _targetFlowO0 = other._targetFlowO0;
+            _targetFlowO1 = other._targetFlowO1;
         }
     
         /// <summary>
@@ -231,6 +237,44 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// The target flow rates of the 5 flow channels on olfactometer 0 in ml/min. Range for the odor channels is 0-100ml/min and 0-1000ml/min for the carrier line.
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="targetFlowO0")]
+        [System.ComponentModel.DescriptionAttribute("The target flow rates of the 5 flow channels on olfactometer 0 in ml/min. Range f" +
+            "or the odor channels is 0-100ml/min and 0-1000ml/min for the carrier line.")]
+        public System.Collections.Generic.List<double> TargetFlowO0
+        {
+            get
+            {
+                return _targetFlowO0;
+            }
+            set
+            {
+                _targetFlowO0 = value;
+            }
+        }
+    
+        /// <summary>
+        /// The target flow rates of the 5 flow channels on olfactometer 1 in ml/min. Range for the odor channels is 0-100ml/min and 0-1000ml/min for the carrier line.
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="targetFlowO1")]
+        [System.ComponentModel.DescriptionAttribute("The target flow rates of the 5 flow channels on olfactometer 1 in ml/min. Range f" +
+            "or the odor channels is 0-100ml/min and 0-1000ml/min for the carrier line.")]
+        public System.Collections.Generic.List<double> TargetFlowO1
+        {
+            get
+            {
+                return _targetFlowO1;
+            }
+            set
+            {
+                _targetFlowO1 = value;
+            }
+        }
+    
         public System.IObservable<OlfactometerStateCommand> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new OlfactometerStateCommand(this)));
@@ -249,7 +293,9 @@ namespace DataSchema
             stringBuilder.Append("valvesOpenO0 = " + _valvesOpenO0 + ", ");
             stringBuilder.Append("valvesOpenO1 = " + _valvesOpenO1 + ", ");
             stringBuilder.Append("endValvesOpenO0 = " + _endValvesOpenO0 + ", ");
-            stringBuilder.Append("endValvesOpenO1 = " + _endValvesOpenO1);
+            stringBuilder.Append("endValvesOpenO1 = " + _endValvesOpenO1 + ", ");
+            stringBuilder.Append("targetFlowO0 = " + _targetFlowO0 + ", ");
+            stringBuilder.Append("targetFlowO1 = " + _targetFlowO1);
             return true;
         }
     
