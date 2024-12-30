@@ -156,8 +156,11 @@
             },
             "type": "array"
         },
-        "sequence": {
-            "$ref": "#/definitions/sequence"
+        "sequences": {
+            "items": {
+                "$ref": "#/definitions/sequence"
+            },
+            "type": "array"
         }
     },
     "title": "HypnoseSession",

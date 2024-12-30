@@ -539,7 +539,7 @@ namespace DataSchema
     
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
     
-        private Sequence _sequence;
+        private System.Collections.Generic.List<Sequence> _sequences = new System.Collections.Generic.List<Sequence>();
     
         public HypnoseSession()
         {
@@ -549,7 +549,7 @@ namespace DataSchema
         {
             _metadata = other._metadata;
             _olfactometerCommands = other._olfactometerCommands;
-            _sequence = other._sequence;
+            _sequences = other._sequences;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -581,16 +581,16 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="sequence")]
-        public Sequence Sequence
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="sequences")]
+        public System.Collections.Generic.List<Sequence> Sequences
         {
             get
             {
-                return _sequence;
+                return _sequences;
             }
             set
             {
-                _sequence = value;
+                _sequences = value;
             }
         }
     
@@ -608,7 +608,7 @@ namespace DataSchema
         {
             stringBuilder.Append("metadata = " + _metadata + ", ");
             stringBuilder.Append("olfactometerCommands = " + _olfactometerCommands + ", ");
-            stringBuilder.Append("sequence = " + _sequence);
+            stringBuilder.Append("sequences = " + _sequences);
             return true;
         }
     
