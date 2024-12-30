@@ -4,3 +4,5 @@ Packages
 .bonsai/Bonsai.exe.settings
 
 src/obj/
+
+temp_data/

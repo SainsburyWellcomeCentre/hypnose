@@ -179,6 +179,11 @@
                     "description": "Time in seconds to deliver rewards",
                     "default": 0.1,
                     "type": "number"
+                },
+                "loggingRootPath": {
+                    "description": "The local root folder to save data for this session",
+                    "default": "",
+                    "type": "string"
                 }
             }
         },
