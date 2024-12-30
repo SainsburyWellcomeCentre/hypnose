@@ -21,6 +21,16 @@
                     "description": "The alias of this olfactometer command",
                     "type": "string"
                 },
+                "flowEnabledO0": {
+                    "description": "Boolean specifying whether to enable airflow across all channels in olfactometer 0",
+                    "type": "boolean",
+                    "default": "True"
+                },
+                "flowEnabledO1": {
+                    "description": "Boolean specifying whether to enable airflow across all channels in olfactometer 1",
+                    "type": "boolean",
+                    "default": "True"
+                },
                 "valvesOpenO0": {
                     "items": {
                         "minimum": 0,
@@ -52,8 +62,30 @@
                         "type": "integer"
                     },
                     "type": "array"
+                },
+                "targetFlowO0": {
+                    "description": "The target flow rates of the 5 flow channels on olfactometer 0 in ml/min. Range for the odor channels is 0-100ml/min and 0-1000ml/min for the carrier line.",
+                    "items": {
+                        "minimum": 0,
+                        "maximum": 1000,
+                        "type": "number"
+                    },
+                    "type": "array",
+                    "minItems": 5,
+                    "maxItems": 5
+                },
+                "targetFlowO1": {
+                    "description": "The target flow rates of the 5 flow channels on olfactometer 1 in ml/min. Range for the odor channels is 0-100ml/min and 0-1000ml/min for the carrier line.",
+                    "items": {
+                        "minimum": 0,
+                        "maximum": 1000,
+                        "type": "number"
+                    },
+                    "type": "array",
+                    "minItems": 5,
+                    "maxItems": 5
                 }
-            }   
+            }
         },
         "valence": {
             "properties": {

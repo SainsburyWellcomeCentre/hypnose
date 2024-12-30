@@ -9,31 +9,15 @@ metadata:
   sampleOffsetTime: 0.1
 
 olfactometerCommands:
-  - {name: Default, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [1]}
-  - {name: Purge, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0, 1], endValvesOpenO1: [1]}
-  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0]}
-  - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0]}
-  - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0]}
-  - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0]}
-  - {name: OdorE, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [1], endValvesOpenO1: [0]}
-  - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [1], endValvesOpenO1: [0]}
-  - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [1], endValvesOpenO1: [0]}
-
-# sequence:
-#   name: Doubles
-#   defaultCommand: Default
-#   presentationTime: 0.8
-#   interCommand: Purge
-#   interCommandTime: 0.2
-#   repeat: 0
-#   rewardCondition1: [
-#     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-#     [{command: OdorA, rewarded: True}]
-#   ]
-#   rewardCondition2: [
-#     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-#     [{command: OdorB, rewarded: True}]
-#   ]
+  - {name: Default, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 10, 10]}
+  - {name: Purge, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0, 1], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 10, 10]}
+  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [10, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
+  - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 10, 0, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
+  - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 0, 10, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
+  - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 10, 10], targetFlowO1: [0, 0, 0, 0, 10]}
+  - {name: OdorE, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [1], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [10, 0, 0, 0, 10]}
+  - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [1], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 10, 0, 0, 10]}
+  - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [1], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 10, 0, 10]}
 
 sequences:
   - {name: Triples1,
