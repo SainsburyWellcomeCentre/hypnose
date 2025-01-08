@@ -410,7 +410,7 @@ namespace DataSchema
     
         private double _interTrialInterval = 5D;
     
-        private int _repeat = 0;
+        private bool _repeat = false;
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition1 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
     
@@ -542,11 +542,11 @@ namespace DataSchema
         }
     
         /// <summary>
-        /// Integer specifying the number of repetitions required for a given sequence
+        /// Boolean specifying whether a sequence should repeat
         /// </summary>
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="repeat")]
-        [System.ComponentModel.DescriptionAttribute("Integer specifying the number of repetitions required for a given sequence")]
-        public int Repeat
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether a sequence should repeat")]
+        public bool Repeat
         {
             get
             {

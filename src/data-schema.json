@@ -129,9 +129,9 @@
                     "type": "number"
                 },
                 "repeat": {
-                    "description": "Integer specifying the number of repetitions required for a given sequence",
-                    "default": 0,
-                    "type": "integer"
+                    "description": "Boolean specifying whether a sequence should repeat",
+                    "default": "False",
+                    "type": "boolean"
                 },
                 "rewardCondition1": {
                     "items": {
