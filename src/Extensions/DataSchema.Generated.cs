@@ -410,7 +410,9 @@ namespace DataSchema
     
         private double _interTrialInterval = 5D;
     
-        private int _repeat = 0;
+        private int _repeatCount = 1;
+    
+        private double _maximumTime = 10D;
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition1 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
     
@@ -432,7 +434,8 @@ namespace DataSchema
             _interCommand = other._interCommand;
             _interCommandTime = other._interCommandTime;
             _interTrialInterval = other._interTrialInterval;
-            _repeat = other._repeat;
+            _repeatCount = other._repeatCount;
+            _maximumTime = other._maximumTime;
             _rewardCondition1 = other._rewardCondition1;
             _rewardCondition2 = other._rewardCondition2;
             _enableTrialIndicator = other._enableTrialIndicator;
@@ -542,19 +545,36 @@ namespace DataSchema
         }
     
         /// <summary>
-        /// Integer specifying the number of repetitions required for a given sequence
+        /// Integer specifying how many times a sequence is allowed to repeat
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="repeat")]
-        [System.ComponentModel.DescriptionAttribute("Integer specifying the number of repetitions required for a given sequence")]
-        public int Repeat
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="repeatCount")]
+        [System.ComponentModel.DescriptionAttribute("Integer specifying how many times a sequence is allowed to repeat")]
+        public int RepeatCount
         {
             get
             {
-                return _repeat;
+                return _repeatCount;
             }
             set
             {
-                _repeat = value;
+                _repeatCount = value;
+            }
+        }
+    
+        /// <summary>
+        /// The maximum time in seconds that a sequence can last
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="maximumTime")]
+        [System.ComponentModel.DescriptionAttribute("The maximum time in seconds that a sequence can last")]
+        public double MaximumTime
+        {
+            get
+            {
+                return _maximumTime;
+            }
+            set
+            {
+                _maximumTime = value;
             }
         }
     
@@ -639,7 +659,8 @@ namespace DataSchema
             stringBuilder.Append("interCommand = " + _interCommand + ", ");
             stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
             stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
-            stringBuilder.Append("repeat = " + _repeat + ", ");
+            stringBuilder.Append("repeatCount = " + _repeatCount + ", ");
+            stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("rewardCondition1 = " + _rewardCondition1 + ", ");
             stringBuilder.Append("rewardCondition2 = " + _rewardCondition2 + ", ");
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");

@@ -21,76 +21,56 @@ olfactometerCommands:
   - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [1], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 10, 0, 10]}
 
 sequences:
-  - {name: Triples1,
+  - {name: FreeRun,
     defaultCommand: Default,
     presentationTime: 0.8,
     interCommand: Purge,
     interCommandTime: 0.2,
-    repeat: 0,
-    interTrialInterval: 20,
-    enableTrialIndicator: True,
-    enableRewardLocationIndicator: True,
+    repeatCount: 20,
+    maximumTime: 5,
     rewardCondition1: [
-      [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-      [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-      [{command: OdorA, rewarded: True}]
+      [{command: OdorA, rewarded: True}, {command: OdorB, rewarded: False}, {command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
     ],
-      rewardCondition2: [
-      [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-      [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-      [{command: OdorB, rewarded: True}]
-    ]
-    }
-  - {name: Triples2,
-    defaultCommand: Default,
-    presentationTime: 0.8,
-    interCommand: Purge,
-    interCommandTime: 0.2,
-    repeat: 0,
-    interTrialInterval: 20,
-    enableTrialIndicator: True,
-    enableRewardLocationIndicator: True,
-    rewardCondition1: [
-      [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-      [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-      [{command: OdorC, rewarded: True}]
-    ],
-      rewardCondition2: [
-      [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-      [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-      [{command: OdorD, rewarded: True}]
-    ]
-    }
-
-# sequence:
-#   name: Triples
-#   defaultCommand: Default
-#   presentationTime: 0.8
-#   interCommand: Purge
-#   interCommandTime: 0.2
-#   repeat: 0
-#   interTrialInterval: 20
-#   rewardCondition1: [
-#     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-#     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-#     [{command: OdorA, rewarded: True}]
-#   ]
-#   rewardCondition2: [
-#     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-#     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-#     [{command: OdorB, rewarded: True}]
-#   ]
-
-# sequence:
-#   name: FreeRun
-#   defaultCommand: Default
-#   presentationTime: 0.8
-#   interCommand: Purge
-#   interCommandTime: 0.2
-#   repeat: true
-#   rewardCondition1: [
-#     [{command: OdorA, rewarded: True}, {command: OdorB, rewarded: False}, {command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-#   ]
-#   rewardCondition2: [
-#     [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: True}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-#   ]
+    rewardCondition2: [
+      [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: True}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+    ]}
+  # - {name: Triples1,
+  #   defaultCommand: Default,
+  #   presentationTime: 0.8,
+  #   interCommand: Purge,
+  #   interCommandTime: 0.2,
+  #   repeat: 0,
+  #   interTrialInterval: 20,
+  #   enableTrialIndicator: True,
+  #   enableRewardLocationIndicator: True,
+  #   rewardCondition1: [
+  #     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+  #     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+  #     [{command: OdorA, rewarded: True}]
+  #   ],
+  #     rewardCondition2: [
+  #     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+  #     [{command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+  #     [{command: OdorB, rewarded: True}]
+  #   ]
+  #   }
+  # - {name: Triples2,
+  #   defaultCommand: Default,
+  #   presentationTime: 0.8,
+  #   interCommand: Purge,
+  #   interCommandTime: 0.2,
+  #   repeat: 0,
+  #   interTrialInterval: 20,
+  #   enableTrialIndicator: True,
+  #   enableRewardLocationIndicator: True,
+  #   rewardCondition1: [
+  #     [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+  #     [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+  #     [{command: OdorC, rewarded: True}]
+  #   ],
+  #     rewardCondition2: [
+  #     [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+  #     [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
+  #     [{command: OdorD, rewarded: True}]
+  #   ]
+  #   }
