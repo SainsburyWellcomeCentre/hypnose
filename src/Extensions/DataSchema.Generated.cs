@@ -412,6 +412,8 @@ namespace DataSchema
     
         private int _repeatCount = 1;
     
+        private double _maximumTime = 10D;
+    
         private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition1 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition2 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
@@ -433,6 +435,7 @@ namespace DataSchema
             _interCommandTime = other._interCommandTime;
             _interTrialInterval = other._interTrialInterval;
             _repeatCount = other._repeatCount;
+            _maximumTime = other._maximumTime;
             _rewardCondition1 = other._rewardCondition1;
             _rewardCondition2 = other._rewardCondition2;
             _enableTrialIndicator = other._enableTrialIndicator;
@@ -558,6 +561,23 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// The maximum time in seconds that a sequence can last
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="maximumTime")]
+        [System.ComponentModel.DescriptionAttribute("The maximum time in seconds that a sequence can last")]
+        public double MaximumTime
+        {
+            get
+            {
+                return _maximumTime;
+            }
+            set
+            {
+                _maximumTime = value;
+            }
+        }
+    
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardCondition1")]
         public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> RewardCondition1
@@ -640,6 +660,7 @@ namespace DataSchema
             stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
             stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
             stringBuilder.Append("repeatCount = " + _repeatCount + ", ");
+            stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("rewardCondition1 = " + _rewardCondition1 + ", ");
             stringBuilder.Append("rewardCondition2 = " + _rewardCondition2 + ", ");
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");

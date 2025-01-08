@@ -130,8 +130,13 @@
                 },
                 "repeatCount": {
                     "description": "Integer specifying how many times a sequence is allowed to repeat",
-                    "default": "1",
+                    "default": 1,
                     "type": "integer"
+                },
+                "maximumTime": {
+                    "description": "The maximum time in seconds that a sequence can last",
+                    "default": 10,
+                    "type": "number"
                 },
                 "rewardCondition1": {
                     "items": {
