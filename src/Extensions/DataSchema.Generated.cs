@@ -410,7 +410,7 @@ namespace DataSchema
     
         private double _interTrialInterval = 5D;
     
-        private bool _repeat = false;
+        private int _repeatCount = 1;
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition1 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
     
@@ -432,7 +432,7 @@ namespace DataSchema
             _interCommand = other._interCommand;
             _interCommandTime = other._interCommandTime;
             _interTrialInterval = other._interTrialInterval;
-            _repeat = other._repeat;
+            _repeatCount = other._repeatCount;
             _rewardCondition1 = other._rewardCondition1;
             _rewardCondition2 = other._rewardCondition2;
             _enableTrialIndicator = other._enableTrialIndicator;
@@ -542,19 +542,19 @@ namespace DataSchema
         }
     
         /// <summary>
-        /// Boolean specifying whether a sequence should repeat
+        /// Integer specifying how many times a sequence is allowed to repeat
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="repeat")]
-        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether a sequence should repeat")]
-        public bool Repeat
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="repeatCount")]
+        [System.ComponentModel.DescriptionAttribute("Integer specifying how many times a sequence is allowed to repeat")]
+        public int RepeatCount
         {
             get
             {
-                return _repeat;
+                return _repeatCount;
             }
             set
             {
-                _repeat = value;
+                _repeatCount = value;
             }
         }
     
@@ -639,7 +639,7 @@ namespace DataSchema
             stringBuilder.Append("interCommand = " + _interCommand + ", ");
             stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
             stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
-            stringBuilder.Append("repeat = " + _repeat + ", ");
+            stringBuilder.Append("repeatCount = " + _repeatCount + ", ");
             stringBuilder.Append("rewardCondition1 = " + _rewardCondition1 + ", ");
             stringBuilder.Append("rewardCondition2 = " + _rewardCondition2 + ", ");
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");

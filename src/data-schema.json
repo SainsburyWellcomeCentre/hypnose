@@ -128,10 +128,10 @@
                     "default": 5,
                     "type": "number"
                 },
-                "repeat": {
-                    "description": "Boolean specifying whether a sequence should repeat",
-                    "default": "False",
-                    "type": "boolean"
+                "repeatCount": {
+                    "description": "Integer specifying how many times a sequence is allowed to repeat",
+                    "default": "1",
+                    "type": "integer"
                 },
                 "rewardCondition1": {
                     "items": {
