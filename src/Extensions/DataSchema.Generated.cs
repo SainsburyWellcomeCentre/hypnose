@@ -418,6 +418,8 @@ namespace DataSchema
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition2 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
     
+        private int _allowedAttempts = 1;
+    
         private bool _enableTrialIndicator = false;
     
         private bool _enableRewardLocationIndicator = false;
@@ -438,6 +440,7 @@ namespace DataSchema
             _maximumTime = other._maximumTime;
             _rewardCondition1 = other._rewardCondition1;
             _rewardCondition2 = other._rewardCondition2;
+            _allowedAttempts = other._allowedAttempts;
             _enableTrialIndicator = other._enableTrialIndicator;
             _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
         }
@@ -607,6 +610,23 @@ namespace DataSchema
         }
     
         /// <summary>
+        /// Integer specifying how many attempts at finding the reward port are allowed
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="allowedAttempts")]
+        [System.ComponentModel.DescriptionAttribute("Integer specifying how many attempts at finding the reward port are allowed")]
+        public int AllowedAttempts
+        {
+            get
+            {
+                return _allowedAttempts;
+            }
+            set
+            {
+                _allowedAttempts = value;
+            }
+        }
+    
+        /// <summary>
         /// Boolean specifying whether to enable indicator for when a trial is ready to be initiated
         /// </summary>
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="enableTrialIndicator")]
@@ -663,6 +683,7 @@ namespace DataSchema
             stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("rewardCondition1 = " + _rewardCondition1 + ", ");
             stringBuilder.Append("rewardCondition2 = " + _rewardCondition2 + ", ");
+            stringBuilder.Append("allowedAttempts = " + _allowedAttempts + ", ");
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
             stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator);
             return true;

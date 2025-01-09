@@ -156,6 +156,12 @@
                     },
                     "type": "array"
                 },
+                "allowedAttempts": {
+                    "description": "Integer specifying how many attempts at finding the reward port are allowed",
+                    "default": 1,
+                    "minimum": 1,
+                    "type": "integer"
+                },
                 "enableTrialIndicator": {
                     "description": "Boolean specifying whether to enable indicator for when a trial is ready to be initiated",
                     "default": "False",

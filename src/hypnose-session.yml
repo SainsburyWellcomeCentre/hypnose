@@ -35,7 +35,8 @@ sequences:
     ],
     rewardCondition2: [
       [{command: OdorA, rewarded: False}, {command: OdorB, rewarded: False}, {command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: True}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
-    ]}
+    ],
+    allowedAttempts: 1}
   # - {name: Triples1,
   #   defaultCommand: Default,
   #   presentationTime: 0.8,
