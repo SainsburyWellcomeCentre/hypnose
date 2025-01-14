@@ -28,7 +28,8 @@ sequences:
     interCommandTime: 0.2,
     repeatCount: 20,
     maximumTime: 10,
-    interTrialInterval: 10,
+    responseTime: 10,
+    interTrialInterval: 0,
     rewardCondition1: [
       [{command: OdorA, rewarded: True}, {command: OdorB, rewarded: False}, {command: OdorC, rewarded: False}, {command: OdorD, rewarded: False}, {command: OdorE, rewarded: False}, {command: OdorF, rewarded: False}, {command: OdorG, rewarded: False}],
     ],
@@ -37,7 +38,7 @@ sequences:
     ],
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
-    resetOnReward: False
+    resetOnReward: True
     }
   # - {name: Triples1,
   #   defaultCommand: Default,

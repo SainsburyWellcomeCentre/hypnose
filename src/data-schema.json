@@ -133,6 +133,11 @@
                     "default": 1,
                     "type": "integer"
                 },
+                "responseTime": {
+                    "description": "The allowed time window for a subject to make a response following stimulus presentation",
+                    "default": 5,
+                    "type": "number"
+                },
                 "maximumTime": {
                     "description": "The maximum time in seconds that a sequence can last",
                     "default": 10,
@@ -167,7 +172,7 @@
                     "type": "boolean"
                 },
                 "resetOnReward": {
-                    "description": "Boolean specifying whether a trial should reset once a reward is delivered. If false, then trial should only reset after inter-trial interval has expired.",
+                    "description": "Boolean specifying whether a trial should ignore the response time and reset once a reward is given",
                     "default": "False",
                     "type": "boolean"
                 }
