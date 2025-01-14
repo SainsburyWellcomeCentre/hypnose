@@ -422,6 +422,8 @@ namespace DataSchema
     
         private bool _enableRewardLocationIndicator = false;
     
+        private bool _resetOnReward = false;
+    
         public Sequence()
         {
         }
@@ -440,6 +442,7 @@ namespace DataSchema
             _rewardCondition2 = other._rewardCondition2;
             _enableTrialIndicator = other._enableTrialIndicator;
             _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
+            _resetOnReward = other._resetOnReward;
         }
     
         /// <summary>
@@ -641,6 +644,24 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Boolean specifying whether a trial should reset once a reward is delivered. If false, then trial should only reset after inter-trial interval has expired.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="resetOnReward")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether a trial should reset once a reward is delivered. If fa" +
+            "lse, then trial should only reset after inter-trial interval has expired.")]
+        public bool ResetOnReward
+        {
+            get
+            {
+                return _resetOnReward;
+            }
+            set
+            {
+                _resetOnReward = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -664,7 +685,8 @@ namespace DataSchema
             stringBuilder.Append("rewardCondition1 = " + _rewardCondition1 + ", ");
             stringBuilder.Append("rewardCondition2 = " + _rewardCondition2 + ", ");
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
-            stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator);
+            stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
+            stringBuilder.Append("resetOnReward = " + _resetOnReward);
             return true;
         }
     

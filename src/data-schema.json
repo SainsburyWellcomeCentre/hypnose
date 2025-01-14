@@ -165,6 +165,11 @@
                     "description": "Boolean specifying whether to enable indicator for where a reward is available",
                     "default": "False",
                     "type": "boolean"
+                },
+                "resetOnReward": {
+                    "description": "Boolean specifying whether a trial should reset once a reward is delivered. If false, then trial should only reset after inter-trial interval has expired.",
+                    "default": "False",
+                    "type": "boolean"
                 }
             }
         }
