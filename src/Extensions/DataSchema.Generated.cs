@@ -412,6 +412,8 @@ namespace DataSchema
     
         private int _repeatCount = 1;
     
+        private double _responseTime = 5D;
+    
         private double _maximumTime = 10D;
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition1 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
@@ -421,6 +423,8 @@ namespace DataSchema
         private bool _enableTrialIndicator = false;
     
         private bool _enableRewardLocationIndicator = false;
+    
+        private bool _resetOnReward = false;
     
         public Sequence()
         {
@@ -435,11 +439,13 @@ namespace DataSchema
             _interCommandTime = other._interCommandTime;
             _interTrialInterval = other._interTrialInterval;
             _repeatCount = other._repeatCount;
+            _responseTime = other._responseTime;
             _maximumTime = other._maximumTime;
             _rewardCondition1 = other._rewardCondition1;
             _rewardCondition2 = other._rewardCondition2;
             _enableTrialIndicator = other._enableTrialIndicator;
             _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
+            _resetOnReward = other._resetOnReward;
         }
     
         /// <summary>
@@ -562,6 +568,24 @@ namespace DataSchema
         }
     
         /// <summary>
+        /// The allowed time window for a subject to make a response following stimulus presentation
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="responseTime")]
+        [System.ComponentModel.DescriptionAttribute("The allowed time window for a subject to make a response following stimulus prese" +
+            "ntation")]
+        public double ResponseTime
+        {
+            get
+            {
+                return _responseTime;
+            }
+            set
+            {
+                _responseTime = value;
+            }
+        }
+    
+        /// <summary>
         /// The maximum time in seconds that a sequence can last
         /// </summary>
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="maximumTime")]
@@ -641,6 +665,24 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Boolean specifying whether a trial should ignore the response time and reset once a reward is given
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="resetOnReward")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether a trial should ignore the response time and reset once" +
+            " a reward is given")]
+        public bool ResetOnReward
+        {
+            get
+            {
+                return _resetOnReward;
+            }
+            set
+            {
+                _resetOnReward = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -660,11 +702,13 @@ namespace DataSchema
             stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
             stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
             stringBuilder.Append("repeatCount = " + _repeatCount + ", ");
+            stringBuilder.Append("responseTime = " + _responseTime + ", ");
             stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("rewardCondition1 = " + _rewardCondition1 + ", ");
             stringBuilder.Append("rewardCondition2 = " + _rewardCondition2 + ", ");
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
-            stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator);
+            stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
+            stringBuilder.Append("resetOnReward = " + _resetOnReward);
             return true;
         }
     
