@@ -133,6 +133,11 @@
                     "default": 1,
                     "type": "integer"
                 },
+                "responseTime": {
+                    "description": "The allowed time window for a subject to make a response following stimulus presentation",
+                    "default": 5,
+                    "type": "number"
+                },
                 "maximumTime": {
                     "description": "The maximum time in seconds that a sequence can last",
                     "default": 10,
@@ -163,6 +168,11 @@
                 },
                 "enableRewardLocationIndicator": {
                     "description": "Boolean specifying whether to enable indicator for where a reward is available",
+                    "default": "False",
+                    "type": "boolean"
+                },
+                "resetOnReward": {
+                    "description": "Boolean specifying whether a trial should ignore the response time and reset once a reward is given",
                     "default": "False",
                     "type": "boolean"
                 }
