@@ -48,7 +48,7 @@
         <Builder xsi:type="beh:CreateMessage">
           <harp:MessageType>Write</harp:MessageType>
           <harp:Payload xsi:type="beh:CreateOutputPulseEnablePayload">
-            <beh:OutputPulseEnable>SupplyPort0</beh:OutputPulseEnable>
+            <beh:OutputPulseEnable>SupplyPort1</beh:OutputPulseEnable>
           </harp:Payload>
         </Builder>
       </Expression>
@@ -60,8 +60,8 @@
       <Expression xsi:type="Disable">
         <Builder xsi:type="beh:CreateMessage">
           <harp:MessageType>Write</harp:MessageType>
-          <harp:Payload xsi:type="beh:CreatePulseSupplyPort0Payload">
-            <beh:PulseSupplyPort0>100</beh:PulseSupplyPort0>
+          <harp:Payload xsi:type="beh:CreatePulseSupplyPort1Payload">
+            <beh:PulseSupplyPort1>100</beh:PulseSupplyPort1>
           </harp:Payload>
         </Builder>
       </Expression>
@@ -74,7 +74,7 @@
         <Builder xsi:type="beh:CreateMessage">
           <harp:MessageType>Write</harp:MessageType>
           <harp:Payload xsi:type="beh:CreateOutputSetPayload">
-            <beh:OutputSet>SupplyPort0</beh:OutputSet>
+            <beh:OutputSet>SupplyPort1</beh:OutputSet>
           </harp:Payload>
         </Builder>
       </Expression>
@@ -91,8 +91,8 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p1:RewardCommand">
-          <p1:RewardPosition>1</p1:RewardPosition>
-          <p1:RewardTime>1</p1:RewardTime>
+          <p1:RewardPosition>0</p1:RewardPosition>
+          <p1:RewardTime>0.1</p1:RewardTime>
         </Combinator>
       </Expression>
       <Expression xsi:type="MulticastSubject">
