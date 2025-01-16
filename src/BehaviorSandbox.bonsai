@@ -4,6 +4,7 @@
                  xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
                  xmlns:harp="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp"
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
+                 xmlns:p1="clr-namespace:DataSchema;assembly=Extensions"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -35,38 +36,67 @@
           <Name>BehaviorCommands</Name>
         </Builder>
       </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="wie:KeyDown">
+            <wie:Filter>A</wie:Filter>
+            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+          </Combinator>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="beh:CreateMessage">
+          <harp:MessageType>Write</harp:MessageType>
+          <harp:Payload xsi:type="beh:CreateOutputPulseEnablePayload">
+            <beh:OutputPulseEnable>SupplyPort0</beh:OutputPulseEnable>
+          </harp:Payload>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="MulticastSubject">
+          <Name>BehaviorCommands</Name>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="beh:CreateMessage">
+          <harp:MessageType>Write</harp:MessageType>
+          <harp:Payload xsi:type="beh:CreatePulseSupplyPort0Payload">
+            <beh:PulseSupplyPort0>100</beh:PulseSupplyPort0>
+          </harp:Payload>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="MulticastSubject">
+          <Name>BehaviorCommands</Name>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="beh:CreateMessage">
+          <harp:MessageType>Write</harp:MessageType>
+          <harp:Payload xsi:type="beh:CreateOutputSetPayload">
+            <beh:OutputSet>SupplyPort0</beh:OutputSet>
+          </harp:Payload>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="MulticastSubject">
+          <Name>BehaviorCommands</Name>
+        </Builder>
+      </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="wie:KeyDown">
           <wie:Filter>A</wie:Filter>
           <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
         </Combinator>
       </Expression>
-      <Expression xsi:type="beh:CreateMessage">
-        <harp:MessageType>Write</harp:MessageType>
-        <harp:Payload xsi:type="beh:CreateOutputPulseEnablePayload">
-          <beh:OutputPulseEnable>SupplyPort0</beh:OutputPulseEnable>
-        </harp:Payload>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="p1:RewardCommand">
+          <p1:RewardPosition>1</p1:RewardPosition>
+          <p1:RewardTime>1</p1:RewardTime>
+        </Combinator>
       </Expression>
       <Expression xsi:type="MulticastSubject">
-        <Name>BehaviorCommands</Name>
-      </Expression>
-      <Expression xsi:type="beh:CreateMessage">
-        <harp:MessageType>Write</harp:MessageType>
-        <harp:Payload xsi:type="beh:CreatePulseSupplyPort0Payload">
-          <beh:PulseSupplyPort0>100</beh:PulseSupplyPort0>
-        </harp:Payload>
-      </Expression>
-      <Expression xsi:type="MulticastSubject">
-        <Name>BehaviorCommands</Name>
-      </Expression>
-      <Expression xsi:type="beh:CreateMessage">
-        <harp:MessageType>Write</harp:MessageType>
-        <harp:Payload xsi:type="beh:CreateOutputSetPayload">
-          <beh:OutputSet>SupplyPort0</beh:OutputSet>
-        </harp:Payload>
-      </Expression>
-      <Expression xsi:type="MulticastSubject">
-        <Name>BehaviorCommands</Name>
+        <Name>RewardCommand</Name>
       </Expression>
     </Nodes>
     <Edges>
@@ -79,6 +109,8 @@
       <Edge From="8" To="9" Label="Source1" />
       <Edge From="9" To="10" Label="Source1" />
       <Edge From="10" To="11" Label="Source1" />
+      <Edge From="12" To="13" Label="Source1" />
+      <Edge From="13" To="14" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
