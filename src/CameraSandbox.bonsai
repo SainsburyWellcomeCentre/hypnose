@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.8.5"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                 xmlns:aeon="clr-namespace:Aeon.Acquisition;assembly=Aeon.Acquisition"
+                 xmlns:aeon-video="clr-namespace:Aeon.Video;assembly=Aeon.Video"
                  xmlns:spk="clr-namespace:Bonsai.Spinnaker;assembly=Bonsai.Spinnaker"
                  xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
                  xmlns:harp="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp"
@@ -13,13 +13,13 @@
   <Workflow>
     <Nodes>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="aeon:SpinnakerCapture">
+        <Combinator xsi:type="aeon-video:SpinnakerCapture">
           <spk:Index xsi:nil="true" />
-          <spk:SerialNumber>24282618</spk:SerialNumber>
           <spk:ColorProcessing>Default</spk:ColorProcessing>
-          <aeon:ExposureTime>17000</aeon:ExposureTime>
-          <aeon:Gain>1</aeon:Gain>
-          <aeon:Binning>1</aeon:Binning>
+          <aeon-video:ExposureTime>19000</aeon-video:ExposureTime>
+          <aeon-video:Gain>0</aeon-video:Gain>
+          <aeon-video:Binning>1</aeon-video:Binning>
+          <aeon-video:TriggerSource>Line3</aeon-video:TriggerSource>
         </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">
