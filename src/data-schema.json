@@ -212,6 +212,25 @@
                 }
             }
         },
+        "cameraProperties": {
+            "properties": {
+                "frameRate": {
+                    "default": 60,
+                    "type": "number",
+                    "description": "The target camera frame rate in frames per second."
+                },
+                "exposure": {
+                    "default": 19000,
+                    "type": "number",
+                    "description": "The frame exposure in microseconds."
+                },
+                "gain": {
+                    "default": 0,
+                    "type": "number",
+                    "description": "the gain of the camera sensor."
+                }   
+            }
+        },
         "olfactometerCommands": {
             "items": {
                 "$ref": "#/definitions/olfactometerStateCommand"

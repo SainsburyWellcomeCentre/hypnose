@@ -9,6 +9,11 @@ metadata:
   sampleOffsetTime: 0.1
   loggingRootPath: C:\Users\neurogears\source\repos\swc\hypnose\temp_data
 
+cameraProperties:
+  frameRate: 60
+  exposure: 19000
+  gain: 0
+
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 10, 10]}
   - {name: Purge, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0, 1], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 10, 10]}

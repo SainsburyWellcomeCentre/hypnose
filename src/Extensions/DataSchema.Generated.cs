@@ -735,6 +735,8 @@ namespace DataSchema
     
         private Metadata _metadata;
     
+        private CameraProperties _cameraProperties;
+    
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
     
         private System.Collections.Generic.List<Sequence> _sequences = new System.Collections.Generic.List<Sequence>();
@@ -746,6 +748,7 @@ namespace DataSchema
         protected HypnoseSession(HypnoseSession other)
         {
             _metadata = other._metadata;
+            _cameraProperties = other._cameraProperties;
             _olfactometerCommands = other._olfactometerCommands;
             _sequences = other._sequences;
         }
@@ -761,6 +764,20 @@ namespace DataSchema
             set
             {
                 _metadata = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="cameraProperties")]
+        public CameraProperties CameraProperties
+        {
+            get
+            {
+                return _cameraProperties;
+            }
+            set
+            {
+                _cameraProperties = value;
             }
         }
     
@@ -805,6 +822,7 @@ namespace DataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("metadata = " + _metadata + ", ");
+            stringBuilder.Append("cameraProperties = " + _cameraProperties + ", ");
             stringBuilder.Append("olfactometerCommands = " + _olfactometerCommands + ", ");
             stringBuilder.Append("sequences = " + _sequences);
             return true;
@@ -989,6 +1007,113 @@ namespace DataSchema
     }
 
 
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [Bonsai.CombinatorAttribute()]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    public partial class CameraProperties
+    {
+    
+        private double _frameRate = 60D;
+    
+        private double _exposure = 19000D;
+    
+        private double _gain = 0D;
+    
+        public CameraProperties()
+        {
+        }
+    
+        protected CameraProperties(CameraProperties other)
+        {
+            _frameRate = other._frameRate;
+            _exposure = other._exposure;
+            _gain = other._gain;
+        }
+    
+        /// <summary>
+        /// The target camera frame rate in frames per second.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="frameRate")]
+        [System.ComponentModel.DescriptionAttribute("The target camera frame rate in frames per second.")]
+        public double FrameRate
+        {
+            get
+            {
+                return _frameRate;
+            }
+            set
+            {
+                _frameRate = value;
+            }
+        }
+    
+        /// <summary>
+        /// The frame exposure in microseconds.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="exposure")]
+        [System.ComponentModel.DescriptionAttribute("The frame exposure in microseconds.")]
+        public double Exposure
+        {
+            get
+            {
+                return _exposure;
+            }
+            set
+            {
+                _exposure = value;
+            }
+        }
+    
+        /// <summary>
+        /// the gain of the camera sensor.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="gain")]
+        [System.ComponentModel.DescriptionAttribute("the gain of the camera sensor.")]
+        public double Gain
+        {
+            get
+            {
+                return _gain;
+            }
+            set
+            {
+                _gain = value;
+            }
+        }
+    
+        public System.IObservable<CameraProperties> Process()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new CameraProperties(this)));
+        }
+    
+        public System.IObservable<CameraProperties> Process<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new CameraProperties(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("frameRate = " + _frameRate + ", ");
+            stringBuilder.Append("exposure = " + _exposure + ", ");
+            stringBuilder.Append("gain = " + _gain);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
     /// <summary>
     /// Serializes a sequence of data model objects into YAML strings.
     /// </summary>
@@ -1038,6 +1163,11 @@ namespace DataSchema
         {
             return Process<Metadata>(source);
         }
+
+        public System.IObservable<string> Process(System.IObservable<CameraProperties> source)
+        {
+            return Process<CameraProperties>(source);
+        }
     }
 
 
@@ -1054,6 +1184,7 @@ namespace DataSchema
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Sequence>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<HypnoseSession>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Metadata>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<CameraProperties>))]
     public partial class DeserializeFromYaml : Bonsai.Expressions.SingleArgumentExpressionBuilder
     {
     
