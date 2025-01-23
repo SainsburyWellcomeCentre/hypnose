@@ -11,7 +11,7 @@ metadata:
 
 cameraProperties:
   frameRate: 60
-  exposure: 19000
+  exposure: 5000
   gain: 0
 
 olfactometerCommands:
