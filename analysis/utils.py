@@ -35,6 +35,6 @@ def load_json(reader: SessionData, root: Path) -> pd.DataFrame:
 
 def load(reader: Reader, root: Path) -> pd.DataFrame:
     root = Path(root)
-    pattern = f"{root.joinpath(root.name)}_{reader.register.address}_*.{reader.extension}"
+    pattern = f"{root.joinpath(root.name)}_{reader.register.address}_*.bin"
     data = [reader.read(file) for file in sorted(glob(pattern))]
     return pd.concat(data)
