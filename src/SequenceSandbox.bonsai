@@ -45,7 +45,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\Users\neurogears\source\repos\swc\hypnose\temp_data</Path>
+              <Path>C:/Users/neurogears/source/repos/swc/hypnose/temp_data</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -174,7 +174,7 @@
                 <spk:Index xsi:nil="true" />
                 <spk:SerialNumber>24282618</spk:SerialNumber>
                 <spk:ColorProcessing>Default</spk:ColorProcessing>
-                <aeon-video:ExposureTime>5000</aeon-video:ExposureTime>
+                <aeon-video:ExposureTime>19000</aeon-video:ExposureTime>
                 <aeon-video:Gain>0</aeon-video:Gain>
                 <aeon-video:Binning>1</aeon-video:Binning>
                 <aeon-video:TriggerSource>Line3</aeon-video:TriggerSource>
@@ -205,7 +205,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p1:LoadSessionSettings">
-          <p1:Path>hypnose-session.yml</p1:Path>
+          <p1:Path>odor-discrimination.yml</p1:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -838,7 +838,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Timer">
-                <rx:DueTime>PT10S</rx:DueTime>
+                <rx:DueTime>PT1S</rx:DueTime>
                 <rx:Period>PT0S</rx:Period>
               </Combinator>
             </Expression>
