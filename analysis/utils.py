@@ -1,9 +1,10 @@
+import os
 import json
 from dotmap import DotMap
 import pandas as pd
 from pathlib import Path
 from glob import glob
-from aeon.io.reader import Reader
+from aeon.io.reader import Reader, Csv
 import aeon.io.api as api
 
 
@@ -24,6 +25,24 @@ class SessionData(Reader):
         timestamps = [api.aeon(entry['seconds']) for entry in metadata]
 
         return pd.DataFrame(data, index=timestamps, columns=self.columns)
+
+
+class Video(Csv):
+    """Extracts video frame metadata."""
+
+    def __init__(self, pattern="VideoData"):
+        super().__init__(pattern, columns=["hw_counter", "hw_timestamp", "_frame", "_path", "_epoch"])
+        self._rawcolumns = ["Time"] + self.columns[0:2]
+
+    def read(self, file):
+        """Reads video metadata from the specified file."""
+        data = pd.read_csv(file, header=0, names=self._rawcolumns)
+        data["_frame"] = data.index
+        data["_path"] = os.path.splitext(file)[0] + ".avi"
+        data["_epoch"] = file.parts[-3]
+        data["Time"] = data["Time"].transform(lambda x: api.aeon(x))
+        data.set_index("Time", inplace=True)
+        return data
     
 
 def load_json(reader: SessionData, root: Path) -> pd.DataFrame:
@@ -37,4 +56,11 @@ def load(reader: Reader, root: Path) -> pd.DataFrame:
     root = Path(root)
     pattern = f"{root.joinpath(root.name)}_{reader.register.address}_*.bin"
     data = [reader.read(file) for file in sorted(glob(pattern))]
+    return pd.concat(data)
+
+
+def load_video(reader: Video, root: Path) -> pd.DataFrame:
+    root = Path(root)
+    pattern = f"{root.joinpath(root.name)}_*.csv"
+    data = [reader.read(Path(file)) for file in sorted(glob(pattern))]
     return pd.concat(data)
