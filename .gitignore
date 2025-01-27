@@ -9,3 +9,5 @@ temp_data/
 example_data/
 
 *.pyc
+
+.conda/
