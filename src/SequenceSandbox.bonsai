@@ -205,7 +205,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p1:LoadSessionSettings">
-          <p1:Path>hypnose-session.yml</p1:Path>
+          <p1:Path>odor-discrimination.yml</p1:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
