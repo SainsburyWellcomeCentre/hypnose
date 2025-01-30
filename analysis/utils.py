@@ -64,3 +64,10 @@ def load_video(reader: Video, root: Path) -> pd.DataFrame:
     pattern = f"{root.joinpath(root.name)}_*.csv"
     data = [reader.read(Path(file)) for file in sorted(glob(pattern))]
     return pd.concat(data)
+
+
+def concat_digi_events(series_low: pd.DataFrame, series_high: pd.DataFrame) -> pd.DataFrame:
+    """Concatenate seperate high and low dataframes to produce on/off vector"""
+    data_off = ~series_low[series_low==True]
+    data_on = series_high[series_high==True]
+    return pd.concat([data_off, data_on]).sort_index()
