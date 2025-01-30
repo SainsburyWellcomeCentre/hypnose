@@ -53,7 +53,7 @@
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:Materialize" />
+              <Combinator xsi:type="rx:Last" />
             </Expression>
             <Expression xsi:type="scr:ExpressionTransform">
               <scr:Expression>Convert.ToString(it)</scr:Expression>
