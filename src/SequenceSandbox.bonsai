@@ -14,6 +14,7 @@
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
                  xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
                  xmlns:p4="clr-namespace:DataSchema;assembly=Extensions"
+                 xmlns:aeon="clr-namespace:Aeon.Acquisition;assembly=Aeon.Acquisition"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -114,6 +115,18 @@
               <LogName>VideoData</LogName>
               <FrameRate>60</FrameRate>
             </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>AvailableMemory</Name>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
+              <Name>BehaviorEvents</Name>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+              <Heartbeats>BehaviorEvents</Heartbeats>
+              <ClosingDuration xsi:nil="true" />
+              <LogName>AvailableMemory</LogName>
+              <Selector xsi:nil="true" />
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -131,6 +144,8 @@
             <Edge From="17" To="18" Label="Source1" />
             <Edge From="18" To="19" Label="Source1" />
             <Edge From="19" To="20" Label="Source2" />
+            <Edge From="21" To="22" Label="Source1" />
+            <Edge From="22" To="23" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1514,6 +1529,18 @@
       <Expression xsi:type="MemberSelector">
         <Selector>Image</Selector>
       </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Timer">
+          <rx:DueTime>PT0S</rx:DueTime>
+          <rx:Period>PT10S</rx:Period>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="aeon:AvailableMemory" />
+      </Expression>
+      <Expression xsi:type="rx:PublishSubject">
+        <Name>AvailableMemory</Name>
+      </Expression>
     </Nodes>
     <Edges>
       <Edge From="4" To="5" Label="Source1" />
@@ -1586,6 +1613,8 @@
       <Edge From="81" To="82" Label="Source1" />
       <Edge From="86" To="87" Label="Source1" />
       <Edge From="87" To="88" Label="Source1" />
+      <Edge From="89" To="90" Label="Source1" />
+      <Edge From="90" To="91" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
