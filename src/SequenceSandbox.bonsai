@@ -1952,6 +1952,11 @@
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Merge" />
       </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:GateInterval">
+          <rx:Interval>PT0.5S</rx:Interval>
+        </Combinator>
+      </Expression>
       <Expression xsi:type="MulticastSubject">
         <Name>RewardCommand</Name>
       </Expression>
@@ -2071,10 +2076,11 @@
       <Edge From="79" To="80" Label="Source1" />
       <Edge From="80" To="81" Label="Source1" />
       <Edge From="81" To="82" Label="Source1" />
-      <Edge From="86" To="87" Label="Source1" />
+      <Edge From="82" To="83" Label="Source1" />
       <Edge From="87" To="88" Label="Source1" />
-      <Edge From="89" To="90" Label="Source1" />
+      <Edge From="88" To="89" Label="Source1" />
       <Edge From="90" To="91" Label="Source1" />
+      <Edge From="91" To="92" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
