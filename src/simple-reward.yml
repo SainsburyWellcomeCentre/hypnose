@@ -37,9 +37,11 @@ sequences:
     responseTime: 10,
     interTrialInterval: 0,
     rewardCondition1: [
+      [{command: OdorB, rewarded: False}],
       [{command: OdorA, rewarded: True}],
     ],
     rewardCondition2: [
+      [{command: OdorB, rewarded: False}],
       [{command: OdorE, rewarded: True}],
     ],
     enableTrialIndicator: True,
