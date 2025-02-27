@@ -161,6 +161,11 @@
                     },
                     "type": "array"
                 },
+                "rewardAttempts": {
+                    "description": "The number of attempts at a reward port allowed before reset.",
+                    "default": 1,
+                    "type": "integer"
+                },
                 "enableTrialIndicator": {
                     "description": "Boolean specifying whether to enable indicator for when a trial is ready to be initiated",
                     "default": "False",
