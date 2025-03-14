@@ -1564,6 +1564,14 @@
           <Value>Start</Value>
         </Combinator>
       </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="StringProperty">
+          <Value>Some other event</Value>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Merge" />
+      </Expression>
       <Expression xsi:type="rx:BehaviorSubject">
         <Name>ExperimentEvents</Name>
       </Expression>
@@ -1611,8 +1619,10 @@
       <Edge From="40" To="41" Label="Source1" />
       <Edge From="41" To="42" Label="Source2" />
       <Edge From="42" To="43" Label="Source1" />
-      <Edge From="44" To="45" Label="Source1" />
+      <Edge From="44" To="46" Label="Source1" />
+      <Edge From="45" To="46" Label="Source2" />
       <Edge From="46" To="47" Label="Source1" />
+      <Edge From="48" To="49" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
