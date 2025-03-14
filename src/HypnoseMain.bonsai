@@ -1575,6 +1575,13 @@
       <Expression xsi:type="rx:BehaviorSubject">
         <Name>ExperimentEvents</Name>
       </Expression>
+      <Expression xsi:type="GroupWorkflow">
+        <Name>EEG Stuff</Name>
+        <Workflow>
+          <Nodes />
+          <Edges />
+        </Workflow>
+      </Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>CameraStream</Name>
       </Expression>
@@ -1622,7 +1629,7 @@
       <Edge From="44" To="46" Label="Source1" />
       <Edge From="45" To="46" Label="Source2" />
       <Edge From="46" To="47" Label="Source1" />
-      <Edge From="48" To="49" Label="Source1" />
+      <Edge From="49" To="50" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
