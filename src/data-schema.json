@@ -202,7 +202,7 @@
                 },
                 "rewardTime": {
                     "description": "Time in seconds to deliver rewards",
-                    "default": 0.1,
+                    "default": 0.13,
                     "type": "number"
                 },
                 "loggingRootPath": {

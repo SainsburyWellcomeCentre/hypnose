@@ -7,11 +7,11 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.1
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\test
+  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-02_date-20250314\behav
 
 cameraProperties:
-  frameRate: 15
-  exposure: 60000
+  frameRate: 30
+  exposure: 50000
   gain: 0
 
 olfactometerCommands:
@@ -28,20 +28,20 @@ olfactometerCommands:
 sequences:
   - {name: OdourDiscrimination,
     defaultCommand: Default,
-    presentationTime: 0.8,
+    presentationTime: 5,
     interCommand: Purge,
     interCommandTime: 0.2,
     repeatCount: 20,
-    maximumTime: 1,
+    maximumTime: 5,
     responseTime: 99999,
     interTrialInterval: 0,
     rewardCondition1: [
       [{command: OdorA, rewarded: True}],
     ],
     rewardCondition2: [
-      [{command: OdorE, rewarded: True}],
+      [{command: OdorB, rewarded: True}],
     ],
     enableTrialIndicator: True,
-    enableRewardLocationIndicator: True,
+    enableRewardLocationIndicator: True, # changed from False (didn't change anything becasue most variables here are hardcoded on the bonsai script right now)
     resetOnReward: True
     }

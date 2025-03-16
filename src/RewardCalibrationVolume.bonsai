@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorkflowBuilder Version="2.8.5"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
+                 xmlns:harp="clr-namespace:Bonsai.Harp;assembly=Bonsai.Harp"
+                 xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
+                 xmlns:p1="clr-namespace:DataSchema;assembly=Extensions"
+                 xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
+                 xmlns="https://bonsai-rx.org/2018/workflow">
+  <Workflow>
+    <Nodes>
+      <Expression xsi:type="IncludeWorkflow" Path="Extensions\Behavior.bonsai">
+        <PortName>COM11</PortName>
+      </Expression>
+      <Expression xsi:type="beh:FilterRegister">
+        <harp:FilterType>Exclude</harp:FilterType>
+        <harp:Register xsi:type="beh:AnalogData" />
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="wie:KeyDown">
+            <wie:Filter>A</wie:Filter>
+            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+          </Combinator>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="beh:CreateMessage">
+          <harp:MessageType>Write</harp:MessageType>
+          <harp:Payload xsi:type="beh:CreateOutputSetPayload">
+            <beh:OutputSet>SupplyPort0</beh:OutputSet>
+          </harp:Payload>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="MulticastSubject">
+          <Name>BehaviorCommands</Name>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="Combinator">
+          <Combinator xsi:type="wie:KeyDown">
+            <wie:Filter>A</wie:Filter>
+            <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+          </Combinator>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="beh:CreateMessage">
+          <harp:MessageType>Write</harp:MessageType>
+          <harp:Payload xsi:type="beh:CreateOutputPulseEnablePayload">
+            <beh:OutputPulseEnable>SupplyPort1</beh:OutputPulseEnable>
+          </harp:Payload>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="MulticastSubject">
+          <Name>BehaviorCommands</Name>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="beh:CreateMessage">
+          <harp:MessageType>Write</harp:MessageType>
+          <harp:Payload xsi:type="beh:CreatePulseSupplyPort1Payload">
+            <beh:PulseSupplyPort1>100</beh:PulseSupplyPort1>
+          </harp:Payload>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="MulticastSubject">
+          <Name>BehaviorCommands</Name>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="beh:CreateMessage">
+          <harp:MessageType>Write</harp:MessageType>
+          <harp:Payload xsi:type="beh:CreateOutputSetPayload">
+            <beh:OutputSet>SupplyPort1</beh:OutputSet>
+          </harp:Payload>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="MulticastSubject">
+          <Name>BehaviorCommands</Name>
+        </Builder>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="p1:RewardCommand">
+          <p1:RewardTime>0.16</p1:RewardTime>
+          <p1:RewardPosition>0</p1:RewardPosition>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MulticastSubject">
+        <Name>RewardCommand</Name>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Delay">
+          <rx:DueTime>PT0.5S</rx:DueTime>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:RepeatCount">
+          <rx:Count>100</rx:Count>
+        </Combinator>
+      </Expression>
+    </Nodes>
+    <Edges>
+      <Edge From="0" To="1" Label="Source1" />
+      <Edge From="2" To="3" Label="Source1" />
+      <Edge From="3" To="4" Label="Source1" />
+      <Edge From="5" To="6" Label="Source1" />
+      <Edge From="6" To="7" Label="Source1" />
+      <Edge From="7" To="8" Label="Source1" />
+      <Edge From="8" To="9" Label="Source1" />
+      <Edge From="9" To="10" Label="Source1" />
+      <Edge From="10" To="11" Label="Source1" />
+      <Edge From="12" To="13" Label="Source1" />
+      <Edge From="13" To="14" Label="Source1" />
+      <Edge From="14" To="15" Label="Source1" />
+    </Edges>
+  </Workflow>
+</WorkflowBuilder>

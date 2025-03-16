@@ -7,9 +7,10 @@
                  xmlns:scr="clr-namespace:Bonsai.Scripting.Expressions;assembly=Bonsai.Scripting.Expressions"
                  xmlns:sys="clr-namespace:System;assembly=mscorlib"
                  xmlns:p1="clr-namespace:DataSchema;assembly=Extensions"
-                 xmlns:p2="clr-namespace:Aeon.Video;assembly=Aeon.Video"
-                 xmlns:p3="clr-namespace:Harp.ClockSynchronizer;assembly=Harp.ClockSynchronizer"
-                 xmlns:p4="clr-namespace:;assembly=Extensions"
+                 xmlns:aeon-video="clr-namespace:Aeon.Video;assembly=Aeon.Video"
+                 xmlns:spk="clr-namespace:Bonsai.Spinnaker;assembly=Bonsai.Spinnaker"
+                 xmlns:p2="clr-namespace:Harp.ClockSynchronizer;assembly=Harp.ClockSynchronizer"
+                 xmlns:p3="clr-namespace:;assembly=Extensions"
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
@@ -32,7 +33,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM7</harp:PortName>
+                <harp:PortName>COM11</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -612,14 +613,14 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="p2:SpinnakerCapture">
-                <Index xsi:nil="true" xmlns="clr-namespace:Bonsai.Spinnaker;assembly=Bonsai.Spinnaker" />
-                <SerialNumber xmlns="clr-namespace:Bonsai.Spinnaker;assembly=Bonsai.Spinnaker">24284790</SerialNumber>
-                <ColorProcessing xmlns="clr-namespace:Bonsai.Spinnaker;assembly=Bonsai.Spinnaker">Default</ColorProcessing>
-                <p2:ExposureTime>60000</p2:ExposureTime>
-                <p2:Gain>0</p2:Gain>
-                <p2:Binning>1</p2:Binning>
-                <p2:TriggerSource>Line3</p2:TriggerSource>
+              <Combinator xsi:type="aeon-video:SpinnakerCapture">
+                <spk:Index xsi:nil="true" />
+                <spk:SerialNumber>24284790</spk:SerialNumber>
+                <spk:ColorProcessing>Default</spk:ColorProcessing>
+                <aeon-video:ExposureTime>60000</aeon-video:ExposureTime>
+                <aeon-video:Gain>0</aeon-video:Gain>
+                <aeon-video:Binning>1</aeon-video:Binning>
+                <aeon-video:TriggerSource>Line3</aeon-video:TriggerSource>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -643,7 +644,7 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="p3:Device">
+        <Combinator xsi:type="p2:Device">
           <harp:OperationMode>Active</harp:OperationMode>
           <harp:OperationLed>On</harp:OperationLed>
           <harp:DumpRegisters>true</harp:DumpRegisters>
@@ -657,8 +658,8 @@
         <Property Name="Path" DisplayName="SessionSettingsPath" />
       </Expression>
       <Expression xsi:type="Combinator">
-        <Combinator xsi:type="p4:LoadSessionSettings">
-          <p4:Path>simple-reward.yml</p4:Path>
+        <Combinator xsi:type="p3:LoadSessionSettings">
+          <p3:Path>odor-discrimination_with-odours.yml</p3:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -775,7 +776,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:RewardCommand">
-                <p1:RewardTime>0.1</p1:RewardTime>
+                <p1:RewardTime>0.13</p1:RewardTime>
                 <p1:RewardPosition>0</p1:RewardPosition>
               </Combinator>
             </Expression>
@@ -879,7 +880,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:RewardCommand">
-                <p1:RewardTime>0.1</p1:RewardTime>
+                <p1:RewardTime>0.13</p1:RewardTime>
                 <p1:RewardPosition>1</p1:RewardPosition>
               </Combinator>
             </Expression>

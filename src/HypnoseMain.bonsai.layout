@@ -5,12 +5,12 @@
   <DialogSettings>
     <Visible>false</Visible>
     <Location>
-      <X>0</X>
-      <Y>0</Y>
+      <X>76</X>
+      <Y>74</Y>
     </Location>
     <Size>
-      <Width>0</Width>
-      <Height>0</Height>
+      <Width>335</Width>
+      <Height>62</Height>
     </Size>
     <WindowState>Normal</WindowState>
   </DialogSettings>
@@ -29,11 +29,11 @@
       <Visible>true</Visible>
       <Location>
         <X>4</X>
-        <Y>4</Y>
+        <Y>5</Y>
       </Location>
       <Size>
-        <Width>1019</Width>
-        <Height>699</Height>
+        <Width>2147</Width>
+        <Height>1238</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -415,11 +415,11 @@
       <Visible>true</Visible>
       <Location>
         <X>4</X>
-        <Y>4</Y>
+        <Y>5</Y>
       </Location>
       <Size>
-        <Width>1019</Width>
-        <Height>699</Height>
+        <Width>2147</Width>
+        <Height>1238</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -921,12 +921,12 @@
   <DialogSettings>
     <Visible>false</Visible>
     <Location>
-      <X>0</X>
-      <Y>0</Y>
+      <X>735</X>
+      <Y>446</Y>
     </Location>
     <Size>
-      <Width>0</Width>
-      <Height>0</Height>
+      <Width>335</Width>
+      <Height>62</Height>
     </Size>
     <WindowState>Normal</WindowState>
   </DialogSettings>
@@ -1121,82 +1121,6 @@
       <Height>0</Height>
     </Size>
     <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>false</Visible>
-    <Location>
-      <X>0</X>
-      <Y>0</Y>
-    </Location>
-    <Size>
-      <Width>0</Width>
-      <Height>0</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-  </DialogSettings>
-  <DialogSettings>
-    <Visible>true</Visible>
-    <Location>
-      <X>144</X>
-      <Y>156</Y>
-    </Location>
-    <Size>
-      <Width>334</Width>
-      <Height>201</Height>
-    </Size>
-    <WindowState>Normal</WindowState>
-    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
-    <VisualizerSettings>
-      <ObjectTextVisualizer />
-    </VisualizerSettings>
   </DialogSettings>
   <DialogSettings>
     <Visible>false</Visible>
@@ -1213,6 +1137,142 @@
   <DialogSettings xsi:type="WorkflowEditorSettings">
     <Visible>false</Visible>
     <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>0</Width>
+      <Height>0</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+    <EditorDialogSettings>
+      <Visible>false</Visible>
+      <Location>
+        <X>203</X>
+        <Y>198</Y>
+      </Location>
+      <Size>
+        <Width>759</Width>
+        <Height>480</Height>
+      </Size>
+      <WindowState>Normal</WindowState>
+    </EditorDialogSettings>
+  </DialogSettings>
+  <DialogSettings xsi:type="WorkflowEditorSettings">
+    <Visible>false</Visible>
+    <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>0</Width>
+      <Height>0</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+    <EditorDialogSettings>
+      <Visible>false</Visible>
+      <Location>
+        <X>25</X>
+        <Y>25</Y>
+      </Location>
+      <Size>
+        <Width>575</Width>
+        <Height>237</Height>
+      </Size>
+      <WindowState>Normal</WindowState>
+    </EditorDialogSettings>
+  </DialogSettings>
+  <DialogSettings>
+    <Visible>false</Visible>
+    <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>0</Width>
+      <Height>0</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+  </DialogSettings>
+  <DialogSettings xsi:type="WorkflowEditorSettings">
+    <Visible>false</Visible>
+    <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>0</Width>
+      <Height>0</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+    <EditorDialogSettings>
+      <Visible>false</Visible>
+      <Location>
+        <X>235</X>
+        <Y>136</Y>
+      </Location>
+      <Size>
+        <Width>785</Width>
+        <Height>608</Height>
+      </Size>
+      <WindowState>Normal</WindowState>
+    </EditorDialogSettings>
+  </DialogSettings>
+  <DialogSettings xsi:type="WorkflowEditorSettings">
+    <Visible>true</Visible>
+    <Location>
+      <X>39</X>
+      <Y>109</Y>
+    </Location>
+    <Size>
+      <Width>335</Width>
+      <Height>201</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
+    <EditorDialogSettings>
+      <Visible>false</Visible>
+      <Location>
+        <X>400</X>
+        <Y>152</Y>
+      </Location>
+      <Size>
+        <Width>887</Width>
+        <Height>536</Height>
+      </Size>
+      <WindowState>Normal</WindowState>
+    </EditorDialogSettings>
+  </DialogSettings>
+  <DialogSettings xsi:type="WorkflowEditorSettings">
+    <Visible>false</Visible>
+    <Location>
+      <X>0</X>
+      <Y>0</Y>
+    </Location>
+    <Size>
+      <Width>0</Width>
+      <Height>0</Height>
+    </Size>
+    <WindowState>Normal</WindowState>
+    <EditorDialogSettings>
+      <Visible>false</Visible>
+      <Location>
+        <X>25</X>
+        <Y>25</Y>
+      </Location>
+      <Size>
+        <Width>1009</Width>
+        <Height>524</Height>
+      </Size>
+      <WindowState>Normal</WindowState>
+    </EditorDialogSettings>
+  </DialogSettings>
+  <DialogSettings xsi:type="WorkflowEditorSettings">
+    <Visible>false</Visible>
+    <Location>
       <X>96</X>
       <Y>104</Y>
     </Location>
@@ -1224,8 +1284,8 @@
     <EditorDialogSettings>
       <Visible>false</Visible>
       <Location>
-        <X>257</X>
-        <Y>274</Y>
+        <X>387</X>
+        <Y>339</Y>
       </Location>
       <Size>
         <Width>932</Width>
@@ -1248,12 +1308,12 @@
     <EditorDialogSettings>
       <Visible>false</Visible>
       <Location>
-        <X>178</X>
-        <Y>478</Y>
+        <X>489</X>
+        <Y>290</Y>
       </Location>
       <Size>
-        <Width>686</Width>
-        <Height>238</Height>
+        <Width>1171</Width>
+        <Height>174</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -1273,12 +1333,12 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>483</X>
-      <Y>362</Y>
+      <X>813</X>
+      <Y>7</Y>
     </Location>
     <Size>
-      <Width>334</Width>
-      <Height>408</Height>
+      <Width>335</Width>
+      <Height>876</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
@@ -1289,11 +1349,11 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>145</X>
-      <Y>356</Y>
+      <X>47</X>
+      <Y>336</Y>
     </Location>
     <Size>
-      <Width>334</Width>
+      <Width>335</Width>
       <Height>406</Height>
     </Size>
     <WindowState>Normal</WindowState>
@@ -1461,12 +1521,12 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>819</X>
-      <Y>362</Y>
+      <X>1141</X>
+      <Y>7</Y>
     </Location>
     <Size>
-      <Width>334</Width>
-      <Height>64</Height>
+      <Width>335</Width>
+      <Height>860</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
@@ -1513,12 +1573,12 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>470</X>
-      <Y>157</Y>
+      <X>385</X>
+      <Y>106</Y>
     </Location>
     <Size>
-      <Width>334</Width>
-      <Height>201</Height>
+      <Width>411</Width>
+      <Height>319</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Vision.Design.IplImageVisualizer</VisualizerTypeName>
