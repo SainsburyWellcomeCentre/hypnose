@@ -36,11 +36,9 @@ sequences:
     maximumTime: 1,
     responseTime: 10,
     interTrialInterval: 0,
-    rewardCondition1: [
-      [{command: OdorA, rewarded: True}],
-    ],
-    rewardCondition2: [
-      [{command: OdorE, rewarded: True}],
+    rewardConditions: [
+      [[{command: OdorA, rewarded: True}]],
+      [[{command: OdorE, rewarded: True}]]
     ],
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,

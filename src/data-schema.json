@@ -143,19 +143,13 @@
                     "default": 10,
                     "type": "number"
                 },
-                "rewardCondition1": {
+                "rewardConditions": {
                     "items": {
                         "items": {
-                            "$ref": "#/definitions/valence"
-                        },
-                        "type": "array"
-                    },
-                    "type": "array"
-                },
-                "rewardCondition2": {
-                    "items": {
-                        "items": {
-                            "$ref": "#/definitions/valence"
+                            "items": {
+                                "$ref": "#/definitions/valence"
+                            },
+                            "type": "array"
                         },
                         "type": "array"
                     },
