@@ -1692,11 +1692,6 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Merge" />
             </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:Take">
-                <rx:Count>1</rx:Count>
-              </Combinator>
-            </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>RewardInfo</Name>
             </Expression>
@@ -1708,6 +1703,11 @@
             </Expression>
             <Expression xsi:type="MemberSelector">
               <Selector>Item2</Selector>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Take">
+                <rx:Count>1</rx:Count>
+              </Combinator>
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
             <Expression xsi:type="SubscribeSubject">
@@ -1776,10 +1776,10 @@
             <Edge From="34" To="35" Label="Source1" />
             <Edge From="35" To="36" Label="Source1" />
             <Edge From="36" To="37" Label="Source5" />
-            <Edge From="37" To="38" Label="Source1" />
-            <Edge From="38" To="41" Label="Source1" />
-            <Edge From="39" To="40" Label="Source1" />
-            <Edge From="40" To="41" Label="Source2" />
+            <Edge From="37" To="40" Label="Source1" />
+            <Edge From="38" To="39" Label="Source1" />
+            <Edge From="39" To="40" Label="Source2" />
+            <Edge From="40" To="41" Label="Source1" />
             <Edge From="41" To="42" Label="Source1" />
             <Edge From="42" To="43" Label="Source1" />
             <Edge From="44" To="46" Label="Source1" />
