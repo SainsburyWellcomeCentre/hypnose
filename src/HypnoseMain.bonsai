@@ -1063,7 +1063,7 @@
               <Combinator xsi:type="p2:UniformSampleList" />
             </Expression>
             <Expression xsi:type="SubscribeSubject">
-              <Name>SampleOnset</Name>
+              <Name>SustainedSampleOnset</Name>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:SubscribeWhen" />
@@ -1179,7 +1179,7 @@
               <rx:Name>CurrentValence</rx:Name>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
-              <Name>SampleOffset</Name>
+              <Name>SustainedSampleOffset</Name>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:TakeUntil" />
