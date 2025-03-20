@@ -1255,7 +1255,7 @@
         <WindowState>Normal</WindowState>
       </DialogSettings>
       <DialogSettings>
-        <Visible>true</Visible>
+        <Visible>false</Visible>
         <Location>
           <X>495</X>
           <Y>996</Y>
@@ -1265,10 +1265,6 @@
           <Height>257</Height>
         </Size>
         <WindowState>Normal</WindowState>
-        <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
-        <VisualizerSettings>
-          <ObjectTextVisualizer />
-        </VisualizerSettings>
       </DialogSettings>
       <DialogSettings xsi:type="WorkflowEditorSettings">
         <Visible>false</Visible>
@@ -1295,7 +1291,7 @@
         </EditorDialogSettings>
       </DialogSettings>
       <DialogSettings>
-        <Visible>true</Visible>
+        <Visible>false</Visible>
         <Location>
           <X>828</X>
           <Y>993</Y>
@@ -1305,10 +1301,6 @@
           <Height>264</Height>
         </Size>
         <WindowState>Normal</WindowState>
-        <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
-        <VisualizerSettings>
-          <ObjectTextVisualizer />
-        </VisualizerSettings>
       </DialogSettings>
     </EditorVisualizerLayout>
   </DialogSettings>
@@ -1384,7 +1376,7 @@
     </Size>
     <WindowState>Normal</WindowState>
   </DialogSettings>
-  <DialogSettings>
+  <DialogSettings xsi:type="WorkflowEditorSettings">
     <Visible>false</Visible>
     <Location>
       <X>0</X>
@@ -1395,6 +1387,18 @@
       <Height>0</Height>
     </Size>
     <WindowState>Normal</WindowState>
+    <EditorDialogSettings>
+      <Visible>false</Visible>
+      <Location>
+        <X>329</X>
+        <Y>321</Y>
+      </Location>
+      <Size>
+        <Width>1088</Width>
+        <Height>237</Height>
+      </Size>
+      <WindowState>Normal</WindowState>
+    </EditorDialogSettings>
   </DialogSettings>
   <DialogSettings>
     <Visible>false</Visible>
@@ -1408,7 +1412,7 @@
     </Size>
     <WindowState>Normal</WindowState>
   </DialogSettings>
-  <DialogSettings>
+  <DialogSettings xsi:type="WorkflowEditorSettings">
     <Visible>false</Visible>
     <Location>
       <X>0</X>
@@ -1419,18 +1423,42 @@
       <Height>0</Height>
     </Size>
     <WindowState>Normal</WindowState>
+    <EditorDialogSettings>
+      <Visible>false</Visible>
+      <Location>
+        <X>152</X>
+        <Y>148</Y>
+      </Location>
+      <Size>
+        <Width>1105</Width>
+        <Height>712</Height>
+      </Size>
+      <WindowState>Normal</WindowState>
+    </EditorDialogSettings>
   </DialogSettings>
-  <DialogSettings>
+  <DialogSettings xsi:type="WorkflowEditorSettings">
     <Visible>false</Visible>
     <Location>
-      <X>0</X>
-      <Y>0</Y>
+      <X>177</X>
+      <Y>173</Y>
     </Location>
     <Size>
-      <Width>0</Width>
-      <Height>0</Height>
+      <Width>335</Width>
+      <Height>62</Height>
     </Size>
     <WindowState>Normal</WindowState>
+    <EditorDialogSettings>
+      <Visible>false</Visible>
+      <Location>
+        <X>203</X>
+        <Y>198</Y>
+      </Location>
+      <Size>
+        <Width>996</Width>
+        <Height>469</Height>
+      </Size>
+      <WindowState>Normal</WindowState>
+    </EditorDialogSettings>
   </DialogSettings>
   <DialogSettings>
     <Visible>false</Visible>
@@ -1447,8 +1475,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>468</X>
-      <Y>372</Y>
+      <X>1605</X>
+      <Y>355</Y>
     </Location>
     <Size>
       <Width>335</Width>
@@ -1463,8 +1491,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>145</X>
-      <Y>356</Y>
+      <X>1274</X>
+      <Y>349</Y>
     </Location>
     <Size>
       <Width>335</Width>
@@ -1635,8 +1663,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>819</X>
-      <Y>362</Y>
+      <X>1956</X>
+      <Y>354</Y>
     </Location>
     <Size>
       <Width>335</Width>
@@ -1687,8 +1715,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>470</X>
-      <Y>157</Y>
+      <X>1961</X>
+      <Y>153</Y>
     </Location>
     <Size>
       <Width>334</Width>
