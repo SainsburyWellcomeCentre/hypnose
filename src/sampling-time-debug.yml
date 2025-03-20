@@ -40,7 +40,7 @@ sequences:
       [[{command: OdorA, rewarded: True}]],
       [[{command: OdorB, rewarded: True}]],
     ],
-    rewardAttempts: 100,
+    rewardAttempts: 2,
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
     resetOnReward: True
