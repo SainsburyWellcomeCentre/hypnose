@@ -5,7 +5,7 @@
 metadata:
   animalId: plimbo
   rootPath: test
-  minimumSampleTime: 1
+  minimumSampleTime: 0.1
   sampleOffsetTime: 0.1
   loggingRootPath: D:\Repos\hypnose_ae_dev\hypnose\temp_data
   rewardTime: 0.1
