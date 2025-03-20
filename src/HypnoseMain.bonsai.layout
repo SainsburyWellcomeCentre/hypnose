@@ -29,11 +29,11 @@
       <Visible>true</Visible>
       <Location>
         <X>4</X>
-        <Y>4</Y>
+        <Y>5</Y>
       </Location>
       <Size>
-        <Width>1979</Width>
-        <Height>1284</Height>
+        <Width>2147</Width>
+        <Height>1238</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -415,11 +415,11 @@
       <Visible>true</Visible>
       <Location>
         <X>4</X>
-        <Y>4</Y>
+        <Y>5</Y>
       </Location>
       <Size>
-        <Width>1979</Width>
-        <Height>1284</Height>
+        <Width>2147</Width>
+        <Height>1238</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -1125,23 +1125,27 @@
   <DialogSettings xsi:type="WorkflowEditorSettings">
     <Visible>false</Visible>
     <Location>
-      <X>0</X>
-      <Y>0</Y>
+      <X>101</X>
+      <Y>99</Y>
     </Location>
     <Size>
-      <Width>0</Width>
-      <Height>0</Height>
+      <Width>335</Width>
+      <Height>62</Height>
     </Size>
     <WindowState>Normal</WindowState>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
     <EditorDialogSettings>
       <Visible>true</Visible>
       <Location>
         <X>4</X>
-        <Y>4</Y>
+        <Y>5</Y>
       </Location>
       <Size>
-        <Width>1979</Width>
-        <Height>1284</Height>
+        <Width>2147</Width>
+        <Height>1238</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -1255,16 +1259,22 @@
         <WindowState>Normal</WindowState>
       </DialogSettings>
       <DialogSettings>
-        <Visible>false</Visible>
+        <Visible>true</Visible>
         <Location>
-          <X>0</X>
-          <Y>0</Y>
+          <X>1486</X>
+          <Y>502</Y>
         </Location>
         <Size>
-          <Width>0</Width>
-          <Height>0</Height>
+          <Width>415</Width>
+          <Height>276</Height>
         </Size>
         <WindowState>Normal</WindowState>
+        <VisualizerTypeName>Bonsai.Design.Visualizers.BooleanTimeSeriesVisualizer</VisualizerTypeName>
+        <VisualizerSettings>
+          <BooleanTimeSeriesVisualizer>
+            <Capacity>640</Capacity>
+          </BooleanTimeSeriesVisualizer>
+        </VisualizerSettings>
       </DialogSettings>
       <DialogSettings>
         <Visible>false</Visible>
@@ -1486,12 +1496,12 @@
     <EditorDialogSettings>
       <Visible>false</Visible>
       <Location>
-        <X>354</X>
-        <Y>-1092</Y>
+        <X>152</X>
+        <Y>148</Y>
       </Location>
       <Size>
-        <Width>1490</Width>
-        <Height>771</Height>
+        <Width>1151</Width>
+        <Height>627</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -1503,7 +1513,7 @@
       <Y>156</Y>
     </Location>
     <Size>
-      <Width>334</Width>
+      <Width>335</Width>
       <Height>201</Height>
     </Size>
     <WindowState>Normal</WindowState>
@@ -1538,12 +1548,12 @@
     <EditorDialogSettings>
       <Visible>false</Visible>
       <Location>
-        <X>276</X>
-        <Y>-1211</Y>
+        <X>127</X>
+        <Y>123</Y>
       </Location>
       <Size>
-        <Width>809</Width>
-        <Height>505</Height>
+        <Width>789</Width>
+        <Height>503</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -1562,12 +1572,12 @@
     <EditorDialogSettings>
       <Visible>false</Visible>
       <Location>
-        <X>380</X>
-        <Y>-1205</Y>
+        <X>279</X>
+        <Y>272</Y>
       </Location>
       <Size>
-        <Width>1138</Width>
-        <Height>721</Height>
+        <Width>1407</Width>
+        <Height>914</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -1615,7 +1625,7 @@
       <Y>362</Y>
     </Location>
     <Size>
-      <Width>334</Width>
+      <Width>335</Width>
       <Height>408</Height>
     </Size>
     <WindowState>Normal</WindowState>
@@ -1631,7 +1641,7 @@
       <Y>356</Y>
     </Location>
     <Size>
-      <Width>334</Width>
+      <Width>335</Width>
       <Height>406</Height>
     </Size>
     <WindowState>Normal</WindowState>
@@ -1803,7 +1813,7 @@
       <Y>362</Y>
     </Location>
     <Size>
-      <Width>334</Width>
+      <Width>335</Width>
       <Height>64</Height>
     </Size>
     <WindowState>Normal</WindowState>
