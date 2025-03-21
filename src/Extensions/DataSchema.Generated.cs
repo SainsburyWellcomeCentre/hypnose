@@ -495,7 +495,7 @@ namespace DataSchema
     
         private double _maximumTime = 10D;
     
-        private System.Collections.Generic.List<System.Collections.Generic.List<System.Collections.Generic.List<Valence>>> _rewardConditions = new System.Collections.Generic.List<System.Collections.Generic.List<System.Collections.Generic.List<Valence>>>();
+        private System.Collections.Generic.List<RewardCondition> _rewardConditions = new System.Collections.Generic.List<RewardCondition>();
     
         private int _rewardAttempts = 1;
     
@@ -683,7 +683,7 @@ namespace DataSchema
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardConditions")]
-        public System.Collections.Generic.List<System.Collections.Generic.List<System.Collections.Generic.List<Valence>>> RewardConditions
+        public System.Collections.Generic.List<RewardCondition> RewardConditions
         {
             get
             {

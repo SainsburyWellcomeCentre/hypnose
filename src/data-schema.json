@@ -162,13 +162,7 @@
                 },
                 "rewardConditions": {
                     "items": {
-                        "items": {
-                            "items": {
-                                "$ref": "#/definitions/valence"
-                            },
-                            "type": "array"
-                        },
-                        "type": "array"
+                        "$ref": "#/definitions/rewardCondition"
                     },
                     "type": "array"
                 },
