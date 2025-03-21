@@ -395,6 +395,85 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    public partial class RewardCondition
+    {
+    
+        private int _position;
+    
+        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _definition = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
+    
+        public RewardCondition()
+        {
+        }
+    
+        protected RewardCondition(RewardCondition other)
+        {
+            _position = other._position;
+            _definition = other._definition;
+        }
+    
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="position")]
+        public int Position
+        {
+            get
+            {
+                return _position;
+            }
+            set
+            {
+                _position = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="definition")]
+        public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> Definition
+        {
+            get
+            {
+                return _definition;
+            }
+            set
+            {
+                _definition = value;
+            }
+        }
+    
+        public System.IObservable<RewardCondition> Process()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new RewardCondition(this)));
+        }
+    
+        public System.IObservable<RewardCondition> Process<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new RewardCondition(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("position = " + _position + ", ");
+            stringBuilder.Append("definition = " + _definition);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [Bonsai.CombinatorAttribute()]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class Sequence
     {
     
@@ -1152,6 +1231,11 @@ namespace DataSchema
             return Process<Valence>(source);
         }
 
+        public System.IObservable<string> Process(System.IObservable<RewardCondition> source)
+        {
+            return Process<RewardCondition>(source);
+        }
+
         public System.IObservable<string> Process(System.IObservable<Sequence> source)
         {
             return Process<Sequence>(source);
@@ -1184,6 +1268,7 @@ namespace DataSchema
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RewardCommand>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerStateCommand>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Valence>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RewardCondition>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Sequence>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<HypnoseSession>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Metadata>))]

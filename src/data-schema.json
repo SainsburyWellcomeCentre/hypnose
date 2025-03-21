@@ -97,6 +97,23 @@
                 }
             }
         },
+        "rewardCondition": {
+            "properties": {
+                "position": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "definition": {
+                    "items": {
+                        "items": {
+                            "$ref": "#/definitions/valence"
+                        },
+                        "type": "array"
+                    },
+                    "type": "array"
+                }
+            }
+        },
         "sequence": {
             "properties": {
                 "name": {
