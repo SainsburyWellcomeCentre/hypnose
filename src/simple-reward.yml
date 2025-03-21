@@ -37,8 +37,8 @@ sequences:
     responseTime: 10,
     interTrialInterval: 0,
     rewardConditions: [
-      [[{command: OdorA, rewarded: True}]],
-      [[{command: OdorB, rewarded: True}]],
+      {position: 0, definition: [[{command: OdorA, rewarded: True}]]},
+      {position: 1, definition: [[{command: OdorB, rewarded: True}]]},
     ],
     rewardAttempts: 100,
     enableTrialIndicator: True,
