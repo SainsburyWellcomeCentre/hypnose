@@ -7,17 +7,18 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.1
   sampleOffsetTime: 0.1
-  loggingRootPath: D:/temp
+  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-08_date-20250325\behav
+  rewardTime: 0.16
 
 cameraProperties:
   frameRate: 30
-  exposure: 20000
-  gain: 0
+  exposure: 30000
+  gain: 15
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 20, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: Purge, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0, 1], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 10, 10]}
-  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [100, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
+  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [20, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 20, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 0, 10, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 10, 10], targetFlowO1: [0, 0, 0, 0, 10]}
@@ -28,20 +29,19 @@ olfactometerCommands:
 sequences:
   - {name: OdourDiscrimination,
     defaultCommand: Default,
-    presentationTime: 5,
+    presentationTime: 5, #changed from 0.8
     interCommand: Purge,
     interCommandTime: 0.2,
     repeatCount: 20,
-    maximumTime: 5,
+    maximumTime: 1,
     responseTime: 99999,
     interTrialInterval: 0,
-    rewardCondition1: [
-      [{command: OdorA, rewarded: True}],
+    rewardConditions: [
+      [[{command: OdorA, rewarded: True}]],
+      [[{command: OdorB, rewarded: True}]],
     ],
-    rewardCondition2: [
-      [{command: OdorB, rewarded: True}],
-    ],
+    rewardAttempts: 0,
     enableTrialIndicator: True,
-    enableRewardLocationIndicator: True, # changed from False (didn't change anything becasue most variables here are hardcoded on the bonsai script right now)
+    enableRewardLocationIndicator: True,
     resetOnReward: True
     }

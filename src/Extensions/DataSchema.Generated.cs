@@ -416,9 +416,9 @@ namespace DataSchema
     
         private double _maximumTime = 10D;
     
-        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition1 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
+        private System.Collections.Generic.List<System.Collections.Generic.List<System.Collections.Generic.List<Valence>>> _rewardConditions = new System.Collections.Generic.List<System.Collections.Generic.List<System.Collections.Generic.List<Valence>>>();
     
-        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition2 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
+        private int _rewardAttempts = 1;
     
         private bool _enableTrialIndicator = false;
     
@@ -441,8 +441,8 @@ namespace DataSchema
             _repeatCount = other._repeatCount;
             _responseTime = other._responseTime;
             _maximumTime = other._maximumTime;
-            _rewardCondition1 = other._rewardCondition1;
-            _rewardCondition2 = other._rewardCondition2;
+            _rewardConditions = other._rewardConditions;
+            _rewardAttempts = other._rewardAttempts;
             _enableTrialIndicator = other._enableTrialIndicator;
             _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
             _resetOnReward = other._resetOnReward;
@@ -603,30 +603,33 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardCondition1")]
-        public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> RewardCondition1
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardConditions")]
+        public System.Collections.Generic.List<System.Collections.Generic.List<System.Collections.Generic.List<Valence>>> RewardConditions
         {
             get
             {
-                return _rewardCondition1;
+                return _rewardConditions;
             }
             set
             {
-                _rewardCondition1 = value;
+                _rewardConditions = value;
             }
         }
     
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardCondition2")]
-        public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> RewardCondition2
+        /// <summary>
+        /// The number of attempts at a reward port allowed before reset.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardAttempts")]
+        [System.ComponentModel.DescriptionAttribute("The number of attempts at a reward port allowed before reset.")]
+        public int RewardAttempts
         {
             get
             {
-                return _rewardCondition2;
+                return _rewardAttempts;
             }
             set
             {
-                _rewardCondition2 = value;
+                _rewardAttempts = value;
             }
         }
     
@@ -704,8 +707,8 @@ namespace DataSchema
             stringBuilder.Append("repeatCount = " + _repeatCount + ", ");
             stringBuilder.Append("responseTime = " + _responseTime + ", ");
             stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
-            stringBuilder.Append("rewardCondition1 = " + _rewardCondition1 + ", ");
-            stringBuilder.Append("rewardCondition2 = " + _rewardCondition2 + ", ");
+            stringBuilder.Append("rewardConditions = " + _rewardConditions + ", ");
+            stringBuilder.Append("rewardAttempts = " + _rewardAttempts + ", ");
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
             stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
             stringBuilder.Append("resetOnReward = " + _resetOnReward);

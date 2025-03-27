@@ -5,14 +5,14 @@
 metadata:
   animalId: plimbo
   rootPath: test
-  minimumSampleTime: 0.1
+  minimumSampleTime: 1
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\temp
+  loggingRootPath: C:/Users/neurogears/source/repos/swc/hypnose/temp_data
   rewardTime: 0.1
 
 cameraProperties:
-  frameRate: 15
-  exposure: 60000
+  frameRate: 50
+  exposure: 7000
   gain: 0
 
 olfactometerCommands:
@@ -34,14 +34,13 @@ sequences:
     interCommandTime: 0.2,
     repeatCount: 20,
     maximumTime: 1,
-    responseTime: 99999,
+    responseTime: 10,
     interTrialInterval: 0,
-    rewardCondition1: [
-      [{command: OdorA, rewarded: True}],
+    rewardConditions: [
+      [[{command: OdorA, rewarded: True}]],
+      [[{command: OdorB, rewarded: True}]],
     ],
-    rewardCondition2: [
-      [{command: OdorE, rewarded: True}],
-    ],
+    rewardAttempts: 100,
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
     resetOnReward: True

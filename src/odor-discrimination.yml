@@ -7,18 +7,18 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.1
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\test
+  loggingRootPath: C:/Users/neurogears/source/repos/swc/hypnose/temp_data
 
 cameraProperties:
-  frameRate: 15
-  exposure: 60000
+  frameRate: 50
+  exposure: 7000
   gain: 0
 
 olfactometerCommands:
-  - {name: Default, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 20, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
+  - {name: Default, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 10, 10]}
   - {name: Purge, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0, 1], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 10, 10]}
-  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [20, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
-  - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 20, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
+  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [10, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
+  - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 10, 0, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 0, 10, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 10, 10], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorE, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [1], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [10, 0, 0, 0, 10]}
@@ -33,7 +33,7 @@ sequences:
     interCommandTime: 0.2,
     repeatCount: 20,
     maximumTime: 1,
-    responseTime: 99999,
+    responseTime: 10,
     interTrialInterval: 0,
     rewardCondition1: [
       [{command: OdorA, rewarded: True}],
