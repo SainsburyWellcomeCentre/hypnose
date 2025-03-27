@@ -3,12 +3,14 @@
 # yaml-language-server: $schema=data-schema.json
 
 metadata:
+  source: "./data-schema.json"
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.1 # should make this 0.5 (nope, this variable actually pertains to amount of time animal has to sample before the odour is presented)
   sampleOffsetTime: 0.1 # consider making this 0.2
   loggingRootPath: D:\Repos\hypnose_ae_dev\hypnose\temp_data
   rewardTime: 0.1 # ideally have a rewardTime variable for each pump (or just change the dodgey pump on rig2)
+  #holdTime: 0.1
 
 cameraProperties:
   frameRate: 50

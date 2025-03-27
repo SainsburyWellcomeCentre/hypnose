@@ -5,22 +5,21 @@
 metadata:
   animalId: plimbo
   rootPath: test
-  minimumSampleTime: 0.1 # should make this 0.5 (nope, this variable actually pertains to amount of time animal has to sample before the odour is presented)
-  sampleOffsetTime: 0.1 # consider making this 0.2
-  loggingRootPath: D:\Repos\hypnose_ae_dev\hypnose\temp_data
-  rewardTime: 0.1 # ideally have a rewardTime variable for each pump (or just change the dodgey pump on rig2)
-  #requiredSampleTime: 0.5
+  minimumSampleTime: 0.1
+  sampleOffsetTime: 0.1
+  loggingRootPath: D:\hypnose\rawdata\sub-023_id-067\ses-09_date-20250327\behav
+  rewardTime: 0.13
 
 cameraProperties:
-  frameRate: 50
-  exposure: 7000
-  gain: 0
+  frameRate: 30
+  exposure: 30000
+  gain: 15
 
 olfactometerCommands:
-  - {name: Default, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 10, 10]}
+  - {name: Default, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 20, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: Purge, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0, 1], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 10, 10]}
-  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [10, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
-  - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 10, 0, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
+  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [20, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
+  - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 20, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 0, 10, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 10, 10], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorE, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [1], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [10, 0, 0, 0, 10]}
@@ -30,17 +29,17 @@ olfactometerCommands:
 sequences:
   - {name: OdourDiscrimination,
     defaultCommand: Default,
-    presentationTime: 0.8,
+    presentationTime: 5, #changed from 0.8
     interCommand: Purge,
     interCommandTime: 0.2,
     repeatCount: 20,
     maximumTime: 1,
-    responseTime: 10,
-    interTrialInterval: 1,
+    responseTime: 99999,
+    interTrialInterval: 0,
     rewardConditions: [
       [[{command: OdorA, rewarded: True}]],
     ],
-    rewardAttempts: 2, # pertains to the strict rule
+    rewardAttempts: 99999,
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
     resetOnReward: True

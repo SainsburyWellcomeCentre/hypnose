@@ -191,7 +191,7 @@
                 },
                 "minimumSampleTime": {
                     "description": "Minimum amount of time in seconds an animal must sample the poke to initiate a trial",
-                    "default": 0.1,
+                    "default": 5,
                     "type": "number"
                 },
                 "sampleOffsetTime": {
@@ -208,6 +208,11 @@
                     "description": "The local root folder to save data for this session",
                     "default": "",
                     "type": "string"
+                },
+                "holdTime": {
+                    "descripton": "Time in seconds to hold the poke before it is considered a valid response",
+                    "default": 0.1,
+                    "type": "number"
                 }
             }
         },
@@ -243,6 +248,6 @@
             "type": "array"
         }
     },
-    "title": "HypnoseSession",
+    "title": "HypnoseSesh",
     "type": "object"
 }
