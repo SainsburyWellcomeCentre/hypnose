@@ -7,8 +7,8 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.1
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-09_date-20250327\behav
-  rewardTime: 0.16
+  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-11_date-20250331\behav
+  rewardTime: 0.12
 
 cameraProperties:
   frameRate: 30
@@ -17,7 +17,7 @@ cameraProperties:
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 20, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
-  - {name: Purge, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0, 1], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 0, 10, 10]}
+  - {name: Purge, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0, 1], endValvesOpenO1: [1], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 10, 10]}
   - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [20, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 20, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 10]}
   - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [0], endValvesOpenO1: [0], targetFlowO0: [0, 0, 10, 0, 10], targetFlowO1: [0, 0, 0, 0, 10]}
