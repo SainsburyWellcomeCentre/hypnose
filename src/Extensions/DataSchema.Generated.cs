@@ -395,6 +395,85 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    public partial class RewardCondition
+    {
+    
+        private int _position;
+    
+        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _definition = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
+    
+        public RewardCondition()
+        {
+        }
+    
+        protected RewardCondition(RewardCondition other)
+        {
+            _position = other._position;
+            _definition = other._definition;
+        }
+    
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="position")]
+        public int Position
+        {
+            get
+            {
+                return _position;
+            }
+            set
+            {
+                _position = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="definition")]
+        public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> Definition
+        {
+            get
+            {
+                return _definition;
+            }
+            set
+            {
+                _definition = value;
+            }
+        }
+    
+        public System.IObservable<RewardCondition> Process()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new RewardCondition(this)));
+        }
+    
+        public System.IObservable<RewardCondition> Process<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new RewardCondition(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("position = " + _position + ", ");
+            stringBuilder.Append("definition = " + _definition);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [Bonsai.CombinatorAttribute()]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class Sequence
     {
     
@@ -416,9 +495,9 @@ namespace DataSchema
     
         private double _maximumTime = 10D;
     
-        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition1 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
+        private System.Collections.Generic.List<RewardCondition> _rewardConditions = new System.Collections.Generic.List<RewardCondition>();
     
-        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _rewardCondition2 = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
+        private int _rewardAttempts = 1;
     
         private bool _enableTrialIndicator = false;
     
@@ -441,8 +520,8 @@ namespace DataSchema
             _repeatCount = other._repeatCount;
             _responseTime = other._responseTime;
             _maximumTime = other._maximumTime;
-            _rewardCondition1 = other._rewardCondition1;
-            _rewardCondition2 = other._rewardCondition2;
+            _rewardConditions = other._rewardConditions;
+            _rewardAttempts = other._rewardAttempts;
             _enableTrialIndicator = other._enableTrialIndicator;
             _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
             _resetOnReward = other._resetOnReward;
@@ -603,30 +682,33 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardCondition1")]
-        public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> RewardCondition1
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardConditions")]
+        public System.Collections.Generic.List<RewardCondition> RewardConditions
         {
             get
             {
-                return _rewardCondition1;
+                return _rewardConditions;
             }
             set
             {
-                _rewardCondition1 = value;
+                _rewardConditions = value;
             }
         }
     
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardCondition2")]
-        public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> RewardCondition2
+        /// <summary>
+        /// The number of attempts at a reward port allowed before reset.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardAttempts")]
+        [System.ComponentModel.DescriptionAttribute("The number of attempts at a reward port allowed before reset.")]
+        public int RewardAttempts
         {
             get
             {
-                return _rewardCondition2;
+                return _rewardAttempts;
             }
             set
             {
-                _rewardCondition2 = value;
+                _rewardAttempts = value;
             }
         }
     
@@ -704,8 +786,8 @@ namespace DataSchema
             stringBuilder.Append("repeatCount = " + _repeatCount + ", ");
             stringBuilder.Append("responseTime = " + _responseTime + ", ");
             stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
-            stringBuilder.Append("rewardCondition1 = " + _rewardCondition1 + ", ");
-            stringBuilder.Append("rewardCondition2 = " + _rewardCondition2 + ", ");
+            stringBuilder.Append("rewardConditions = " + _rewardConditions + ", ");
+            stringBuilder.Append("rewardAttempts = " + _rewardAttempts + ", ");
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
             stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
             stringBuilder.Append("resetOnReward = " + _resetOnReward);
@@ -1149,6 +1231,11 @@ namespace DataSchema
             return Process<Valence>(source);
         }
 
+        public System.IObservable<string> Process(System.IObservable<RewardCondition> source)
+        {
+            return Process<RewardCondition>(source);
+        }
+
         public System.IObservable<string> Process(System.IObservable<Sequence> source)
         {
             return Process<Sequence>(source);
@@ -1181,6 +1268,7 @@ namespace DataSchema
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RewardCommand>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerStateCommand>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Valence>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RewardCondition>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Sequence>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<HypnoseSession>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Metadata>))]

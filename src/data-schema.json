@@ -97,6 +97,23 @@
                 }
             }
         },
+        "rewardCondition": {
+            "properties": {
+                "position": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "definition": {
+                    "items": {
+                        "items": {
+                            "$ref": "#/definitions/valence"
+                        },
+                        "type": "array"
+                    },
+                    "type": "array"
+                }
+            }
+        },
         "sequence": {
             "properties": {
                 "name": {
@@ -143,23 +160,16 @@
                     "default": 10,
                     "type": "number"
                 },
-                "rewardCondition1": {
+                "rewardConditions": {
                     "items": {
-                        "items": {
-                            "$ref": "#/definitions/valence"
-                        },
-                        "type": "array"
+                        "$ref": "#/definitions/rewardCondition"
                     },
                     "type": "array"
                 },
-                "rewardCondition2": {
-                    "items": {
-                        "items": {
-                            "$ref": "#/definitions/valence"
-                        },
-                        "type": "array"
-                    },
-                    "type": "array"
+                "rewardAttempts": {
+                    "description": "The number of attempts at a reward port allowed before reset.",
+                    "default": 1,
+                    "type": "integer"
                 },
                 "enableTrialIndicator": {
                     "description": "Boolean specifying whether to enable indicator for when a trial is ready to be initiated",

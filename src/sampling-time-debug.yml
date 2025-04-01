@@ -5,9 +5,9 @@
 metadata:
   animalId: plimbo
   rootPath: test
-  minimumSampleTime: 1
+  minimumSampleTime: 0.1
   sampleOffsetTime: 0.1
-  loggingRootPath: C:/Users/neurogears/source/repos/swc/hypnose/temp_data
+  loggingRootPath: D:\Repos\hypnose_ae_dev\hypnose\temp_data
   rewardTime: 0.1
 
 cameraProperties:
@@ -40,7 +40,7 @@ sequences:
       {position: 0, definition: [[{command: OdorA, rewarded: True}]]},
       {position: 1, definition: [[{command: OdorB, rewarded: True}]]},
     ],
-    rewardAttempts: 100,
+    rewardAttempts: 2,
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
     resetOnReward: True
