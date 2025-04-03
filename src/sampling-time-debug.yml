@@ -29,13 +29,14 @@ olfactometerCommands:
 sequences:
   - {name: OdourDiscrimination,
     defaultCommand: Default,
-    presentationTime: 0.8,
+    presentationTime: 3,
     interCommand: Purge,
     interCommandTime: 0.2,
     repeatCount: 20,
     maximumTime: 1,
     responseTime: 10,
     interTrialInterval: 0,
+    minimumEngagementTime: 1,
     rewardConditions: [
       {position: 0, definition: [[{command: OdorA, rewarded: True}]]},
       {position: 1, definition: [[{command: OdorB, rewarded: True}]]},
