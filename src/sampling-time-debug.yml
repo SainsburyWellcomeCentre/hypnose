@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.1
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\Repos\hypnose_ae_dev\hypnose\temp_data
+  loggingRootPath: C:\Users\neurogears\source\repos\swc\hypnose\temp_data
   rewardTime: 0.1
 
 cameraProperties:
@@ -29,16 +29,24 @@ olfactometerCommands:
 sequences:
   - {name: OdourDiscrimination,
     defaultCommand: Default,
-    presentationTime: 0.8,
+    presentationTime: 3,
     interCommand: Purge,
     interCommandTime: 0.2,
     repeatCount: 20,
     maximumTime: 1,
     responseTime: 10,
     interTrialInterval: 0,
+    minimumEngagementTime: 1,
+    completionRequiresEngagement: True,
     rewardConditions: [
-      {position: 0, definition: [[{command: OdorA, rewarded: True}]]},
-      {position: 1, definition: [[{command: OdorB, rewarded: True}]]},
+      {position: 0, definition: [
+        [{command: OdorE, rewarded: False}], 
+        [{command: OdorA, rewarded: True}]
+      ]},
+      {position: 1, definition: [
+        [{command: OdorD, rewarded: False}], 
+        [{command: OdorB, rewarded: True}]
+      ]},
     ],
     rewardAttempts: 2,
     enableTrialIndicator: True,
