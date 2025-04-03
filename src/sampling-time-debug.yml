@@ -39,8 +39,14 @@ sequences:
     minimumEngagementTime: 1,
     completionRequiresEngagement: False,
     rewardConditions: [
-      {position: 0, definition: [[{command: OdorA, rewarded: True}]]},
-      {position: 1, definition: [[{command: OdorB, rewarded: True}]]},
+      {position: 0, definition: [
+        [{command: OdorE, rewarded: False}], 
+        [{command: OdorA, rewarded: True}]
+      ]},
+      {position: 1, definition: [
+        [{command: OdorD, rewarded: False}], 
+        [{command: OdorB, rewarded: True}]
+      ]},
     ],
     rewardAttempts: 2,
     enableTrialIndicator: True,
