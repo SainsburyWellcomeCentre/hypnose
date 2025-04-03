@@ -190,6 +190,11 @@
                     "description": "Minimum amount of time in seconds an animal must engage with a trial for it to be considered valid.",
                     "default": 0.5,
                     "type": "number"
+                },
+                "completionRequiresEngagement": {
+                    "description": "Boolean specifying whether engagement time must be satisfied before a trial can be considered complete/valid.",
+                    "default": "True",
+                    "type": "boolean"
                 }
             }
         }

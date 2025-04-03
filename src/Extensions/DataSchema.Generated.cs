@@ -507,6 +507,8 @@ namespace DataSchema
     
         private double _minimumEngagementTime = 0.5D;
     
+        private bool _completionRequiresEngagement = true;
+    
         public Sequence()
         {
         }
@@ -528,6 +530,7 @@ namespace DataSchema
             _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
             _resetOnReward = other._resetOnReward;
             _minimumEngagementTime = other._minimumEngagementTime;
+            _completionRequiresEngagement = other._completionRequiresEngagement;
         }
     
         /// <summary>
@@ -786,6 +789,24 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Boolean specifying whether engagement time must be satisfied before a trial can be considered complete/valid.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="completionRequiresEngagement")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether engagement time must be satisfied before a trial can b" +
+            "e considered complete/valid.")]
+        public bool CompletionRequiresEngagement
+        {
+            get
+            {
+                return _completionRequiresEngagement;
+            }
+            set
+            {
+                _completionRequiresEngagement = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -812,7 +833,8 @@ namespace DataSchema
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
             stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
             stringBuilder.Append("resetOnReward = " + _resetOnReward + ", ");
-            stringBuilder.Append("minimumEngagementTime = " + _minimumEngagementTime);
+            stringBuilder.Append("minimumEngagementTime = " + _minimumEngagementTime + ", ");
+            stringBuilder.Append("completionRequiresEngagement = " + _completionRequiresEngagement);
             return true;
         }
     

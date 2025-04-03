@@ -37,6 +37,7 @@ sequences:
     responseTime: 10,
     interTrialInterval: 0,
     minimumEngagementTime: 1,
+    completionRequiresEngagement: False,
     rewardConditions: [
       {position: 0, definition: [[{command: OdorA, rewarded: True}]]},
       {position: 1, definition: [[{command: OdorB, rewarded: True}]]},
