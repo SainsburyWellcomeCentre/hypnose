@@ -505,6 +505,8 @@ namespace DataSchema
     
         private bool _resetOnReward = false;
     
+        private double _minimumEngagementTime = 0.5D;
+    
         public Sequence()
         {
         }
@@ -525,6 +527,7 @@ namespace DataSchema
             _enableTrialIndicator = other._enableTrialIndicator;
             _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
             _resetOnReward = other._resetOnReward;
+            _minimumEngagementTime = other._minimumEngagementTime;
         }
     
         /// <summary>
@@ -765,6 +768,24 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Minimum amount of time in seconds an animal must engage with a trial for it to be considered valid.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="minimumEngagementTime")]
+        [System.ComponentModel.DescriptionAttribute("Minimum amount of time in seconds an animal must engage with a trial for it to be" +
+            " considered valid.")]
+        public double MinimumEngagementTime
+        {
+            get
+            {
+                return _minimumEngagementTime;
+            }
+            set
+            {
+                _minimumEngagementTime = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -790,7 +811,8 @@ namespace DataSchema
             stringBuilder.Append("rewardAttempts = " + _rewardAttempts + ", ");
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
             stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
-            stringBuilder.Append("resetOnReward = " + _resetOnReward);
+            stringBuilder.Append("resetOnReward = " + _resetOnReward + ", ");
+            stringBuilder.Append("minimumEngagementTime = " + _minimumEngagementTime);
             return true;
         }
     
@@ -984,11 +1006,11 @@ namespace DataSchema
         }
     
         /// <summary>
-        /// Minimum amount of time in seconds an animal must sample the poke to initiate a trial
+        /// Minimum amount of time in seconds a subject must sample the port to initiate a trial.
         /// </summary>
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="minimumSampleTime")]
-        [System.ComponentModel.DescriptionAttribute("Minimum amount of time in seconds an animal must sample the poke to initiate a tr" +
-            "ial")]
+        [System.ComponentModel.DescriptionAttribute("Minimum amount of time in seconds a subject must sample the port to initiate a tr" +
+            "ial.")]
         public double MinimumSampleTime
         {
             get
@@ -1002,11 +1024,11 @@ namespace DataSchema
         }
     
         /// <summary>
-        /// Time in seconds after sampling offset when subject is considered to have disengaged sampling
+        /// Time in seconds after sampling offset when subject is considered to have disengaged sampling.
         /// </summary>
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="sampleOffsetTime")]
         [System.ComponentModel.DescriptionAttribute("Time in seconds after sampling offset when subject is considered to have disengag" +
-            "ed sampling")]
+            "ed sampling.")]
         public double SampleOffsetTime
         {
             get

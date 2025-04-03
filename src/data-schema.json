@@ -185,6 +185,11 @@
                     "description": "Boolean specifying whether a trial should ignore the response time and reset once a reward is given",
                     "default": "False",
                     "type": "boolean"
+                },
+                "minimumEngagementTime": {
+                    "description": "Minimum amount of time in seconds an animal must engage with a trial for it to be considered valid.",
+                    "default": 0.5,
+                    "type": "number"
                 }
             }
         }
@@ -201,12 +206,12 @@
                     "type": "string"
                 },
                 "minimumSampleTime": {
-                    "description": "Minimum amount of time in seconds an animal must sample the poke to initiate a trial",
+                    "description": "Minimum amount of time in seconds a subject must sample the port to initiate a trial.",
                     "default": 0.1,
                     "type": "number"
                 },
                 "sampleOffsetTime": {
-                    "description": "Time in seconds after sampling offset when subject is considered to have disengaged sampling",
+                    "description": "Time in seconds after sampling offset when subject is considered to have disengaged sampling.",
                     "default": 0.1,
                     "type": "number"
                 },
