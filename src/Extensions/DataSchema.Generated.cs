@@ -844,7 +844,7 @@ namespace DataSchema
     
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
     
-        private System.Collections.Generic.List<Sequence> _sequences = new System.Collections.Generic.List<Sequence>();
+        private System.Collections.Generic.List<System.Collections.Generic.List<Sequence>> _sequences = new System.Collections.Generic.List<System.Collections.Generic.List<Sequence>>();
     
         public HypnoseSession()
         {
@@ -902,7 +902,7 @@ namespace DataSchema
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="sequences")]
-        public System.Collections.Generic.List<Sequence> Sequences
+        public System.Collections.Generic.List<System.Collections.Generic.List<Sequence>> Sequences
         {
             get
             {

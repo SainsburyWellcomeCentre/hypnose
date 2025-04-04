@@ -62,7 +62,29 @@ sequences: [
     enableRewardLocationIndicator: True,
     resetOnReward: True
     }],
-  []
+    [{name: RewardC,
+    defaultCommand: Default,
+    presentationTime: 2,
+    interCommand: Purge,
+    interCommandTime: 0.2,
+    maximumTime: 1,
+    responseTime: 10,
+    interTrialInterval: 0,
+    minimumEngagementTime: 1,
+    completionRequiresEngagement: True,
+    rewardConditions: [
+      {position: 0, definition: [
+        [{command: OdorC, rewarded: True}]
+      ]},
+      {position: 1, definition: [
+        [{command: OdorC, rewarded: True}]
+      ]},
+    ],
+    rewardAttempts: 2,
+    enableTrialIndicator: True,
+    enableRewardLocationIndicator: True,
+    resetOnReward: True
+    }]
 ]
 
 # sequences:

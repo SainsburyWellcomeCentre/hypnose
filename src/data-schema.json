@@ -254,7 +254,10 @@
         },
         "sequences": {
             "items": {
-                "$ref": "#/definitions/sequence"
+                "items": {
+                    "$ref": "#/definitions/sequence"
+                },
+                "type": "array"
             },
             "type": "array"
         }
