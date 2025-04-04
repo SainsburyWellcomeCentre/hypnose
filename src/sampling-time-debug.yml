@@ -71,6 +71,26 @@ sequences: [
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
     resetOnReward: True
+    },
+    {name: AlternateC,
+    defaultCommand: Default,
+    presentationTime: 2,
+    interCommand: Purge,
+    interCommandTime: 0.2,
+    maximumTime: 1,
+    responseTime: 10,
+    interTrialInterval: 0,
+    minimumEngagementTime: 0.5,
+    completionRequiresEngagement: True,
+    rewardConditions: [
+      {position: 0, definition: [
+        [{command: OdorC, rewarded: True}]
+      ]}
+    ],
+    rewardAttempts: 2,
+    enableTrialIndicator: True,
+    enableRewardLocationIndicator: True,
+    resetOnReward: True
     }],
     [{name: AlternateB,
     defaultCommand: Default,
