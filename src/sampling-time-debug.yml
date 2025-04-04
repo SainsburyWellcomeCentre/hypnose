@@ -26,13 +26,22 @@ olfactometerCommands:
   - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [1], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 10, 0, 0, 10]}
   - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [1], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 10], targetFlowO1: [0, 0, 10, 0, 10]}
 
-sequences:
-  - {name: OdourDiscrimination,
+# sequences: [
+#   [{name: OdourDiscrimination}, {name: OdourDiscriminationHard}]
+#   implicit repeat
+# ]
+
+# sequences: [
+  # [{name: RewardA}],
+  # [{name: RewardB}]
+# ]
+
+sequences: [
+  [{name: OdourDiscrimination,
     defaultCommand: Default,
-    presentationTime: 3,
+    presentationTime: 2,
     interCommand: Purge,
     interCommandTime: 0.2,
-    repeatCount: 20,
     maximumTime: 1,
     responseTime: 10,
     interTrialInterval: 0,
@@ -52,4 +61,34 @@ sequences:
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
     resetOnReward: True
-    }
+    }],
+  []
+]
+
+# sequences:
+#   - {name: OdourDiscrimination,
+#     defaultCommand: Default,
+#     presentationTime: 3,
+#     interCommand: Purge,
+#     interCommandTime: 0.2,
+#     repeatCount: 20,
+#     maximumTime: 1,
+#     responseTime: 10,
+#     interTrialInterval: 0,
+#     minimumEngagementTime: 1,
+#     completionRequiresEngagement: True,
+#     rewardConditions: [
+#       {position: 0, definition: [
+#         [{command: OdorE, rewarded: False}], 
+#         [{command: OdorA, rewarded: True}]
+#       ]},
+#       {position: 1, definition: [
+#         [{command: OdorD, rewarded: False}], 
+#         [{command: OdorB, rewarded: True}]
+#       ]},
+#     ],
+#     rewardAttempts: 2,
+#     enableTrialIndicator: True,
+#     enableRewardLocationIndicator: True,
+#     resetOnReward: True
+#     }

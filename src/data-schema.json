@@ -145,11 +145,6 @@
                     "default": 5,
                     "type": "number"
                 },
-                "repeatCount": {
-                    "description": "Integer specifying how many times a sequence is allowed to repeat",
-                    "default": 1,
-                    "type": "integer"
-                },
                 "responseTime": {
                     "description": "The allowed time window for a subject to make a response following stimulus presentation",
                     "default": 5,
