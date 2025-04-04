@@ -489,8 +489,6 @@ namespace DataSchema
     
         private double _interTrialInterval = 5D;
     
-        private int _repeatCount = 1;
-    
         private double _responseTime = 5D;
     
         private double _maximumTime = 10D;
@@ -521,7 +519,6 @@ namespace DataSchema
             _interCommand = other._interCommand;
             _interCommandTime = other._interCommandTime;
             _interTrialInterval = other._interTrialInterval;
-            _repeatCount = other._repeatCount;
             _responseTime = other._responseTime;
             _maximumTime = other._maximumTime;
             _rewardConditions = other._rewardConditions;
@@ -632,23 +629,6 @@ namespace DataSchema
             set
             {
                 _interTrialInterval = value;
-            }
-        }
-    
-        /// <summary>
-        /// Integer specifying how many times a sequence is allowed to repeat
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="repeatCount")]
-        [System.ComponentModel.DescriptionAttribute("Integer specifying how many times a sequence is allowed to repeat")]
-        public int RepeatCount
-        {
-            get
-            {
-                return _repeatCount;
-            }
-            set
-            {
-                _repeatCount = value;
             }
         }
     
@@ -825,7 +805,6 @@ namespace DataSchema
             stringBuilder.Append("interCommand = " + _interCommand + ", ");
             stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
             stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
-            stringBuilder.Append("repeatCount = " + _repeatCount + ", ");
             stringBuilder.Append("responseTime = " + _responseTime + ", ");
             stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("rewardConditions = " + _rewardConditions + ", ");
