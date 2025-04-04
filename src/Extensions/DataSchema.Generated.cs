@@ -507,6 +507,8 @@ namespace DataSchema
     
         private bool _completionRequiresEngagement = true;
     
+        private bool _skipSampling = false;
+    
         public Sequence()
         {
         }
@@ -528,6 +530,7 @@ namespace DataSchema
             _resetOnReward = other._resetOnReward;
             _minimumEngagementTime = other._minimumEngagementTime;
             _completionRequiresEngagement = other._completionRequiresEngagement;
+            _skipSampling = other._skipSampling;
         }
     
         /// <summary>
@@ -787,6 +790,24 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Boolean specifying whether sampling should be skipped (if skipped rewards are available immediately).
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="skipSampling")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether sampling should be skipped (if skipped rewards are ava" +
+            "ilable immediately).")]
+        public bool SkipSampling
+        {
+            get
+            {
+                return _skipSampling;
+            }
+            set
+            {
+                _skipSampling = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -813,7 +834,8 @@ namespace DataSchema
             stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
             stringBuilder.Append("resetOnReward = " + _resetOnReward + ", ");
             stringBuilder.Append("minimumEngagementTime = " + _minimumEngagementTime + ", ");
-            stringBuilder.Append("completionRequiresEngagement = " + _completionRequiresEngagement);
+            stringBuilder.Append("completionRequiresEngagement = " + _completionRequiresEngagement + ", ");
+            stringBuilder.Append("skipSampling = " + _skipSampling);
             return true;
         }
     

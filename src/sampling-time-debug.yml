@@ -59,9 +59,9 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 1,
     responseTime: 10,
-    interTrialInterval: 0,
+    interTrialInterval: 4,
     minimumEngagementTime: 0.5,
-    completionRequiresEngagement: True,
+    completionRequiresEngagement: False,
     rewardConditions: [
       {position: 0, definition: [
         [{command: OdorA, rewarded: True}]
@@ -70,27 +70,8 @@ sequences: [
     rewardAttempts: 2,
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
-    resetOnReward: True
-    },
-    {name: AlternateC,
-    defaultCommand: Default,
-    presentationTime: 2,
-    interCommand: Purge,
-    interCommandTime: 0.2,
-    maximumTime: 1,
-    responseTime: 10,
-    interTrialInterval: 0,
-    minimumEngagementTime: 0.5,
-    completionRequiresEngagement: True,
-    rewardConditions: [
-      {position: 0, definition: [
-        [{command: OdorC, rewarded: True}]
-      ]}
-    ],
-    rewardAttempts: 2,
-    enableTrialIndicator: True,
-    enableRewardLocationIndicator: True,
-    resetOnReward: True
+    resetOnReward: True,
+    skipSampling: True
     }],
     [{name: AlternateB,
     defaultCommand: Default,
@@ -99,9 +80,9 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 1,
     responseTime: 10,
-    interTrialInterval: 0,
+    interTrialInterval: 4,
     minimumEngagementTime: 0.5,
-    completionRequiresEngagement: True,
+    completionRequiresEngagement: False,
     rewardConditions: [
       {position: 1, definition: [
         [{command: OdorB, rewarded: True}]
@@ -110,6 +91,7 @@ sequences: [
     rewardAttempts: 2,
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
-    resetOnReward: True
+    resetOnReward: True,
+    skipSampling: True
     }]
 ]
