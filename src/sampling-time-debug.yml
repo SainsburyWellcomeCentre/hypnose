@@ -71,7 +71,7 @@ sequences: [
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
     resetOnReward: True,
-    skipSampling: True
+    skipSampling: False
     }],
     [{name: AlternateB,
     defaultCommand: Default,
@@ -92,6 +92,6 @@ sequences: [
     enableTrialIndicator: True,
     enableRewardLocationIndicator: True,
     resetOnReward: True,
-    skipSampling: True
+    skipSampling: False
     }]
 ]
