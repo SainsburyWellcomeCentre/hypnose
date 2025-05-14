@@ -1,2 +1,3 @@
-2025/05/13-12:08:14.106 5680 Creating DB E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\shared_proto_db\metadata since it was missing.
-2025/05/13-12:08:14.501 5680 Reusing MANIFEST E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\shared_proto_db\metadata/MANIFEST-000001
+2025/05/14-10:05:35.291 5a74 Reusing MANIFEST E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\shared_proto_db\metadata/MANIFEST-000001
+2025/05/14-10:05:35.293 5a74 Recovering log #3
+2025/05/14-10:05:35.293 5a74 Reusing old log E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\shared_proto_db\metadata/000003.log 

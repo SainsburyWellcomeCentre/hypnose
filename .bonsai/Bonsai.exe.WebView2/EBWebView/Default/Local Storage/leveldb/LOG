@@ -1,2 +1,3 @@
-2025/05/13-12:08:14.399 63e0 Creating DB E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\Local Storage\leveldb since it was missing.
-2025/05/13-12:08:14.926 63e0 Reusing MANIFEST E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/05/14-10:05:35.407 62d8 Reusing MANIFEST E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/05/14-10:05:35.432 62d8 Recovering log #3
+2025/05/14-10:05:35.437 62d8 Reusing old log E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000003.log 
