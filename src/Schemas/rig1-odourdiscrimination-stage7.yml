@@ -29,7 +29,7 @@ olfactometerCommands:
 sequences: [
     [{name: OdourDiscriminationA_Stage7,
     defaultCommand: Default,
-    presentationTime: 1,
+    presentationTime: 5,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
@@ -50,7 +50,7 @@ sequences: [
     },
     {name: OdourDiscriminationB_Stage7,
     defaultCommand: Default,
-    presentationTime: 1,
+    presentationTime: 5,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
