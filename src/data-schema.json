@@ -229,6 +229,12 @@
                     "description": "The local root folder to save data for this session",
                     "default": "",
                     "type": "string"
+                },
+                "pokeBiasBufferLength": {
+                    "description": "Length of the poke history buffer used to determine bias",
+                    "default": 10,
+                    "type": "integer",
+                    "minimum": 2
                 }
             }
         },
