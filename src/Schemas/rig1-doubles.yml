@@ -29,14 +29,14 @@ olfactometerCommands:
 sequences: [
     [{name: Doubles,
     defaultCommand: Default,
-    presentationTime: 0.5,
+    presentationTime: 2,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
     interTrialInterval: 0,
-    minimumEngagementTime: 1.2,
-    completionRequiresEngagement: True,
+    minimumEngagementTime: 4,
+    completionRequiresEngagement: False,
     rewardConditions: [
       {position: 0, definition: [
         [{command: OdorC, rewarded: False}],
@@ -51,14 +51,14 @@ sequences: [
     }],
     [{name: Doubles,
     defaultCommand: Default,
-    presentationTime: 0.5,
+    presentationTime: 2,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
     interTrialInterval: 0,
-    minimumEngagementTime: 1.2,
-    completionRequiresEngagement: True,
+    minimumEngagementTime: 4,
+    completionRequiresEngagement: False,
     rewardConditions: [
       {position: 1, definition: [
         [{command: OdorC, rewarded: False}],
