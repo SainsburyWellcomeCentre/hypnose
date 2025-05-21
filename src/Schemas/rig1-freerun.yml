@@ -29,13 +29,13 @@ olfactometerCommands:
 sequences: [
     [{name: FreeRun,
     defaultCommand: Default,
-    presentationTime: 1,
+    presentationTime: 4,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
     interTrialInterval: 0,
-    minimumEngagementTime: 0.35,
+    minimumEngagementTime: 2,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 0, definition: [
@@ -50,13 +50,13 @@ sequences: [
     },
     {name: FreeRun,
     defaultCommand: Default,
-    presentationTime: 1,
+    presentationTime: 4,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
     interTrialInterval: 0,
-    minimumEngagementTime: 0.35,
+    minimumEngagementTime: 2,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
@@ -71,13 +71,13 @@ sequences: [
     },
     {name: FreeRun,
     defaultCommand: Default,
-    presentationTime: 1,
+    presentationTime: 4,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
     interTrialInterval: 0,
-    minimumEngagementTime: 0.35,
+    minimumEngagementTime: 2,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
@@ -92,13 +92,13 @@ sequences: [
     },
     {name: FreeRun,
     defaultCommand: Default,
-    presentationTime: 1,
+    presentationTime: 4,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
     interTrialInterval: 0,
-    minimumEngagementTime: 0.35,
+    minimumEngagementTime: 2,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
@@ -113,13 +113,13 @@ sequences: [
     },
     {name: FreeRun,
     defaultCommand: Default,
-    presentationTime: 1,
+    presentationTime: 4,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
     interTrialInterval: 0,
-    minimumEngagementTime: 0.35,
+    minimumEngagementTime: 2,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
@@ -134,13 +134,13 @@ sequences: [
     },
     {name: FreeRun,
     defaultCommand: Default,
-    presentationTime: 1,
+    presentationTime: 4,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
     interTrialInterval: 0,
-    minimumEngagementTime: 0.35,
+    minimumEngagementTime: 2,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
@@ -155,13 +155,13 @@ sequences: [
     },
     {name: FreeRun,
     defaultCommand: Default,
-    presentationTime: 1,
+    presentationTime: 4,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
     interTrialInterval: 0,
-    minimumEngagementTime: 0.35,
+    minimumEngagementTime: 2,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [

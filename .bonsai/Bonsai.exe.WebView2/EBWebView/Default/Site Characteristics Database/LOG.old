@@ -1,0 +1,5 @@
+2025/05/21-15:04:00.257 6f78 Log #3: 2 ops saved to Table #4 OK
+2025/05/21-15:04:00.261 6f78 Archiving E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\Site Characteristics Database/000003.log: OK
+2025/05/21-15:04:00.261 6f78 Table #4: 2 entries OK
+2025/05/21-15:04:00.263 6f78 Archiving E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\Site Characteristics Database/MANIFEST-000001: OK
+2025/05/21-15:04:00.360 6f78 **** Repaired leveldb E:\Repos\hypnose\.bonsai\Bonsai.exe.WebView2\EBWebView\Default\Site Characteristics Database; recovered 1 files; 191 bytes. Some data may have been lost. ****
