@@ -524,8 +524,6 @@ namespace DataSchema
     
         private string _defaultCommand = "Default";
     
-        private double _presentationTime = 1D;
-    
         private string _interCommand = "Purge";
     
         private double _interCommandTime = 0.2D;
@@ -546,8 +544,6 @@ namespace DataSchema
     
         private bool _resetOnReward = false;
     
-        private double _minimumEngagementTime = 0.5D;
-    
         private bool _completionRequiresEngagement = true;
     
         private bool _skipSampling = false;
@@ -560,7 +556,6 @@ namespace DataSchema
         {
             _name = other._name;
             _defaultCommand = other._defaultCommand;
-            _presentationTime = other._presentationTime;
             _interCommand = other._interCommand;
             _interCommandTime = other._interCommandTime;
             _interTrialInterval = other._interTrialInterval;
@@ -571,7 +566,6 @@ namespace DataSchema
             _enableTrialIndicator = other._enableTrialIndicator;
             _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
             _resetOnReward = other._resetOnReward;
-            _minimumEngagementTime = other._minimumEngagementTime;
             _completionRequiresEngagement = other._completionRequiresEngagement;
             _skipSampling = other._skipSampling;
         }
@@ -607,23 +601,6 @@ namespace DataSchema
             set
             {
                 _defaultCommand = value;
-            }
-        }
-    
-        /// <summary>
-        /// Presentation time in seconds of each sequence element
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="presentationTime")]
-        [System.ComponentModel.DescriptionAttribute("Presentation time in seconds of each sequence element")]
-        public double PresentationTime
-        {
-            get
-            {
-                return _presentationTime;
-            }
-            set
-            {
-                _presentationTime = value;
             }
         }
     
@@ -798,24 +775,6 @@ namespace DataSchema
         }
     
         /// <summary>
-        /// Minimum amount of time in seconds an animal must engage with a trial for it to be considered valid.
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="minimumEngagementTime")]
-        [System.ComponentModel.DescriptionAttribute("Minimum amount of time in seconds an animal must engage with a trial for it to be" +
-            " considered valid.")]
-        public double MinimumEngagementTime
-        {
-            get
-            {
-                return _minimumEngagementTime;
-            }
-            set
-            {
-                _minimumEngagementTime = value;
-            }
-        }
-    
-        /// <summary>
         /// Boolean specifying whether engagement time must be satisfied before a trial can be considered complete/valid.
         /// </summary>
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="completionRequiresEngagement")]
@@ -865,7 +824,6 @@ namespace DataSchema
         {
             stringBuilder.Append("name = " + _name + ", ");
             stringBuilder.Append("defaultCommand = " + _defaultCommand + ", ");
-            stringBuilder.Append("presentationTime = " + _presentationTime + ", ");
             stringBuilder.Append("interCommand = " + _interCommand + ", ");
             stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
             stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
@@ -876,7 +834,6 @@ namespace DataSchema
             stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
             stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
             stringBuilder.Append("resetOnReward = " + _resetOnReward + ", ");
-            stringBuilder.Append("minimumEngagementTime = " + _minimumEngagementTime + ", ");
             stringBuilder.Append("completionRequiresEngagement = " + _completionRequiresEngagement + ", ");
             stringBuilder.Append("skipSampling = " + _skipSampling);
             return true;
