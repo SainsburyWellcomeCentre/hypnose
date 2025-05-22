@@ -94,6 +94,14 @@
                 },
                 "rewarded": {
                     "type": "boolean"
+                },
+                "minimumSamplingTime": {
+                    "type": "number",
+                    "description": "The minimum sampling time in seconds for a presentation to be considered valid."
+                },
+                "maximumSamplingTime": {
+                    "type": "number",
+                    "description": "The maximum sampling time in seconds for a presentation, completes and is valid after this time."
                 }
             }
         },

@@ -324,6 +324,10 @@ namespace DataSchema
     
         private bool _rewarded;
     
+        private double _minimumSamplingTime;
+    
+        private double _maximumSamplingTime;
+    
         public Valence()
         {
         }
@@ -332,6 +336,8 @@ namespace DataSchema
         {
             _command = other._command;
             _rewarded = other._rewarded;
+            _minimumSamplingTime = other._minimumSamplingTime;
+            _maximumSamplingTime = other._maximumSamplingTime;
         }
     
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="command")]
@@ -360,6 +366,41 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// The minimum sampling time in seconds for a presentation to be considered valid.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="minimumSamplingTime")]
+        [System.ComponentModel.DescriptionAttribute("The minimum sampling time in seconds for a presentation to be considered valid.")]
+        public double MinimumSamplingTime
+        {
+            get
+            {
+                return _minimumSamplingTime;
+            }
+            set
+            {
+                _minimumSamplingTime = value;
+            }
+        }
+    
+        /// <summary>
+        /// The maximum sampling time in seconds for a presentation, completes and is valid after this time.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="maximumSamplingTime")]
+        [System.ComponentModel.DescriptionAttribute("The maximum sampling time in seconds for a presentation, completes and is valid a" +
+            "fter this time.")]
+        public double MaximumSamplingTime
+        {
+            get
+            {
+                return _maximumSamplingTime;
+            }
+            set
+            {
+                _maximumSamplingTime = value;
+            }
+        }
+    
         public System.IObservable<Valence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Valence(this)));
@@ -373,7 +414,9 @@ namespace DataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("command = " + _command + ", ");
-            stringBuilder.Append("rewarded = " + _rewarded);
+            stringBuilder.Append("rewarded = " + _rewarded + ", ");
+            stringBuilder.Append("minimumSamplingTime = " + _minimumSamplingTime + ", ");
+            stringBuilder.Append("maximumSamplingTime = " + _maximumSamplingTime);
             return true;
         }
     
