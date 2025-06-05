@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: C:\Users\neurogears\source\repos\swc\hypnose\temp_data
+  loggingRootPath: E:\temp
   rewardTime: 0.058
 
 cameraProperties:
