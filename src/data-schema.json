@@ -94,6 +94,14 @@
                 },
                 "rewarded": {
                     "type": "boolean"
+                },
+                "minimumSamplingTime": {
+                    "type": "number",
+                    "description": "The minimum sampling time in seconds for a presentation to be considered valid."
+                },
+                "maximumSamplingTime": {
+                    "type": "number",
+                    "description": "The maximum sampling time in seconds for a presentation, completes and is valid after this time."
                 }
             }
         },
@@ -124,11 +132,6 @@
                     "description": "The default olfactometer command",
                     "default": "Default",
                     "type": "string"
-                },
-                "presentationTime": {
-                    "description": "Presentation time in seconds of each sequence element",
-                    "default": 1,
-                    "type": "number"
                 },
                 "interCommand": {
                     "description": "Command in between presentations",
@@ -180,11 +183,6 @@
                     "description": "Boolean specifying whether a trial should ignore the response time and reset once a reward is given",
                     "default": "False",
                     "type": "boolean"
-                },
-                "minimumEngagementTime": {
-                    "description": "Minimum amount of time in seconds an animal must engage with a trial for it to be considered valid.",
-                    "default": 0.5,
-                    "type": "number"
                 },
                 "completionRequiresEngagement": {
                     "description": "Boolean specifying whether engagement time must be satisfied before a trial can be considered complete/valid.",
