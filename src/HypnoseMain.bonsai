@@ -736,11 +736,11 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:SequenceSelector">
-          <p2:Path />
+          <p2:Path>sandbox-sequence.yml</p2:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="rx:BehaviorSubject">
-        <Name>CurrentSequence</Name>
+        <Name>CurrentSequences</Name>
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="num:CreateRandom">
@@ -922,7 +922,7 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="SubscribeSubject">
-        <Name>CurrentSequence</Name>
+        <Name>CurrentSequences</Name>
       </Expression>
       <Expression xsi:type="MemberSelector">
         <Selector>Sequences</Selector>
@@ -1852,9 +1852,9 @@ it.Item1.Result.Valid as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p4:Valence">
-                      <p4:MaximumSamplingTime>0</p4:MaximumSamplingTime>
+                      <p4:Rewarded>true</p4:Rewarded>
                       <p4:MinimumSamplingTime>0</p4:MinimumSamplingTime>
-                      <p4:Rewarded>false</p4:Rewarded>
+                      <p4:MaximumSamplingTime>0</p4:MaximumSamplingTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
