@@ -118,6 +118,11 @@
                     "description": "The local root folder to save data for this session",
                     "default": "",
                     "type": "string"
+                },
+                "performanceAverageWindow": {
+                    "description": "Size of buffer to average subject performance over.",
+                    "type": "integer",
+                    "default": 50
                 }
             }
         },

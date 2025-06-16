@@ -9,7 +9,7 @@ namespace DataSchema
 {
     #pragma warning disable // Disable all warnings
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.4.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class RewardCommand
@@ -87,7 +87,7 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.4.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class OlfactometerStateCommand
@@ -314,7 +314,7 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.4.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class HypnoseSession
@@ -412,7 +412,7 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.4.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class Metadata
@@ -430,6 +430,8 @@ namespace DataSchema
     
         private string _loggingRootPath = "";
     
+        private int _performanceAverageWindow = 50;
+    
         public Metadata()
         {
         }
@@ -442,6 +444,7 @@ namespace DataSchema
             _sampleOffsetTime = other._sampleOffsetTime;
             _rewardTime = other._rewardTime;
             _loggingRootPath = other._loggingRootPath;
+            _performanceAverageWindow = other._performanceAverageWindow;
         }
     
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="animalId")]
@@ -540,6 +543,23 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Size of buffer to average subject performance over.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="performanceAverageWindow")]
+        [System.ComponentModel.DescriptionAttribute("Size of buffer to average subject performance over.")]
+        public int PerformanceAverageWindow
+        {
+            get
+            {
+                return _performanceAverageWindow;
+            }
+            set
+            {
+                _performanceAverageWindow = value;
+            }
+        }
+    
         public System.IObservable<Metadata> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
@@ -557,7 +577,8 @@ namespace DataSchema
             stringBuilder.Append("minimumSampleTime = " + _minimumSampleTime + ", ");
             stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime + ", ");
             stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
-            stringBuilder.Append("loggingRootPath = " + _loggingRootPath);
+            stringBuilder.Append("loggingRootPath = " + _loggingRootPath + ", ");
+            stringBuilder.Append("performanceAverageWindow = " + _performanceAverageWindow);
             return true;
         }
     
@@ -576,7 +597,7 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.4.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class CameraProperties
@@ -686,7 +707,7 @@ namespace DataSchema
     /// <summary>
     /// Serializes a sequence of data model objects into YAML strings.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.4.0.0 (YamlDotNet v13.0.0.0)")]
     [System.ComponentModel.DescriptionAttribute("Serializes a sequence of data model objects into YAML strings.")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
@@ -733,7 +754,7 @@ namespace DataSchema
     /// <summary>
     /// Deserializes a sequence of YAML strings into data model objects.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.4.0.0 (YamlDotNet v13.0.0.0)")]
     [System.ComponentModel.DescriptionAttribute("Deserializes a sequence of YAML strings into data model objects.")]
     [System.ComponentModel.DefaultPropertyAttribute("Type")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
