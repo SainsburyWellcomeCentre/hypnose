@@ -12,9 +12,8 @@
                  xmlns:p2="clr-namespace:;assembly=Extensions"
                  xmlns:num="clr-namespace:Bonsai.Numerics;assembly=Bonsai.Numerics"
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
-                 xmlns:p3="clr-namespace:System.Reactive;assembly=System.Reactive.Core"
-                 xmlns:p4="clr-namespace:Bonsai.Numerics.Distributions;assembly=Bonsai.Numerics"
-                 xmlns:p5="clr-namespace:SequenceSchema;assembly=Extensions"
+                 xmlns:p3="clr-namespace:Bonsai.Numerics.Distributions;assembly=Bonsai.Numerics"
+                 xmlns:p4="clr-namespace:SequenceSchema;assembly=Extensions"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -647,10 +646,6 @@
                 </Edges>
               </Workflow>
             </Expression>
-            <Expression xsi:type="Unit" />
-            <Expression xsi:type="MulticastSubject">
-              <Name>RewardGiven</Name>
-            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="2" Label="Source1" />
@@ -691,8 +686,6 @@
             <Edge From="41" To="42" Label="Source4" />
             <Edge From="42" To="43" Label="Source1" />
             <Edge From="44" To="45" Label="Source1" />
-            <Edge From="45" To="46" Label="Source1" />
-            <Edge From="46" To="47" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -928,11 +921,8 @@
           </Edges>
         </Workflow>
       </Expression>
-      <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:Unit">
-        <rx:Name>RewardGiven</rx:Name>
-      </Expression>
-      <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p3:Unit">
-        <rx:Name>TrialCompleted</rx:Name>
+      <Expression xsi:type="rx:BehaviorSubject" TypeArguments="sys:Boolean">
+        <rx:Name>TrialCorrectResult</rx:Name>
       </Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>CurrentSequences</Name>
@@ -1074,13 +1064,13 @@
                     </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p4:CreateDiscreteUniform">
-                      <p4:Lower>0</p4:Lower>
-                      <p4:Upper>0</p4:Upper>
+                    <Combinator xsi:type="p3:CreateDiscreteUniform">
+                      <p3:Lower>0</p3:Lower>
+                      <p3:Upper>0</p3:Upper>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p4:Sample" />
+                    <Combinator xsi:type="p3:Sample" />
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Take">
@@ -1864,10 +1854,10 @@ it.Item1.Result.Valid as TrialComplete
                     </Operand>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p5:Valence">
-                      <p5:Rewarded>true</p5:Rewarded>
-                      <p5:MinimumSamplingTime>0</p5:MinimumSamplingTime>
-                      <p5:MaximumSamplingTime>0</p5:MaximumSamplingTime>
+                    <Combinator xsi:type="p4:Valence">
+                      <p4:Rewarded>true</p4:Rewarded>
+                      <p4:MinimumSamplingTime>0</p4:MinimumSamplingTime>
+                      <p4:MaximumSamplingTime>0</p4:MaximumSamplingTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
@@ -2655,9 +2645,6 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Zip" />
                   </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Item2</Selector>
-                  </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Take">
                       <rx:Count>1</rx:Count>
@@ -2740,14 +2727,13 @@ it.Item2 as TrialComplete
                   <Edge From="44" To="45" Label="Source2" />
                   <Edge From="45" To="46" Label="Source1" />
                   <Edge From="46" To="47" Label="Source1" />
-                  <Edge From="47" To="48" Label="Source1" />
-                  <Edge From="49" To="51" Label="Source1" />
-                  <Edge From="50" To="51" Label="Source2" />
+                  <Edge From="48" To="50" Label="Source1" />
+                  <Edge From="49" To="50" Label="Source2" />
+                  <Edge From="50" To="51" Label="Source1" />
                   <Edge From="51" To="52" Label="Source1" />
-                  <Edge From="52" To="53" Label="Source1" />
-                  <Edge From="53" To="55" Label="Source1" />
-                  <Edge From="54" To="55" Label="Source2" />
-                  <Edge From="55" To="56" Label="Source1" />
+                  <Edge From="52" To="54" Label="Source1" />
+                  <Edge From="53" To="54" Label="Source2" />
+                  <Edge From="54" To="55" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -2772,7 +2758,7 @@ it.Item2 as TrialComplete
               </Workflow>
             </Expression>
             <Expression xsi:type="MemberSelector">
-              <Selector>Sequence</Selector>
+              <Selector>TrialComplete,Sequence</Selector>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Take">
@@ -2781,6 +2767,28 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="rx:Sink">
+              <Name>UpdateTrialTracker</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item1</Selector>
+                  </Expression>
+                  <Expression xsi:type="MulticastSubject">
+                    <Name>TrialCorrectResult</Name>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
+                </Edges>
+              </Workflow>
             </Expression>
             <Expression xsi:type="rx:SelectMany">
               <Name>Reset</Name>
@@ -2829,7 +2837,7 @@ it.Item2 as TrialComplete
                     <Name>SequenceInfo</Name>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
-                    <Selector>InterTrialInterval</Selector>
+                    <Selector>Item2.InterTrialInterval</Selector>
                   </Expression>
                   <Expression xsi:type="scr:ExpressionTransform">
                     <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
@@ -2870,10 +2878,6 @@ it.Item2 as TrialComplete
                 </Edges>
               </Workflow>
             </Expression>
-            <Expression xsi:type="Unit" />
-            <Expression xsi:type="MulticastSubject">
-              <Name>TrialCompleted</Name>
-            </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Take">
                 <rx:Count>1</rx:Count>
@@ -2903,7 +2907,6 @@ it.Item2 as TrialComplete
             <Edge From="17" To="18" Label="Source1" />
             <Edge From="18" To="19" Label="Source1" />
             <Edge From="19" To="20" Label="Source1" />
-            <Edge From="20" To="21" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -3058,32 +3061,32 @@ it.Item2 as TrialComplete
       <Edge From="18" To="19" Label="Source1" />
       <Edge From="19" To="20" Label="Source1" />
       <Edge From="20" To="21" Label="Source1" />
+      <Edge From="24" To="25" Label="Source1" />
       <Edge From="25" To="26" Label="Source1" />
       <Edge From="26" To="27" Label="Source1" />
       <Edge From="27" To="28" Label="Source1" />
       <Edge From="28" To="29" Label="Source1" />
-      <Edge From="29" To="30" Label="Source1" />
+      <Edge From="32" To="33" Label="Source1" />
+      <Edge From="32" To="38" Label="Source1" />
       <Edge From="33" To="34" Label="Source1" />
-      <Edge From="33" To="39" Label="Source1" />
-      <Edge From="34" To="35" Label="Source1" />
-      <Edge From="35" To="37" Label="Source1" />
-      <Edge From="36" To="37" Label="Source2" />
-      <Edge From="36" To="41" Label="Source2" />
-      <Edge From="37" To="38" Label="Source1" />
-      <Edge From="38" To="43" Label="Source1" />
+      <Edge From="34" To="36" Label="Source1" />
+      <Edge From="35" To="36" Label="Source2" />
+      <Edge From="35" To="40" Label="Source2" />
+      <Edge From="36" To="37" Label="Source1" />
+      <Edge From="37" To="42" Label="Source1" />
+      <Edge From="38" To="39" Label="Source1" />
       <Edge From="39" To="40" Label="Source1" />
       <Edge From="40" To="41" Label="Source1" />
-      <Edge From="41" To="42" Label="Source1" />
-      <Edge From="42" To="43" Label="Source2" />
-      <Edge From="43" To="44" Label="Source1" />
+      <Edge From="41" To="42" Label="Source2" />
+      <Edge From="42" To="43" Label="Source1" />
+      <Edge From="44" To="45" Label="Source1" />
       <Edge From="45" To="46" Label="Source1" />
       <Edge From="46" To="47" Label="Source1" />
       <Edge From="47" To="48" Label="Source1" />
       <Edge From="48" To="49" Label="Source1" />
       <Edge From="49" To="50" Label="Source1" />
-      <Edge From="50" To="51" Label="Source1" />
-      <Edge From="52" To="53" Label="Source1" />
-      <Edge From="54" To="55" Label="Source1" />
+      <Edge From="51" To="52" Label="Source1" />
+      <Edge From="53" To="54" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
