@@ -98,7 +98,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>E:\temp</Path>
+              <Path>C:\Users\neurogears\source\repos\swc\hypnose\temp_data</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -261,7 +261,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM8</harp:PortName>
+                <harp:PortName>COM27</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -531,7 +531,7 @@
                   <Expression xsi:type="beh:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="beh:CreatePulseSupplyPort1Payload">
-                      <beh:PulseSupplyPort1>100</beh:PulseSupplyPort1>
+                      <beh:PulseSupplyPort1>58</beh:PulseSupplyPort1>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -592,7 +592,7 @@
                   <Expression xsi:type="beh:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="beh:CreatePulseSupplyPort2Payload">
-                      <beh:PulseSupplyPort2>100</beh:PulseSupplyPort2>
+                      <beh:PulseSupplyPort2>58</beh:PulseSupplyPort2>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -689,9 +689,9 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM13</PortO0>
+        <PortO0>COM38</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM12</PortO1>
+        <PortO1>COM39</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
