@@ -9,6 +9,7 @@ metadata:
   sampleOffsetTime: 0.1
   loggingRootPath: C:\Users\neurogears\source\repos\swc\hypnose\temp_data
   rewardTime: 0.058
+  performanceAverageWindow: 10
 
 cameraProperties:
   frameRate: 30

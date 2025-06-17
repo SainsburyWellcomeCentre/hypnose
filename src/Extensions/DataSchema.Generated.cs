@@ -988,6 +988,8 @@ namespace DataSchema
     
         private string _loggingRootPath = "";
     
+        private int _performanceAverageWindow = 10;
+    
         public Metadata()
         {
         }
@@ -1000,6 +1002,7 @@ namespace DataSchema
             _sampleOffsetTime = other._sampleOffsetTime;
             _rewardTime = other._rewardTime;
             _loggingRootPath = other._loggingRootPath;
+            _performanceAverageWindow = other._performanceAverageWindow;
         }
     
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="animalId")]
@@ -1098,6 +1101,23 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Size of the window to calculate performance average over
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="performanceAverageWindow")]
+        [System.ComponentModel.DescriptionAttribute("Size of the window to calculate performance average over")]
+        public int PerformanceAverageWindow
+        {
+            get
+            {
+                return _performanceAverageWindow;
+            }
+            set
+            {
+                _performanceAverageWindow = value;
+            }
+        }
+    
         public System.IObservable<Metadata> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
@@ -1115,7 +1135,8 @@ namespace DataSchema
             stringBuilder.Append("minimumSampleTime = " + _minimumSampleTime + ", ");
             stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime + ", ");
             stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
-            stringBuilder.Append("loggingRootPath = " + _loggingRootPath);
+            stringBuilder.Append("loggingRootPath = " + _loggingRootPath + ", ");
+            stringBuilder.Append("performanceAverageWindow = " + _performanceAverageWindow);
             return true;
         }
     
