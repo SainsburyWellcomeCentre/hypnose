@@ -9,7 +9,7 @@ metadata:
   sampleOffsetTime: 0.1
   loggingRootPath: C:\Users\neurogears\source\repos\swc\hypnose\temp_data
   rewardTime: 0.058
-  performanceAverageWindow: 10
+  performanceAverageWindow: 5
   initialSequence: C:\Users\neurogears\source\repos\swc\hypnose\src\sandbox-sequence.yml
 
 cameraProperties:
