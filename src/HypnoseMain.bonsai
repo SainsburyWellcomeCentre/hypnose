@@ -941,7 +941,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="dsp:Buffer">
-          <dsp:Count>10</dsp:Count>
+          <dsp:Count>50</dsp:Count>
           <dsp:Skip>1</dsp:Skip>
         </Combinator>
       </Expression>
@@ -1490,7 +1490,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0</Value>
+                                  <Value>3</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -1547,7 +1547,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT0.5S</rx:DueTime>
+                            <rx:DueTime>PT0S</rx:DueTime>
                             <rx:Period>PT0S</rx:Period>
                           </Combinator>
                         </Expression>
@@ -2399,7 +2399,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:RewardCommand">
-                      <p1:RewardTime>0.1</p1:RewardTime>
+                      <p1:RewardTime>0.058</p1:RewardTime>
                       <p1:RewardPosition>0</p1:RewardPosition>
                     </Combinator>
                   </Expression>
@@ -2526,7 +2526,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:RewardCommand">
-                      <p1:RewardTime>0.1</p1:RewardTime>
+                      <p1:RewardTime>0.058</p1:RewardTime>
                       <p1:RewardPosition>1</p1:RewardPosition>
                     </Combinator>
                   </Expression>
@@ -2651,7 +2651,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT10S</rx:DueTime>
+                      <rx:DueTime>P1DT3H46M39S</rx:DueTime>
                       <rx:Period>PT0S</rx:Period>
                     </Combinator>
                   </Expression>
@@ -2876,7 +2876,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT4S</rx:DueTime>
+                      <rx:DueTime>PT0S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">

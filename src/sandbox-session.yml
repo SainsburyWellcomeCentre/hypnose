@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: E:\temp
+  loggingRootPath: C:\Users\neurogears\source\repos\swc\hypnose\temp_data
   rewardTime: 0.058
 
 cameraProperties:
@@ -25,40 +25,3 @@ olfactometerCommands:
 - {name: OdorE, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [100, 0, 0, 0, 1000]}
 - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 100, 0, 0, 1000]}
 - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 100, 0, 1000]}
-
-sequences: [
-  [
-    {
-      name: OdourDiscriminationA,
-      defaultCommand: Default,
-      interCommand: Purge,
-      interCommandTime: 0.2,
-      maximumTime: 10,
-      responseTime: 99999,
-      interTrialInterval: 0,
-      completionRequiresEngagement: True,
-      rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: False, minimumSamplingTime: 1, maximumSamplingTime: 3}], [{command: OdorD, rewarded: True, minimumSamplingTime: 1, maximumSamplingTime: 3}]]}],
-      rewardAttempts: 0,
-      enableTrialIndicator: True,
-      enableRewardLocationIndicator: True,
-      resetOnReward: True,
-      skipSampling: False
-    },
-    {
-      name: OdourDiscriminationB,
-      defaultCommand: Default,
-      interCommand: Purge,
-      interCommandTime: 0.2,
-      maximumTime: 10,
-      responseTime: 99999,
-      interTrialInterval: 0,
-      completionRequiresEngagement: True,
-      rewardConditions: [{position: 1, definition: [[{command: OdorB, rewarded: False, minimumSamplingTime: 1, maximumSamplingTime: 3}], [{command: OdorC, rewarded: True, minimumSamplingTime: 1, maximumSamplingTime: 3}]]}],
-      rewardAttempts: 0,
-      enableTrialIndicator: True,
-      enableRewardLocationIndicator: True,
-      resetOnReward: True,
-      skipSampling: False
-    }
-    ]
-  ]
