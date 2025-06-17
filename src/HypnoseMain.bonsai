@@ -735,17 +735,15 @@
       <Expression xsi:type="rx:AsyncSubject">
         <Name>SessionSettings</Name>
       </Expression>
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Path" DisplayName="SequencePath" />
+      </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:SequenceSelector">
           <p2:Path>sandbox-sequence.yml</p2:Path>
         </Combinator>
       </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:Take">
-          <rx:Count>1</rx:Count>
-        </Combinator>
-      </Expression>
-      <Expression xsi:type="rx:AsyncSubject">
+      <Expression xsi:type="rx:BehaviorSubject">
         <Name>CurrentSequences</Name>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -947,6 +945,11 @@
       </Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>CurrentSequences</Name>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Take">
+          <rx:Count>1</rx:Count>
+        </Combinator>
       </Expression>
       <Expression xsi:type="MemberSelector">
         <Selector>Sequences</Selector>
@@ -2972,9 +2975,6 @@ it.Item2 as TrialComplete
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Concat" />
-      </Expression>
-      <Expression xsi:type="Combinator">
-        <Combinator xsi:type="rx:Materialize" />
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Repeat" />
