@@ -54,7 +54,7 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="aeon-video:SpinnakerCapture">
                 <spk:Index xsi:nil="true" />
-                <spk:SerialNumber>24282622</spk:SerialNumber>
+                <spk:SerialNumber>24284790</spk:SerialNumber>
                 <spk:ColorProcessing>Default</spk:ColorProcessing>
                 <aeon-video:ExposureTime>30000</aeon-video:ExposureTime>
                 <aeon-video:Gain>15</aeon-video:Gain>
@@ -98,7 +98,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>E:\temp</Path>
+              <Path>D:\hypnose\rawdata\sub-020_id-072\ses-55_date-20250610\behav</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -123,17 +123,23 @@
                 <rx:Count>1</rx:Count>
               </Combinator>
             </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>EegStream</Name>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="SubscribeSubject">
+                <Name>EegStream</Name>
+              </Builder>
             </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
-              <Name>BehaviorEvents</Name>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
+                <Name>BehaviorEvents</Name>
+              </Builder>
             </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
-              <Heartbeats>BehaviorEvents</Heartbeats>
-              <ClosingDuration xsi:nil="true" />
-              <LogName>ExperimentEvents</LogName>
-              <Selector xsi:nil="true" />
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+                <Heartbeats>BehaviorEvents</Heartbeats>
+                <ClosingDuration xsi:nil="true" />
+                <LogName>ExperimentEvents</LogName>
+                <Selector xsi:nil="true" />
+              </Builder>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>EventsO0</Name>
@@ -261,7 +267,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM8</harp:PortName>
+                <harp:PortName>COM11</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -531,7 +537,7 @@
                   <Expression xsi:type="beh:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="beh:CreatePulseSupplyPort1Payload">
-                      <beh:PulseSupplyPort1>100</beh:PulseSupplyPort1>
+                      <beh:PulseSupplyPort1>45</beh:PulseSupplyPort1>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -592,7 +598,7 @@
                   <Expression xsi:type="beh:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="beh:CreatePulseSupplyPort2Payload">
-                      <beh:PulseSupplyPort2>100</beh:PulseSupplyPort2>
+                      <beh:PulseSupplyPort2>45</beh:PulseSupplyPort2>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -689,9 +695,9 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM13</PortO0>
+        <PortO0>COM25</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM12</PortO1>
+        <PortO1>COM9</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
@@ -700,16 +706,22 @@
       <Expression xsi:type="GroupWorkflow">
         <Workflow>
           <Nodes>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="p2:UdpSource">
-                <p2:GroupAddress>239.255.76.67</p2:GroupAddress>
-                <p2:Port>8866</p2:Port>
-              </Combinator>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="p2:UdpSource">
+                  <p2:GroupAddress>239.255.76.67</p2:GroupAddress>
+                  <p2:Port>8866</p2:Port>
+                </Combinator>
+              </Builder>
             </Expression>
-            <Expression xsi:type="rx:PublishSubject">
-              <Name>EegStream</Name>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="rx:PublishSubject">
+                <Name>EegStream</Name>
+              </Builder>
             </Expression>
-            <Expression xsi:type="WorkflowOutput" />
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="WorkflowOutput" />
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -722,7 +734,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:LoadSessionSettings">
-          <p2:Path>sandbox-session.yml</p2:Path>
+          <p2:Path>Z:\hypnose\Schemas_doubles_freerun\rig1-freerun-stage1.yml</p2:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -1286,7 +1298,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT3S</rx:DueTime>
+                            <rx:DueTime>PT1.5S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
@@ -1388,7 +1400,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>1</Value>
+                                  <Value>0.35</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="WorkflowOutput" />
@@ -1441,7 +1453,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>1</Value>
+                                  <Value>0.35</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -1457,7 +1469,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>3</Value>
+                                  <Value>1.5</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -2372,7 +2384,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:RewardCommand">
-                      <p1:RewardTime>0.058</p1:RewardTime>
+                      <p1:RewardTime>0.045</p1:RewardTime>
                       <p1:RewardPosition>0</p1:RewardPosition>
                     </Combinator>
                   </Expression>
@@ -2499,7 +2511,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:RewardCommand">
-                      <p1:RewardTime>0.058</p1:RewardTime>
+                      <p1:RewardTime>0.045</p1:RewardTime>
                       <p1:RewardPosition>1</p1:RewardPosition>
                     </Combinator>
                   </Expression>
