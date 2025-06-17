@@ -123,6 +123,10 @@
                     "description": "Size of the window to calculate performance average over",
                     "default": 10,
                     "type": "integer"
+                },
+                "initialSequence": {
+                    "description": "Path to the initial sequence .yml file to run",
+                    "type": "string"
                 }
             }
         },

@@ -121,6 +121,17 @@
                 "type": "array"
             },
             "type": "array"
+        },
+        "nextSequence": {
+            "description": "Path to .yml file of the next sequence to advance to.",
+            "type": "string"
+        },
+        "performaceCriterion": {
+            "description": "Performance that must be reached before advancing to the next sequence.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 0.8
         }
     },
     "title": "HypnoseSequence",

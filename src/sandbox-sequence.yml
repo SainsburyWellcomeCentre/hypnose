@@ -2,6 +2,8 @@
 ---
 # yaml-language-server: $schema=sequence-schema.json
 
+nextSequence: C:\Users\neurogears\source\repos\swc\hypnose\src\sandbox-sequence-rev.yml
+performaceCriterion: 0.8
 sequences: [
   [
     {
