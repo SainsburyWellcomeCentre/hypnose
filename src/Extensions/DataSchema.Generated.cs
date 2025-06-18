@@ -530,8 +530,6 @@ namespace DataSchema
     
         private double _interTrialInterval = 5D;
     
-        private double _maximumInterOdourPokeTime = 0.5D;
-    
         private double _responseTime = 5D;
     
         private double _maximumTime = 10D;
@@ -561,7 +559,6 @@ namespace DataSchema
             _interCommand = other._interCommand;
             _interCommandTime = other._interCommandTime;
             _interTrialInterval = other._interTrialInterval;
-            _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
             _responseTime = other._responseTime;
             _maximumTime = other._maximumTime;
             _rewardConditions = other._rewardConditions;
@@ -655,24 +652,6 @@ namespace DataSchema
             set
             {
                 _interTrialInterval = value;
-            }
-        }
-    
-        /// <summary>
-        /// Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="maximumInterOdourPokeTime")]
-        [System.ComponentModel.DescriptionAttribute("Maximum time after interCommandTime that subject has to repoke - otherwise trial " +
-            "ends.")]
-        public double MaximumInterOdourPokeTime
-        {
-            get
-            {
-                return _maximumInterOdourPokeTime;
-            }
-            set
-            {
-                _maximumInterOdourPokeTime = value;
             }
         }
     
@@ -848,7 +827,6 @@ namespace DataSchema
             stringBuilder.Append("interCommand = " + _interCommand + ", ");
             stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
             stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
-            stringBuilder.Append("maximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
             stringBuilder.Append("responseTime = " + _responseTime + ", ");
             stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("rewardConditions = " + _rewardConditions + ", ");
@@ -1006,6 +984,8 @@ namespace DataSchema
     
         private double _sampleOffsetTime = 0.1D;
     
+        private double _maximumInterOdourPokeTime = 0.5D;
+    
         private double _rewardTime = 0.1D;
     
         private string _loggingRootPath = "";
@@ -1020,6 +1000,7 @@ namespace DataSchema
             _rootPath = other._rootPath;
             _minimumSampleTime = other._minimumSampleTime;
             _sampleOffsetTime = other._sampleOffsetTime;
+            _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
             _rewardTime = other._rewardTime;
             _loggingRootPath = other._loggingRootPath;
         }
@@ -1087,6 +1068,24 @@ namespace DataSchema
         }
     
         /// <summary>
+        /// Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="maximumInterOdourPokeTime")]
+        [System.ComponentModel.DescriptionAttribute("Maximum time after interCommandTime that subject has to repoke - otherwise trial " +
+            "ends.")]
+        public double MaximumInterOdourPokeTime
+        {
+            get
+            {
+                return _maximumInterOdourPokeTime;
+            }
+            set
+            {
+                _maximumInterOdourPokeTime = value;
+            }
+        }
+    
+        /// <summary>
         /// Time in seconds to deliver rewards
         /// </summary>
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardTime")]
@@ -1136,6 +1135,7 @@ namespace DataSchema
             stringBuilder.Append("rootPath = " + _rootPath + ", ");
             stringBuilder.Append("minimumSampleTime = " + _minimumSampleTime + ", ");
             stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime + ", ");
+            stringBuilder.Append("maximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
             stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
             stringBuilder.Append("loggingRootPath = " + _loggingRootPath);
             return true;

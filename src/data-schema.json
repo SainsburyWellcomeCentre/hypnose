@@ -148,11 +148,6 @@
                     "default": 5,
                     "type": "number"
                 },
-                "maximumInterOdourPokeTime": {
-                    "description": "Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.",
-                    "default": 0.5,
-                    "type": "number"
-                },
                 "responseTime": {
                     "description": "The allowed time window for a subject to make a response following stimulus presentation",
                     "default": 5,
@@ -221,6 +216,11 @@
                 "sampleOffsetTime": {
                     "description": "Time in seconds after sampling offset when subject is considered to have disengaged sampling.",
                     "default": 0.1,
+                    "type": "number"
+                },
+                "maximumInterOdourPokeTime": {
+                    "description": "Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.",
+                    "default": 0.5,
                     "type": "number"
                 },
                 "rewardTime": {

@@ -1517,7 +1517,7 @@
                           <Name>SessionSettings</Name>
                         </Expression>
                         <Expression xsi:type="MemberSelector">
-                          <Selector>Metadata.MinimumSampleTime</Selector>
+                          <Selector>Metadata.MaximumInterOdourPokeTime</Selector>
                         </Expression>
                         <Expression xsi:type="scr:ExpressionTransform">
                           <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
