@@ -98,7 +98,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>D:\hypnose\rawdata\sub-020_id-072\ses-55_date-20250610\behav</Path>
+              <Path>E:\temp</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -267,7 +267,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM11</harp:PortName>
+                <harp:PortName>COM10</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -695,9 +695,9 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM25</PortO0>
+        <PortO0>COM13</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM9</PortO1>
+        <PortO1>COM12</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
@@ -734,7 +734,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:LoadSessionSettings">
-          <p2:Path>Z:\hypnose\Schemas_doubles_freerun\rig1-freerun-stage1.yml</p2:Path>
+          <p2:Path>Schemas\rig1-freerun-stage1.yml</p2:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -1298,7 +1298,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT1.5S</rx:DueTime>
+                            <rx:DueTime>PT1S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
@@ -1469,7 +1469,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>1.5</Value>
+                                  <Value>1</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -2645,6 +2645,14 @@ it.Item2 as TrialComplete
                       <Value>false</Value>
                     </Combinator>
                   </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SustainedSampleOnset</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="BooleanProperty">
+                      <Value>false</Value>
+                    </Combinator>
+                  </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Merge" />
                   </Expression>
@@ -2708,10 +2716,10 @@ it.Item2 as TrialComplete
                   <Edge From="11" To="12" Label="Source2" />
                   <Edge From="12" To="13" Label="Source1" />
                   <Edge From="13" To="14" Label="Source1" />
-                  <Edge From="14" To="42" Label="Source1" />
+                  <Edge From="14" To="44" Label="Source1" />
                   <Edge From="15" To="16" Label="Source1" />
                   <Edge From="16" To="17" Label="Source1" />
-                  <Edge From="17" To="42" Label="Source2" />
+                  <Edge From="17" To="44" Label="Source2" />
                   <Edge From="18" To="20" Label="Source1" />
                   <Edge From="19" To="20" Label="Source2" />
                   <Edge From="20" To="21" Label="Source1" />
@@ -2722,34 +2730,36 @@ it.Item2 as TrialComplete
                   <Edge From="24" To="25" Label="Source2" />
                   <Edge From="25" To="26" Label="Source1" />
                   <Edge From="26" To="27" Label="Source1" />
-                  <Edge From="27" To="42" Label="Source3" />
+                  <Edge From="27" To="44" Label="Source3" />
                   <Edge From="28" To="29" Label="Source1" />
                   <Edge From="29" To="30" Label="Source1" />
-                  <Edge From="30" To="42" Label="Source4" />
+                  <Edge From="30" To="44" Label="Source4" />
                   <Edge From="31" To="32" Label="Source1" />
                   <Edge From="32" To="33" Label="Source1" />
                   <Edge From="33" To="34" Label="Source1" />
                   <Edge From="34" To="35" Label="Source1" />
-                  <Edge From="35" To="42" Label="Source5" />
+                  <Edge From="35" To="44" Label="Source5" />
                   <Edge From="36" To="37" Label="Source1" />
                   <Edge From="37" To="38" Label="Source1" />
                   <Edge From="38" To="39" Label="Source1" />
                   <Edge From="39" To="40" Label="Source1" />
                   <Edge From="40" To="41" Label="Source1" />
-                  <Edge From="41" To="42" Label="Source6" />
-                  <Edge From="42" To="45" Label="Source1" />
-                  <Edge From="43" To="44" Label="Source1" />
-                  <Edge From="44" To="45" Label="Source2" />
+                  <Edge From="41" To="44" Label="Source6" />
+                  <Edge From="42" To="43" Label="Source1" />
+                  <Edge From="43" To="44" Label="Source7" />
+                  <Edge From="44" To="47" Label="Source1" />
                   <Edge From="45" To="46" Label="Source1" />
-                  <Edge From="46" To="47" Label="Source1" />
+                  <Edge From="46" To="47" Label="Source2" />
                   <Edge From="47" To="48" Label="Source1" />
-                  <Edge From="49" To="51" Label="Source1" />
-                  <Edge From="50" To="51" Label="Source2" />
-                  <Edge From="51" To="52" Label="Source1" />
-                  <Edge From="52" To="53" Label="Source1" />
-                  <Edge From="53" To="55" Label="Source1" />
-                  <Edge From="54" To="55" Label="Source2" />
-                  <Edge From="55" To="56" Label="Source1" />
+                  <Edge From="48" To="49" Label="Source1" />
+                  <Edge From="49" To="50" Label="Source1" />
+                  <Edge From="51" To="53" Label="Source1" />
+                  <Edge From="52" To="53" Label="Source2" />
+                  <Edge From="53" To="54" Label="Source1" />
+                  <Edge From="54" To="55" Label="Source1" />
+                  <Edge From="55" To="57" Label="Source1" />
+                  <Edge From="56" To="57" Label="Source2" />
+                  <Edge From="57" To="58" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
