@@ -55,7 +55,7 @@ sequences: [
     interTrialInterval: 0,
     completionRequiresEngagement: True,
     rewardConditions: [
-      {position: 0, definition: [
+      {position: 1, definition: [
         [{command: OdorB, rewarded: True, minimumSamplingTime: 0.05, maximumSamplingTime: 1}]
       ]}
     ],
