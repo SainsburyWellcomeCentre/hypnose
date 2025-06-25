@@ -41,7 +41,7 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: True
     },
     {name: FreeRun_Stage1,
     defaultCommand: Default,
@@ -57,7 +57,7 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: True
     },
     {name: FreeRun_Stage1,
     defaultCommand: Default,
@@ -73,7 +73,7 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: True
     },
     {name: FreeRun_Stage1,
     defaultCommand: Default,
@@ -89,7 +89,7 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: True
     },
     {name: FreeRun_Stage1,
     defaultCommand: Default,
@@ -105,7 +105,7 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: True
     },
     {name: FreeRun_Stage1,
     defaultCommand: Default,
@@ -121,7 +121,7 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: True
     },
     {name: FreeRun_Stage1,
     defaultCommand: Default,
@@ -137,6 +137,6 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: True
     }]
 ]
