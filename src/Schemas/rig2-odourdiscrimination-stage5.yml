@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-034_id-109\ses-21_date-20250612\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-032_id-107\ses-35_date-20250701\behav
   rewardTime: 0.056
 
 cameraProperties:
@@ -44,7 +44,8 @@ sequences: [
     enableTrialIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: False
     }],
     [{name: OdourDiscriminationB_Stage5,
     defaultCommand: Default,
@@ -63,6 +64,7 @@ sequences: [
     enableTrialIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: False
     }]
 ]

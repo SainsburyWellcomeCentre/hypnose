@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.25
-  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-64_date-20250623\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-70_date-20250701\behav
   rewardTime: 0.096
 
 cameraProperties:
@@ -225,23 +225,6 @@ sequences: [
       interTrialInterval: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
-      rewardAttempts: 0,
-      enableTrialIndicator: True,
-      enableRewardLocationIndicator: False,
-      resetOnReward: True,
-      skipSampling: False,
-      rewardAvailablePokeReset: False
-    },
-    {
-      name: TriplesA_Stage1,
-      defaultCommand: Default,
-      interCommand: Purge,
-      interCommandTime: 0.2,
-      maximumTime: 10,
-      responseTime: 99999,
-      interTrialInterval: 0,
-      completionRequiresEngagement: True,
-      rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
@@ -616,23 +599,6 @@ sequences: [
       interTrialInterval: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 1, definition: [[{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
-      rewardAttempts: 0,
-      enableTrialIndicator: True,
-      enableRewardLocationIndicator: False,
-      resetOnReward: True,
-      skipSampling: False,
-      rewardAvailablePokeReset: False
-    },
-    {
-      name: TriplesB_Stage1,
-      defaultCommand: Default,
-      interCommand: Purge,
-      interCommandTime: 0.2,
-      maximumTime: 10,
-      responseTime: 99999,
-      interTrialInterval: 0,
-      completionRequiresEngagement: True,
-      rewardConditions: [{position: 1, definition: [[{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
