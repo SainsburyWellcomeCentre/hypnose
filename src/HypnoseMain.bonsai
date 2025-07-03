@@ -98,7 +98,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>D:\hypnose\rawdata\sub-020_id-072\ses-55_date-20250610\behav</Path>
+              <Path>E:\temp</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -267,7 +267,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM11</harp:PortName>
+                <harp:PortName>COM10</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -695,9 +695,9 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM25</PortO0>
+        <PortO0>COM13</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM9</PortO1>
+        <PortO1>COM12</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
@@ -734,7 +734,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:LoadSessionSettings">
-          <p2:Path>Z:\hypnose\Schemas_doubles_freerun\rig1-freerun-stage1.yml</p2:Path>
+          <p2:Path>Schemas\rig1-doubles-stage1.yml</p2:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -1298,7 +1298,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT1.5S</rx:DueTime>
+                            <rx:DueTime>PT5S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
@@ -1336,7 +1336,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT0.2S</rx:DueTime>
+                            <rx:DueTime>PT1S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -1400,7 +1400,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>2</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="WorkflowOutput" />
@@ -1453,7 +1453,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>2</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -1469,7 +1469,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>1.5</Value>
+                                  <Value>5</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -1496,7 +1496,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="BooleanProperty">
-                            <Value>true</Value>
+                            <Value>false</Value>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -1529,7 +1529,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT0.05S</rx:DueTime>
+                            <rx:DueTime>PT2S</rx:DueTime>
                             <rx:Period>PT0S</rx:Period>
                           </Combinator>
                         </Expression>
@@ -1537,7 +1537,7 @@
                           <Name>SustainedSampleState</Name>
                         </Expression>
                         <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:Zip" />
+                          <Combinator xsi:type="rx:WithLatestFrom" />
                         </Expression>
                         <Expression xsi:type="rx:Condition">
                           <Name>FailedToSample</Name>
