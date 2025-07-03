@@ -7,8 +7,8 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-025_id-076\ses-72_date-20250702\behav
-  rewardTime: 0.058
+  loggingRootPath: D:\hypnose\rawdata\sub-020_id-072\ses-69_date-20250630\behav
+  rewardTime: 0.045
 
 cameraProperties:
   frameRate: 30
@@ -27,7 +27,7 @@ olfactometerCommands:
   - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 100, 0, 1000]}
 
 sequences: [
-    [{name: FreeRun_Stage1,
+    [{name: FreeRun_Stage3,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -37,12 +37,13 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialIndicator: False,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage1,
+    {name: FreeRun_Stage3,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -52,12 +53,13 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 1, definition: [[{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialIndicator: False,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage1,
+    {name: FreeRun_Stage3,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -67,12 +69,13 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialIndicator: False,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage1,
+    {name: FreeRun_Stage3,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -82,12 +85,13 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialIndicator: False,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage1,
+    {name: FreeRun_Stage3,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -97,12 +101,13 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialIndicator: False,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage1,
+    {name: FreeRun_Stage3,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -112,12 +117,13 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialIndicator: False,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage1,
+    {name: FreeRun_Stage3,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -127,9 +133,10 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialIndicator: False,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: True
     }]
 ]
