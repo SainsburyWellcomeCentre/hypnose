@@ -2152,12 +2152,12 @@
     <EditorDialogSettings>
       <Visible>true</Visible>
       <Location>
-        <X>234</X>
-        <Y>234</Y>
+        <X>423</X>
+        <Y>94</Y>
       </Location>
       <Size>
-        <Width>1401</Width>
-        <Height>644</Height>
+        <Width>1853</Width>
+        <Height>921</Height>
       </Size>
       <WindowState>Normal</WindowState>
     </EditorDialogSettings>
@@ -4527,8 +4527,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>377</X>
-      <Y>641</Y>
+      <X>197</X>
+      <Y>850</Y>
     </Location>
     <Size>
       <Width>336</Width>

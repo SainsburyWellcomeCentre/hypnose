@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-032_id-107\ses-25_date-20250617\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-033_id-108\ses-35_date-20250702\behav
   rewardTime: 0.122
 
 cameraProperties:
@@ -55,7 +55,7 @@ sequences: [
     interTrialInterval: 0,
     completionRequiresEngagement: True,
     rewardConditions: [
-      {position: 0, definition: [
+      {position: 1, definition: [
         [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
       ]}
     ],

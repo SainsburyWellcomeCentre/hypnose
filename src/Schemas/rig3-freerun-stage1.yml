@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-025_id-076\ses-61_date-20250617\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-025_id-076\ses-72_date-20250702\behav
   rewardTime: 0.058
 
 cameraProperties:
