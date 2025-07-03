@@ -6,9 +6,10 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  sampleOffsetTime: 0.25
-  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-59_date-20250616\behav
-  rewardTime: 0.045
+  sampleOffsetTime: 0.1
+  loggingRootPath: D:\hypnose\rawdata\sub-034_id-109\ses-35_date-20250702\behav
+  rewardTime: 0.056
+  maximumInterOdourPokeTime: 2
 
 cameraProperties:
   frameRate: 30
@@ -42,7 +43,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
       name: DoublesA_Stage1,
@@ -58,7 +60,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
       name: DoublesA_Stage1,
@@ -74,7 +77,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
       name: DoublesA_Stage1,
@@ -90,7 +94,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
       name: DoublesA_Stage1,
@@ -106,7 +111,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
       name: DoublesB_Stage1,
@@ -122,7 +128,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
       name: DoublesB_Stage1,
@@ -138,7 +145,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
       name: DoublesB_Stage1,
@@ -154,7 +162,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
       name: DoublesB_Stage1,
@@ -170,7 +179,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
       name: DoublesB_Stage1,
@@ -186,7 +196,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     }
     ]
   ]
