@@ -724,7 +724,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:LoadSessionSettings">
-          <p2:Path>sandbox-session.yml</p2:Path>
+          <p2:Path>Schemas/rig1-session-settings.yml</p2:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -772,7 +772,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>sandbox-sequence.yml</p2:Path>
+                <p2:Path>Schemas/rig1-odourdiscrimination-stage5-test.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
