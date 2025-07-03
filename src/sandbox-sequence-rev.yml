@@ -4,38 +4,42 @@
 nextSequence: sandbox-sequence.yml
 performaceCriterion: 0.8
 sequences: [
-  [
-    {
-      name: OdourDiscriminationA,
-      defaultCommand: Default,
-      interCommand: Purge,
-      interCommandTime: 0.2,
-      maximumTime: 10,
-      responseTime: 99999,
-      interTrialInterval: 0,
-      completionRequiresEngagement: True,
-      rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: False, minimumSamplingTime: 1, maximumSamplingTime: 3}], [{command: OdorB, rewarded: True, minimumSamplingTime: 1, maximumSamplingTime: 3}]]}],
-      rewardAttempts: 0,
-      enableTrialIndicator: True,
-      enableRewardLocationIndicator: True,
-      resetOnReward: True,
-      skipSampling: False
-    },
-    {
-      name: OdourDiscriminationB,
-      defaultCommand: Default,
-      interCommand: Purge,
-      interCommandTime: 0.2,
-      maximumTime: 10,
-      responseTime: 99999,
-      interTrialInterval: 0,
-      completionRequiresEngagement: True,
-      rewardConditions: [{position: 1, definition: [[{command: OdorC, rewarded: False, minimumSamplingTime: 1, maximumSamplingTime: 3}], [{command: OdorD, rewarded: True, minimumSamplingTime: 1, maximumSamplingTime: 3}]]}],
-      rewardAttempts: 0,
-      enableTrialIndicator: True,
-      enableRewardLocationIndicator: True,
-      resetOnReward: True,
-      skipSampling: False
-    }
-    ]
-  ]
+    [{name: OdourDiscriminationA_Stage2A,
+    defaultCommand: Default,
+    interCommand: Purge,
+    interCommandTime: 0.2,
+    maximumTime: 10,
+    responseTime: 99999,
+    interTrialInterval: 0,
+    completionRequiresEngagement: True,
+    rewardConditions: [
+      {position: 0, definition: [
+        [{command: OdorA, rewarded: True, minimumSamplingTime: 0.05, maximumSamplingTime: 1}]
+      ]}
+    ],
+    rewardAttempts: 99999,
+    enableTrialIndicator: True,
+    enableRewardLocationIndicator: True,
+    resetOnReward: True,
+    skipSampling: False
+    }],
+    [{name: OdourDiscriminationB_Stage2A,
+    defaultCommand: Default,
+    interCommand: Purge,
+    interCommandTime: 0.2,
+    maximumTime: 10,
+    responseTime: 99999,
+    interTrialInterval: 0,
+    completionRequiresEngagement: True,
+    rewardConditions: [
+      {position: 1, definition: [
+        [{command: OdorB, rewarded: True, minimumSamplingTime: 0.05, maximumSamplingTime: 1}]
+      ]}
+    ],
+    rewardAttempts: 99999,
+    enableTrialIndicator: True,
+    enableRewardLocationIndicator: True,
+    resetOnReward: True,
+    skipSampling: False
+    }]
+]
