@@ -7,10 +7,10 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: E:/temp
+  loggingRootPath: D:\hypnose\rawdata\sub-025_id-076\ses-74_date-20250704\behav
   rewardTime: 0.058
   performanceAverageWindow: 5
-  initialSequence: Schemas/stage6-test.yml
+  initialSequence: Schemas/freerun-stage1-test.yml
 
 cameraProperties:
   frameRate: 30
