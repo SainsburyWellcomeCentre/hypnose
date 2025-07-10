@@ -2722,9 +2722,6 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Zip" />
                   </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Item2</Selector>
-                  </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Take">
                       <rx:Count>1</rx:Count>
@@ -2813,14 +2810,35 @@ it.Item2 as TrialComplete
                   <Edge From="50" To="51" Label="Source2" />
                   <Edge From="51" To="52" Label="Source1" />
                   <Edge From="52" To="53" Label="Source1" />
-                  <Edge From="53" To="54" Label="Source1" />
-                  <Edge From="55" To="57" Label="Source1" />
-                  <Edge From="56" To="57" Label="Source2" />
+                  <Edge From="54" To="56" Label="Source1" />
+                  <Edge From="55" To="56" Label="Source2" />
+                  <Edge From="56" To="57" Label="Source1" />
                   <Edge From="57" To="58" Label="Source1" />
-                  <Edge From="58" To="59" Label="Source1" />
-                  <Edge From="59" To="61" Label="Source1" />
-                  <Edge From="60" To="61" Label="Source2" />
-                  <Edge From="61" To="62" Label="Source1" />
+                  <Edge From="58" To="60" Label="Source1" />
+                  <Edge From="59" To="60" Label="Source2" />
+                  <Edge From="60" To="61" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="rx:Sink">
+              <Name>UpdatePerformance</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item1</Selector>
+                  </Expression>
+                  <Expression xsi:type="MulticastSubject">
+                    <Name>TrialCorrectResult</Name>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -2845,15 +2863,40 @@ it.Item2 as TrialComplete
               </Workflow>
             </Expression>
             <Expression xsi:type="MemberSelector">
-              <Selector>Sequence</Selector>
+              <Selector>TrialComplete,Sequence</Selector>
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Take">
                 <rx:Count>1</rx:Count>
               </Combinator>
             </Expression>
+            <Expression xsi:type="rx:Sink">
+              <Name>UpdatePerformance</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item1</Selector>
+                  </Expression>
+                  <Expression xsi:type="MulticastSubject">
+                    <Name>TrialCorrectResult</Name>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>Item2</Selector>
             </Expression>
             <Expression xsi:type="rx:SelectMany">
               <Name>Reset</Name>
@@ -2961,16 +3004,19 @@ it.Item2 as TrialComplete
             <Edge From="7" To="8" Label="Source1" />
             <Edge From="8" To="9" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
-            <Edge From="9" To="13" Label="Source1" />
+            <Edge From="9" To="14" Label="Source1" />
             <Edge From="10" To="11" Label="Source1" />
             <Edge From="11" To="12" Label="Source1" />
-            <Edge From="12" To="16" Label="Source1" />
-            <Edge From="13" To="14" Label="Source1" />
+            <Edge From="12" To="13" Label="Source1" />
+            <Edge From="13" To="18" Label="Source1" />
             <Edge From="14" To="15" Label="Source1" />
-            <Edge From="15" To="16" Label="Source2" />
+            <Edge From="15" To="16" Label="Source1" />
             <Edge From="16" To="17" Label="Source1" />
-            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="17" To="18" Label="Source2" />
             <Edge From="18" To="19" Label="Source1" />
+            <Edge From="19" To="20" Label="Source1" />
+            <Edge From="20" To="21" Label="Source1" />
+            <Edge From="21" To="22" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
