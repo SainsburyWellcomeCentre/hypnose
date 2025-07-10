@@ -317,568 +317,6 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
-    public partial class Valence
-    {
-    
-        private string _command;
-    
-        private bool _rewarded;
-    
-        private double _minimumSamplingTime;
-    
-        private double _maximumSamplingTime;
-    
-        public Valence()
-        {
-        }
-    
-        protected Valence(Valence other)
-        {
-            _command = other._command;
-            _rewarded = other._rewarded;
-            _minimumSamplingTime = other._minimumSamplingTime;
-            _maximumSamplingTime = other._maximumSamplingTime;
-        }
-    
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="command")]
-        public string Command
-        {
-            get
-            {
-                return _command;
-            }
-            set
-            {
-                _command = value;
-            }
-        }
-    
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewarded")]
-        public bool Rewarded
-        {
-            get
-            {
-                return _rewarded;
-            }
-            set
-            {
-                _rewarded = value;
-            }
-        }
-    
-        /// <summary>
-        /// The minimum sampling time in seconds for a presentation to be considered valid.
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="minimumSamplingTime")]
-        [System.ComponentModel.DescriptionAttribute("The minimum sampling time in seconds for a presentation to be considered valid.")]
-        public double MinimumSamplingTime
-        {
-            get
-            {
-                return _minimumSamplingTime;
-            }
-            set
-            {
-                _minimumSamplingTime = value;
-            }
-        }
-    
-        /// <summary>
-        /// The maximum sampling time in seconds for a presentation, completes and is valid after this time.
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="maximumSamplingTime")]
-        [System.ComponentModel.DescriptionAttribute("The maximum sampling time in seconds for a presentation, completes and is valid a" +
-            "fter this time.")]
-        public double MaximumSamplingTime
-        {
-            get
-            {
-                return _maximumSamplingTime;
-            }
-            set
-            {
-                _maximumSamplingTime = value;
-            }
-        }
-    
-        public System.IObservable<Valence> Process()
-        {
-            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Valence(this)));
-        }
-    
-        public System.IObservable<Valence> Process<TSource>(System.IObservable<TSource> source)
-        {
-            return System.Reactive.Linq.Observable.Select(source, _ => new Valence(this));
-        }
-    
-        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
-        {
-            stringBuilder.Append("command = " + _command + ", ");
-            stringBuilder.Append("rewarded = " + _rewarded + ", ");
-            stringBuilder.Append("minimumSamplingTime = " + _minimumSamplingTime + ", ");
-            stringBuilder.Append("maximumSamplingTime = " + _maximumSamplingTime);
-            return true;
-        }
-    
-        public override string ToString()
-        {
-            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
-            stringBuilder.Append(GetType().Name);
-            stringBuilder.Append(" { ");
-            if (PrintMembers(stringBuilder))
-            {
-                stringBuilder.Append(" ");
-            }
-            stringBuilder.Append("}");
-            return stringBuilder.ToString();
-        }
-    }
-
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
-    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
-    public partial class RewardCondition
-    {
-    
-        private int _position;
-    
-        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _definition = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
-    
-        public RewardCondition()
-        {
-        }
-    
-        protected RewardCondition(RewardCondition other)
-        {
-            _position = other._position;
-            _definition = other._definition;
-        }
-    
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="position")]
-        public int Position
-        {
-            get
-            {
-                return _position;
-            }
-            set
-            {
-                _position = value;
-            }
-        }
-    
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="definition")]
-        public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> Definition
-        {
-            get
-            {
-                return _definition;
-            }
-            set
-            {
-                _definition = value;
-            }
-        }
-    
-        public System.IObservable<RewardCondition> Process()
-        {
-            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new RewardCondition(this)));
-        }
-    
-        public System.IObservable<RewardCondition> Process<TSource>(System.IObservable<TSource> source)
-        {
-            return System.Reactive.Linq.Observable.Select(source, _ => new RewardCondition(this));
-        }
-    
-        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
-        {
-            stringBuilder.Append("position = " + _position + ", ");
-            stringBuilder.Append("definition = " + _definition);
-            return true;
-        }
-    
-        public override string ToString()
-        {
-            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
-            stringBuilder.Append(GetType().Name);
-            stringBuilder.Append(" { ");
-            if (PrintMembers(stringBuilder))
-            {
-                stringBuilder.Append(" ");
-            }
-            stringBuilder.Append("}");
-            return stringBuilder.ToString();
-        }
-    }
-
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
-    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
-    public partial class Sequence
-    {
-    
-        private string _name;
-    
-        private string _defaultCommand = "Default";
-    
-        private string _interCommand = "Purge";
-    
-        private double _interCommandTime = 0.2D;
-    
-        private double _interTrialInterval = 5D;
-    
-        private double _responseTime = 5D;
-    
-        private double _maximumTime = 10D;
-    
-        private System.Collections.Generic.List<RewardCondition> _rewardConditions = new System.Collections.Generic.List<RewardCondition>();
-    
-        private int _rewardAttempts = 1;
-    
-        private bool _enableTrialIndicator = false;
-    
-        private bool _enableRewardLocationIndicator = false;
-    
-        private bool _resetOnReward = false;
-    
-        private bool _completionRequiresEngagement = true;
-    
-        private bool _skipSampling = false;
-    
-        private bool _rewardAvailablePokeReset = false;
-    
-        public Sequence()
-        {
-        }
-    
-        protected Sequence(Sequence other)
-        {
-            _name = other._name;
-            _defaultCommand = other._defaultCommand;
-            _interCommand = other._interCommand;
-            _interCommandTime = other._interCommandTime;
-            _interTrialInterval = other._interTrialInterval;
-            _responseTime = other._responseTime;
-            _maximumTime = other._maximumTime;
-            _rewardConditions = other._rewardConditions;
-            _rewardAttempts = other._rewardAttempts;
-            _enableTrialIndicator = other._enableTrialIndicator;
-            _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
-            _resetOnReward = other._resetOnReward;
-            _completionRequiresEngagement = other._completionRequiresEngagement;
-            _skipSampling = other._skipSampling;
-            _rewardAvailablePokeReset = other._rewardAvailablePokeReset;
-        }
-    
-        /// <summary>
-        /// The alias of this sequence
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="name")]
-        [System.ComponentModel.DescriptionAttribute("The alias of this sequence")]
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
-        }
-    
-        /// <summary>
-        /// The default olfactometer command
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="defaultCommand")]
-        [System.ComponentModel.DescriptionAttribute("The default olfactometer command")]
-        public string DefaultCommand
-        {
-            get
-            {
-                return _defaultCommand;
-            }
-            set
-            {
-                _defaultCommand = value;
-            }
-        }
-    
-        /// <summary>
-        /// Command in between presentations
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interCommand")]
-        [System.ComponentModel.DescriptionAttribute("Command in between presentations")]
-        public string InterCommand
-        {
-            get
-            {
-                return _interCommand;
-            }
-            set
-            {
-                _interCommand = value;
-            }
-        }
-    
-        /// <summary>
-        /// Time for inter-command in seconds
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interCommandTime")]
-        [System.ComponentModel.DescriptionAttribute("Time for inter-command in seconds")]
-        public double InterCommandTime
-        {
-            get
-            {
-                return _interCommandTime;
-            }
-            set
-            {
-                _interCommandTime = value;
-            }
-        }
-    
-        /// <summary>
-        /// Time between trials in seconds
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interTrialInterval")]
-        [System.ComponentModel.DescriptionAttribute("Time between trials in seconds")]
-        public double InterTrialInterval
-        {
-            get
-            {
-                return _interTrialInterval;
-            }
-            set
-            {
-                _interTrialInterval = value;
-            }
-        }
-    
-        /// <summary>
-        /// The allowed time window for a subject to make a response following stimulus presentation
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="responseTime")]
-        [System.ComponentModel.DescriptionAttribute("The allowed time window for a subject to make a response following stimulus prese" +
-            "ntation")]
-        public double ResponseTime
-        {
-            get
-            {
-                return _responseTime;
-            }
-            set
-            {
-                _responseTime = value;
-            }
-        }
-    
-        /// <summary>
-        /// The maximum time in seconds that a sequence can last
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="maximumTime")]
-        [System.ComponentModel.DescriptionAttribute("The maximum time in seconds that a sequence can last")]
-        public double MaximumTime
-        {
-            get
-            {
-                return _maximumTime;
-            }
-            set
-            {
-                _maximumTime = value;
-            }
-        }
-    
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardConditions")]
-        public System.Collections.Generic.List<RewardCondition> RewardConditions
-        {
-            get
-            {
-                return _rewardConditions;
-            }
-            set
-            {
-                _rewardConditions = value;
-            }
-        }
-    
-        /// <summary>
-        /// The number of attempts at a reward port allowed before reset.
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardAttempts")]
-        [System.ComponentModel.DescriptionAttribute("The number of attempts at a reward port allowed before reset.")]
-        public int RewardAttempts
-        {
-            get
-            {
-                return _rewardAttempts;
-            }
-            set
-            {
-                _rewardAttempts = value;
-            }
-        }
-    
-        /// <summary>
-        /// Boolean specifying whether to enable indicator for when a trial is ready to be initiated
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="enableTrialIndicator")]
-        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable indicator for when a trial is ready to be in" +
-            "itiated")]
-        public bool EnableTrialIndicator
-        {
-            get
-            {
-                return _enableTrialIndicator;
-            }
-            set
-            {
-                _enableTrialIndicator = value;
-            }
-        }
-    
-        /// <summary>
-        /// Boolean specifying whether to enable indicator for where a reward is available
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="enableRewardLocationIndicator")]
-        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable indicator for where a reward is available")]
-        public bool EnableRewardLocationIndicator
-        {
-            get
-            {
-                return _enableRewardLocationIndicator;
-            }
-            set
-            {
-                _enableRewardLocationIndicator = value;
-            }
-        }
-    
-        /// <summary>
-        /// Boolean specifying whether a trial should ignore the response time and reset once a reward is given
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="resetOnReward")]
-        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether a trial should ignore the response time and reset once" +
-            " a reward is given")]
-        public bool ResetOnReward
-        {
-            get
-            {
-                return _resetOnReward;
-            }
-            set
-            {
-                _resetOnReward = value;
-            }
-        }
-    
-        /// <summary>
-        /// Boolean specifying whether engagement time must be satisfied before a trial can be considered complete/valid.
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="completionRequiresEngagement")]
-        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether engagement time must be satisfied before a trial can b" +
-            "e considered complete/valid.")]
-        public bool CompletionRequiresEngagement
-        {
-            get
-            {
-                return _completionRequiresEngagement;
-            }
-            set
-            {
-                _completionRequiresEngagement = value;
-            }
-        }
-    
-        /// <summary>
-        /// Boolean specifying whether sampling should be skipped (if skipped rewards are available immediately).
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="skipSampling")]
-        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether sampling should be skipped (if skipped rewards are ava" +
-            "ilable immediately).")]
-        public bool SkipSampling
-        {
-            get
-            {
-                return _skipSampling;
-            }
-            set
-            {
-                _skipSampling = value;
-            }
-        }
-    
-        /// <summary>
-        /// Boolean specifying whether when a reward is available if the subject pokes the odour port it resets the trial.
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardAvailablePokeReset")]
-        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether when a reward is available if the subject pokes the od" +
-            "our port it resets the trial.")]
-        public bool RewardAvailablePokeReset
-        {
-            get
-            {
-                return _rewardAvailablePokeReset;
-            }
-            set
-            {
-                _rewardAvailablePokeReset = value;
-            }
-        }
-    
-        public System.IObservable<Sequence> Process()
-        {
-            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
-        }
-    
-        public System.IObservable<Sequence> Process<TSource>(System.IObservable<TSource> source)
-        {
-            return System.Reactive.Linq.Observable.Select(source, _ => new Sequence(this));
-        }
-    
-        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
-        {
-            stringBuilder.Append("name = " + _name + ", ");
-            stringBuilder.Append("defaultCommand = " + _defaultCommand + ", ");
-            stringBuilder.Append("interCommand = " + _interCommand + ", ");
-            stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
-            stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
-            stringBuilder.Append("responseTime = " + _responseTime + ", ");
-            stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
-            stringBuilder.Append("rewardConditions = " + _rewardConditions + ", ");
-            stringBuilder.Append("rewardAttempts = " + _rewardAttempts + ", ");
-            stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
-            stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
-            stringBuilder.Append("resetOnReward = " + _resetOnReward + ", ");
-            stringBuilder.Append("completionRequiresEngagement = " + _completionRequiresEngagement + ", ");
-            stringBuilder.Append("skipSampling = " + _skipSampling + ", ");
-            stringBuilder.Append("rewardAvailablePokeReset = " + _rewardAvailablePokeReset);
-            return true;
-        }
-    
-        public override string ToString()
-        {
-            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
-            stringBuilder.Append(GetType().Name);
-            stringBuilder.Append(" { ");
-            if (PrintMembers(stringBuilder))
-            {
-                stringBuilder.Append(" ");
-            }
-            stringBuilder.Append("}");
-            return stringBuilder.ToString();
-        }
-    }
-
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
-    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class HypnoseSession
     {
     
@@ -887,8 +325,6 @@ namespace DataSchema
         private CameraProperties _cameraProperties;
     
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
-    
-        private System.Collections.Generic.List<System.Collections.Generic.List<Sequence>> _sequences = new System.Collections.Generic.List<System.Collections.Generic.List<Sequence>>();
     
         public HypnoseSession()
         {
@@ -899,7 +335,6 @@ namespace DataSchema
             _metadata = other._metadata;
             _cameraProperties = other._cameraProperties;
             _olfactometerCommands = other._olfactometerCommands;
-            _sequences = other._sequences;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -944,20 +379,6 @@ namespace DataSchema
             }
         }
     
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="sequences")]
-        public System.Collections.Generic.List<System.Collections.Generic.List<Sequence>> Sequences
-        {
-            get
-            {
-                return _sequences;
-            }
-            set
-            {
-                _sequences = value;
-            }
-        }
-    
         public System.IObservable<HypnoseSession> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new HypnoseSession(this)));
@@ -972,8 +393,7 @@ namespace DataSchema
         {
             stringBuilder.Append("metadata = " + _metadata + ", ");
             stringBuilder.Append("cameraProperties = " + _cameraProperties + ", ");
-            stringBuilder.Append("olfactometerCommands = " + _olfactometerCommands + ", ");
-            stringBuilder.Append("sequences = " + _sequences);
+            stringBuilder.Append("olfactometerCommands = " + _olfactometerCommands);
             return true;
         }
     
@@ -1006,8 +426,6 @@ namespace DataSchema
     
         private double _sampleOffsetTime = 0.1D;
     
-        private double _maximumInterOdourPokeTime = 0.5D;
-    
         private double _rewardTime = 0.1D;
     
         private string _loggingRootPath = "";
@@ -1024,7 +442,6 @@ namespace DataSchema
             _rootPath = other._rootPath;
             _minimumSampleTime = other._minimumSampleTime;
             _sampleOffsetTime = other._sampleOffsetTime;
-            _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
             _rewardTime = other._rewardTime;
             _loggingRootPath = other._loggingRootPath;
             _performanceAverageWindow = other._performanceAverageWindow;
@@ -1089,24 +506,6 @@ namespace DataSchema
             set
             {
                 _sampleOffsetTime = value;
-            }
-        }
-    
-        /// <summary>
-        /// Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="maximumInterOdourPokeTime")]
-        [System.ComponentModel.DescriptionAttribute("Maximum time after interCommandTime that subject has to repoke - otherwise trial " +
-            "ends.")]
-        public double MaximumInterOdourPokeTime
-        {
-            get
-            {
-                return _maximumInterOdourPokeTime;
-            }
-            set
-            {
-                _maximumInterOdourPokeTime = value;
             }
         }
     
@@ -1177,7 +576,6 @@ namespace DataSchema
             stringBuilder.Append("rootPath = " + _rootPath + ", ");
             stringBuilder.Append("minimumSampleTime = " + _minimumSampleTime + ", ");
             stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime + ", ");
-            stringBuilder.Append("maximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
             stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
             stringBuilder.Append("loggingRootPath = " + _loggingRootPath + ", ");
             stringBuilder.Append("performanceAverageWindow = " + _performanceAverageWindow);
@@ -1336,21 +734,6 @@ namespace DataSchema
             return Process<OlfactometerStateCommand>(source);
         }
 
-        public System.IObservable<string> Process(System.IObservable<Valence> source)
-        {
-            return Process<Valence>(source);
-        }
-
-        public System.IObservable<string> Process(System.IObservable<RewardCondition> source)
-        {
-            return Process<RewardCondition>(source);
-        }
-
-        public System.IObservable<string> Process(System.IObservable<Sequence> source)
-        {
-            return Process<Sequence>(source);
-        }
-
         public System.IObservable<string> Process(System.IObservable<HypnoseSession> source)
         {
             return Process<HypnoseSession>(source);
@@ -1377,9 +760,6 @@ namespace DataSchema
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RewardCommand>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerStateCommand>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Valence>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RewardCondition>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Sequence>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<HypnoseSession>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Metadata>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<CameraProperties>))]
