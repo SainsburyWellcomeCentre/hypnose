@@ -109,6 +109,11 @@
                     "default": 0.1,
                     "type": "number"
                 },
+                "maximumInterOdourPokeTime": {
+                    "description": "Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.",
+                    "default": 0.5,
+                    "type": "number"
+                },
                 "rewardTime": {
                     "description": "Time in seconds to deliver rewards",
                     "default": 0.1,
