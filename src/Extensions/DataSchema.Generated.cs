@@ -434,6 +434,8 @@ namespace DataSchema
     
         private int _performanceAverageWindow = 10;
     
+        private string _initialSequence;
+    
         public Metadata()
         {
         }
@@ -448,6 +450,7 @@ namespace DataSchema
             _rewardTime = other._rewardTime;
             _loggingRootPath = other._loggingRootPath;
             _performanceAverageWindow = other._performanceAverageWindow;
+            _initialSequence = other._initialSequence;
         }
     
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="animalId")]
@@ -581,6 +584,23 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Path to the initial sequence .yml file to run
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="initialSequence")]
+        [System.ComponentModel.DescriptionAttribute("Path to the initial sequence .yml file to run")]
+        public string InitialSequence
+        {
+            get
+            {
+                return _initialSequence;
+            }
+            set
+            {
+                _initialSequence = value;
+            }
+        }
+    
         public System.IObservable<Metadata> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
@@ -600,7 +620,8 @@ namespace DataSchema
             stringBuilder.Append("maximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
             stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
             stringBuilder.Append("loggingRootPath = " + _loggingRootPath + ", ");
-            stringBuilder.Append("performanceAverageWindow = " + _performanceAverageWindow);
+            stringBuilder.Append("performanceAverageWindow = " + _performanceAverageWindow + ", ");
+            stringBuilder.Append("initialSequence = " + _initialSequence);
             return true;
         }
     

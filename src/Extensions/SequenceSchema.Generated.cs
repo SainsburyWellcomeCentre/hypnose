@@ -579,6 +579,10 @@ namespace SequenceSchema
     
         private System.Collections.Generic.List<System.Collections.Generic.List<Sequence>> _sequences = new System.Collections.Generic.List<System.Collections.Generic.List<Sequence>>();
     
+        private string _nextSequence;
+    
+        private double _performaceCriterion = 0.8D;
+    
         public HypnoseSequence()
         {
         }
@@ -586,6 +590,8 @@ namespace SequenceSchema
         protected HypnoseSequence(HypnoseSequence other)
         {
             _sequences = other._sequences;
+            _nextSequence = other._nextSequence;
+            _performaceCriterion = other._performaceCriterion;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -602,6 +608,40 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// Path to .yml file of the next sequence to advance to.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="nextSequence")]
+        [System.ComponentModel.DescriptionAttribute("Path to .yml file of the next sequence to advance to.")]
+        public string NextSequence
+        {
+            get
+            {
+                return _nextSequence;
+            }
+            set
+            {
+                _nextSequence = value;
+            }
+        }
+    
+        /// <summary>
+        /// Performance that must be reached before advancing to the next sequence.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="performaceCriterion")]
+        [System.ComponentModel.DescriptionAttribute("Performance that must be reached before advancing to the next sequence.")]
+        public double PerformaceCriterion
+        {
+            get
+            {
+                return _performaceCriterion;
+            }
+            set
+            {
+                _performaceCriterion = value;
+            }
+        }
+    
         public System.IObservable<HypnoseSequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new HypnoseSequence(this)));
@@ -614,7 +654,9 @@ namespace SequenceSchema
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("sequences = " + _sequences);
+            stringBuilder.Append("sequences = " + _sequences + ", ");
+            stringBuilder.Append("nextSequence = " + _nextSequence + ", ");
+            stringBuilder.Append("performaceCriterion = " + _performaceCriterion);
             return true;
         }
     

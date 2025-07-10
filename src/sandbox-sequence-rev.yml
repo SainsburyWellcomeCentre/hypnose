@@ -1,8 +1,7 @@
 %YAML 1.1
 ---
 # yaml-language-server: $schema=sequence-schema.json
-
-nextSequence: C:\Users\neurogears\source\repos\swc\hypnose\src\sandbox-sequence-rev.yml
+nextSequence: C:\Users\neurogears\source\repos\swc\hypnose\src\sandbox-sequence.yml
 performaceCriterion: 0.8
 sequences: [
   [
@@ -15,7 +14,7 @@ sequences: [
       responseTime: 99999,
       interTrialInterval: 0,
       completionRequiresEngagement: True,
-      rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: False, minimumSamplingTime: 1, maximumSamplingTime: 3}], [{command: OdorD, rewarded: True, minimumSamplingTime: 1, maximumSamplingTime: 3}]]}],
+      rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: False, minimumSamplingTime: 1, maximumSamplingTime: 3}], [{command: OdorB, rewarded: True, minimumSamplingTime: 1, maximumSamplingTime: 3}]]}],
       rewardAttempts: 0,
       enableTrialIndicator: True,
       enableRewardLocationIndicator: True,
@@ -31,12 +30,12 @@ sequences: [
       responseTime: 99999,
       interTrialInterval: 0,
       completionRequiresEngagement: True,
-      rewardConditions: [{position: 1, definition: [[{command: OdorB, rewarded: False, minimumSamplingTime: 1, maximumSamplingTime: 3}], [{command: OdorC, rewarded: True, minimumSamplingTime: 1, maximumSamplingTime: 3}]]}],
+      rewardConditions: [{position: 1, definition: [[{command: OdorC, rewarded: False, minimumSamplingTime: 1, maximumSamplingTime: 3}], [{command: OdorD, rewarded: True, minimumSamplingTime: 1, maximumSamplingTime: 3}]]}],
       rewardAttempts: 0,
       enableTrialIndicator: True,
       enableRewardLocationIndicator: True,
       resetOnReward: True,
       skipSampling: False
     }
+    ]
   ]
-]
