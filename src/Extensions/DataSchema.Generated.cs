@@ -9,7 +9,7 @@ namespace DataSchema
 {
     #pragma warning disable // Disable all warnings
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.5.0.0 (YamlDotNet v16.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class RewardCommand
@@ -87,7 +87,7 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.5.0.0 (YamlDotNet v16.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class OlfactometerStateCommand
@@ -95,32 +95,24 @@ namespace DataSchema
     
         private string _name;
     
-        private bool _flowEnabledO0;
+        private bool _flowEnabledO0 = true;
     
-        private bool _flowEnabledO1;
+        private bool _flowEnabledO1 = true;
     
-        private System.Collections.Generic.List<int> _valvesOpenO0;
+        private System.Collections.Generic.List<int> _valvesOpenO0 = new System.Collections.Generic.List<int>();
     
-        private System.Collections.Generic.List<int> _valvesOpenO1;
+        private System.Collections.Generic.List<int> _valvesOpenO1 = new System.Collections.Generic.List<int>();
     
-        private System.Collections.Generic.List<int> _endValvesOpenO0;
+        private System.Collections.Generic.List<int> _endValvesOpenO0 = new System.Collections.Generic.List<int>();
     
-        private System.Collections.Generic.List<int> _endValvesOpenO1;
+        private System.Collections.Generic.List<int> _endValvesOpenO1 = new System.Collections.Generic.List<int>();
     
-        private System.Collections.Generic.List<double> _targetFlowO0;
+        private System.Collections.Generic.List<double> _targetFlowO0 = new System.Collections.Generic.List<double>();
     
-        private System.Collections.Generic.List<double> _targetFlowO1;
+        private System.Collections.Generic.List<double> _targetFlowO1 = new System.Collections.Generic.List<double>();
     
         public OlfactometerStateCommand()
         {
-            _flowEnabledO0 = true;
-            _flowEnabledO1 = true;
-            _valvesOpenO0 = new System.Collections.Generic.List<int>();
-            _valvesOpenO1 = new System.Collections.Generic.List<int>();
-            _endValvesOpenO0 = new System.Collections.Generic.List<int>();
-            _endValvesOpenO1 = new System.Collections.Generic.List<int>();
-            _targetFlowO0 = new System.Collections.Generic.List<double>();
-            _targetFlowO1 = new System.Collections.Generic.List<double>();
         }
     
         protected OlfactometerStateCommand(OlfactometerStateCommand other)
@@ -321,7 +313,8 @@ namespace DataSchema
         }
     }
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.5.0.0 (YamlDotNet v16.0.0.0)")]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class Valence
@@ -441,7 +434,8 @@ namespace DataSchema
         }
     }
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.5.0.0 (YamlDotNet v16.0.0.0)")]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class RewardCondition
@@ -449,11 +443,10 @@ namespace DataSchema
     
         private int _position;
     
-        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _definition;
+        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _definition = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
     
         public RewardCondition()
         {
-            _definition = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
         }
     
         protected RewardCondition(RewardCondition other)
@@ -521,7 +514,7 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.5.0.0 (YamlDotNet v16.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class Sequence
@@ -529,50 +522,36 @@ namespace DataSchema
     
         private string _name;
     
-        private string _defaultCommand;
+        private string _defaultCommand = "Default";
     
-        private string _interCommand;
+        private string _interCommand = "Purge";
     
-        private double _interCommandTime;
+        private double _interCommandTime = 0.2D;
     
-        private double _interTrialInterval;
+        private double _interTrialInterval = 5D;
     
-        private double _responseTime;
+        private double _responseTime = 5D;
     
-        private double _maximumTime;
+        private double _maximumTime = 10D;
     
-        private System.Collections.Generic.List<RewardCondition> _rewardConditions;
+        private System.Collections.Generic.List<RewardCondition> _rewardConditions = new System.Collections.Generic.List<RewardCondition>();
     
-        private int _rewardAttempts;
+        private int _rewardAttempts = 1;
     
-        private bool _enableTrialIndicator;
+        private bool _enableTrialIndicator = false;
     
-        private bool _enableRewardLocationIndicator;
+        private bool _enableRewardLocationIndicator = false;
     
-        private bool _resetOnReward;
+        private bool _resetOnReward = false;
     
-        private bool _completionRequiresEngagement;
+        private bool _completionRequiresEngagement = true;
     
-        private bool _skipSampling;
+        private bool _skipSampling = false;
     
-        private bool _rewardAvailablePokeReset;
+        private bool _rewardAvailablePokeReset = false;
     
         public Sequence()
         {
-            _defaultCommand = "Default";
-            _interCommand = "Purge";
-            _interCommandTime = 0.2D;
-            _interTrialInterval = 5D;
-            _responseTime = 5D;
-            _maximumTime = 10D;
-            _rewardConditions = new System.Collections.Generic.List<RewardCondition>();
-            _rewardAttempts = 1;
-            _enableTrialIndicator = false;
-            _enableRewardLocationIndicator = false;
-            _resetOnReward = false;
-            _completionRequiresEngagement = true;
-            _skipSampling = false;
-            _rewardAvailablePokeReset = false;
         }
     
         protected Sequence(Sequence other)
@@ -897,7 +876,7 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.5.0.0 (YamlDotNet v16.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class HypnoseSession
@@ -907,14 +886,12 @@ namespace DataSchema
     
         private CameraProperties _cameraProperties;
     
-        private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands;
+        private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
     
-        private System.Collections.Generic.List<System.Collections.Generic.List<Sequence>> _sequences;
+        private System.Collections.Generic.List<System.Collections.Generic.List<Sequence>> _sequences = new System.Collections.Generic.List<System.Collections.Generic.List<Sequence>>();
     
         public HypnoseSession()
         {
-            _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
-            _sequences = new System.Collections.Generic.List<System.Collections.Generic.List<Sequence>>();
         }
     
         protected HypnoseSession(HypnoseSession other)
@@ -1015,34 +992,30 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.5.0.0 (YamlDotNet v16.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class Metadata
     {
     
-        private string _animalId;
+        private string _animalId = "";
     
-        private string _rootPath;
+        private string _rootPath = "";
     
-        private double _minimumSampleTime;
+        private double _minimumSampleTime = 0.1D;
     
-        private double _sampleOffsetTime;
+        private double _sampleOffsetTime = 0.1D;
     
         private double _maximumInterOdourPokeTime = 0.5D;
     
         private double _rewardTime = 0.1D;
     
-        private string _loggingRootPath;
+        private string _loggingRootPath = "";
+    
+        private int _performanceAverageWindow = 10;
     
         public Metadata()
         {
-            _animalId = "";
-            _rootPath = "";
-            _minimumSampleTime = 0.1D;
-            _sampleOffsetTime = 0.1D;
-            _rewardTime = 0.1D;
-            _loggingRootPath = "";
         }
     
         protected Metadata(Metadata other)
@@ -1054,6 +1027,7 @@ namespace DataSchema
             _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
             _rewardTime = other._rewardTime;
             _loggingRootPath = other._loggingRootPath;
+            _performanceAverageWindow = other._performanceAverageWindow;
         }
     
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="animalId")]
@@ -1170,6 +1144,23 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Size of the window to calculate performance average over
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="performanceAverageWindow")]
+        [System.ComponentModel.DescriptionAttribute("Size of the window to calculate performance average over")]
+        public int PerformanceAverageWindow
+        {
+            get
+            {
+                return _performanceAverageWindow;
+            }
+            set
+            {
+                _performanceAverageWindow = value;
+            }
+        }
+    
         public System.IObservable<Metadata> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
@@ -1188,7 +1179,8 @@ namespace DataSchema
             stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime + ", ");
             stringBuilder.Append("maximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
             stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
-            stringBuilder.Append("loggingRootPath = " + _loggingRootPath);
+            stringBuilder.Append("loggingRootPath = " + _loggingRootPath + ", ");
+            stringBuilder.Append("performanceAverageWindow = " + _performanceAverageWindow);
             return true;
         }
     
@@ -1206,23 +1198,21 @@ namespace DataSchema
         }
     }
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.5.0.0 (YamlDotNet v16.0.0.0)")]
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class CameraProperties
     {
     
-        private double _frameRate;
+        private double _frameRate = 60D;
     
-        private double _exposure;
+        private double _exposure = 19000D;
     
-        private double _gain;
+        private double _gain = 0D;
     
         public CameraProperties()
         {
-            _frameRate = 60D;
-            _exposure = 19000D;
-            _gain = 0D;
         }
     
         protected CameraProperties(CameraProperties other)
@@ -1319,7 +1309,7 @@ namespace DataSchema
     /// <summary>
     /// Serializes a sequence of data model objects into YAML strings.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.5.0.0 (YamlDotNet v16.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [System.ComponentModel.DescriptionAttribute("Serializes a sequence of data model objects into YAML strings.")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
@@ -1381,7 +1371,7 @@ namespace DataSchema
     /// <summary>
     /// Deserializes a sequence of YAML strings into data model objects.
     /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.5.0.0 (YamlDotNet v16.0.0.0)")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [System.ComponentModel.DescriptionAttribute("Deserializes a sequence of YAML strings into data model objects.")]
     [System.ComponentModel.DefaultPropertyAttribute("Type")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
