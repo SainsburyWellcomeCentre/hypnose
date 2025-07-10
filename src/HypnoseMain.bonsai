@@ -785,7 +785,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>C:\Users\neurogears\source\repos\swc\hypnose\src\sandbox-sequence.yml</p2:Path>
+                <p2:Path>sandbox-sequence.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
