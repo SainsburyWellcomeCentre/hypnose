@@ -14,6 +14,7 @@
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
                  xmlns:dsp="clr-namespace:Bonsai.Dsp;assembly=Bonsai.Dsp"
                  xmlns:p3="clr-namespace:Bonsai.Numerics.Distributions;assembly=Bonsai.Numerics"
+                 xmlns:p4="clr-namespace:SequenceSchema;assembly=Extensions"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -1907,10 +1908,10 @@ it.Item1.Result.Valid as TrialComplete
                     </Operand>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p1:Valence">
-                      <p1:Rewarded>true</p1:Rewarded>
-                      <p1:MinimumSamplingTime>0</p1:MinimumSamplingTime>
-                      <p1:MaximumSamplingTime>0</p1:MaximumSamplingTime>
+                    <Combinator xsi:type="p4:Valence">
+                      <p4:MaximumSamplingTime>0</p4:MaximumSamplingTime>
+                      <p4:MinimumSamplingTime>0</p4:MinimumSamplingTime>
+                      <p4:Rewarded>true</p4:Rewarded>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MemberSelector">

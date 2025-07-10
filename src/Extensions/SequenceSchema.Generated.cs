@@ -43,6 +43,8 @@ namespace SequenceSchema
     
         private bool _skipSampling = false;
     
+        private bool _rewardAvailablePokeReset = false;
+    
         public Sequence()
         {
         }
@@ -63,6 +65,7 @@ namespace SequenceSchema
             _resetOnReward = other._resetOnReward;
             _completionRequiresEngagement = other._completionRequiresEngagement;
             _skipSampling = other._skipSampling;
+            _rewardAvailablePokeReset = other._rewardAvailablePokeReset;
         }
     
         /// <summary>
@@ -305,6 +308,24 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// Boolean specifying whether when a reward is available if the subject pokes the odour port it resets the trial.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardAvailablePokeReset")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether when a reward is available if the subject pokes the od" +
+            "our port it resets the trial.")]
+        public bool RewardAvailablePokeReset
+        {
+            get
+            {
+                return _rewardAvailablePokeReset;
+            }
+            set
+            {
+                _rewardAvailablePokeReset = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -330,7 +351,8 @@ namespace SequenceSchema
             stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
             stringBuilder.Append("resetOnReward = " + _resetOnReward + ", ");
             stringBuilder.Append("completionRequiresEngagement = " + _completionRequiresEngagement + ", ");
-            stringBuilder.Append("skipSampling = " + _skipSampling);
+            stringBuilder.Append("skipSampling = " + _skipSampling + ", ");
+            stringBuilder.Append("rewardAvailablePokeReset = " + _rewardAvailablePokeReset);
             return true;
         }
     

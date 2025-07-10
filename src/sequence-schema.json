@@ -73,6 +73,11 @@
                     "description": "Boolean specifying whether sampling should be skipped (if skipped rewards are available immediately).",
                     "default": "False",
                     "type": "boolean"
+                },
+                "rewardAvailablePokeReset": {
+                    "description": "Boolean specifying whether when a reward is available if the subject pokes the odour port it resets the trial.",
+                    "default": "False",
+                    "type": "boolean"
                 }
             }
         },
