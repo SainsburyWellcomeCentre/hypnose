@@ -1909,9 +1909,9 @@ it.Item1.Result.Valid as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p4:Valence">
-                      <p4:MaximumSamplingTime>0</p4:MaximumSamplingTime>
-                      <p4:MinimumSamplingTime>0</p4:MinimumSamplingTime>
                       <p4:Rewarded>true</p4:Rewarded>
+                      <p4:MinimumSamplingTime>0</p4:MinimumSamplingTime>
+                      <p4:MaximumSamplingTime>0</p4:MaximumSamplingTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
