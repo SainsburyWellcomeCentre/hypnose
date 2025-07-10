@@ -1,0 +1,144 @@
+{
+    "$id": "h...",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "definitions": {
+        "sequence": {
+            "properties": {
+                "name": {
+                    "description": "The alias of this sequence",
+                    "type": "string"
+                },
+                "defaultCommand": {
+                    "description": "The default olfactometer command",
+                    "default": "Default",
+                    "type": "string"
+                },
+                "interCommand": {
+                    "description": "Command in between presentations",
+                    "default": "Purge",
+                    "type": "string"
+                },
+                "interCommandTime": {
+                    "description": "Time for inter-command in seconds",
+                    "default": 0.2,
+                    "type": "number"
+                },
+                "interTrialInterval": {
+                    "description": "Time between trials in seconds",
+                    "default": 5,
+                    "type": "number"
+                },
+                "responseTime": {
+                    "description": "The allowed time window for a subject to make a response following stimulus presentation",
+                    "default": 5,
+                    "type": "number"
+                },
+                "maximumTime": {
+                    "description": "The maximum time in seconds that a sequence can last",
+                    "default": 10,
+                    "type": "number"
+                },
+                "rewardConditions": {
+                    "items": {
+                        "$ref": "#/definitions/rewardCondition"
+                    },
+                    "type": "array"
+                },
+                "rewardAttempts": {
+                    "description": "The number of attempts at a reward port allowed before reset.",
+                    "default": 1,
+                    "type": "integer"
+                },
+                "enableTrialIndicator": {
+                    "description": "Boolean specifying whether to enable indicator for when a trial is ready to be initiated",
+                    "default": "False",
+                    "type": "boolean"
+                },
+                "enableRewardLocationIndicator": {
+                    "description": "Boolean specifying whether to enable indicator for where a reward is available",
+                    "default": "False",
+                    "type": "boolean"
+                },
+                "resetOnReward": {
+                    "description": "Boolean specifying whether a trial should ignore the response time and reset once a reward is given",
+                    "default": "False",
+                    "type": "boolean"
+                },
+                "completionRequiresEngagement": {
+                    "description": "Boolean specifying whether engagement time must be satisfied before a trial can be considered complete/valid.",
+                    "default": "True",
+                    "type": "boolean"
+                },
+                "skipSampling": {
+                    "description": "Boolean specifying whether sampling should be skipped (if skipped rewards are available immediately).",
+                    "default": "False",
+                    "type": "boolean"
+                },
+                "rewardAvailablePokeReset": {
+                    "description": "Boolean specifying whether when a reward is available if the subject pokes the odour port it resets the trial.",
+                    "default": "False",
+                    "type": "boolean"
+                }
+            }
+        },
+        "rewardCondition": {
+            "properties": {
+                "position": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "definition": {
+                    "items": {
+                        "items": {
+                            "$ref": "#/definitions/valence"
+                        },
+                        "type": "array"
+                    },
+                    "type": "array"
+                }
+            }
+        },
+        "valence": {
+            "properties": {
+                "command": {
+                    "type": "string"
+                },
+                "rewarded": {
+                    "type": "boolean"
+                },
+                "minimumSamplingTime": {
+                    "type": "number",
+                    "description": "The minimum sampling time in seconds for a presentation to be considered valid."
+                },
+                "maximumSamplingTime": {
+                    "type": "number",
+                    "description": "The maximum sampling time in seconds for a presentation, completes and is valid after this time."
+                }
+            }
+        }
+    },
+    "properties": {
+        "sequences": {
+            "items": {
+                "items": {
+                    "$ref": "#/definitions/sequence"
+                },
+                "type": "array"
+            },
+            "type": "array"
+        },
+        "nextSequence": {
+            "description": "Path to .yml file of the next sequence to advance to.",
+            "type": "string"
+        },
+        "performaceCriterion": {
+            "description": "Performance that must be reached before advancing to the next sequence.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 0.8
+        }
+    },
+    "title": "HypnoseSequence",
+    "type": "object"
+}
