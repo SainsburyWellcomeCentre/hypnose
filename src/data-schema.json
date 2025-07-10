@@ -237,6 +237,11 @@
                     "description": "The local root folder to save data for this session",
                     "default": "",
                     "type": "string"
+                },
+                "performanceAverageWindow": {
+                    "description": "Size of the window to calculate performance average over",
+                    "default": 10,
+                    "type": "integer"
                 }
             }
         },
