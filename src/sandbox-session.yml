@@ -9,6 +9,7 @@ metadata:
   sampleOffsetTime: 0.1
   loggingRootPath: E:\temp
   rewardTime: 0.058
+  performanceAverageWindow: 10
 
 cameraProperties:
   frameRate: 30
