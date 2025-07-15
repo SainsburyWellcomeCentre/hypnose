@@ -837,14 +837,18 @@
       <DialogSettings>
         <Visible>false</Visible>
         <Location>
-          <X>0</X>
-          <Y>0</Y>
+          <X>78</X>
+          <Y>78</Y>
         </Location>
         <Size>
-          <Width>0</Width>
-          <Height>0</Height>
+          <Width>336</Width>
+          <Height>65</Height>
         </Size>
         <WindowState>Normal</WindowState>
+        <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+        <VisualizerSettings>
+          <ObjectTextVisualizer />
+        </VisualizerSettings>
       </DialogSettings>
       <DialogSettings>
         <Visible>false</Visible>
@@ -955,16 +959,20 @@
         </EditorDialogSettings>
       </DialogSettings>
       <DialogSettings>
-        <Visible>false</Visible>
+        <Visible>true</Visible>
         <Location>
-          <X>0</X>
-          <Y>0</Y>
+          <X>552</X>
+          <Y>161</Y>
         </Location>
         <Size>
-          <Width>0</Width>
-          <Height>0</Height>
+          <Width>336</Width>
+          <Height>186</Height>
         </Size>
         <WindowState>Normal</WindowState>
+        <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+        <VisualizerSettings>
+          <ObjectTextVisualizer />
+        </VisualizerSettings>
       </DialogSettings>
       <DialogSettings xsi:type="WorkflowEditorSettings">
         <Visible>false</Visible>
@@ -991,16 +999,20 @@
         </EditorDialogSettings>
       </DialogSettings>
       <DialogSettings>
-        <Visible>false</Visible>
+        <Visible>true</Visible>
         <Location>
-          <X>0</X>
-          <Y>0</Y>
+          <X>883</X>
+          <Y>170</Y>
         </Location>
         <Size>
-          <Width>0</Width>
-          <Height>0</Height>
+          <Width>336</Width>
+          <Height>162</Height>
         </Size>
         <WindowState>Normal</WindowState>
+        <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+        <VisualizerSettings>
+          <ObjectTextVisualizer />
+        </VisualizerSettings>
       </DialogSettings>
       <DialogSettings>
         <Visible>false</Visible>
@@ -2600,8 +2612,8 @@
     <EditorDialogSettings>
       <Visible>false</Visible>
       <Location>
-        <X>208</X>
-        <Y>208</Y>
+        <X>1022</X>
+        <Y>334</Y>
       </Location>
       <Size>
         <Width>1458</Width>
@@ -2613,8 +2625,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>858</X>
-      <Y>235</Y>
+      <X>1613</X>
+      <Y>182</Y>
     </Location>
     <Size>
       <Width>336</Width>
@@ -2733,8 +2745,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>28</X>
-      <Y>292</Y>
+      <X>187</X>
+      <Y>181</Y>
     </Location>
     <Size>
       <Width>336</Width>
@@ -3041,8 +3053,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>371</X>
-      <Y>305</Y>
+      <X>730</X>
+      <Y>947</Y>
     </Location>
     <Size>
       <Width>334</Width>
