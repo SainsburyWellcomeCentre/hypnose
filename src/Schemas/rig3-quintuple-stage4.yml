@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-78_date-20250711\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-79_date-20250714\behav
   rewardTime: 0.13
   maximumInterOdourPokeTime: 2
 

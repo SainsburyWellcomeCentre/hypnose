@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-034_id-109\ses-43_date-20250714\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-032_id-107\ses-45_date-20250715\behav
   rewardTime: 0.056
 
 cameraProperties:
@@ -27,7 +27,7 @@ olfactometerCommands:
   - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 100, 0, 1000]}
 
 sequences: [
-    [{name: OdourDiscriminationA_Stage7,
+    [{name: OdourDiscriminationA_Stage6,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -37,7 +37,7 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 0, definition: [
-        [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
+        [{command: OdorA, rewarded: True, minimumSamplingTime: 0.25, maximumSamplingTime: 1}]
       ]}
     ],
     rewardAttempts: 0,
@@ -45,8 +45,8 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False
-    },
-    {name: OdourDiscriminationB_Stage7,
+    }],
+    [{name: OdourDiscriminationB_Stage6,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -56,7 +56,7 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
-        [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
+        [{command: OdorB, rewarded: True, minimumSamplingTime: 0.25, maximumSamplingTime: 1}]
       ]}
     ],
     rewardAttempts: 0,
