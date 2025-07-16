@@ -7,8 +7,10 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-029_id-073\ses-06_date-20250416\behav
-  rewardTime: 0.13
+  loggingRootPath: D:\hypnose\rawdata\sub-025_id-076\ses-74_date-20250704\behav
+  rewardTime: 0.058
+  performanceAverageWindow: 5
+  initialSequence: Schemas/freerun-stage1-test.yml
 
 cameraProperties:
   frameRate: 30
@@ -25,44 +27,3 @@ olfactometerCommands:
   - {name: OdorE, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [100, 0, 0, 0, 1000]}
   - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 100, 0, 0, 1000]}
   - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 100, 0, 1000]}
-
-sequences: [
-    [{name: OdourDiscriminationA_Stage1,
-    defaultCommand: Default,
-    interCommand: Purge,
-    interCommandTime: 0.2,
-    maximumTime: 10,
-    responseTime: 99999,
-    interTrialInterval: 0,
-    completionRequiresEngagement: True,
-    rewardConditions: [
-      {position: 0, definition: [
-        [{command: OdorA, rewarded: True, minimumSamplingTime: 0.05, maximumSamplingTime: 1}]
-      ]}
-    ],
-    rewardAttempts: 99999,
-    enableTrialIndicator: False,
-    enableRewardLocationIndicator: True,
-    resetOnReward: True,
-    skipSampling: True
-    }],
-    [{name: OdourDiscriminationB_Stage1,
-    defaultCommand: Default,
-    interCommand: Purge,
-    interCommandTime: 0.2,
-    maximumTime: 10,
-    responseTime: 99999,
-    interTrialInterval: 0,
-    completionRequiresEngagement: True,
-    rewardConditions: [
-      {position: 1, definition: [
-        [{command: OdorB, rewarded: True, minimumSamplingTime: 0.05, maximumSamplingTime: 1}]
-      ]}
-    ],
-    rewardAttempts: 99999,
-    enableTrialIndicator: False,
-    enableRewardLocationIndicator: True,
-    resetOnReward: True,
-    skipSampling: True
-    }]
-]

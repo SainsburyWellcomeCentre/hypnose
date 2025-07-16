@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-020_id-072\ses-76_date-20250709\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-020_id-072\ses-71_date-20250702\behav
   rewardTime: 0.045
 
 cameraProperties:
@@ -19,7 +19,7 @@ olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 100, 1000]}
   - {name: Purge, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 100, 1000]}
   - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [100, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 1000]}
-  - {name: OdorB, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [100, 0, 0, 0, 1000]}
+  - {name: OdorB, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 100, 0, 0, 1000], targetFlowO1: [100, 0, 0, 0, 1000]}
   - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 100, 0, 1000], targetFlowO1: [0, 0, 0, 0, 1000]}
   - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 100, 1000], targetFlowO1: [0, 0, 0, 0, 1000]}
   - {name: OdorE, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 100, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 1000]}
@@ -27,7 +27,7 @@ olfactometerCommands:
   - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 100, 0, 1000]}
 
 sequences: [
-    [{name: FreeRun_Stage5,
+    [{name: FreeRun_stage4,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -43,7 +43,7 @@ sequences: [
     skipSampling: False,
     rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage5,
+    {name: FreeRun_stage4,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -59,7 +59,7 @@ sequences: [
     skipSampling: False,
     rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage5,
+    {name: FreeRun_stage4,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -75,7 +75,7 @@ sequences: [
     skipSampling: False,
     rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage5,
+    {name: FreeRun_stage4,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -91,7 +91,7 @@ sequences: [
     skipSampling: False,
     rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage5,
+    {name: FreeRun_stage4,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -107,7 +107,7 @@ sequences: [
     skipSampling: False,
     rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage5,
+    {name: FreeRun_stage4,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -123,7 +123,7 @@ sequences: [
     skipSampling: False,
     rewardAvailablePokeReset: True
     },
-    {name: FreeRun_Stage5,
+    {name: FreeRun_stage4,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,

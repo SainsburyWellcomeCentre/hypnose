@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-034_id-109\ses-39_date-20250708\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-034_id-109\ses-35_date-20250702\behav
   rewardTime: 0.056
   maximumInterOdourPokeTime: 2
 
@@ -30,7 +30,7 @@ olfactometerCommands:
 sequences: [
   [
     {
-      name: DoublesA_Stage2,
+      name: DoublesA_Stage1,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -47,7 +47,7 @@ sequences: [
       rewardAvailablePokeReset: False
     },
     {
-      name: DoublesA_Stage2,
+      name: DoublesA_Stage1,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -64,7 +64,7 @@ sequences: [
       rewardAvailablePokeReset: False
     },
     {
-      name: DoublesA_Stage2,
+      name: DoublesA_Stage1,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -81,7 +81,7 @@ sequences: [
       rewardAvailablePokeReset: False
     },
     {
-      name: DoublesA_Stage2,
+      name: DoublesA_Stage1,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -98,7 +98,7 @@ sequences: [
       rewardAvailablePokeReset: False
     },
     {
-      name: DoublesA_Stage2,
+      name: DoublesA_Stage1,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -115,7 +115,7 @@ sequences: [
       rewardAvailablePokeReset: False
     },
     {
-      name: DoublesB_Stage2,
+      name: DoublesB_Stage1,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -132,7 +132,7 @@ sequences: [
       rewardAvailablePokeReset: False
     },
     {
-      name: DoublesB_Stage2,
+      name: DoublesB_Stage1,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -149,7 +149,7 @@ sequences: [
       rewardAvailablePokeReset: False
     },
     {
-      name: DoublesB_Stage2,
+      name: DoublesB_Stage1,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -166,7 +166,7 @@ sequences: [
       rewardAvailablePokeReset: False
     },
     {
-      name: DoublesB_Stage2,
+      name: DoublesB_Stage1,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -183,7 +183,7 @@ sequences: [
       rewardAvailablePokeReset: False
     },
     {
-      name: DoublesB_Stage2,
+      name: DoublesB_Stage1,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
