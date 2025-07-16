@@ -100,7 +100,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>E:\temp</Path>
+              <Path>D:\hypnose\rawdata\sub-020_id-072\ses-79_date-20250715\behav</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -296,7 +296,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM10</harp:PortName>
+                <harp:PortName>COM11</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -749,40 +749,42 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM13</PortO0>
+        <PortO0>COM25</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM12</PortO1>
+        <PortO1>COM9</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
         <OlfactometerCommand>OlfactometerCommand</OlfactometerCommand>
       </Expression>
-      <Expression xsi:type="GroupWorkflow">
-        <Name>EEG</Name>
-        <Workflow>
-          <Nodes>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="Combinator">
-                <Combinator xsi:type="p2:UdpSource">
-                  <p2:GroupAddress>239.255.76.67</p2:GroupAddress>
-                  <p2:Port>8866</p2:Port>
-                </Combinator>
-              </Builder>
-            </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="rx:PublishSubject">
-                <Name>EegStream</Name>
-              </Builder>
-            </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="WorkflowOutput" />
-            </Expression>
-          </Nodes>
-          <Edges>
-            <Edge From="0" To="1" Label="Source1" />
-            <Edge From="1" To="2" Label="Source1" />
-          </Edges>
-        </Workflow>
+      <Expression xsi:type="Disable">
+        <Builder xsi:type="GroupWorkflow">
+          <Name>EEG</Name>
+          <Workflow>
+            <Nodes>
+              <Expression xsi:type="Disable">
+                <Builder xsi:type="Combinator">
+                  <Combinator xsi:type="p2:UdpSource">
+                    <p2:GroupAddress>239.255.76.67</p2:GroupAddress>
+                    <p2:Port>8866</p2:Port>
+                  </Combinator>
+                </Builder>
+              </Expression>
+              <Expression xsi:type="Disable">
+                <Builder xsi:type="rx:PublishSubject">
+                  <Name>EegStream</Name>
+                </Builder>
+              </Expression>
+              <Expression xsi:type="Disable">
+                <Builder xsi:type="WorkflowOutput" />
+              </Expression>
+            </Nodes>
+            <Edges>
+              <Edge From="0" To="1" Label="Source1" />
+              <Edge From="1" To="2" Label="Source1" />
+            </Edges>
+          </Workflow>
+        </Builder>
       </Expression>
       <Expression xsi:type="ExternalizedMapping">
         <Property Name="Path" DisplayName="SessionSettingsPath" />
@@ -837,7 +839,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/freerun-stage1-test.yml</p2:Path>
+                <p2:Path>Schemas/freerun-stage3.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1607,7 +1609,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.5</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="WorkflowOutput" />
@@ -1660,7 +1662,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.5</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
