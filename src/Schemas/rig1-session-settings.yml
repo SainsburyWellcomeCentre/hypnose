@@ -10,7 +10,7 @@ metadata:
   loggingRootPath: E:\temp
   rewardTime: 0.045
   performanceAverageWindow: 5
-  initialSequence: Schemas/odourdiscrimination-stage3b.yml
+  initialSequence: Schemas/hiddenrule-location0.yml
   maximumInterOdourPokeTime: 2
     
 cameraProperties:
