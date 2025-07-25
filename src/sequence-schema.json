@@ -78,6 +78,11 @@
                     "description": "Boolean specifying whether when a reward is available if the subject pokes the odour port it resets the trial.",
                     "default": "False",
                     "type": "boolean"
+                },
+                "enableTrialStartIndicator": {
+                    "description": "Boolean specifying whether to enable indicator for when a trial is ready to be started",
+                    "default": "False",
+                    "type": "boolean"
                 }
             }
         },
