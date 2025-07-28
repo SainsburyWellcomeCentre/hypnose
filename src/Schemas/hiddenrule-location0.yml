@@ -17,11 +17,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -34,11 +35,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -51,11 +53,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -68,11 +71,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -85,11 +89,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -102,11 +107,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -119,11 +125,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -136,11 +143,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -153,11 +161,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -170,11 +179,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -187,11 +197,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -204,11 +215,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -221,11 +233,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -238,11 +251,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -255,11 +269,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -272,11 +287,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -289,11 +305,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -306,11 +323,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -323,11 +341,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -340,11 +359,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -357,11 +377,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -374,11 +395,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -391,11 +413,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleA_Location0,
@@ -408,11 +431,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -425,11 +449,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -442,11 +467,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -459,11 +485,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -476,11 +503,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -493,11 +521,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -510,11 +539,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -527,11 +557,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -544,11 +575,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -561,11 +593,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -578,11 +611,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -595,11 +629,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -612,11 +647,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -629,11 +665,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -646,11 +683,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -663,11 +701,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -680,11 +719,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -697,11 +737,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -714,11 +755,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -731,11 +773,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -748,11 +791,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -765,11 +809,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -782,11 +827,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -799,11 +845,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     },
     {
       name: HiddenRuleB_Location0,
@@ -816,11 +863,12 @@ sequences: [
       completionRequiresEngagement: False,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
-      enableTrialIndicator: True,
+      enableTrialIndicator: False,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True
+      rewardAvailablePokeReset: True,
+      enableTrialStartIndicator: True
     }
   ]
 ]
