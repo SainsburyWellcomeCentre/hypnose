@@ -45,6 +45,8 @@ namespace SequenceSchema
     
         private bool _rewardAvailablePokeReset = false;
     
+        private bool _enableTrialStartIndicator = false;
+    
         public Sequence()
         {
         }
@@ -66,6 +68,7 @@ namespace SequenceSchema
             _completionRequiresEngagement = other._completionRequiresEngagement;
             _skipSampling = other._skipSampling;
             _rewardAvailablePokeReset = other._rewardAvailablePokeReset;
+            _enableTrialStartIndicator = other._enableTrialStartIndicator;
         }
     
         /// <summary>
@@ -326,6 +329,24 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// Boolean specifying whether to enable indicator for when a trial is ready to be started
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="enableTrialStartIndicator")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable indicator for when a trial is ready to be st" +
+            "arted")]
+        public bool EnableTrialStartIndicator
+        {
+            get
+            {
+                return _enableTrialStartIndicator;
+            }
+            set
+            {
+                _enableTrialStartIndicator = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -352,7 +373,8 @@ namespace SequenceSchema
             stringBuilder.Append("resetOnReward = " + _resetOnReward + ", ");
             stringBuilder.Append("completionRequiresEngagement = " + _completionRequiresEngagement + ", ");
             stringBuilder.Append("skipSampling = " + _skipSampling + ", ");
-            stringBuilder.Append("rewardAvailablePokeReset = " + _rewardAvailablePokeReset);
+            stringBuilder.Append("rewardAvailablePokeReset = " + _rewardAvailablePokeReset + ", ");
+            stringBuilder.Append("enableTrialStartIndicator = " + _enableTrialStartIndicator);
             return true;
         }
     
