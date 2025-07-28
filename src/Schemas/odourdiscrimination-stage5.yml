@@ -2,8 +2,8 @@
 ---
 # yaml-language-server: $schema=sequence-schema.json
 
-nextSequence: Schemas/rig1-odourdiscrimination-stage4b-test.yml
-performaceCriterion: 0.8
+nextSequence: Schemas/stage6-test.yml
+performaceCriterion: 1.1
 sequences: [
     [{name: OdourDiscriminationA_Stage5,
     defaultCommand: Default,
@@ -22,7 +22,8 @@ sequences: [
     enableTrialIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: False
     }],
     [{name: OdourDiscriminationB_Stage5,
     defaultCommand: Default,
@@ -41,6 +42,7 @@ sequences: [
     enableTrialIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    rewardAvailablePokeReset: False
     }]
 ]

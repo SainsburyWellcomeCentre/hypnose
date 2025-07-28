@@ -2,10 +2,10 @@
 ---
 # yaml-language-server: $schema=sequence-schema.json
 
-nextSequence: Schemas/rig1-odourdiscrimination-stage5-test.yml
+nextSequence: Schemas/stage6-test.yml
 performaceCriterion: 1.1
 sequences: [
-    [{name: OdourDiscriminationA_Stage4B,
+    [{name: OdourDiscriminationA_Stage6,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -18,13 +18,13 @@ sequences: [
         [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
       ]}
     ],
-    rewardAttempts: 99999,
+    rewardAttempts: 0,
     enableTrialIndicator: True,
-    enableRewardLocationIndicator: True,
+    enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False
     }],
-    [{name: OdourDiscriminationB_Stage4B,
+    [{name: OdourDiscriminationB_Stage6,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -37,9 +37,9 @@ sequences: [
         [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
       ]}
     ],
-    rewardAttempts: 99999,
+    rewardAttempts: 0,
     enableTrialIndicator: True,
-    enableRewardLocationIndicator: True,
+    enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False
     }]
