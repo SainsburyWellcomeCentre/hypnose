@@ -21,7 +21,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -39,7 +39,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -57,7 +57,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -75,7 +75,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -93,7 +93,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -111,7 +111,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -129,7 +129,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -147,7 +147,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -165,7 +165,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -183,7 +183,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -201,7 +201,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -219,7 +219,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -237,7 +237,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -255,7 +255,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -273,7 +273,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -291,7 +291,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -309,7 +309,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -327,7 +327,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -345,7 +345,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -363,7 +363,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -381,7 +381,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -399,7 +399,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -417,7 +417,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -435,7 +435,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -453,7 +453,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -471,7 +471,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -489,7 +489,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -507,7 +507,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -525,7 +525,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -543,7 +543,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -561,7 +561,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -579,7 +579,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -597,7 +597,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -615,7 +615,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -633,7 +633,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -651,7 +651,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -669,7 +669,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -687,7 +687,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -705,7 +705,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -723,7 +723,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -741,7 +741,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -759,7 +759,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -777,7 +777,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -795,7 +795,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -813,7 +813,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -831,7 +831,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -849,7 +849,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     },
     {
@@ -867,7 +867,7 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: True,
+      rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True
     }
   ]
