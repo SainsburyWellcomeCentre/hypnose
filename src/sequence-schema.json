@@ -50,7 +50,7 @@
                     "type": "integer"
                 },
                 "enableTrialEndIndicator": {
-                    "description": "Boolean specifying whether to enable indicator for when the trial is completed and reward is available",
+                    "description": "Boolean specifying whether to enable indicator until the trial is completed and reward is available",
                     "default": "False",
                     "type": "boolean"
                 },
