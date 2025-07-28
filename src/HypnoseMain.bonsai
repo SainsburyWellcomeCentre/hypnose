@@ -2209,7 +2209,7 @@ it.Item2 as TrialComplete
                     <Name>SequenceInfo</Name>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
-                    <Selector>Item2.EnableTrialIndicator</Selector>
+                    <Selector>Item2.enableTrialEndIndicator</Selector>
                   </Expression>
                   <Expression xsi:type="rx:Condition">
                     <Workflow>

@@ -33,7 +33,7 @@ namespace SequenceSchema
     
         private int _rewardAttempts = 1;
     
-        private bool _enableTrialIndicator = false;
+        private bool _enableTrialEndIndicator = false;
     
         private bool _enableRewardLocationIndicator = false;
     
@@ -62,7 +62,7 @@ namespace SequenceSchema
             _maximumTime = other._maximumTime;
             _rewardConditions = other._rewardConditions;
             _rewardAttempts = other._rewardAttempts;
-            _enableTrialIndicator = other._enableTrialIndicator;
+            _enableTrialEndIndicator = other._enableTrialEndIndicator;
             _enableRewardLocationIndicator = other._enableRewardLocationIndicator;
             _resetOnReward = other._resetOnReward;
             _completionRequiresEngagement = other._completionRequiresEngagement;
@@ -225,18 +225,18 @@ namespace SequenceSchema
         /// <summary>
         /// Boolean specifying whether to enable indicator for when a trial is ready to be initiated
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="enableTrialIndicator")]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="enableTrialEndIndicator")]
         [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable indicator for when a trial is ready to be in" +
             "itiated")]
-        public bool EnableTrialIndicator
+        public bool EnableTrialEndIndicator
         {
             get
             {
-                return _enableTrialIndicator;
+                return _enableTrialEndIndicator;
             }
             set
             {
-                _enableTrialIndicator = value;
+                _enableTrialEndIndicator = value;
             }
         }
     
@@ -368,7 +368,7 @@ namespace SequenceSchema
             stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("rewardConditions = " + _rewardConditions + ", ");
             stringBuilder.Append("rewardAttempts = " + _rewardAttempts + ", ");
-            stringBuilder.Append("enableTrialIndicator = " + _enableTrialIndicator + ", ");
+            stringBuilder.Append("enableTrialEndIndicator = " + _enableTrialEndIndicator + ", ");
             stringBuilder.Append("enableRewardLocationIndicator = " + _enableRewardLocationIndicator + ", ");
             stringBuilder.Append("resetOnReward = " + _resetOnReward + ", ");
             stringBuilder.Append("completionRequiresEngagement = " + _completionRequiresEngagement + ", ");
