@@ -2,10 +2,10 @@
 ---
 # yaml-language-server: $schema=sequence-schema.json
 
-nextSequence: Schemas/stage7-test.yml
+nextSequence: Schemas/rig1-odourdiscrimination-stage5-test.yml
 performaceCriterion: 1.1
 sequences: [
-    [{name: OdourDiscriminationA_Stage6,
+    [{name: OdourDiscriminationA_Stage2,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -15,16 +15,16 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 0, definition: [
-        [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
+        [{command: OdorA, rewarded: True, minimumSamplingTime: 0.05, maximumSamplingTime: 1}]
       ]}
     ],
-    rewardAttempts: 0,
+    rewardAttempts: 99999,
     enableTrialIndicator: True,
-    enableRewardLocationIndicator: False,
+    enableRewardLocationIndicator: True,
     resetOnReward: True,
     skipSampling: False
     }],
-    [{name: OdourDiscriminationB_Stage6,
+    [{name: OdourDiscriminationB_Stage2,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -34,12 +34,12 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
-        [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
+        [{command: OdorB, rewarded: True, minimumSamplingTime: 0.05, maximumSamplingTime: 1}]
       ]}
     ],
-    rewardAttempts: 0,
+    rewardAttempts: 99999,
     enableTrialIndicator: True,
-    enableRewardLocationIndicator: False,
+    enableRewardLocationIndicator: True,
     resetOnReward: True,
     skipSampling: False
     }]

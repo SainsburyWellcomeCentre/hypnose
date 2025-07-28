@@ -5,7 +5,7 @@
 nextSequence: Schemas/rig1-odourdiscrimination-stage5-test.yml
 performaceCriterion: 1.1
 sequences: [
-    [{name: OdourDiscriminationA_Stage4B,
+    [{name: OdourDiscriminationA_Stage3B,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
@@ -24,7 +24,7 @@ sequences: [
     resetOnReward: True,
     skipSampling: False
     }],
-    [{name: OdourDiscriminationB_Stage4B,
+    [{name: OdourDiscriminationB_Stage3B,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,

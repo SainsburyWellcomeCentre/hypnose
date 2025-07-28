@@ -1,35 +1,13 @@
 %YAML 1.1
 ---
-# yaml-language-server: $schema=data-schema.json
+# yaml-language-server: $schema=sequence-schema.json
 
-metadata:
-  animalId: plimbo
-  rootPath: test
-  minimumSampleTime: 0.05
-  sampleOffsetTime: 0.25
-  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-59_date-20250616\behav
-  rewardTime: 0.045
-
-cameraProperties:
-  frameRate: 30
-  exposure: 30000
-  gain: 15
-
-olfactometerCommands:
-  - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 100, 1000]}
-  - {name: Purge, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 100, 1000]}
-  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [100, 0, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 1000]}
-  - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 100, 0, 0, 1000], targetFlowO1: [0, 0, 0, 0, 1000]}
-  - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 100, 0, 1000], targetFlowO1: [0, 0, 0, 0, 1000]}
-  - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 100, 1000], targetFlowO1: [0, 0, 0, 0, 1000]}
-  - {name: OdorE, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [100, 0, 0, 0, 1000]}
-  - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 100, 0, 0, 1000]}
-  - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1000], targetFlowO1: [0, 0, 100, 0, 1000]}
-
+nextSequence: Schemas/stage7-test.yml
+performaceCriterion: 1.1
 sequences: [
   [
     {
-      name: DoublesA_Stage1,
+      name: DoublesA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -42,10 +20,11 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
-      name: DoublesA_Stage1,
+      name: DoublesA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -58,10 +37,11 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
-      name: DoublesA_Stage1,
+      name: DoublesA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -74,10 +54,11 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
-      name: DoublesA_Stage1,
+      name: DoublesA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -90,10 +71,11 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
-      name: DoublesA_Stage1,
+      name: DoublesA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -106,10 +88,11 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
-      name: DoublesB_Stage1,
+      name: DoublesB_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -122,10 +105,11 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
-      name: DoublesB_Stage1,
+      name: DoublesB_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -138,10 +122,11 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
-      name: DoublesB_Stage1,
+      name: DoublesB_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -154,10 +139,11 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
-      name: DoublesB_Stage1,
+      name: DoublesB_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -170,10 +156,11 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     },
     {
-      name: DoublesB_Stage1,
+      name: DoublesB_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -186,7 +173,8 @@ sequences: [
       enableTrialIndicator: True,
       enableRewardLocationIndicator: False,
       resetOnReward: True,
-      skipSampling: False
+      skipSampling: False,
+      rewardAvailablePokeReset: False
     }
     ]
   ]

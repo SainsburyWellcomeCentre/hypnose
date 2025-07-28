@@ -6,11 +6,11 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  sampleOffsetTime: 0.1
-  loggingRootPath: D:\hypnose\rawdata\sub-026_id-077\ses-81_date-20250716\behav
+  sampleOffsetTime: 0.2
+  loggingRootPath: D:\hypnose\rawdata\sub-025_id-076\ses-91_date-20250728\behav
   rewardTime: 0.13
   performanceAverageWindow: 5
-  initialSequence: Schemas/quintuples-stage5.yml
+  initialSequence: Schemas/freerun-stage5.yml
   maximumInterOdourPokeTime: 2
 
 cameraProperties:
@@ -22,9 +22,9 @@ olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
   - {name: Purge, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
   - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [100, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorB, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 100, 0, 0, 400], targetFlowO1: [0, 0, 0, 0, 400]}
+  - {name: OdorB, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [100, 0, 0, 0, 400]}
   - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 100, 0, 400], targetFlowO1: [0, 0, 0, 0, 400]}
   - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 100, 400], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorE, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [100, 0, 0, 0, 400]}
+  - {name: OdorE, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 100, 0, 0, 400], targetFlowO1: [0, 0, 0, 0, 400]}
   - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 100, 0, 0, 400]}
   - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 100, 0, 400]}
