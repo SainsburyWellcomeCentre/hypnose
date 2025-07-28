@@ -37,7 +37,7 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialEndIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False
@@ -52,7 +52,7 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 1, definition: [[{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialEndIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False
@@ -67,7 +67,7 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialEndIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False
@@ -82,7 +82,7 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialEndIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False
@@ -97,7 +97,7 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialEndIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False
@@ -112,7 +112,7 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialEndIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False
@@ -127,7 +127,7 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
-    enableTrialIndicator: True,
+    enableTrialEndIndicator: True,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False
