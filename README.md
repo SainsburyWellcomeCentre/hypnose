@@ -46,6 +46,30 @@ To create an experiment parameter file based on the `data-schema`, create a new 
 
  Below this add your experiment definition. There are 3 main groups of parameters to define: 1) metadata, 2) olfactometerCommands and 3) sequences. An example implementation is shown below:
 
+#### Updating schema files for Bonsai serialization
+When schema files are modified, you need to regenerate the corresponding C# serialization classes for Bonsai to properly load and validate the YAML files. This process uses the `dotnet bonsai.sgen` command to generate strongly-typed classes from JSON schema definitions.
+
+To update serialization classes after modifying a schema file, navigate to the location where dotnet was set up (typically the `.bonsai` directory where the Bonsai environment was installed) in a terminal and run:
+
+```
+dotnet bonsai.sgen --schema ./src/sequence-schema.json --namespace SequenceSchema
+```
+
+For the data schema, use:
+
+```
+dotnet bonsai.sgen --schema ./src/data-schema.json --namespace DataSchema
+```
+
+**Important:** The version of `bonsai.sgen` used is critical for compatibility. Ensure you're using the same version that was installed with your Bonsai environment setup to avoid serialization conflicts or incompatibilities with the workflow runtime.
+
+This command will:
+- Read the JSON schema file specified by `--schema`
+- Generate corresponding C# classes in the specified `--namespace`
+- Create or update the serialization classes in the `Extensions` folder
+
+The generated classes enable Bonsai to deserialize YAML configuration files with proper type checking and validation based on the schema definitions. Always regenerate these classes when you modify the schema files to ensure consistency between your YAML configurations and the Bonsai workflow expectations.
+
 ```
  metadata:
   animalId: plimbo
