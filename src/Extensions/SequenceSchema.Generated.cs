@@ -23,7 +23,9 @@ namespace SequenceSchema
     
         private double _interCommandTime = 0.2D;
     
-        private double _interTrialInterval = 5D;
+        private double _interTrialIntervalSuccessfulTrial = 5D;
+    
+        private double _interTrialIntervalUnsuccessfulTrial = 5D;
     
         private double _responseTime = 5D;
     
@@ -57,7 +59,8 @@ namespace SequenceSchema
             _defaultCommand = other._defaultCommand;
             _interCommand = other._interCommand;
             _interCommandTime = other._interCommandTime;
-            _interTrialInterval = other._interTrialInterval;
+            _interTrialIntervalSuccessfulTrial = other._interTrialIntervalSuccessfulTrial;
+            _interTrialIntervalUnsuccessfulTrial = other._interTrialIntervalUnsuccessfulTrial;
             _responseTime = other._responseTime;
             _maximumTime = other._maximumTime;
             _rewardConditions = other._rewardConditions;
@@ -140,19 +143,36 @@ namespace SequenceSchema
         }
     
         /// <summary>
-        /// Time between trials in seconds
+        /// Time between trials in seconds after a successful trial
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interTrialInterval")]
-        [System.ComponentModel.DescriptionAttribute("Time between trials in seconds")]
-        public double InterTrialInterval
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interTrialIntervalSuccessfulTrial")]
+        [System.ComponentModel.DescriptionAttribute("Time between trials in seconds after a successful trial")]
+        public double InterTrialIntervalSuccessfulTrial
         {
             get
             {
-                return _interTrialInterval;
+                return _interTrialIntervalSuccessfulTrial;
             }
             set
             {
-                _interTrialInterval = value;
+                _interTrialIntervalSuccessfulTrial = value;
+            }
+        }
+    
+        /// <summary>
+        /// Time between trials in seconds after an unsuccessful trial
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interTrialIntervalUnsuccessfulTrial")]
+        [System.ComponentModel.DescriptionAttribute("Time between trials in seconds after an unsuccessful trial")]
+        public double InterTrialIntervalUnsuccessfulTrial
+        {
+            get
+            {
+                return _interTrialIntervalUnsuccessfulTrial;
+            }
+            set
+            {
+                _interTrialIntervalUnsuccessfulTrial = value;
             }
         }
     
@@ -223,11 +243,11 @@ namespace SequenceSchema
         }
     
         /// <summary>
-        /// Boolean specifying whether to enable indicator for when a trial is ready to be initiated
+        /// Boolean specifying whether to enable indicator until the trial is completed and reward is available
         /// </summary>
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="enableTrialEndIndicator")]
-        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable indicator for when a trial is ready to be in" +
-            "itiated")]
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable indicator until the trial is completed and r" +
+            "eward is available")]
         public bool EnableTrialEndIndicator
         {
             get
@@ -363,7 +383,8 @@ namespace SequenceSchema
             stringBuilder.Append("defaultCommand = " + _defaultCommand + ", ");
             stringBuilder.Append("interCommand = " + _interCommand + ", ");
             stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
-            stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
+            stringBuilder.Append("interTrialIntervalSuccessfulTrial = " + _interTrialIntervalSuccessfulTrial + ", ");
+            stringBuilder.Append("interTrialIntervalUnsuccessfulTrial = " + _interTrialIntervalUnsuccessfulTrial + ", ");
             stringBuilder.Append("responseTime = " + _responseTime + ", ");
             stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("rewardConditions = " + _rewardConditions + ", ");
