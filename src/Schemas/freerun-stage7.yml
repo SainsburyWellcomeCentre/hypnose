@@ -11,7 +11,8 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, minimumSamplingTime: 0.5, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
@@ -19,7 +20,8 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: False,
+    enableTrialStartIndicator: False
     },
     {name: FreeRun_Stage7,
     defaultCommand: Default,
@@ -27,7 +29,8 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     completionRequiresEngagement: True,
     rewardConditions: [{position: 1, definition: [[{command: OdorB, rewarded: True, minimumSamplingTime: 0.5, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
@@ -35,7 +38,8 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: False,
+    enableTrialStartIndicator: False
     },
     {name: FreeRun_Stage7,
     defaultCommand: Default,
@@ -43,7 +47,8 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, minimumSamplingTime: 0.5, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
@@ -51,7 +56,8 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: False,
+    enableTrialStartIndicator: False
     },
     {name: FreeRun_Stage7,
     defaultCommand: Default,
@@ -59,7 +65,8 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, minimumSamplingTime: 0.5, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
@@ -67,7 +74,8 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: False,
+    enableTrialStartIndicator: False
     },
     {name: FreeRun_Stage7,
     defaultCommand: Default,
@@ -75,7 +83,8 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, minimumSamplingTime: 0.5, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
@@ -83,7 +92,8 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: False,
+    enableTrialStartIndicator: False
     },
     {name: FreeRun_Stage7,
     defaultCommand: Default,
@@ -91,7 +101,8 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, minimumSamplingTime: 0.5, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
@@ -99,7 +110,8 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: False,
+    enableTrialStartIndicator: False
     },
     {name: FreeRun_Stage7,
     defaultCommand: Default,
@@ -107,7 +119,8 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     completionRequiresEngagement: True,
     rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, minimumSamplingTime: 0.5, maximumSamplingTime: 1}]]}],
     rewardAttempts: 0,
@@ -115,6 +128,7 @@ sequences: [
     enableRewardLocationIndicator: False,
     resetOnReward: True,
     skipSampling: False,
-    rewardAvailablePokeReset: False
+    rewardAvailablePokeReset: False,
+    enableTrialStartIndicator: False
     }]
 ]

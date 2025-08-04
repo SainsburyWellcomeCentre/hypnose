@@ -13,7 +13,8 @@ sequences: [
       interCommandTime: 0.2,
       maximumTime: 10,
       responseTime: 99999,
-      interTrialInterval: 0,
+      interTrialIntervalSuccessfulTrial: 0,
+      interTrialIntervalUnsuccessfulTrial: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
@@ -21,7 +22,8 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: False
+      rewardAvailablePokeReset: False,
+      enableTrialStartIndicator: False
     },
     {
       name: DoublesA_Stage5,
@@ -30,7 +32,8 @@ sequences: [
       interCommandTime: 0.2,
       maximumTime: 10,
       responseTime: 99999,
-      interTrialInterval: 0,
+      interTrialIntervalSuccessfulTrial: 0,
+      interTrialIntervalUnsuccessfulTrial: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
@@ -38,7 +41,8 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: False
+      rewardAvailablePokeReset: False,
+      enableTrialStartIndicator: False
     },
     {
       name: DoublesA_Stage5,
@@ -47,7 +51,8 @@ sequences: [
       interCommandTime: 0.2,
       maximumTime: 10,
       responseTime: 99999,
-      interTrialInterval: 0,
+      interTrialIntervalSuccessfulTrial: 0,
+      interTrialIntervalUnsuccessfulTrial: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
@@ -55,7 +60,8 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: False
+      rewardAvailablePokeReset: False,
+      enableTrialStartIndicator: False
     },
     {
       name: DoublesA_Stage5,
@@ -64,7 +70,8 @@ sequences: [
       interCommandTime: 0.2,
       maximumTime: 10,
       responseTime: 99999,
-      interTrialInterval: 0,
+      interTrialIntervalSuccessfulTrial: 0,
+      interTrialIntervalUnsuccessfulTrial: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
@@ -72,7 +79,8 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: False
+      rewardAvailablePokeReset: False,
+      enableTrialStartIndicator: False
     },
     {
       name: DoublesA_Stage5,
@@ -81,7 +89,8 @@ sequences: [
       interCommandTime: 0.2,
       maximumTime: 10,
       responseTime: 99999,
-      interTrialInterval: 0,
+      interTrialIntervalSuccessfulTrial: 0,
+      interTrialIntervalUnsuccessfulTrial: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
@@ -89,7 +98,8 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: False
+      rewardAvailablePokeReset: False,
+      enableTrialStartIndicator: False
     },
     {
       name: DoublesB_Stage5,
@@ -98,7 +108,8 @@ sequences: [
       interCommandTime: 0.2,
       maximumTime: 10,
       responseTime: 99999,
-      interTrialInterval: 0,
+      interTrialIntervalSuccessfulTrial: 0,
+      interTrialIntervalUnsuccessfulTrial: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 1, definition: [[{command: OdorC, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
@@ -106,7 +117,8 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: False
+      rewardAvailablePokeReset: False,
+      enableTrialStartIndicator: False
     },
     {
       name: DoublesB_Stage5,
@@ -115,7 +127,8 @@ sequences: [
       interCommandTime: 0.2,
       maximumTime: 10,
       responseTime: 99999,
-      interTrialInterval: 0,
+      interTrialIntervalSuccessfulTrial: 0,
+      interTrialIntervalUnsuccessfulTrial: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 1, definition: [[{command: OdorD, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
@@ -123,7 +136,8 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: False
+      rewardAvailablePokeReset: False,
+      enableTrialStartIndicator: False
     },
     {
       name: DoublesB_Stage5,
@@ -132,7 +146,8 @@ sequences: [
       interCommandTime: 0.2,
       maximumTime: 10,
       responseTime: 99999,
-      interTrialInterval: 0,
+      interTrialIntervalSuccessfulTrial: 0,
+      interTrialIntervalUnsuccessfulTrial: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 1, definition: [[{command: OdorE, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
@@ -140,7 +155,8 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: False
+      rewardAvailablePokeReset: False,
+      enableTrialStartIndicator: False
     },
     {
       name: DoublesB_Stage5,
@@ -149,7 +165,8 @@ sequences: [
       interCommandTime: 0.2,
       maximumTime: 10,
       responseTime: 99999,
-      interTrialInterval: 0,
+      interTrialIntervalSuccessfulTrial: 0,
+      interTrialIntervalUnsuccessfulTrial: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 1, definition: [[{command: OdorF, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
@@ -157,7 +174,8 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: False
+      rewardAvailablePokeReset: False,
+      enableTrialStartIndicator: False
     },
     {
       name: DoublesB_Stage5,
@@ -166,7 +184,8 @@ sequences: [
       interCommandTime: 0.2,
       maximumTime: 10,
       responseTime: 99999,
-      interTrialInterval: 0,
+      interTrialIntervalSuccessfulTrial: 0,
+      interTrialIntervalUnsuccessfulTrial: 0,
       completionRequiresEngagement: True,
       rewardConditions: [{position: 1, definition: [[{command: OdorG, rewarded: False, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
       rewardAttempts: 0,
@@ -174,7 +193,8 @@ sequences: [
       enableRewardLocationIndicator: False,
       resetOnReward: True,
       skipSampling: False,
-      rewardAvailablePokeReset: False
+      rewardAvailablePokeReset: False,
+      enableTrialStartIndicator: False
     }
     ]
   ]
