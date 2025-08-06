@@ -507,6 +507,8 @@ namespace SequenceSchema
     
         private double _maximumSamplingTime;
     
+        private int _index;
+    
         public Valence()
         {
         }
@@ -517,6 +519,7 @@ namespace SequenceSchema
             _rewarded = other._rewarded;
             _minimumSamplingTime = other._minimumSamplingTime;
             _maximumSamplingTime = other._maximumSamplingTime;
+            _index = other._index;
         }
     
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="command")]
@@ -580,6 +583,23 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// The index of the command in the sequence, used for multi-command sequences.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="index")]
+        [System.ComponentModel.DescriptionAttribute("The index of the command in the sequence, used for multi-command sequences.")]
+        public int Index
+        {
+            get
+            {
+                return _index;
+            }
+            set
+            {
+                _index = value;
+            }
+        }
+    
         public System.IObservable<Valence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Valence(this)));
@@ -595,7 +615,8 @@ namespace SequenceSchema
             stringBuilder.Append("command = " + _command + ", ");
             stringBuilder.Append("rewarded = " + _rewarded + ", ");
             stringBuilder.Append("minimumSamplingTime = " + _minimumSamplingTime + ", ");
-            stringBuilder.Append("maximumSamplingTime = " + _maximumSamplingTime);
+            stringBuilder.Append("maximumSamplingTime = " + _maximumSamplingTime + ", ");
+            stringBuilder.Append("index = " + _index);
             return true;
         }
     
