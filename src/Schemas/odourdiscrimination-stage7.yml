@@ -13,10 +13,10 @@ sequences: [
     responseTime: 99999,
     interTrialIntervalSuccessfulTrial: 0,
     interTrialIntervalUnsuccessfulTrial: 0,
-    completionRequiresEngagement: True,
+    completionRequiresEngagement: False,
     rewardConditions: [
       {position: 0, definition: [
-        [{command: OdorA, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
+        [{command: OdorA, index: 0, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
       ]}
     ],
     rewardAttempts: 0,
@@ -34,10 +34,10 @@ sequences: [
     responseTime: 99999,
     interTrialIntervalSuccessfulTrial: 0,
     interTrialIntervalUnsuccessfulTrial: 0,
-    completionRequiresEngagement: True,
+    completionRequiresEngagement: False,
     rewardConditions: [
       {position: 1, definition: [
-        [{command: OdorB, rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
+        [{command: OdorB, index: 1,rewarded: True, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
       ]}
     ],
     rewardAttempts: 0,
