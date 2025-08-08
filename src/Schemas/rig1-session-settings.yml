@@ -10,8 +10,8 @@ metadata:
   loggingRootPath: E:/temp
   rewardTime: 0.106
   performanceAverageWindow: 5
-  initialSequence: Schemas/hiddenrule-location0.yml
-  maximumInterOdourPokeTime: 5
+  initialSequence: Schemas/quintuples-stage10.yml
+  maximumInterOdourPokeTime: 2
     
 cameraProperties:
   frameRate: 30
