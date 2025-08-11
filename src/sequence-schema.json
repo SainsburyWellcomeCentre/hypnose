@@ -123,6 +123,11 @@
                 "maximumSamplingTime": {
                     "type": "number",
                     "description": "The maximum sampling time in seconds for a presentation, completes and is valid after this time."
+                },
+                "index": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "The index of the command in the sequence, used for multi-command sequences."
                 }
             }
         }
