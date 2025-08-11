@@ -23,7 +23,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -42,7 +42,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -61,7 +61,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -80,7 +80,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -99,7 +99,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -118,7 +118,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -137,7 +137,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -156,7 +156,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -175,7 +175,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -194,7 +194,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -213,7 +213,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -232,7 +232,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -251,7 +251,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -270,7 +270,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -289,7 +289,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -308,7 +308,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -327,7 +327,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -346,7 +346,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -365,7 +365,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -384,7 +384,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -403,7 +403,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -422,7 +422,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -441,7 +441,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -460,7 +460,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -479,7 +479,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -498,7 +498,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -517,7 +517,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -536,7 +536,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -555,7 +555,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -574,7 +574,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -593,7 +593,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -612,7 +612,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -631,7 +631,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -650,7 +650,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -669,7 +669,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -688,7 +688,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -707,7 +707,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -726,7 +726,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -745,7 +745,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -764,7 +764,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -783,7 +783,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -802,7 +802,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -821,7 +821,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -840,7 +840,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -859,7 +859,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -878,7 +878,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -897,7 +897,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -916,7 +916,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -935,7 +935,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -954,7 +954,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -973,7 +973,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -992,7 +992,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1011,7 +1011,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1030,7 +1030,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1049,7 +1049,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1068,7 +1068,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1087,7 +1087,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1106,7 +1106,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1125,7 +1125,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1144,7 +1144,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1163,7 +1163,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1182,7 +1182,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1201,7 +1201,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1220,7 +1220,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1239,7 +1239,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1258,7 +1258,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1277,7 +1277,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1296,7 +1296,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1315,7 +1315,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1334,7 +1334,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1353,7 +1353,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1372,7 +1372,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1391,7 +1391,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1410,7 +1410,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1429,7 +1429,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1448,7 +1448,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1467,7 +1467,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1486,7 +1486,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1505,7 +1505,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1524,7 +1524,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1543,7 +1543,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1562,7 +1562,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1581,7 +1581,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1600,7 +1600,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1619,7 +1619,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1638,7 +1638,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1657,7 +1657,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1676,7 +1676,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1695,7 +1695,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1714,7 +1714,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1733,7 +1733,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1752,7 +1752,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1771,7 +1771,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1790,7 +1790,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1809,7 +1809,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1828,7 +1828,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1847,7 +1847,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1866,7 +1866,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1885,7 +1885,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1904,7 +1904,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1923,7 +1923,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1942,7 +1942,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1961,7 +1961,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1980,7 +1980,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -1999,7 +1999,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2018,7 +2018,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2037,7 +2037,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2056,7 +2056,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2075,7 +2075,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2094,7 +2094,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2113,7 +2113,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2132,7 +2132,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2151,7 +2151,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2170,7 +2170,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2189,7 +2189,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2208,7 +2208,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2227,7 +2227,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2246,7 +2246,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2265,7 +2265,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleA_Stage10,
@@ -2284,7 +2284,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2303,7 +2303,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2322,7 +2322,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2341,7 +2341,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2360,7 +2360,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2379,7 +2379,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2398,7 +2398,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2417,7 +2417,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2436,7 +2436,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2455,7 +2455,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2474,7 +2474,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2493,7 +2493,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2512,7 +2512,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2531,7 +2531,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2550,7 +2550,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2569,7 +2569,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2588,7 +2588,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2607,7 +2607,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2626,7 +2626,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2645,7 +2645,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2664,7 +2664,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2683,7 +2683,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2702,7 +2702,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2721,7 +2721,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2740,7 +2740,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2759,7 +2759,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2778,7 +2778,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2797,7 +2797,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2816,7 +2816,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2835,7 +2835,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2854,7 +2854,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2873,7 +2873,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2892,7 +2892,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2911,7 +2911,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2930,7 +2930,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2949,7 +2949,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2968,7 +2968,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -2987,7 +2987,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3006,7 +3006,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3025,7 +3025,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3044,7 +3044,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3063,7 +3063,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3082,7 +3082,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3101,7 +3101,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3120,7 +3120,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3139,7 +3139,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3158,7 +3158,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3177,7 +3177,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3196,7 +3196,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3215,7 +3215,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3234,7 +3234,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3253,7 +3253,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3272,7 +3272,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3291,7 +3291,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3310,7 +3310,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3329,7 +3329,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3348,7 +3348,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3367,7 +3367,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3386,7 +3386,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3405,7 +3405,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3424,7 +3424,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3443,7 +3443,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3462,7 +3462,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3481,7 +3481,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3500,7 +3500,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3519,7 +3519,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3538,7 +3538,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3557,7 +3557,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3576,7 +3576,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3595,7 +3595,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3614,7 +3614,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3633,7 +3633,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3652,7 +3652,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3671,7 +3671,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3690,7 +3690,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3709,7 +3709,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3728,7 +3728,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3747,7 +3747,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3766,7 +3766,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3785,7 +3785,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3804,7 +3804,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3823,7 +3823,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3842,7 +3842,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3861,7 +3861,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3880,7 +3880,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3899,7 +3899,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3918,7 +3918,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3937,7 +3937,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3956,7 +3956,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3975,7 +3975,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -3994,7 +3994,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4013,7 +4013,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4032,7 +4032,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4051,7 +4051,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4070,7 +4070,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4089,7 +4089,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4108,7 +4108,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4127,7 +4127,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4146,7 +4146,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4165,7 +4165,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4184,7 +4184,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4203,7 +4203,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4222,7 +4222,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4241,7 +4241,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4260,7 +4260,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4279,7 +4279,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4298,7 +4298,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4317,7 +4317,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4336,7 +4336,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4355,7 +4355,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4374,7 +4374,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4393,7 +4393,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4412,7 +4412,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4431,7 +4431,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4450,7 +4450,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4469,7 +4469,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4488,7 +4488,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4507,7 +4507,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4526,7 +4526,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4545,7 +4545,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     },
     {
       name: QuintupleB_Stage10,
@@ -4564,7 +4564,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
-      interTrialIntervalUnsuccessfulTrial: 5
+      interTrialIntervalUnsuccessfulTrial: 3
     }
   ]
 ]
