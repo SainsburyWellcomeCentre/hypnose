@@ -11,7 +11,8 @@ metadata:
   rewardTime: 0.13
   performanceAverageWindow: 5
   initialSequence: Schemas/quintuples-stage10.yml
-  maximumInterOdourPokeTime: 2
+  maximumInterOdourPokeTime: 2.2
+  rewardBecomeAvailableTime: 1.5
 
 cameraProperties:
   frameRate: 30

@@ -11,7 +11,8 @@ metadata:
   rewardTime: 0.122
   performanceAverageWindow: 5
   initialSequence: Schemas/triples-stage5.yml
-  maximumInterOdourPokeTime: 2
+  maximumInterOdourPokeTime: 2.2
+  rewardBecomeAvailableTime: 1.5
 
 cameraProperties:
   frameRate: 30
