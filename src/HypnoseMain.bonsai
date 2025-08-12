@@ -2292,10 +2292,10 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="BitwiseAnd" />
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>SequenceInfo</Name>
+                    <Name>SessionSettings</Name>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
-                    <Selector>Item2.RewardBecomeAvailableTime</Selector>
+                    <Selector>Metadata.RewardBecomeAvailableTime</Selector>
                   </Expression>
                   <Expression xsi:type="scr:ExpressionTransform">
                     <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>

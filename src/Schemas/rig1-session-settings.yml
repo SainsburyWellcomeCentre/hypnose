@@ -11,7 +11,8 @@ metadata:
   rewardTime: 0.106
   performanceAverageWindow: 5
   initialSequence: Schemas/hiddenrule-location0.yml
-  maximumInterOdourPokeTime: 2
+  maximumInterOdourPokeTime: 2.2
+  rewardBecomeAvailableTime: 1.5
     
 cameraProperties:
   frameRate: 30
