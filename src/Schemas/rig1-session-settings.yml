@@ -10,7 +10,7 @@ metadata:
   loggingRootPath: D:\hypnose\rawdata\sub-036_id-185\ses-27_date-20250812\behav
   rewardTime: 0.106
   performanceAverageWindow: 5
-  initialSequence: Schemas/odourdiscrimination-stage4ii.yml
+  initialSequence: Schemas/quintuples-probe-location0.yml
   maximumInterOdourPokeTime: 2.2
   rewardBecomeAvailableTime: 0
     
