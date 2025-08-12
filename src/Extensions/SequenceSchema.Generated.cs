@@ -49,6 +49,8 @@ namespace SequenceSchema
     
         private bool _enableTrialStartIndicator = false;
     
+        private double _rewardBecomeAvailableTime = 1.5D;
+    
         public Sequence()
         {
         }
@@ -72,6 +74,7 @@ namespace SequenceSchema
             _skipSampling = other._skipSampling;
             _rewardAvailablePokeReset = other._rewardAvailablePokeReset;
             _enableTrialStartIndicator = other._enableTrialStartIndicator;
+            _rewardBecomeAvailableTime = other._rewardBecomeAvailableTime;
         }
     
         /// <summary>
@@ -367,6 +370,24 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// Time in seconds after leaving odour port following rewared odour that it becomes available
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardBecomeAvailableTime")]
+        [System.ComponentModel.DescriptionAttribute("Time in seconds after leaving odour port following rewared odour that it becomes " +
+            "available")]
+        public double RewardBecomeAvailableTime
+        {
+            get
+            {
+                return _rewardBecomeAvailableTime;
+            }
+            set
+            {
+                _rewardBecomeAvailableTime = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -395,7 +416,8 @@ namespace SequenceSchema
             stringBuilder.Append("completionRequiresEngagement = " + _completionRequiresEngagement + ", ");
             stringBuilder.Append("skipSampling = " + _skipSampling + ", ");
             stringBuilder.Append("rewardAvailablePokeReset = " + _rewardAvailablePokeReset + ", ");
-            stringBuilder.Append("enableTrialStartIndicator = " + _enableTrialStartIndicator);
+            stringBuilder.Append("enableTrialStartIndicator = " + _enableTrialStartIndicator + ", ");
+            stringBuilder.Append("rewardBecomeAvailableTime = " + _rewardBecomeAvailableTime);
             return true;
         }
     

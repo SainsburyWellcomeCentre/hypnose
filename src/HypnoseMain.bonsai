@@ -2291,6 +2291,20 @@ it.Item2 as TrialComplete
                     <Combinator xsi:type="rx:Zip" />
                   </Expression>
                   <Expression xsi:type="BitwiseAnd" />
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SequenceInfo</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item2.RewardBecomeAvailableTime</Selector>
+                  </Expression>
+                  <Expression xsi:type="scr:ExpressionTransform">
+                    <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="DueTime" />
+                    </PropertyMappings>
+                  </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
                       <rx:DueTime>PT1.9S</rx:DueTime>
@@ -2299,30 +2313,25 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="SubscribeSubject">
                     <Name>SustainedSampleState</Name>
                   </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Value</Selector>
+                  </Expression>
+                  <Expression xsi:type="BitwiseNot" />
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:WithLatestFrom" />
                   </Expression>
+                  <Expression xsi:type="BitwiseAnd" />
                   <Expression xsi:type="rx:Condition">
-                    <Name>FailedToSample</Name>
+                    <Name>CompletionConditionsMet</Name>
                     <Workflow>
                       <Nodes>
                         <Expression xsi:type="WorkflowInput">
                           <Name>Source1</Name>
                         </Expression>
-                        <Expression xsi:type="MemberSelector">
-                          <Selector>Item2</Selector>
-                        </Expression>
-                        <Expression xsi:type="MemberSelector">
-                          <Selector>Value</Selector>
-                        </Expression>
-                        <Expression xsi:type="BitwiseNot" />
                         <Expression xsi:type="WorkflowOutput" />
                       </Nodes>
                       <Edges>
                         <Edge From="0" To="1" Label="Source1" />
-                        <Edge From="1" To="2" Label="Source1" />
-                        <Edge From="2" To="3" Label="Source1" />
-                        <Edge From="3" To="4" Label="Source1" />
                       </Edges>
                     </Workflow>
                   </Expression>
@@ -2471,7 +2480,7 @@ it.Item2 as TrialComplete
                   <Edge From="68" To="69" Label="Source1" />
                   <Edge From="69" To="70" Label="Source2" />
                   <Edge From="70" To="71" Label="Source1" />
-                  <Edge From="71" To="117" Label="Source1" />
+                  <Edge From="71" To="124" Label="Source1" />
                   <Edge From="72" To="73" Label="Source1" />
                   <Edge From="72" To="75" Label="Source1" />
                   <Edge From="73" To="74" Label="Source1" />
@@ -2488,7 +2497,7 @@ it.Item2 as TrialComplete
                   <Edge From="83" To="85" Label="Source1" />
                   <Edge From="84" To="85" Label="Source2" />
                   <Edge From="85" To="86" Label="Source1" />
-                  <Edge From="86" To="117" Label="Source2" />
+                  <Edge From="86" To="124" Label="Source2" />
                   <Edge From="87" To="88" Label="Source1" />
                   <Edge From="88" To="91" Label="Source1" />
                   <Edge From="89" To="90" Label="Source1" />
@@ -2496,7 +2505,7 @@ it.Item2 as TrialComplete
                   <Edge From="91" To="93" Label="Source1" />
                   <Edge From="92" To="93" Label="Source2" />
                   <Edge From="93" To="94" Label="Source1" />
-                  <Edge From="94" To="117" Label="Source3" />
+                  <Edge From="94" To="124" Label="Source3" />
                   <Edge From="95" To="96" Label="Source1" />
                   <Edge From="96" To="102" Label="Source1" />
                   <Edge From="97" To="98" Label="Source1" />
@@ -2506,26 +2515,33 @@ it.Item2 as TrialComplete
                   <Edge From="100" To="101" Label="Source1" />
                   <Edge From="101" To="102" Label="Source2" />
                   <Edge From="102" To="103" Label="Source1" />
-                  <Edge From="103" To="104" Label="Source1" />
-                  <Edge From="104" To="106" Label="Source1" />
-                  <Edge From="105" To="106" Label="Source2" />
+                  <Edge From="103" To="108" Label="Source1" />
+                  <Edge From="104" To="105" Label="Source1" />
+                  <Edge From="105" To="106" Label="Source1" />
                   <Edge From="106" To="107" Label="Source1" />
-                  <Edge From="107" To="109" Label="Source1" />
-                  <Edge From="108" To="109" Label="Source2" />
+                  <Edge From="107" To="108" Label="Source2" />
+                  <Edge From="108" To="112" Label="Source1" />
                   <Edge From="109" To="110" Label="Source1" />
-                  <Edge From="110" To="113" Label="Source1" />
-                  <Edge From="111" To="112" Label="Source1" />
-                  <Edge From="112" To="113" Label="Source2" />
-                  <Edge From="113" To="115" Label="Source1" />
-                  <Edge From="114" To="115" Label="Source2" />
-                  <Edge From="115" To="116" Label="Source1" />
-                  <Edge From="116" To="117" Label="Source4" />
-                  <Edge From="117" To="118" Label="Source1" />
+                  <Edge From="110" To="111" Label="Source1" />
+                  <Edge From="111" To="112" Label="Source2" />
+                  <Edge From="112" To="113" Label="Source1" />
+                  <Edge From="113" To="114" Label="Source1" />
+                  <Edge From="114" To="116" Label="Source1" />
+                  <Edge From="115" To="116" Label="Source2" />
+                  <Edge From="116" To="117" Label="Source1" />
+                  <Edge From="117" To="120" Label="Source1" />
                   <Edge From="118" To="119" Label="Source1" />
-                  <Edge From="120" To="121" Label="Source1" />
-                  <Edge From="121" To="122" Label="Source1" />
+                  <Edge From="119" To="120" Label="Source2" />
+                  <Edge From="120" To="122" Label="Source1" />
+                  <Edge From="121" To="122" Label="Source2" />
                   <Edge From="122" To="123" Label="Source1" />
-                  <Edge From="123" To="124" Label="Source1" />
+                  <Edge From="123" To="124" Label="Source4" />
+                  <Edge From="124" To="125" Label="Source1" />
+                  <Edge From="125" To="126" Label="Source1" />
+                  <Edge From="127" To="128" Label="Source1" />
+                  <Edge From="128" To="129" Label="Source1" />
+                  <Edge From="129" To="130" Label="Source1" />
+                  <Edge From="130" To="131" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -3106,7 +3122,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>P1DT3H46M39S</rx:DueTime>
+                      <rx:DueTime>PT2.5S</rx:DueTime>
                       <rx:Period>PT0S</rx:Period>
                     </Combinator>
                   </Expression>
@@ -3477,7 +3493,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT0S</rx:DueTime>
+                      <rx:DueTime>PT3S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
