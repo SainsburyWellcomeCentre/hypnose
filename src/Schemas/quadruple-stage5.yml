@@ -7,7 +7,7 @@ performaceCriterion: 1.1
 sequences: [
   [
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -25,7 +25,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -43,7 +43,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -61,7 +61,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -79,7 +79,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -97,7 +97,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -115,7 +115,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -133,7 +133,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -151,7 +151,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -169,7 +169,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -187,7 +187,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -205,7 +205,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -223,7 +223,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -241,7 +241,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -259,7 +259,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -277,7 +277,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -295,7 +295,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -313,7 +313,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -331,7 +331,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -349,7 +349,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -367,7 +367,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -385,7 +385,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -403,7 +403,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -421,7 +421,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -439,7 +439,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -457,7 +457,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -475,7 +475,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -493,7 +493,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -511,7 +511,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -529,7 +529,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -547,7 +547,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -565,7 +565,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -583,7 +583,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -601,7 +601,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -619,7 +619,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -637,7 +637,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -655,7 +655,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -673,7 +673,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -691,7 +691,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -709,7 +709,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -727,7 +727,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -745,7 +745,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -763,7 +763,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -781,7 +781,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -799,7 +799,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -817,7 +817,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -835,7 +835,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -853,7 +853,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -871,7 +871,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -889,7 +889,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -907,7 +907,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -925,7 +925,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -943,7 +943,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -961,7 +961,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -979,7 +979,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -997,7 +997,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -1015,7 +1015,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -1033,7 +1033,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -1051,7 +1051,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
@@ -1069,7 +1069,7 @@ sequences: [
       interTrialIntervalUnsuccessfulTrial: 3
     },
     {
-      name: QuadrupleA_Stage1,
+      name: QuadrupleA_Stage5,
       defaultCommand: Default,
       interCommand: Purge,
       interCommandTime: 0.2,
