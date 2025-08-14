@@ -100,7 +100,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>E:/temp</Path>
+              <Path>E:\temp</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -839,7 +839,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/hiddenrule-location0.yml</p2:Path>
+                <p2:Path>Schemas/odourdiscrimination-stage4ii.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1627,7 +1627,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.3</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="WorkflowOutput" />
@@ -1680,7 +1680,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.3</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -1756,7 +1756,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT2S</rx:DueTime>
+                            <rx:DueTime>PT2.2S</rx:DueTime>
                             <rx:Period>PT0S</rx:Period>
                           </Combinator>
                         </Expression>
@@ -2272,12 +2272,6 @@ it.Item2 as TrialComplete
                     <Name>PresentationResult</Name>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
-                    <Selector>Valence.Item1.Rewarded</Selector>
-                  </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>PresentationResult</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
                     <Selector>Result.Disengaged</Selector>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
@@ -2287,8 +2281,14 @@ it.Item2 as TrialComplete
                     <Combinator xsi:type="rx:Zip" />
                   </Expression>
                   <Expression xsi:type="BitwiseAnd" />
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>PresentationResult</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Valence.Item1.Rewarded</Selector>
+                  </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:Zip" />
+                    <Combinator xsi:type="rx:WithLatestFrom" />
                   </Expression>
                   <Expression xsi:type="BitwiseAnd" />
                   <Expression xsi:type="SubscribeSubject">
@@ -2307,7 +2307,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT1.9S</rx:DueTime>
+                      <rx:DueTime>PT1.5S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
@@ -2507,11 +2507,11 @@ it.Item2 as TrialComplete
                   <Edge From="93" To="94" Label="Source1" />
                   <Edge From="94" To="124" Label="Source3" />
                   <Edge From="95" To="96" Label="Source1" />
-                  <Edge From="96" To="102" Label="Source1" />
-                  <Edge From="97" To="98" Label="Source1" />
-                  <Edge From="97" To="99" Label="Source1" />
-                  <Edge From="98" To="100" Label="Source1" />
-                  <Edge From="99" To="100" Label="Source2" />
+                  <Edge From="95" To="97" Label="Source1" />
+                  <Edge From="96" To="98" Label="Source1" />
+                  <Edge From="97" To="98" Label="Source2" />
+                  <Edge From="98" To="99" Label="Source1" />
+                  <Edge From="99" To="102" Label="Source1" />
                   <Edge From="100" To="101" Label="Source1" />
                   <Edge From="101" To="102" Label="Source2" />
                   <Edge From="102" To="103" Label="Source1" />
@@ -3122,7 +3122,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2.5S</rx:DueTime>
+                      <rx:DueTime>PT2.2S</rx:DueTime>
                       <rx:Period>PT0S</rx:Period>
                     </Combinator>
                   </Expression>
@@ -3493,7 +3493,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT3S</rx:DueTime>
+                      <rx:DueTime>PT0S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
