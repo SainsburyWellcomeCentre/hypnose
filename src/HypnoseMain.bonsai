@@ -2378,16 +2378,20 @@ it.Item2 as TrialComplete
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>SustainedSampleState</Name>
+                    <Name>SustainedSampleOnset</Name>
                   </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Value</Selector>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SustainedSampleOffset</Name>
                   </Expression>
-                  <Expression xsi:type="BitwiseNot" />
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:WithLatestFrom" />
                   </Expression>
-                  <Expression xsi:type="BitwiseAnd" />
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:WithLatestFrom" />
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:TakeUntil" />
+                  </Expression>
                   <Expression xsi:type="rx:Condition">
                     <Name>CompletionConditionsMet</Name>
                     <Workflow>
@@ -2584,15 +2588,16 @@ it.Item2 as TrialComplete
                   <Edge From="102" To="103" Label="Source1" />
                   <Edge From="103" To="104" Label="Source1" />
                   <Edge From="104" To="109" Label="Source1" />
+                  <Edge From="104" To="112" Label="Source1" />
                   <Edge From="105" To="106" Label="Source1" />
                   <Edge From="106" To="107" Label="Source1" />
                   <Edge From="107" To="108" Label="Source1" />
                   <Edge From="108" To="109" Label="Source2" />
-                  <Edge From="109" To="113" Label="Source1" />
-                  <Edge From="110" To="111" Label="Source1" />
-                  <Edge From="111" To="112" Label="Source1" />
+                  <Edge From="109" To="114" Label="Source1" />
+                  <Edge From="110" To="113" Label="Source1" />
+                  <Edge From="111" To="112" Label="Source2" />
                   <Edge From="112" To="113" Label="Source2" />
-                  <Edge From="113" To="114" Label="Source1" />
+                  <Edge From="113" To="114" Label="Source2" />
                   <Edge From="114" To="115" Label="Source1" />
                   <Edge From="115" To="117" Label="Source1" />
                   <Edge From="116" To="117" Label="Source2" />
