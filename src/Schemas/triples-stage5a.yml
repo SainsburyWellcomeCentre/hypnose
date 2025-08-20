@@ -23,7 +23,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -42,7 +43,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -61,7 +63,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -80,7 +83,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -99,7 +103,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -118,7 +123,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -137,7 +143,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -156,7 +163,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -175,7 +183,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -194,7 +203,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -213,7 +223,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -232,7 +243,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -251,7 +263,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -270,7 +283,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -289,7 +303,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -308,7 +323,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -327,7 +343,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -346,7 +363,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -365,7 +383,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesA_Stage5A,
@@ -384,7 +403,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -403,7 +423,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -422,7 +443,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -441,7 +463,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -460,7 +483,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -479,7 +503,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -498,7 +523,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -517,7 +543,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -536,7 +563,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -555,7 +583,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -574,7 +603,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -593,7 +623,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -612,7 +643,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -631,7 +663,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -650,7 +683,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -669,7 +703,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -688,7 +723,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -707,7 +743,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -726,7 +763,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -745,7 +783,8 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     },
     {
       name: TriplesB_Stage5,
@@ -764,8 +803,10 @@ sequences: [
       resetOnReward: True,
       skipSampling: False,
       rewardAvailablePokeReset: False,
-      enableTrialStartIndicator: True
+      enableTrialStartIndicator: True,
+      sequenceLengthIndex: 2
     }
     ]
   ]
+
 

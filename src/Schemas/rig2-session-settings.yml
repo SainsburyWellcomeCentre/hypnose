@@ -7,12 +7,12 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.2
-  loggingRootPath: D:\hypnose\rawdata\sub-034_id-109\ses-69_date-20250815\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-032_id-107\ses-71_date-20250820\behav
   rewardTime: 0.122
   performanceAverageWindow: 5
-  initialSequence: Schemas/quintuples-stage5a.yml
+  initialSequence: Schemas/quadruples-stage5a.yml
   maximumInterOdourPokeTime: 2.2
-  rewardBecomeAvailableTime: 0
+  rewardBecomeAvailableTime: 1.5
 
 cameraProperties:
   frameRate: 30
