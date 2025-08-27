@@ -14,7 +14,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -25,6 +25,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -34,7 +35,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -45,6 +46,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -54,7 +56,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -65,6 +67,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -74,7 +77,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -85,6 +88,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -94,7 +98,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -105,6 +109,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -114,7 +119,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -125,6 +130,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -145,6 +151,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -165,6 +172,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -185,6 +193,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -205,6 +214,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -214,7 +224,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -225,6 +235,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -234,7 +245,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -245,6 +256,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -265,6 +277,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -285,6 +298,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -294,7 +308,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -305,6 +319,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -314,7 +329,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -325,6 +340,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -345,6 +361,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -365,6 +382,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -385,6 +403,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -405,6 +424,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -414,7 +434,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -425,6 +445,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -434,7 +455,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -445,6 +466,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -454,7 +476,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -465,6 +487,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -474,7 +497,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -485,6 +508,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -494,7 +518,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -505,6 +529,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -514,7 +539,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -525,6 +550,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -534,7 +560,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -545,6 +571,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -565,6 +592,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -585,6 +613,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -605,6 +634,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -625,6 +655,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -634,7 +665,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -645,6 +676,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -665,6 +697,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -674,7 +707,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -685,6 +718,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -705,6 +739,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -725,6 +760,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -734,7 +770,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -745,6 +781,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -765,6 +802,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -774,7 +812,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -785,6 +823,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -805,6 +844,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -814,7 +854,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -825,6 +865,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -845,6 +886,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -854,7 +896,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -865,6 +907,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -885,6 +928,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -894,7 +938,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -905,6 +949,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -914,7 +959,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -925,6 +970,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -945,6 +991,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -965,6 +1012,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -985,6 +1033,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1005,6 +1054,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1025,6 +1075,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1034,7 +1085,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1045,6 +1096,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1054,7 +1106,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1065,6 +1117,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1074,7 +1127,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1085,6 +1138,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1094,7 +1148,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1105,6 +1159,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1125,6 +1180,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1145,6 +1201,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1165,6 +1222,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1174,7 +1232,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1185,6 +1243,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1194,7 +1253,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1205,6 +1264,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1214,7 +1274,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1225,6 +1285,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1245,6 +1306,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1265,6 +1327,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1274,7 +1337,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1285,6 +1348,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1305,6 +1369,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1325,6 +1390,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1345,6 +1411,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1365,6 +1432,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1374,7 +1442,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1385,6 +1453,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1405,6 +1474,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1414,7 +1484,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1425,6 +1495,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1445,6 +1516,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1465,6 +1537,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1485,6 +1558,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1494,7 +1568,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1505,6 +1579,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1514,7 +1589,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1525,6 +1600,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1545,6 +1621,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1554,7 +1631,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1565,6 +1642,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1585,6 +1663,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1594,7 +1673,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1605,6 +1684,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1625,6 +1705,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1645,6 +1726,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1654,7 +1736,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1665,6 +1747,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1674,7 +1757,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1685,6 +1768,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1705,6 +1789,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1725,6 +1810,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1745,6 +1831,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1754,7 +1841,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1765,6 +1852,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1785,6 +1873,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1794,7 +1883,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1805,6 +1894,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1825,6 +1915,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1834,7 +1925,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1845,6 +1936,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1865,6 +1957,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1874,7 +1967,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1885,6 +1978,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1905,6 +1999,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1914,7 +2009,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -1925,6 +2020,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1945,6 +2041,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1965,6 +2062,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -1985,6 +2083,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2005,6 +2104,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2025,6 +2125,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2045,6 +2146,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2054,7 +2156,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2065,6 +2167,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2085,6 +2188,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2094,7 +2198,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2105,6 +2209,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2114,7 +2219,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2125,6 +2230,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2134,7 +2240,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2145,6 +2251,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2165,6 +2272,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2174,7 +2282,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2185,6 +2293,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2205,6 +2314,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2225,6 +2335,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2234,7 +2345,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2245,6 +2356,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2254,7 +2366,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2265,6 +2377,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2274,7 +2387,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2285,6 +2398,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2305,6 +2419,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2325,6 +2440,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2334,7 +2450,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2345,6 +2461,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2365,6 +2482,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2385,6 +2503,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2405,6 +2524,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2425,6 +2545,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2445,6 +2566,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2454,7 +2576,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2465,6 +2587,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2474,7 +2597,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2485,6 +2608,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2494,7 +2618,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2505,6 +2629,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2525,6 +2650,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2545,6 +2671,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2565,6 +2692,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2574,7 +2702,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2585,6 +2713,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2594,7 +2723,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2605,6 +2734,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2625,6 +2755,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2634,7 +2765,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2645,6 +2776,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2665,6 +2797,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2685,6 +2818,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2705,6 +2839,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2714,7 +2849,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2725,6 +2860,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2734,7 +2870,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2745,6 +2881,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2754,7 +2891,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2765,6 +2902,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2774,7 +2912,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2785,6 +2923,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2794,7 +2933,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2805,6 +2944,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2814,7 +2954,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2825,6 +2965,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2834,7 +2975,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2845,6 +2986,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2854,7 +2996,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2865,6 +3007,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2874,7 +3017,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2885,6 +3028,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2905,6 +3049,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2914,7 +3059,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -2925,6 +3070,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2945,6 +3091,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2965,6 +3112,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2985,6 +3133,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -2994,7 +3143,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3005,6 +3154,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3014,7 +3164,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3025,6 +3175,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3045,6 +3196,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3065,6 +3217,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3085,6 +3238,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3105,6 +3259,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3114,7 +3269,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3125,6 +3280,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3134,7 +3290,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3145,6 +3301,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3154,7 +3311,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3165,6 +3322,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3174,7 +3332,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3185,6 +3343,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3205,6 +3364,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3225,6 +3385,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3245,6 +3406,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3254,7 +3416,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3265,6 +3427,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3285,6 +3448,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3294,7 +3458,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3305,6 +3469,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3314,7 +3479,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3325,6 +3490,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3334,7 +3500,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3345,6 +3511,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3354,7 +3521,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3365,6 +3532,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3385,6 +3553,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3405,6 +3574,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3414,7 +3584,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3425,6 +3595,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3434,7 +3605,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3445,6 +3616,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3465,6 +3637,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3474,7 +3647,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3485,6 +3658,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3494,7 +3668,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3505,6 +3679,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3514,7 +3689,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3525,6 +3700,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3545,6 +3721,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3554,7 +3731,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3565,6 +3742,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3574,7 +3752,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3585,6 +3763,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3594,7 +3773,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3605,6 +3784,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3625,6 +3805,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3645,6 +3826,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3654,7 +3836,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3665,6 +3847,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3685,6 +3868,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3694,7 +3878,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3705,6 +3889,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3725,6 +3910,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3745,6 +3931,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3754,7 +3941,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3765,6 +3952,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3785,6 +3973,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3794,7 +3983,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3805,6 +3994,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3825,6 +4015,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3834,7 +4025,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3845,6 +4036,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3865,6 +4057,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3885,6 +4078,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3894,7 +4088,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3905,6 +4099,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3925,6 +4120,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3934,7 +4130,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3945,6 +4141,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3954,7 +4151,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3965,6 +4162,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3974,7 +4172,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -3985,6 +4183,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -3994,7 +4193,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4005,6 +4204,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4014,7 +4214,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4025,6 +4225,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4045,6 +4246,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4065,6 +4267,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4074,7 +4277,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4085,6 +4288,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4105,6 +4309,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4125,6 +4330,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4134,7 +4340,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4145,6 +4351,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4154,7 +4361,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4165,6 +4372,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4185,6 +4393,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4194,7 +4403,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4205,6 +4414,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4214,7 +4424,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4225,6 +4435,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4234,7 +4445,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4245,6 +4456,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4265,6 +4477,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4285,6 +4498,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4294,7 +4508,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4305,6 +4519,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4314,7 +4529,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4325,6 +4540,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4345,6 +4561,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4354,7 +4571,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4365,6 +4582,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4385,6 +4603,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4394,7 +4613,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4405,6 +4624,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4414,7 +4634,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4425,6 +4645,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4445,6 +4666,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4465,6 +4687,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4474,7 +4697,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4485,6 +4708,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4505,6 +4729,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4525,6 +4750,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4534,7 +4760,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4545,6 +4771,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4554,7 +4781,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4565,6 +4792,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4585,6 +4813,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4594,7 +4823,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4605,6 +4834,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4625,6 +4855,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4645,6 +4876,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4654,7 +4886,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4665,6 +4897,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4685,6 +4918,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4694,7 +4928,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorF, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4705,6 +4939,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4714,7 +4949,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorC, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4725,6 +4960,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4745,6 +4981,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4765,6 +5002,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4785,6 +5023,7 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
     ,
@@ -4794,7 +5033,7 @@ sequences: [
       interCommand: Purge,
       interCommandTime: 0.2,
       maximumTime: 10,
-      responseTime: 5,
+      responseTime: 3.5,
       interTrialIntervalSuccessfulTrial: 3,
       completionRequiresEngagement: False,
       rewardConditions: [{position: 0, definition: [[{command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorE, rewarded: False, index: 1, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorD, rewarded: False, index: 2, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorG, rewarded: False, index: 3, minimumSamplingTime: 0.35, maximumSamplingTime: 1}], [{command: OdorA, rewarded: True, index: 4, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]]}],
@@ -4805,10 +5044,13 @@ sequences: [
       skipSampling: False,
       rewardAvailablePokeReset: False,
       enableTrialStartIndicator: True,
+      sequenceLengthIndex: 4,
       interTrialIntervalUnsuccessfulTrial: 3
     }
   ]
 ]
+
+
 
 
 
