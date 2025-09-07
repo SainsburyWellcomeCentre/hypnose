@@ -317,6 +317,84 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
     [Bonsai.CombinatorAttribute()]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    public partial class Point2d
+    {
+    
+        private double _x;
+    
+        private double _y;
+    
+        public Point2d()
+        {
+        }
+    
+        protected Point2d(Point2d other)
+        {
+            _x = other._x;
+            _y = other._y;
+        }
+    
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="x")]
+        public double X
+        {
+            get
+            {
+                return _x;
+            }
+            set
+            {
+                _x = value;
+            }
+        }
+    
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="y")]
+        public double Y
+        {
+            get
+            {
+                return _y;
+            }
+            set
+            {
+                _y = value;
+            }
+        }
+    
+        public System.IObservable<Point2d> Process()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Point2d(this)));
+        }
+    
+        public System.IObservable<Point2d> Process<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new Point2d(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("x = " + _x + ", ");
+            stringBuilder.Append("y = " + _y);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [Bonsai.CombinatorAttribute()]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     public partial class HypnoseSession
     {
     
@@ -674,6 +752,8 @@ namespace DataSchema
     
         private double _gain = 0D;
     
+        private RoiSourcePoints _roiSourcePoints = new RoiSourcePoints();
+    
         public CameraProperties()
         {
         }
@@ -683,6 +763,7 @@ namespace DataSchema
             _frameRate = other._frameRate;
             _exposure = other._exposure;
             _gain = other._gain;
+            _roiSourcePoints = other._roiSourcePoints;
         }
     
         /// <summary>
@@ -736,6 +817,25 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// The four source points in the camera image that define the region of interest (in clockwise order starting from top-left).
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="roiSourcePoints")]
+        [System.ComponentModel.DescriptionAttribute("The four source points in the camera image that define the region of interest (in" +
+            " clockwise order starting from top-left).")]
+        public RoiSourcePoints RoiSourcePoints
+        {
+            get
+            {
+                return _roiSourcePoints;
+            }
+            set
+            {
+                _roiSourcePoints = value;
+            }
+        }
+    
         public System.IObservable<CameraProperties> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new CameraProperties(this)));
@@ -750,7 +850,70 @@ namespace DataSchema
         {
             stringBuilder.Append("frameRate = " + _frameRate + ", ");
             stringBuilder.Append("exposure = " + _exposure + ", ");
-            stringBuilder.Append("gain = " + _gain);
+            stringBuilder.Append("gain = " + _gain + ", ");
+            stringBuilder.Append("roiSourcePoints = " + _roiSourcePoints);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
+    [Bonsai.CombinatorAttribute()]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    public partial class RoiSourcePoints
+    {
+    
+        private System.Collections.Generic.List<Point2d> _points = new System.Collections.Generic.List<Point2d>();
+    
+        public RoiSourcePoints()
+        {
+        }
+    
+        protected RoiSourcePoints(RoiSourcePoints other)
+        {
+            _points = other._points;
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="points")]
+        public System.Collections.Generic.List<Point2d> Points
+        {
+            get
+            {
+                return _points;
+            }
+            set
+            {
+                _points = value;
+            }
+        }
+    
+        public System.IObservable<RoiSourcePoints> Process()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new RoiSourcePoints(this)));
+        }
+    
+        public System.IObservable<RoiSourcePoints> Process<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new RoiSourcePoints(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("points = " + _points);
             return true;
         }
     
@@ -799,6 +962,11 @@ namespace DataSchema
             return Process<OlfactometerStateCommand>(source);
         }
 
+        public System.IObservable<string> Process(System.IObservable<Point2d> source)
+        {
+            return Process<Point2d>(source);
+        }
+
         public System.IObservable<string> Process(System.IObservable<HypnoseSession> source)
         {
             return Process<HypnoseSession>(source);
@@ -813,6 +981,11 @@ namespace DataSchema
         {
             return Process<CameraProperties>(source);
         }
+
+        public System.IObservable<string> Process(System.IObservable<RoiSourcePoints> source)
+        {
+            return Process<RoiSourcePoints>(source);
+        }
     }
 
 
@@ -825,9 +998,11 @@ namespace DataSchema
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RewardCommand>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerStateCommand>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Point2d>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<HypnoseSession>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Metadata>))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<CameraProperties>))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RoiSourcePoints>))]
     public partial class DeserializeFromYaml : Bonsai.Expressions.SingleArgumentExpressionBuilder
     {
     
