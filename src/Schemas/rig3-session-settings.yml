@@ -18,6 +18,16 @@ cameraProperties:
   frameRate: 60
   exposure: 15000
   gain: 10
+  roiSourcePoints:
+    points:
+      - x: 200
+        y: 600
+      - x: 200
+        y: 700
+      - x: 1070
+        y: 700
+      - x: 1070
+        y: 600
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
