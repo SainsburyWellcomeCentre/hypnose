@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.8.5"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
@@ -101,7 +101,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>E:/temp</Path>
+              <Path>D:\temp</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -297,7 +297,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM10</harp:PortName>
+                <harp:PortName>COM11</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -750,9 +750,9 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM13</PortO0>
+        <PortO0>COM25</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM12</PortO1>
+        <PortO1>COM9</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
