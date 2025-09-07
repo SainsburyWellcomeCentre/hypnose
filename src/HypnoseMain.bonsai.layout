@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <VisualizerLayout xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  >
@@ -1777,8 +1777,8 @@
       <DialogSettings>
         <Visible>true</Visible>
         <Location>
-          <X>539</X>
-          <Y>599</Y>
+          <X>384</X>
+          <Y>530</Y>
         </Location>
         <Size>
           <Width>336</Width>
@@ -1817,8 +1817,8 @@
       <DialogSettings>
         <Visible>true</Visible>
         <Location>
-          <X>1373</X>
-          <Y>198</Y>
+          <X>27</X>
+          <Y>118</Y>
         </Location>
         <Size>
           <Width>336</Width>
@@ -1843,7 +1843,7 @@
         <WindowState>Normal</WindowState>
       </DialogSettings>
       <DialogSettings>
-        <Visible>true</Visible>
+        <Visible>false</Visible>
         <Location>
           <X>1758</X>
           <Y>323</Y>
@@ -1853,13 +1853,9 @@
           <Height>189</Height>
         </Size>
         <WindowState>Normal</WindowState>
-        <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
-        <VisualizerSettings>
-          <ObjectTextVisualizer />
-        </VisualizerSettings>
       </DialogSettings>
       <DialogSettings>
-        <Visible>true</Visible>
+        <Visible>false</Visible>
         <Location>
           <X>156</X>
           <Y>156</Y>
@@ -1869,18 +1865,9 @@
           <Height>279</Height>
         </Size>
         <WindowState>Normal</WindowState>
-        <VisualizerTypeName>Bonsai.Design.Visualizers.TimeSeriesVisualizer</VisualizerTypeName>
-        <VisualizerSettings>
-          <TimeSeriesVisualizer>
-            <Capacity>640</Capacity>
-            <Min>112000</Min>
-            <Max>126000</Max>
-            <AutoScale>true</AutoScale>
-          </TimeSeriesVisualizer>
-        </VisualizerSettings>
       </DialogSettings>
       <DialogSettings>
-        <Visible>true</Visible>
+        <Visible>false</Visible>
         <Location>
           <X>312</X>
           <Y>312</Y>
@@ -1890,15 +1877,6 @@
           <Height>279</Height>
         </Size>
         <WindowState>Normal</WindowState>
-        <VisualizerTypeName>Bonsai.Design.Visualizers.TimeSeriesVisualizer</VisualizerTypeName>
-        <VisualizerSettings>
-          <TimeSeriesVisualizer>
-            <Capacity>640</Capacity>
-            <Min>117500</Min>
-            <Max>120500</Max>
-            <AutoScale>true</AutoScale>
-          </TimeSeriesVisualizer>
-        </VisualizerSettings>
       </DialogSettings>
       <DialogSettings>
         <Visible>false</Visible>
@@ -1915,12 +1893,12 @@
       <DialogSettings>
         <Visible>true</Visible>
         <Location>
-          <X>1682</X>
-          <Y>569</Y>
+          <X>25</X>
+          <Y>1090</Y>
         </Location>
         <Size>
           <Width>336</Width>
-          <Height>233</Height>
+          <Height>195</Height>
         </Size>
         <WindowState>Normal</WindowState>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
@@ -2015,12 +1993,12 @@
       <DialogSettings>
         <Visible>true</Visible>
         <Location>
-          <X>1625</X>
-          <Y>876</Y>
+          <X>364</X>
+          <Y>1076</Y>
         </Location>
         <Size>
           <Width>336</Width>
-          <Height>197</Height>
+          <Height>185</Height>
         </Size>
         <WindowState>Normal</WindowState>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
@@ -2053,7 +2031,7 @@
         <WindowState>Normal</WindowState>
       </DialogSettings>
       <DialogSettings>
-        <Visible>true</Visible>
+        <Visible>false</Visible>
         <Location>
           <X>907</X>
           <Y>684</Y>
@@ -2063,20 +2041,16 @@
           <Height>171</Height>
         </Size>
         <WindowState>Normal</WindowState>
-        <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
-        <VisualizerSettings>
-          <ObjectTextVisualizer />
-        </VisualizerSettings>
       </DialogSettings>
       <DialogSettings>
         <Visible>true</Visible>
         <Location>
-          <X>1135</X>
-          <Y>888</Y>
+          <X>717</X>
+          <Y>106</Y>
         </Location>
         <Size>
           <Width>336</Width>
-          <Height>307</Height>
+          <Height>224</Height>
         </Size>
         <WindowState>Normal</WindowState>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
@@ -2087,8 +2061,8 @@
       <DialogSettings>
         <Visible>true</Visible>
         <Location>
-          <X>1352</X>
-          <Y>587</Y>
+          <X>384</X>
+          <Y>108</Y>
         </Location>
         <Size>
           <Width>336</Width>
@@ -2753,12 +2727,12 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>43</X>
-      <Y>527</Y>
+      <X>18</X>
+      <Y>538</Y>
     </Location>
     <Size>
       <Width>336</Width>
-      <Height>316</Height>
+      <Height>279</Height>
     </Size>
     <WindowState>Normal</WindowState>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
@@ -2767,16 +2741,20 @@
     </VisualizerSettings>
   </DialogSettings>
   <DialogSettings>
-    <Visible>false</Visible>
+    <Visible>true</Visible>
     <Location>
-      <X>0</X>
-      <Y>0</Y>
+      <X>26</X>
+      <Y>869</Y>
     </Location>
     <Size>
-      <Width>0</Width>
-      <Height>0</Height>
+      <Width>336</Width>
+      <Height>205</Height>
     </Size>
     <WindowState>Normal</WindowState>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
   </DialogSettings>
   <DialogSettings>
     <Visible>false</Visible>
@@ -2913,8 +2891,8 @@
   <DialogSettings>
     <Visible>true</Visible>
     <Location>
-      <X>43</X>
-      <Y>931</Y>
+      <X>366</X>
+      <Y>889</Y>
     </Location>
     <Size>
       <Width>336</Width>
