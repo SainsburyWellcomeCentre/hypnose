@@ -49,6 +49,8 @@ namespace SequenceSchema
     
         private bool _enableTrialStartIndicator = false;
     
+        private int _sequenceLengthIndex = 0;
+    
         public Sequence()
         {
         }
@@ -72,6 +74,7 @@ namespace SequenceSchema
             _skipSampling = other._skipSampling;
             _rewardAvailablePokeReset = other._rewardAvailablePokeReset;
             _enableTrialStartIndicator = other._enableTrialStartIndicator;
+            _sequenceLengthIndex = other._sequenceLengthIndex;
         }
     
         /// <summary>
@@ -367,6 +370,23 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// The number of odours in the sequence in index form
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="sequenceLengthIndex")]
+        [System.ComponentModel.DescriptionAttribute("The number of odours in the sequence in index form")]
+        public int SequenceLengthIndex
+        {
+            get
+            {
+                return _sequenceLengthIndex;
+            }
+            set
+            {
+                _sequenceLengthIndex = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -395,7 +415,8 @@ namespace SequenceSchema
             stringBuilder.Append("completionRequiresEngagement = " + _completionRequiresEngagement + ", ");
             stringBuilder.Append("skipSampling = " + _skipSampling + ", ");
             stringBuilder.Append("rewardAvailablePokeReset = " + _rewardAvailablePokeReset + ", ");
-            stringBuilder.Append("enableTrialStartIndicator = " + _enableTrialStartIndicator);
+            stringBuilder.Append("enableTrialStartIndicator = " + _enableTrialStartIndicator + ", ");
+            stringBuilder.Append("sequenceLengthIndex = " + _sequenceLengthIndex);
             return true;
         }
     

@@ -436,6 +436,8 @@ namespace DataSchema
     
         private string _initialSequence;
     
+        private double _rewardBecomeAvailableTime = 1.5D;
+    
         public Metadata()
         {
         }
@@ -451,6 +453,7 @@ namespace DataSchema
             _loggingRootPath = other._loggingRootPath;
             _performanceAverageWindow = other._performanceAverageWindow;
             _initialSequence = other._initialSequence;
+            _rewardBecomeAvailableTime = other._rewardBecomeAvailableTime;
         }
     
         [YamlDotNet.Serialization.YamlMemberAttribute(Alias="animalId")]
@@ -601,6 +604,24 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Time in seconds after leaving odour port following rewared odour that it becomes available
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardBecomeAvailableTime")]
+        [System.ComponentModel.DescriptionAttribute("Time in seconds after leaving odour port following rewared odour that it becomes " +
+            "available")]
+        public double RewardBecomeAvailableTime
+        {
+            get
+            {
+                return _rewardBecomeAvailableTime;
+            }
+            set
+            {
+                _rewardBecomeAvailableTime = value;
+            }
+        }
+    
         public System.IObservable<Metadata> Process()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
@@ -621,7 +642,8 @@ namespace DataSchema
             stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
             stringBuilder.Append("loggingRootPath = " + _loggingRootPath + ", ");
             stringBuilder.Append("performanceAverageWindow = " + _performanceAverageWindow + ", ");
-            stringBuilder.Append("initialSequence = " + _initialSequence);
+            stringBuilder.Append("initialSequence = " + _initialSequence + ", ");
+            stringBuilder.Append("rewardBecomeAvailableTime = " + _rewardBecomeAvailableTime);
             return true;
         }
     

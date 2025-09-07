@@ -88,6 +88,12 @@
                     "description": "Boolean specifying whether to enable indicator for when a trial is ready to be started",
                     "default": "False",
                     "type": "boolean"
+                },
+                "sequenceLengthIndex": {
+                    "description": "The number of odours in the sequence in index form",
+                    "default": 0,
+                    "type": "integer",
+                    "minimum": 0
                 }
             }
         },

@@ -132,6 +132,11 @@
                 "initialSequence": {
                     "description": "Path to the initial sequence .yml file to run",
                     "type": "string"
+                },
+                "rewardBecomeAvailableTime": {
+                    "description": "Time in seconds after leaving odour port following rewared odour that it becomes available",
+                    "default": 1.5,
+                    "type": "number"
                 }
             }
         },
