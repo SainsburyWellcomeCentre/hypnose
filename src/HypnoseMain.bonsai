@@ -246,6 +246,18 @@
               <LogName>BehaviorNotifications</LogName>
               <Selector xsi:nil="true" />
             </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>DetectedObject</Name>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
+              <Name>BehaviorEvents</Name>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+              <Heartbeats>BehaviorEvents</Heartbeats>
+              <ClosingDuration xsi:nil="true" />
+              <LogName>DetectedObject</LogName>
+              <Selector xsi:nil="true" />
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -276,6 +288,8 @@
             <Edge From="34" To="35" Label="Source2" />
             <Edge From="36" To="37" Label="Source1" />
             <Edge From="37" To="38" Label="Source1" />
+            <Edge From="39" To="40" Label="Source1" />
+            <Edge From="40" To="41" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
