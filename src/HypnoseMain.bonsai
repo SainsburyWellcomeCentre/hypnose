@@ -946,7 +946,7 @@
             <Expression xsi:type="Divide" />
             <Expression xsi:type="GreaterThan">
               <Operand xsi:type="DoubleProperty">
-                <Value>5</Value>
+                <Value>3</Value>
               </Operand>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
