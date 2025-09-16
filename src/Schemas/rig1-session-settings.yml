@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.2
-  loggingRootPath: D:\hypnose\rawdata\sub-036_id-185\ses-51_date-20250916\behav
+  loggingRootPath: C:\temp
   rewardTime: 0.106
   performanceAverageWindow: 5
   initialSequence: Schemas/odourdiscrimination-stage7.yml
@@ -17,6 +17,7 @@ cameraProperties:
   frameRate: 60
   exposure: 15000
   gain: 10
+  threshold: 3
   roiSourcePoints:
     points:
       - x: 180

@@ -752,6 +752,8 @@ namespace DataSchema
     
         private double _gain = 0D;
     
+        private double _threshold = 15D;
+    
         private RoiSourcePoints _roiSourcePoints = new RoiSourcePoints();
     
         public CameraProperties()
@@ -763,6 +765,7 @@ namespace DataSchema
             _frameRate = other._frameRate;
             _exposure = other._exposure;
             _gain = other._gain;
+            _threshold = other._threshold;
             _roiSourcePoints = other._roiSourcePoints;
         }
     
@@ -818,6 +821,24 @@ namespace DataSchema
         }
     
         /// <summary>
+        /// The threshold value for detecting an object against the normalised background of the ROI.
+        /// </summary>
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="threshold")]
+        [System.ComponentModel.DescriptionAttribute("The threshold value for detecting an object against the normalised background of " +
+            "the ROI.")]
+        public double Threshold
+        {
+            get
+            {
+                return _threshold;
+            }
+            set
+            {
+                _threshold = value;
+            }
+        }
+    
+        /// <summary>
         /// The four source points in the camera image that define the region of interest (in clockwise order starting from top-left).
         /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -851,6 +872,7 @@ namespace DataSchema
             stringBuilder.Append("frameRate = " + _frameRate + ", ");
             stringBuilder.Append("exposure = " + _exposure + ", ");
             stringBuilder.Append("gain = " + _gain + ", ");
+            stringBuilder.Append("threshold = " + _threshold + ", ");
             stringBuilder.Append("roiSourcePoints = " + _roiSourcePoints);
             return true;
         }

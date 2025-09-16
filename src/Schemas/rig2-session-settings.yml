@@ -17,6 +17,7 @@ cameraProperties:
   frameRate: 60
   exposure: 15000
   gain: 10
+  threshold: 3
   roiSourcePoints:
     points:
       - x: 180

@@ -172,6 +172,11 @@
                     "type": "number",
                     "description": "the gain of the camera sensor."
                 },
+                "threshold": {
+                    "default": 15,
+                    "type": "number",
+                    "description": "The threshold value for detecting an object against the normalised background of the ROI."
+                },
                 "roiSourcePoints": {
                     "type": "object",
                     "description": "The four source points in the camera image that define the region of interest (in clockwise order starting from top-left).",
