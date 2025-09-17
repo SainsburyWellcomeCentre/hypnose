@@ -7,7 +7,7 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.2
-  loggingRootPath: D:\hypnose\rawdata\sub-032_id-107\ses-89_date-20250916\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-032_id-107\ses-90_date-20250917\behav
   rewardTime: 0.122
   performanceAverageWindow: 5
   initialSequence: Schemas/quintuples-stage5b.yml
