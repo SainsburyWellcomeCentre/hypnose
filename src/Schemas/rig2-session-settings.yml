@@ -7,17 +7,27 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.2
-  loggingRootPath: D:\hypnose\rawdata\sub-032_id-107\ses-75_date-20250827\behav
+  loggingRootPath: D:\hypnose\rawdata\sub-032_id-107\ses-90_date-20250917\behav
   rewardTime: 0.122
   performanceAverageWindow: 5
-  initialSequence: Schemas/quadruples-stage5a.yml
-  maximumInterOdourPokeTime: 2.2
-  rewardBecomeAvailableTime: 1.5
+  initialSequence: Schemas/quintuples-stage5b.yml
+  maximumInterOdourPokeTime: 2
 
 cameraProperties:
-  frameRate: 30
-  exposure: 30000
-  gain: 15
+  frameRate: 60
+  exposure: 15000
+  gain: 10
+  threshold: 3
+  roiSourcePoints:
+    points:
+      - x: 180
+        y: 600
+      - x: 180
+        y: 700
+      - x: 1070
+        y: 700
+      - x: 1070
+        y: 600
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}

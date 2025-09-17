@@ -86,6 +86,21 @@
                     "maxItems": 5
                 }
             }
+        },
+        "point2d": {
+            "type": "object",
+            "properties": {
+                "x": {
+                    "type": "number"
+                },
+                "y": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "x",
+                "y"
+            ]
         }
     },
     "properties": {
@@ -156,8 +171,31 @@
                     "default": 0,
                     "type": "number",
                     "description": "the gain of the camera sensor."
-                }   
-            }
+                },
+                "threshold": {
+                    "default": 15,
+                    "type": "number",
+                    "description": "The threshold value for detecting an object against the normalised background of the ROI."
+                },
+                "roiSourcePoints": {
+                    "type": "object",
+                    "description": "The four source points in the camera image that define the region of interest (in clockwise order starting from top-left).",
+                    "properties": {
+                        "points": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/point2d"
+                            },
+                            "minItems": 4,
+                            "maxItems": 4
+                        }
+                    },
+                    "required": [
+                        "points"
+                    ]
+                }
+            },
+            "required": [ "roiSourcePoints"]
         },
         "olfactometerCommands": {
             "items": {
