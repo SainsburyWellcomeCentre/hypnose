@@ -2669,12 +2669,12 @@
       <DialogSettings>
         <Visible>false</Visible>
         <Location>
-          <X>0</X>
-          <Y>0</Y>
+          <X>463</X>
+          <Y>1073</Y>
         </Location>
         <Size>
-          <Width>0</Width>
-          <Height>0</Height>
+          <Width>336</Width>
+          <Height>184</Height>
         </Size>
         <WindowState>Normal</WindowState>
       </DialogSettings>
@@ -2789,12 +2789,12 @@
       <DialogSettings>
         <Visible>false</Visible>
         <Location>
-          <X>0</X>
-          <Y>0</Y>
+          <X>341</X>
+          <Y>275</Y>
         </Location>
         <Size>
-          <Width>0</Width>
-          <Height>0</Height>
+          <Width>336</Width>
+          <Height>200</Height>
         </Size>
         <WindowState>Normal</WindowState>
       </DialogSettings>
