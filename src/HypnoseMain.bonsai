@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.8.5"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
@@ -57,7 +57,7 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="aeon-video:SpinnakerCapture">
                 <spk:Index xsi:nil="true" />
-                <spk:SerialNumber>24284790</spk:SerialNumber>
+                <spk:SerialNumber>24282622</spk:SerialNumber>
                 <spk:ColorProcessing>Default</spk:ColorProcessing>
                 <aeon-video:ExposureTime>15000</aeon-video:ExposureTime>
                 <aeon-video:Gain>10</aeon-video:Gain>
@@ -101,7 +101,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>D:\hypnose\rawdata\sub-020_id-072\ses-126_date-20250916\behav</Path>
+              <Path>C:\temp</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -311,7 +311,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM11</harp:PortName>
+                <harp:PortName>COM5</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -764,9 +764,9 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM25</PortO0>
+        <PortO0>COM6</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM9</PortO1>
+        <PortO1>COM3</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
@@ -1056,7 +1056,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/quintuples-probe-stage2-location0.yml</p2:Path>
+                <p2:Path>Schemas/odourdiscrimination-stage8.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -2003,7 +2003,7 @@
                           <Selector>Seconds</Selector>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
-                          <Name>InitiatingOnset</Name>
+                          <Name>ReinitiatingOnset</Name>
                         </Expression>
                         <Expression xsi:type="MemberSelector">
                           <Selector>Seconds</Selector>
@@ -2012,9 +2012,6 @@
                           <Combinator xsi:type="rx:WithLatestFrom" />
                         </Expression>
                         <Expression xsi:type="Subtract" />
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:TakeUntil" />
-                        </Expression>
                         <Expression xsi:type="rx:Condition">
                           <Name>LessThanMinimum</Name>
                           <Workflow>
@@ -2193,7 +2190,7 @@
                           <Selector>Seconds</Selector>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
-                          <Name>ReinitiatingOnset</Name>
+                          <Name>InitiatingOnset</Name>
                         </Expression>
                         <Expression xsi:type="MemberSelector">
                           <Selector>Seconds</Selector>
@@ -2202,6 +2199,9 @@
                           <Combinator xsi:type="rx:WithLatestFrom" />
                         </Expression>
                         <Expression xsi:type="Subtract" />
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:TakeUntil" />
+                        </Expression>
                         <Expression xsi:type="rx:Condition">
                           <Name>LessThanMinimum</Name>
                           <Workflow>
@@ -2608,9 +2608,9 @@
                         <Edge From="87" To="88" Label="Source2" />
                         <Edge From="88" To="89" Label="Source1" />
                         <Edge From="89" To="90" Label="Source1" />
+                        <Edge From="89" To="95" Label="Source1" />
                         <Edge From="90" To="91" Label="Source1" />
-                        <Edge From="90" To="96" Label="Source1" />
-                        <Edge From="91" To="92" Label="Source1" />
+                        <Edge From="90" To="92" Label="Source1" />
                         <Edge From="91" To="93" Label="Source1" />
                         <Edge From="92" To="93" Label="Source2" />
                         <Edge From="93" To="94" Label="Source1" />
@@ -2820,6 +2820,14 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:TakeUntil" />
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="StringProperty">
+                      <Value>Purge</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="MulticastSubject">
+                    <Name>OlfactometerCommand</Name>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>SequenceInfo</Name>
@@ -3261,9 +3269,9 @@ it.Item2 as TrialComplete
                   <Edge From="29" To="30" Label="Source1" />
                   <Edge From="30" To="31" Label="Source1" />
                   <Edge From="31" To="32" Label="Source2" />
-                  <Edge From="32" To="35" Label="Source1" />
+                  <Edge From="32" To="33" Label="Source1" />
                   <Edge From="33" To="34" Label="Source1" />
-                  <Edge From="34" To="35" Label="Source2" />
+                  <Edge From="34" To="37" Label="Source1" />
                   <Edge From="35" To="36" Label="Source1" />
                   <Edge From="36" To="37" Label="Source2" />
                   <Edge From="37" To="38" Label="Source1" />
@@ -3314,8 +3322,8 @@ it.Item2 as TrialComplete
                   <Edge From="80" To="83" Label="Source1" />
                   <Edge From="81" To="82" Label="Source1" />
                   <Edge From="82" To="83" Label="Source2" />
-                  <Edge From="83" To="84" Label="Source1" />
-                  <Edge From="84" To="123" Label="Source2" />
+                  <Edge From="83" To="85" Label="Source1" />
+                  <Edge From="84" To="85" Label="Source2" />
                   <Edge From="85" To="86" Label="Source1" />
                   <Edge From="86" To="110" Label="Source3" />
                   <Edge From="87" To="88" Label="Source1" />
@@ -3935,7 +3943,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2.25S</rx:DueTime>
+                      <rx:DueTime>P1DT3H46M39S</rx:DueTime>
                       <rx:Period>PT0S</rx:Period>
                     </Combinator>
                   </Expression>
@@ -4306,7 +4314,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT1.5S</rx:DueTime>
+                      <rx:DueTime>PT0S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
