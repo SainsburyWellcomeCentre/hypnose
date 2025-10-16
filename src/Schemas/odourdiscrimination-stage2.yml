@@ -11,7 +11,6 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 0, definition: [
@@ -30,7 +29,6 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [

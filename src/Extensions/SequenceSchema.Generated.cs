@@ -23,9 +23,9 @@ namespace SequenceSchema
     
         private double _interCommandTime = 0.2D;
     
-        private double _interTrialIntervalSuccessfulTrial = 5D;
+        private double _interTrialIntervalSuccessfulTrial = 0D;
     
-        private double _interTrialIntervalUnsuccessfulTrial = 5D;
+        private double _interTrialIntervalUnsuccessfulTrial = 0D;
     
         private double _responseTime = 5D;
     
