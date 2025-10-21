@@ -5,46 +5,42 @@
 nextSequence: Schemas/rig1-odourdiscrimination-stage5-test.yml
 performaceCriterion: 1.1
 sequences: [
-    [{name: OdourDiscriminationA_Stage7,
+    [{name: OdourDiscriminationA_Stage7a,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
-    responseTime: 99999,
-    interTrialIntervalSuccessfulTrial: 0,
-    interTrialIntervalUnsuccessfulTrial: 0,
+    responseTime: 3,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 0, definition: [
-        [{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
+        [{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.25, maximumSamplingTime: 1}]
       ]}
     ],
     rewardAttempts: 0,
-    enableTrialEndIndicator: True,
+    enableTrialStartIndicator: True,
+    enableTrialEndIndicator: False,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False,
-    enableTrialStartIndicator: False
+    skipSampling: False
     },
-    {name: OdourDiscriminationB_Stage7,
+    {name: OdourDiscriminationB_Stage7a,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
-    responseTime: 99999,
-    interTrialIntervalSuccessfulTrial: 0,
-    interTrialIntervalUnsuccessfulTrial: 0,
+    responseTime: 3,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
-        [{command: OdorB, rewarded: True, index: 0, minimumSamplingTime: 0.35, maximumSamplingTime: 1}]
+        [{command: OdorB, rewarded: True, index: 0, minimumSamplingTime: 0.25, maximumSamplingTime: 1}]
       ]}
     ],
     rewardAttempts: 0,
-    enableTrialEndIndicator: True,
+    enableTrialStartIndicator: True,
+    enableTrialEndIndicator: False,
     enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False,
-    enableTrialStartIndicator: False
+    skipSampling: False
     }]
 ]
