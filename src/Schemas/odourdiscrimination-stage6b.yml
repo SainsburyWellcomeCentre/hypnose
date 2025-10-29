@@ -10,7 +10,7 @@ sequences: [
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
-    responseTime: 2.5,
+    responseTime: 2.25,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 0, definition: [
@@ -29,7 +29,7 @@ sequences: [
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
-    responseTime: 2.5,
+    responseTime: 2.25,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
