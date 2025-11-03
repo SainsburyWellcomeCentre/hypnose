@@ -57,7 +57,7 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="aeon-video:SpinnakerCapture">
                 <spk:Index xsi:nil="true" />
-                <spk:SerialNumber>24284790</spk:SerialNumber>
+                <spk:SerialNumber>24282626</spk:SerialNumber>
                 <spk:ColorProcessing>Default</spk:ColorProcessing>
                 <aeon-video:ExposureTime>15000</aeon-video:ExposureTime>
                 <aeon-video:Gain>10</aeon-video:Gain>
@@ -101,7 +101,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\hypnose\rawdata\sub-036_id-185\ses-82_date-20251031\behav</Path>
+              <Path>C:\hypnose\rawdata\sub-037_id-234\ses-013_date-20251103\behav</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -311,7 +311,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM14</harp:PortName>
+                <harp:PortName>COM8</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -764,9 +764,9 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM13</PortO0>
+        <PortO0>COM9</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM11</PortO1>
+        <PortO1>COM7</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
@@ -840,19 +840,19 @@
                 <cv:Regions>
                   <cv:ArrayOfPoint>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>210</cv:X>
                       <cv:Y>600</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>210</cv:X>
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>600</cv:Y>
                     </cv:Point>
                   </cv:ArrayOfPoint>
@@ -923,19 +923,19 @@
                 <cv:Regions>
                   <cv:ArrayOfPoint>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>210</cv:X>
                       <cv:Y>600</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>210</cv:X>
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>600</cv:Y>
                     </cv:Point>
                   </cv:ArrayOfPoint>
@@ -980,7 +980,7 @@
             </Expression>
             <Expression xsi:type="GreaterThan">
               <Operand xsi:type="DoubleProperty">
-                <Value>3</Value>
+                <Value>2</Value>
               </Operand>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -1069,7 +1069,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:LoadSessionSettings">
-          <p2:Path>Schemas\rig1-session-settings.yml</p2:Path>
+          <p2:Path>Schemas\rig3-session-settings.yml</p2:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -1117,7 +1117,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/quintuples-stage5f.yml</p2:Path>
+                <p2:Path>Schemas/odourdiscrimination-stage5a.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">

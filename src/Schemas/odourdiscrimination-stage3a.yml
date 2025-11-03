@@ -23,8 +23,8 @@ sequences: [
     enableRewardLocationIndicator: True,
     resetOnReward: True,
     skipSampling: False
-    }],
-    [{name: OdourDiscriminationB_Stage3A,
+    },
+    {name: OdourDiscriminationB_Stage3A,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
