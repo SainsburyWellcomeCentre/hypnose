@@ -5,46 +5,42 @@
 nextSequence: Schemas/rig1-odourdiscrimination-stage5-test.yml
 performaceCriterion: 1.1
 sequences: [
-    [{name: OdourDiscriminationA_Stage4i,
+    [{name: OdourDiscriminationA_Stage5a,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 2.5,
-    interTrialIntervalSuccessfulTrial: 0,
-    interTrialIntervalUnsuccessfulTrial: 0,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 0, definition: [
-        [{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.3, maximumSamplingTime: 1}]
+        [{command: OdorA, rewarded: True, index: 0, minimumSamplingTime: 0.25, maximumSamplingTime: 1}]
       ]}
     ],
-    rewardAttempts: 99999,
+    rewardAttempts: 0,
+    enableTrialStartIndicator: True,
     enableTrialEndIndicator: False,
-    enableRewardLocationIndicator: True,
+    enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False,
-    enableTrialStartIndicator: True
-    }],
-    [{name: OdourDiscriminationB_Stage4i,
+    skipSampling: False
+    },
+    {name: OdourDiscriminationB_Stage5a,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 2.5,
-    interTrialIntervalSuccessfulTrial: 0,
-    interTrialIntervalUnsuccessfulTrial: 0,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
-        [{command: OdorB, rewarded: True, index: 0, minimumSamplingTime: 0.3, maximumSamplingTime: 1}]
+        [{command: OdorB, rewarded: True, index: 0, minimumSamplingTime: 0.25, maximumSamplingTime: 1}]
       ]}
     ],
-    rewardAttempts: 99999,
+    rewardAttempts: 0,
+    enableTrialStartIndicator: True,
     enableTrialEndIndicator: False,
-    enableRewardLocationIndicator: True,
+    enableRewardLocationIndicator: False,
     resetOnReward: True,
-    skipSampling: False,
-    enableTrialStartIndicator: True
+    skipSampling: False
     }]
 ]
