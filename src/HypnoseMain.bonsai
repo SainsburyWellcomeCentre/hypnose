@@ -1082,7 +1082,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/quintuples-probe-stage7-location0.yml</p2:Path>
+                <p2:Path>Schemas/odourdiscrimination-stage1.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
