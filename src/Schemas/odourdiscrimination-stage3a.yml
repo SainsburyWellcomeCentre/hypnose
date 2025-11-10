@@ -11,7 +11,6 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 0, definition: [
@@ -19,18 +18,20 @@ sequences: [
       ]}
     ],
     rewardAttempts: 99999,
-    enableTrialEndIndicator: True,
+    enableTrialStartIndicator: True,
+    enableTrialEndIndicator: False,
     enableRewardLocationIndicator: True,
     resetOnReward: True,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     skipSampling: False
-    }],
-    [{name: OdourDiscriminationB_Stage3A,
+    },
+    {name: OdourDiscriminationB_Stage3A,
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
@@ -38,9 +39,12 @@ sequences: [
       ]}
     ],
     rewardAttempts: 99999,
-    enableTrialEndIndicator: True,
+    enableTrialStartIndicator: True,
+    enableTrialEndIndicator: False,
     enableRewardLocationIndicator: True,
     resetOnReward: True,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     skipSampling: False
     }]
 ]

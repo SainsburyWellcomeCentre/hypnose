@@ -11,7 +11,6 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 0, definition: [
@@ -22,6 +21,8 @@ sequences: [
     enableTrialEndIndicator: False,
     enableRewardLocationIndicator: True,
     resetOnReward: True,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     skipSampling: True
     }],
     [{name: OdourDiscriminationB_Stage1,
@@ -30,7 +31,6 @@ sequences: [
     interCommandTime: 0.2,
     maximumTime: 10,
     responseTime: 99999,
-    interTrialInterval: 0,
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
@@ -41,6 +41,8 @@ sequences: [
     enableTrialEndIndicator: False,
     enableRewardLocationIndicator: True,
     resetOnReward: True,
+    interTrialIntervalSuccessfulTrial: 0,
+    interTrialIntervalUnsuccessfulTrial: 0,
     skipSampling: True
     }]
 ]
