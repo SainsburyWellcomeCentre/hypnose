@@ -23,13 +23,8 @@
                     "default": 0.2,
                     "type": "number"
                 },
-                "interTrialIntervalSuccessfulTrial": {
-                    "description": "Time between trials in seconds after a successful trial",
-                    "default": 0,
-                    "type": "number"
-                },
-                "interTrialIntervalUnsuccessfulTrial": {
-                    "description": "Time between trials in seconds after an unsuccessful trial",
+                "interTrialInterval": {
+                    "description": "Time between trials",
                     "default": 0,
                     "type": "number"
                 },
