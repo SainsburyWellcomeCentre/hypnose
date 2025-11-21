@@ -531,6 +531,12 @@
                 <beh:EventEnable>PortDI PortDIO AnalogData Camera0</beh:EventEnable>
               </harp:Payload>
             </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreatePokeInputFilterPayload">
+                <beh:PokeInputFilter>2</beh:PokeInputFilter>
+              </harp:Payload>
+            </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Merge" />
             </Expression>
@@ -754,17 +760,18 @@
             <Edge From="38" To="39" Label="Source1" />
             <Edge From="39" To="40" Label="Source1" />
             <Edge From="40" To="41" Label="Source1" />
-            <Edge From="42" To="46" Label="Source1" />
-            <Edge From="43" To="46" Label="Source2" />
-            <Edge From="44" To="46" Label="Source3" />
-            <Edge From="45" To="46" Label="Source4" />
-            <Edge From="46" To="47" Label="Source1" />
-            <Edge From="48" To="49" Label="Source1" />
+            <Edge From="42" To="47" Label="Source1" />
+            <Edge From="43" To="47" Label="Source2" />
+            <Edge From="44" To="47" Label="Source3" />
+            <Edge From="45" To="47" Label="Source4" />
+            <Edge From="46" To="47" Label="Source5" />
+            <Edge From="47" To="48" Label="Source1" />
+            <Edge From="49" To="50" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM6</PortO0>
+        <PortO0>COM7</PortO0>
         <EventsO0>EventsO0</EventsO0>
         <PortO1>COM3</PortO1>
         <EventsO1>EventsO1</EventsO1>
@@ -1082,7 +1089,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/triples.yml</p2:Path>
+                <p2:Path>Schemas/quadruples.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
