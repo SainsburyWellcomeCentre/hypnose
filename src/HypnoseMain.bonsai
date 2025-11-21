@@ -818,7 +818,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:Threshold">
-                <cv:ThresholdValue>59</cv:ThresholdValue>
+                <cv:ThresholdValue>40</cv:ThresholdValue>
                 <cv:MaxValue>255</cv:MaxValue>
                 <cv:ThresholdType>BinaryInv</cv:ThresholdType>
               </Combinator>
@@ -901,7 +901,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="cv:Threshold">
-                <cv:ThresholdValue>59</cv:ThresholdValue>
+                <cv:ThresholdValue>40</cv:ThresholdValue>
                 <cv:MaxValue>255</cv:MaxValue>
                 <cv:ThresholdType>BinaryInv</cv:ThresholdType>
               </Combinator>
@@ -988,7 +988,7 @@
             </Expression>
             <Expression xsi:type="GreaterThan">
               <Operand xsi:type="DoubleProperty">
-                <Value>2</Value>
+                <Value>7</Value>
               </Operand>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -1042,7 +1042,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:LoadSessionSettings">
-          <p2:Path>Schemas\rig3-session-settings.yml</p2:Path>
+          <p2:Path>Schemas\rig1-session-settings.yml</p2:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
