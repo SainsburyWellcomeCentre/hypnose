@@ -535,7 +535,7 @@
             <Expression xsi:type="beh:CreateMessage">
               <harp:MessageType>Write</harp:MessageType>
               <harp:Payload xsi:type="beh:CreatePokeInputFilterPayload">
-                <beh:PokeInputFilter>2</beh:PokeInputFilter>
+                <beh:PokeInputFilter>3</beh:PokeInputFilter>
               </harp:Payload>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1090,7 +1090,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/quintuples-probe-location01234.yml</p2:Path>
+                <p2:Path>Schemas/quintuples-probe-location0123.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
