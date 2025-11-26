@@ -23,9 +23,7 @@ namespace SequenceSchema
     
         private double _interCommandTime = 0.2D;
     
-        private double _interTrialIntervalSuccessfulTrial = 0D;
-    
-        private double _interTrialIntervalUnsuccessfulTrial = 0D;
+        private double _interTrialInterval = 0D;
     
         private double _responseTime = 5D;
     
@@ -61,8 +59,7 @@ namespace SequenceSchema
             _defaultCommand = other._defaultCommand;
             _interCommand = other._interCommand;
             _interCommandTime = other._interCommandTime;
-            _interTrialIntervalSuccessfulTrial = other._interTrialIntervalSuccessfulTrial;
-            _interTrialIntervalUnsuccessfulTrial = other._interTrialIntervalUnsuccessfulTrial;
+            _interTrialInterval = other._interTrialInterval;
             _responseTime = other._responseTime;
             _maximumTime = other._maximumTime;
             _rewardConditions = other._rewardConditions;
@@ -146,36 +143,19 @@ namespace SequenceSchema
         }
     
         /// <summary>
-        /// Time between trials in seconds after a successful trial
+        /// Time between trials
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interTrialIntervalSuccessfulTrial")]
-        [System.ComponentModel.DescriptionAttribute("Time between trials in seconds after a successful trial")]
-        public double InterTrialIntervalSuccessfulTrial
+        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interTrialInterval")]
+        [System.ComponentModel.DescriptionAttribute("Time between trials")]
+        public double InterTrialInterval
         {
             get
             {
-                return _interTrialIntervalSuccessfulTrial;
+                return _interTrialInterval;
             }
             set
             {
-                _interTrialIntervalSuccessfulTrial = value;
-            }
-        }
-    
-        /// <summary>
-        /// Time between trials in seconds after an unsuccessful trial
-        /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="interTrialIntervalUnsuccessfulTrial")]
-        [System.ComponentModel.DescriptionAttribute("Time between trials in seconds after an unsuccessful trial")]
-        public double InterTrialIntervalUnsuccessfulTrial
-        {
-            get
-            {
-                return _interTrialIntervalUnsuccessfulTrial;
-            }
-            set
-            {
-                _interTrialIntervalUnsuccessfulTrial = value;
+                _interTrialInterval = value;
             }
         }
     
@@ -403,8 +383,7 @@ namespace SequenceSchema
             stringBuilder.Append("defaultCommand = " + _defaultCommand + ", ");
             stringBuilder.Append("interCommand = " + _interCommand + ", ");
             stringBuilder.Append("interCommandTime = " + _interCommandTime + ", ");
-            stringBuilder.Append("interTrialIntervalSuccessfulTrial = " + _interTrialIntervalSuccessfulTrial + ", ");
-            stringBuilder.Append("interTrialIntervalUnsuccessfulTrial = " + _interTrialIntervalUnsuccessfulTrial + ", ");
+            stringBuilder.Append("interTrialInterval = " + _interTrialInterval + ", ");
             stringBuilder.Append("responseTime = " + _responseTime + ", ");
             stringBuilder.Append("maximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("rewardConditions = " + _rewardConditions + ", ");
