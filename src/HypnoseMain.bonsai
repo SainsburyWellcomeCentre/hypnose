@@ -149,23 +149,17 @@
                 <rx:Count>1</rx:Count>
               </Combinator>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="SubscribeSubject">
-                <Name>EegStream</Name>
-              </Builder>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>EegStream</Name>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
-                <Name>BehaviorEvents</Name>
-              </Builder>
+            <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
+              <Name>BehaviorEvents</Name>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
-                <Heartbeats>BehaviorEvents</Heartbeats>
-                <ClosingDuration xsi:nil="true" />
-                <LogName>ExperimentEvents</LogName>
-                <Selector xsi:nil="true" />
-              </Builder>
+            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+              <Heartbeats>BehaviorEvents</Heartbeats>
+              <ClosingDuration xsi:nil="true" />
+              <LogName>EegStreamEvents</LogName>
+              <Selector xsi:nil="true" />
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>EventsO0</Name>
@@ -780,28 +774,26 @@
         <SessionSettings>SessionSettings</SessionSettings>
         <OlfactometerCommand>OlfactometerCommand</OlfactometerCommand>
       </Expression>
-      <Expression xsi:type="Disable">
-        <Builder xsi:type="GroupWorkflow">
-          <Name>EEG</Name>
-          <Workflow>
-            <Nodes>
-              <Expression xsi:type="Combinator">
-                <Combinator xsi:type="p2:UdpSource">
-                  <p2:GroupAddress>239.255.76.67</p2:GroupAddress>
-                  <p2:Port>8866</p2:Port>
-                </Combinator>
-              </Expression>
-              <Expression xsi:type="rx:PublishSubject">
-                <Name>EegStream</Name>
-              </Expression>
-              <Expression xsi:type="WorkflowOutput" />
-            </Nodes>
-            <Edges>
-              <Edge From="0" To="1" Label="Source1" />
-              <Edge From="1" To="2" Label="Source1" />
-            </Edges>
-          </Workflow>
-        </Builder>
+      <Expression xsi:type="GroupWorkflow">
+        <Name>EEG</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p2:UdpSource">
+                <p2:GroupAddress>239.255.76.67</p2:GroupAddress>
+                <p2:Port>8866</p2:Port>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>EegStream</Name>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="1" To="2" Label="Source1" />
+          </Edges>
+        </Workflow>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>Tracking</Name>
