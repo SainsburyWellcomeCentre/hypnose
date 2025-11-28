@@ -7,26 +7,26 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.2
-  loggingRootPath: C:\hypnose\rawdata\sub-039_id-258\ses-024_date-20251128\behav
+  loggingRootPath: C:\hypnose\rawdata\sub-040_id-259\ses-025_date-20251128\behav
   rewardTime: 0.122
   performanceAverageWindow: 5
-  initialSequence: Schemas/doubles.yml
+  initialSequence: Schemas/hiddenrule-location0123.yml
   maximumInterOdourPokeTime: 2
 
 cameraProperties:
   frameRate: 60
   exposure: 15000
   gain: 10
-  threshold: 3
+  threshold: 5
   roiSourcePoints:
     points:
       - x: 180
         y: 600
       - x: 180
         y: 700
-      - x: 1070
+      - x: 1050
         y: 700
-      - x: 1070
+      - x: 1050
         y: 600
 
 olfactometerCommands:
