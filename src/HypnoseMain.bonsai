@@ -102,7 +102,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\hypnose\rawdata\sub-039_id-258\ses-024_date-20251128\behav</Path>
+              <Path>C:\hypnose\rawdata\sub-040_id-259\ses-025_date-20251128\behav</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -893,11 +893,11 @@
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1070</cv:X>
+                      <cv:X>1050</cv:X>
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1070</cv:X>
+                      <cv:X>1050</cv:X>
                       <cv:Y>600</cv:Y>
                     </cv:Point>
                   </cv:ArrayOfPoint>
@@ -976,11 +976,11 @@
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1070</cv:X>
+                      <cv:X>1050</cv:X>
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1070</cv:X>
+                      <cv:X>1050</cv:X>
                       <cv:Y>600</cv:Y>
                     </cv:Point>
                   </cv:ArrayOfPoint>
@@ -1025,7 +1025,7 @@
             </Expression>
             <Expression xsi:type="GreaterThan">
               <Operand xsi:type="DoubleProperty">
-                <Value>3</Value>
+                <Value>5</Value>
               </Operand>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -1127,7 +1127,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/doubles.yml</p2:Path>
+                <p2:Path>Schemas/hiddenrule-location0123.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1585,48 +1585,50 @@
                       <rx:Count>1</rx:Count>
                     </Combinator>
                   </Expression>
-                  <Expression xsi:type="rx:Sink">
-                    <Name>EnableTrialStartIndicator</Name>
-                    <Workflow>
-                      <Nodes>
-                        <Expression xsi:type="WorkflowInput">
-                          <Name>Source1</Name>
-                        </Expression>
-                        <Expression xsi:type="MemberSelector">
-                          <Selector>Item2.EnableTrialStartIndicator</Selector>
-                        </Expression>
-                        <Expression xsi:type="rx:Condition">
-                          <Workflow>
-                            <Nodes>
-                              <Expression xsi:type="WorkflowInput">
-                                <Name>Source1</Name>
-                              </Expression>
-                              <Expression xsi:type="WorkflowOutput" />
-                            </Nodes>
-                            <Edges>
-                              <Edge From="0" To="1" Label="Source1" />
-                            </Edges>
-                          </Workflow>
-                        </Expression>
-                        <Expression xsi:type="beh:CreateMessage">
-                          <harp:MessageType>Write</harp:MessageType>
-                          <harp:Payload xsi:type="beh:CreateOutputSetPayload">
-                            <beh:OutputSet>DOPort0</beh:OutputSet>
-                          </harp:Payload>
-                        </Expression>
-                        <Expression xsi:type="MulticastSubject">
-                          <Name>BehaviorCommands</Name>
-                        </Expression>
-                        <Expression xsi:type="WorkflowOutput" />
-                      </Nodes>
-                      <Edges>
-                        <Edge From="0" To="1" Label="Source1" />
-                        <Edge From="1" To="2" Label="Source1" />
-                        <Edge From="2" To="3" Label="Source1" />
-                        <Edge From="3" To="4" Label="Source1" />
-                        <Edge From="4" To="5" Label="Source1" />
-                      </Edges>
-                    </Workflow>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="rx:Sink">
+                      <Name>EnableTrialStartIndicator</Name>
+                      <Workflow>
+                        <Nodes>
+                          <Expression xsi:type="WorkflowInput">
+                            <Name>Source1</Name>
+                          </Expression>
+                          <Expression xsi:type="MemberSelector">
+                            <Selector>Item2.EnableTrialStartIndicator</Selector>
+                          </Expression>
+                          <Expression xsi:type="rx:Condition">
+                            <Workflow>
+                              <Nodes>
+                                <Expression xsi:type="WorkflowInput">
+                                  <Name>Source1</Name>
+                                </Expression>
+                                <Expression xsi:type="WorkflowOutput" />
+                              </Nodes>
+                              <Edges>
+                                <Edge From="0" To="1" Label="Source1" />
+                              </Edges>
+                            </Workflow>
+                          </Expression>
+                          <Expression xsi:type="beh:CreateMessage">
+                            <harp:MessageType>Write</harp:MessageType>
+                            <harp:Payload xsi:type="beh:CreateOutputSetPayload">
+                              <beh:OutputSet>DOPort0</beh:OutputSet>
+                            </harp:Payload>
+                          </Expression>
+                          <Expression xsi:type="MulticastSubject">
+                            <Name>BehaviorCommands</Name>
+                          </Expression>
+                          <Expression xsi:type="WorkflowOutput" />
+                        </Nodes>
+                        <Edges>
+                          <Edge From="0" To="1" Label="Source1" />
+                          <Edge From="1" To="2" Label="Source1" />
+                          <Edge From="2" To="3" Label="Source1" />
+                          <Edge From="3" To="4" Label="Source1" />
+                          <Edge From="4" To="5" Label="Source1" />
+                        </Edges>
+                      </Workflow>
+                    </Builder>
                   </Expression>
                   <Expression xsi:type="rx:AsyncSubject">
                     <Name>SequenceInfo</Name>
@@ -2015,7 +2017,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.2</Value>
+                                  <Value>0.275</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2129,7 +2131,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.2</Value>
+                                  <Value>0.275</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
@@ -2296,7 +2298,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.2</Value>
+                                  <Value>0.275</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2410,7 +2412,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.2</Value>
+                                  <Value>0.275</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
@@ -2908,54 +2910,60 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:TakeUntil" />
                   </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>SequenceInfo</Name>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="SubscribeSubject">
+                      <Name>SequenceInfo</Name>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="rx:Sink">
-                    <Name>EnableTrialStartIndicator</Name>
-                    <Workflow>
-                      <Nodes>
-                        <Expression xsi:type="WorkflowInput">
-                          <Name>Source1</Name>
-                        </Expression>
-                        <Expression xsi:type="MemberSelector">
-                          <Selector>Item2.EnableTrialStartIndicator</Selector>
-                        </Expression>
-                        <Expression xsi:type="rx:Condition">
-                          <Workflow>
-                            <Nodes>
-                              <Expression xsi:type="WorkflowInput">
-                                <Name>Source1</Name>
-                              </Expression>
-                              <Expression xsi:type="WorkflowOutput" />
-                            </Nodes>
-                            <Edges>
-                              <Edge From="0" To="1" Label="Source1" />
-                            </Edges>
-                          </Workflow>
-                        </Expression>
-                        <Expression xsi:type="beh:CreateMessage">
-                          <harp:MessageType>Write</harp:MessageType>
-                          <harp:Payload xsi:type="beh:CreateOutputSetPayload">
-                            <beh:OutputSet>DOPort0</beh:OutputSet>
-                          </harp:Payload>
-                        </Expression>
-                        <Expression xsi:type="MulticastSubject">
-                          <Name>BehaviorCommands</Name>
-                        </Expression>
-                        <Expression xsi:type="WorkflowOutput" />
-                      </Nodes>
-                      <Edges>
-                        <Edge From="0" To="1" Label="Source1" />
-                        <Edge From="1" To="2" Label="Source1" />
-                        <Edge From="2" To="3" Label="Source1" />
-                        <Edge From="3" To="4" Label="Source1" />
-                        <Edge From="4" To="5" Label="Source1" />
-                      </Edges>
-                    </Workflow>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="rx:Sink">
+                      <Name>EnableTrialStartIndicator</Name>
+                      <Workflow>
+                        <Nodes>
+                          <Expression xsi:type="WorkflowInput">
+                            <Name>Source1</Name>
+                          </Expression>
+                          <Expression xsi:type="MemberSelector">
+                            <Selector>Item2.EnableTrialStartIndicator</Selector>
+                          </Expression>
+                          <Expression xsi:type="rx:Condition">
+                            <Workflow>
+                              <Nodes>
+                                <Expression xsi:type="WorkflowInput">
+                                  <Name>Source1</Name>
+                                </Expression>
+                                <Expression xsi:type="WorkflowOutput" />
+                              </Nodes>
+                              <Edges>
+                                <Edge From="0" To="1" Label="Source1" />
+                              </Edges>
+                            </Workflow>
+                          </Expression>
+                          <Expression xsi:type="beh:CreateMessage">
+                            <harp:MessageType>Write</harp:MessageType>
+                            <harp:Payload xsi:type="beh:CreateOutputSetPayload">
+                              <beh:OutputSet>DOPort0</beh:OutputSet>
+                            </harp:Payload>
+                          </Expression>
+                          <Expression xsi:type="MulticastSubject">
+                            <Name>BehaviorCommands</Name>
+                          </Expression>
+                          <Expression xsi:type="WorkflowOutput" />
+                        </Nodes>
+                        <Edges>
+                          <Edge From="0" To="1" Label="Source1" />
+                          <Edge From="1" To="2" Label="Source1" />
+                          <Edge From="2" To="3" Label="Source1" />
+                          <Edge From="3" To="4" Label="Source1" />
+                          <Edge From="4" To="5" Label="Source1" />
+                        </Edges>
+                      </Workflow>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:WithLatestFrom" />
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="Combinator">
+                      <Combinator xsi:type="rx:WithLatestFrom" />
+                    </Builder>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Repeat" />
@@ -3244,72 +3252,98 @@ it.Item2 as TrialComplete
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>SustainedSampleOnset</Name>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="SubscribeSubject">
+                      <Name>SustainedSampleOnset</Name>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>SequenceInfo</Name>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="SubscribeSubject">
+                      <Name>SequenceInfo</Name>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Item2.EnableTrialStartIndicator</Selector>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="MemberSelector">
+                      <Selector>Item2.EnableTrialStartIndicator</Selector>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="rx:Condition">
-                    <Workflow>
-                      <Nodes>
-                        <Expression xsi:type="WorkflowInput">
-                          <Name>Source1</Name>
-                        </Expression>
-                        <Expression xsi:type="WorkflowOutput" />
-                      </Nodes>
-                      <Edges>
-                        <Edge From="0" To="1" Label="Source1" />
-                      </Edges>
-                    </Workflow>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="rx:Condition">
+                      <Workflow>
+                        <Nodes>
+                          <Expression xsi:type="WorkflowInput">
+                            <Name>Source1</Name>
+                          </Expression>
+                          <Expression xsi:type="WorkflowOutput" />
+                        </Nodes>
+                        <Edges>
+                          <Edge From="0" To="1" Label="Source1" />
+                        </Edges>
+                      </Workflow>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:WithLatestFrom" />
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="Combinator">
+                      <Combinator xsi:type="rx:WithLatestFrom" />
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="BooleanProperty">
-                      <Value>true</Value>
-                    </Combinator>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="Combinator">
+                      <Combinator xsi:type="BooleanProperty">
+                        <Value>true</Value>
+                      </Combinator>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="beh:CreateMessage">
-                    <harp:MessageType>Write</harp:MessageType>
-                    <harp:Payload xsi:type="beh:CreateOutputClearPayload">
-                      <beh:OutputClear>DOPort0</beh:OutputClear>
-                    </harp:Payload>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="beh:CreateMessage">
+                      <harp:MessageType>Write</harp:MessageType>
+                      <harp:Payload xsi:type="beh:CreateOutputClearPayload">
+                        <beh:OutputClear>DOPort0</beh:OutputClear>
+                      </harp:Payload>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="MulticastSubject">
-                    <Name>BehaviorCommands</Name>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="MulticastSubject">
+                      <Name>BehaviorCommands</Name>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>SequenceInfo</Name>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="SubscribeSubject">
+                      <Name>SequenceInfo</Name>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Item2.enableTrialEndIndicator</Selector>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="MemberSelector">
+                      <Selector>Item2.enableTrialEndIndicator</Selector>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="rx:Condition">
-                    <Workflow>
-                      <Nodes>
-                        <Expression xsi:type="WorkflowInput">
-                          <Name>Source1</Name>
-                        </Expression>
-                        <Expression xsi:type="WorkflowOutput" />
-                      </Nodes>
-                      <Edges>
-                        <Edge From="0" To="1" Label="Source1" />
-                      </Edges>
-                    </Workflow>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="rx:Condition">
+                      <Workflow>
+                        <Nodes>
+                          <Expression xsi:type="WorkflowInput">
+                            <Name>Source1</Name>
+                          </Expression>
+                          <Expression xsi:type="WorkflowOutput" />
+                        </Nodes>
+                        <Edges>
+                          <Edge From="0" To="1" Label="Source1" />
+                        </Edges>
+                      </Workflow>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="beh:CreateMessage">
-                    <harp:MessageType>Write</harp:MessageType>
-                    <harp:Payload xsi:type="beh:CreateOutputSetPayload">
-                      <beh:OutputSet>DOPort0</beh:OutputSet>
-                    </harp:Payload>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="beh:CreateMessage">
+                      <harp:MessageType>Write</harp:MessageType>
+                      <harp:Payload xsi:type="beh:CreateOutputSetPayload">
+                        <beh:OutputSet>DOPort0</beh:OutputSet>
+                      </harp:Payload>
+                    </Builder>
                   </Expression>
-                  <Expression xsi:type="MulticastSubject">
-                    <Name>BehaviorCommands</Name>
+                  <Expression xsi:type="Disable">
+                    <Builder xsi:type="MulticastSubject">
+                      <Name>BehaviorCommands</Name>
+                    </Builder>
                   </Expression>
                 </Nodes>
                 <Edges>
