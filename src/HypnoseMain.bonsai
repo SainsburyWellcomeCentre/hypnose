@@ -58,7 +58,7 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="aeon-video:SpinnakerCapture">
                 <spk:Index xsi:nil="true" />
-                <spk:SerialNumber>24282618</spk:SerialNumber>
+                <spk:SerialNumber>24282626</spk:SerialNumber>
                 <spk:ColorProcessing>Default</spk:ColorProcessing>
                 <aeon-video:ExposureTime>15000</aeon-video:ExposureTime>
                 <aeon-video:Gain>10</aeon-video:Gain>
@@ -102,7 +102,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\temp</Path>
+              <Path>C:\hypnose\rawdata\sub-037_id-234\ses-036_date-20251204\behav</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -324,7 +324,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT0.002S</rx:DueTime>
+                      <rx:DueTime>PT0.005S</rx:DueTime>
                       <rx:Period>PT0S</rx:Period>
                     </Combinator>
                   </Expression>
@@ -356,7 +356,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM4</harp:PortName>
+                <harp:PortName>COM3</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -706,7 +706,7 @@
                   <Expression xsi:type="beh:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="beh:CreatePulseSupplyPort1Payload">
-                      <beh:PulseSupplyPort1>122</beh:PulseSupplyPort1>
+                      <beh:PulseSupplyPort1>130</beh:PulseSupplyPort1>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -767,7 +767,7 @@
                   <Expression xsi:type="beh:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="beh:CreatePulseSupplyPort2Payload">
-                      <beh:PulseSupplyPort2>122</beh:PulseSupplyPort2>
+                      <beh:PulseSupplyPort2>130</beh:PulseSupplyPort2>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -876,9 +876,9 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM15</PortO0>
+        <PortO0>COM4</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM3</PortO1>
+        <PortO1>COM5</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
@@ -952,19 +952,19 @@
                 <cv:Regions>
                   <cv:ArrayOfPoint>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>210</cv:X>
                       <cv:Y>600</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>210</cv:X>
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>600</cv:Y>
                     </cv:Point>
                   </cv:ArrayOfPoint>
@@ -1035,19 +1035,19 @@
                 <cv:Regions>
                   <cv:ArrayOfPoint>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>210</cv:X>
                       <cv:Y>600</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>210</cv:X>
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>700</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>600</cv:Y>
                     </cv:Point>
                   </cv:ArrayOfPoint>
@@ -1092,7 +1092,7 @@
             </Expression>
             <Expression xsi:type="GreaterThan">
               <Operand xsi:type="DoubleProperty">
-                <Value>5</Value>
+                <Value>3</Value>
               </Operand>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -1146,7 +1146,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p2:LoadSessionSettings">
-          <p2:Path>Schemas\rig2-session-settings.yml</p2:Path>
+          <p2:Path>Schemas\rig3-session-settings.yml</p2:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -1194,7 +1194,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/doubles.yml</p2:Path>
+                <p2:Path>Schemas/odourdiscrimination-stage5a.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -2084,7 +2084,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.2</Value>
+                                  <Value>0.25</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2198,7 +2198,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.2</Value>
+                                  <Value>0.25</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
@@ -2365,7 +2365,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.2</Value>
+                                  <Value>0.25</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2479,7 +2479,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.2</Value>
+                                  <Value>0.25</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
@@ -3869,7 +3869,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:RewardCommand">
-                      <p1:RewardTime>0.122</p1:RewardTime>
+                      <p1:RewardTime>0.13</p1:RewardTime>
                       <p1:RewardPosition>0</p1:RewardPosition>
                     </Combinator>
                   </Expression>
@@ -3996,7 +3996,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:RewardCommand">
-                      <p1:RewardTime>0.122</p1:RewardTime>
+                      <p1:RewardTime>0.13</p1:RewardTime>
                       <p1:RewardPosition>1</p1:RewardPosition>
                     </Combinator>
                   </Expression>
@@ -4121,7 +4121,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>PT2S</rx:DueTime>
+                      <rx:DueTime>PT2.5S</rx:DueTime>
                       <rx:Period>PT0S</rx:Period>
                     </Combinator>
                   </Expression>
@@ -4412,7 +4412,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT3S</rx:DueTime>
+                      <rx:DueTime>PT0S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -4546,7 +4546,7 @@ it.Item2 as TrialComplete
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="wie:KeyDown">
-          <wie:Filter>RButton ShiftKey Menu Space Next PageDown D0 D2 Control</wie:Filter>
+          <wie:Filter>LButton RButton Cancel ShiftKey ControlKey Menu Pause Space Prior PageUp Next PageDown End D0 D1 D2 D3 Control</wie:Filter>
           <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
         </Combinator>
       </Expression>
