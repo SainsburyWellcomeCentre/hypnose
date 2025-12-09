@@ -102,7 +102,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\hypnose\rawdata\sub-037_id-234\ses-036_date-20251204\behav</Path>
+              <Path>C:\temp</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -356,7 +356,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM3</harp:PortName>
+                <harp:PortName>COM5</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -1194,7 +1194,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/odourdiscrimination-stage5a.yml</p2:Path>
+                <p2:Path>Schemas/hiddenrule-location0123-stage4.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
