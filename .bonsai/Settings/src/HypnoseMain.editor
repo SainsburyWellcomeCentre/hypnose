@@ -67,9 +67,8 @@
     <Watch Path="45.8.16" />
     <Watch Path="45.8.17" />
     <Watch Path="45.8.18" />
-    <Watch Path="45.8.19" />
-    <Watch Path="45.8.20" />
     <Watch Path="45.8.21" />
+    <Watch Path="45.8.22" />
     <Watch Path="45.8.23" />
     <Watch Path="45.8.24" />
     <Watch Path="45.8.25" />
@@ -171,8 +170,6 @@
     <Watch Path="45.8.121" />
     <Watch Path="45.8.122" />
     <Watch Path="45.8.123" />
-    <Watch Path="45.8.124" />
-    <Watch Path="45.8.125" />
     <Watch Path="45.9" />
     <Watch Path="45.10" />
     <Watch Path="45.11" />
