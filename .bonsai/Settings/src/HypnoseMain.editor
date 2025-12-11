@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EditorSettings Version="2.9.0">
-  <DockPanel FormatVersion="1.0" DockLeftPortion="0.25" DockRightPortion="0.25" DockTopPortion="0.25" DockBottomPortion="0.0240157480314961" ActiveDocumentPane="0" ActivePane="0">
+  <DockPanel FormatVersion="1.0" DockLeftPortion="0.25" DockRightPortion="0.25" DockTopPortion="0.25" DockBottomPortion="0.25" ActiveDocumentPane="0" ActivePane="0">
     <Contents Count="3">
       <Content ID="0" PersistString="WorkflowFindToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
       <Content ID="1" PersistString="WatchToolWindow" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
@@ -50,6 +50,7 @@
     <Watch Path="45.8" />
     <Watch Path="45.8.0" />
     <Watch Path="45.8.1" />
+    <Watch Path="45.8.2" />
     <Watch Path="45.8.3" />
     <Watch Path="45.8.4" />
     <Watch Path="45.8.5" />
@@ -67,7 +68,6 @@
     <Watch Path="45.8.19" />
     <Watch Path="45.8.20" />
     <Watch Path="45.8.21" />
-    <Watch Path="45.8.23" />
     <Watch Path="45.8.24" />
     <Watch Path="45.8.25" />
     <Watch Path="45.8.26" />
@@ -76,6 +76,9 @@
     <Watch Path="45.8.31" />
     <Watch Path="45.8.32" />
     <Watch Path="45.8.33" />
+    <Watch Path="45.8.34" />
+    <Watch Path="45.8.35" />
+    <Watch Path="45.8.36" />
     <Watch Path="45.8.37" />
     <Watch Path="45.8.38" />
     <Watch Path="45.8.39" />
@@ -128,6 +131,19 @@
     <Watch Path="45.8.109" />
     <Watch Path="45.8.110" />
     <Watch Path="45.8.111" />
+    <Watch Path="45.8.112" />
+    <Watch Path="45.8.113" />
+    <Watch Path="45.8.114" />
+    <Watch Path="45.8.115" />
+    <Watch Path="45.8.116" />
+    <Watch Path="45.8.117" />
+    <Watch Path="45.8.118" />
+    <Watch Path="45.8.119" />
+    <Watch Path="45.8.120" />
+    <Watch Path="45.8.121" />
+    <Watch Path="45.8.122" />
+    <Watch Path="45.8.123" />
+    <Watch Path="45.8.124" />
     <Watch Path="45.9" />
     <Watch Path="45.10" />
     <Watch Path="45.11" />
