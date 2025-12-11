@@ -1193,7 +1193,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/quintuples-easy-stage2.yml</p2:Path>
+                <p2:Path>Schemas/hiddenrule-location0123-stage4.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1985,7 +1985,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT1S</rx:DueTime>
+                            <rx:DueTime>PT2S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -2102,7 +2102,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>1.1</Value>
+                                  <Value>2.1</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -2254,7 +2254,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT1S</rx:DueTime>
+                            <rx:DueTime>PT2S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
@@ -2365,7 +2365,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>1.1</Value>
+                                  <Value>2.1</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -2502,7 +2502,7 @@
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT2S</rx:DueTime>
+                            <rx:DueTime>PT5S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
@@ -3053,7 +3053,7 @@
                     <scr:Expression>new (
 it.Item1.Item2 as RewardInfo,
 it.Item2 as Sequence,
-it.Item1.Item1.Item1 as TrialComplete
+it.Item1.Item1.Item2 as TrialComplete
 )</scr:Expression>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
@@ -4035,7 +4035,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>P1DT3H46M39S</rx:DueTime>
+                      <rx:DueTime>PT5S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
