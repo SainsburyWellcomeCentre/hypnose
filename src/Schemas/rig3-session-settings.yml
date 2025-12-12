@@ -6,7 +6,7 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  sampleOffsetTime: 0.2
+  sampleOffsetTime: 0.5
   loggingRootPath: C:\hypnose\rawdata\sub-038_id-235\ses-042_date-20251210\behav
   rewardTime: 0.13
   performanceAverageWindow: 5
