@@ -10,7 +10,7 @@ metadata:
   loggingRootPath: C:\temp
   rewardTime: 0.13
   performanceAverageWindow: 5
-  initialSequence: Schemas/quintuples-easy.yml
+  initialSequence: Schemas/hiddenrule-location0123-stage6.yml
   maximumInterOdourPokeTime: 2
 
 cameraProperties:
