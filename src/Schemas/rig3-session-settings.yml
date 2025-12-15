@@ -6,11 +6,11 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  sampleOffsetTime: 0.5
-  loggingRootPath: C:\hypnose\rawdata\sub-038_id-235\ses-042_date-20251210\behav
+  sampleOffsetTime: 0.2
+  loggingRootPath: C:\temp
   rewardTime: 0.13
   performanceAverageWindow: 5
-  initialSequence: Schemas/quintuples-easy-stage2.yml
+  initialSequence: Schemas/quintuples-easy.yml
   maximumInterOdourPokeTime: 2
 
 cameraProperties:
