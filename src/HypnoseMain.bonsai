@@ -102,7 +102,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\hypnose\rawdata\sub-038_id-235\ses-046_date-20251216\behav</Path>
+              <Path>C:\hypnose\rawdata\sub-038_id-235\ses-047_date-20251217\behav</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -608,7 +608,7 @@
                   <Expression xsi:type="beh:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="beh:CreatePulseSupplyPort1Payload">
-                      <beh:PulseSupplyPort1>122</beh:PulseSupplyPort1>
+                      <beh:PulseSupplyPort1>130</beh:PulseSupplyPort1>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -669,7 +669,7 @@
                   <Expression xsi:type="beh:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="beh:CreatePulseSupplyPort2Payload">
-                      <beh:PulseSupplyPort2>122</beh:PulseSupplyPort2>
+                      <beh:PulseSupplyPort2>130</beh:PulseSupplyPort2>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -2386,93 +2386,119 @@
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Zip" />
                         </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>SessionSettings</Name>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="SubscribeSubject">
+                            <Name>SessionSettings</Name>
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="MemberSelector">
-                          <Selector>Metadata.MaximumInterOdourPokeTime</Selector>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="MemberSelector">
+                            <Selector>Metadata.MaximumInterOdourPokeTime</Selector>
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="scr:ExpressionTransform">
-                          <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="scr:ExpressionTransform">
+                            <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="PropertyMapping">
-                          <PropertyMappings>
-                            <Property Name="DueTime" />
-                          </PropertyMappings>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="PropertyMapping">
+                            <PropertyMappings>
+                              <Property Name="DueTime" />
+                            </PropertyMappings>
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT2S</rx:DueTime>
-                          </Combinator>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="Combinator">
+                            <Combinator xsi:type="rx:Timer">
+                              <rx:DueTime>PT2S</rx:DueTime>
+                            </Combinator>
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>CommandsO1</Name>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="SubscribeSubject">
+                            <Name>CommandsO1</Name>
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:SubscribeWhen" />
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="Combinator">
+                            <Combinator xsi:type="rx:SubscribeWhen" />
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>SustainedSampleState</Name>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="SubscribeSubject">
+                            <Name>SustainedSampleState</Name>
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:WithLatestFrom" />
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="Combinator">
+                            <Combinator xsi:type="rx:WithLatestFrom" />
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="rx:Condition">
-                          <Name>FailedToSample</Name>
-                          <Workflow>
-                            <Nodes>
-                              <Expression xsi:type="WorkflowInput">
-                                <Name>Source1</Name>
-                              </Expression>
-                              <Expression xsi:type="MemberSelector">
-                                <Selector>Item2</Selector>
-                              </Expression>
-                              <Expression xsi:type="MemberSelector">
-                                <Selector>Value</Selector>
-                              </Expression>
-                              <Expression xsi:type="BitwiseNot" />
-                              <Expression xsi:type="SubscribeSubject">
-                                <Name>Valence</Name>
-                              </Expression>
-                              <Expression xsi:type="MemberSelector">
-                                <Selector>Index</Selector>
-                              </Expression>
-                              <Expression xsi:type="GreaterThan">
-                                <Operand xsi:type="IntProperty">
-                                  <Value>0</Value>
-                                </Operand>
-                              </Expression>
-                              <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="rx:Zip" />
-                              </Expression>
-                              <Expression xsi:type="BitwiseAnd" />
-                              <Expression xsi:type="WorkflowOutput" />
-                            </Nodes>
-                            <Edges>
-                              <Edge From="0" To="1" Label="Source1" />
-                              <Edge From="1" To="2" Label="Source1" />
-                              <Edge From="2" To="3" Label="Source1" />
-                              <Edge From="3" To="7" Label="Source1" />
-                              <Edge From="4" To="5" Label="Source1" />
-                              <Edge From="5" To="6" Label="Source1" />
-                              <Edge From="6" To="7" Label="Source2" />
-                              <Edge From="7" To="8" Label="Source1" />
-                              <Edge From="8" To="9" Label="Source1" />
-                            </Edges>
-                          </Workflow>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="rx:Condition">
+                            <Name>FailedToSample</Name>
+                            <Workflow>
+                              <Nodes>
+                                <Expression xsi:type="WorkflowInput">
+                                  <Name>Source1</Name>
+                                </Expression>
+                                <Expression xsi:type="MemberSelector">
+                                  <Selector>Item2</Selector>
+                                </Expression>
+                                <Expression xsi:type="MemberSelector">
+                                  <Selector>Value</Selector>
+                                </Expression>
+                                <Expression xsi:type="BitwiseNot" />
+                                <Expression xsi:type="SubscribeSubject">
+                                  <Name>Valence</Name>
+                                </Expression>
+                                <Expression xsi:type="MemberSelector">
+                                  <Selector>Index</Selector>
+                                </Expression>
+                                <Expression xsi:type="GreaterThan">
+                                  <Operand xsi:type="IntProperty">
+                                    <Value>0</Value>
+                                  </Operand>
+                                </Expression>
+                                <Expression xsi:type="Combinator">
+                                  <Combinator xsi:type="rx:Zip" />
+                                </Expression>
+                                <Expression xsi:type="BitwiseAnd" />
+                                <Expression xsi:type="WorkflowOutput" />
+                              </Nodes>
+                              <Edges>
+                                <Edge From="0" To="1" Label="Source1" />
+                                <Edge From="1" To="2" Label="Source1" />
+                                <Edge From="2" To="3" Label="Source1" />
+                                <Edge From="3" To="7" Label="Source1" />
+                                <Edge From="4" To="5" Label="Source1" />
+                                <Edge From="5" To="6" Label="Source1" />
+                                <Edge From="6" To="7" Label="Source2" />
+                                <Edge From="7" To="8" Label="Source1" />
+                                <Edge From="8" To="9" Label="Source1" />
+                              </Edges>
+                            </Workflow>
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="BooleanProperty">
-                            <Value>false</Value>
-                          </Combinator>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="Combinator">
+                            <Combinator xsi:type="BooleanProperty">
+                              <Value>false</Value>
+                            </Combinator>
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="BooleanProperty">
-                            <Value>true</Value>
-                          </Combinator>
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="Combinator">
+                            <Combinator xsi:type="BooleanProperty">
+                              <Value>true</Value>
+                            </Combinator>
+                          </Builder>
                         </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="rx:Zip" />
+                        <Expression xsi:type="Disable">
+                          <Builder xsi:type="Combinator">
+                            <Combinator xsi:type="rx:Zip" />
+                          </Builder>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Merge" />
