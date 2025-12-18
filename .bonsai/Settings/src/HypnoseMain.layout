@@ -38,10 +38,24 @@
         <NestedLayout>
           <WindowSettings Index="20">
             <NestedLayout>
+              <WindowSettings Index="3">
+                <Location>
+                  <X>156</X>
+                  <Y>156</Y>
+                </Location>
+                <Size>
+                  <Width>336</Width>
+                  <Height>133</Height>
+                </Size>
+                <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+                <VisualizerSettings>
+                  <ObjectTextVisualizer />
+                </VisualizerSettings>
+              </WindowSettings>
               <WindowSettings Index="4">
                 <Location>
-                  <X>680</X>
-                  <Y>59</Y>
+                  <X>1011</X>
+                  <Y>48</Y>
                 </Location>
                 <Size>
                   <Width>626</Width>
@@ -75,6 +89,20 @@
                 <Size>
                   <Width>336</Width>
                   <Height>107</Height>
+                </Size>
+                <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+                <VisualizerSettings>
+                  <ObjectTextVisualizer />
+                </VisualizerSettings>
+              </WindowSettings>
+              <WindowSettings Index="10">
+                <Location>
+                  <X>1316</X>
+                  <Y>1009</Y>
+                </Location>
+                <Size>
+                  <Width>629</Width>
+                  <Height>182</Height>
                 </Size>
                 <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
                 <VisualizerSettings>
@@ -147,9 +175,10 @@
                 </VisualizerSettings>
               </WindowSettings>
               <WindowSettings Index="39">
+                <Visible>false</Visible>
                 <Location>
-                  <X>670</X>
-                  <Y>309</Y>
+                  <X>923</X>
+                  <Y>322</Y>
                 </Location>
                 <Size>
                   <Width>336</Width>
