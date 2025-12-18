@@ -4,7 +4,7 @@
     <Contents Count="3">
       <Content ID="0" PersistString="WorkflowFindToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
       <Content ID="1" PersistString="WatchToolWindow" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
-      <Content ID="2" PersistString="WorkflowDockContent" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
+      <Content ID="2" PersistString="WorkflowDockContent:47" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     </Contents>
     <Panes Count="2">
       <Pane ID="0" DockState="DockBottom" ActiveContent="1">
@@ -41,4 +41,24 @@
     </DockWindows>
     <FloatWindows Count="0" />
   </DockPanel>
+  <WatchSettings>
+    <Watch Path="47.3" />
+    <Watch Path="47.4" />
+    <Watch Path="47.5" />
+    <Watch Path="47.6" />
+    <Watch Path="47.7" />
+    <Watch Path="47.8" />
+    <Watch Path="47.9" />
+    <Watch Path="47.10" />
+    <Watch Path="47.11" />
+    <Watch Path="47.12" />
+    <Watch Path="47.13" />
+    <Watch Path="47.14" />
+    <Watch Path="47.15" />
+    <Watch Path="47.16" />
+    <Watch Path="47.17" />
+    <Watch Path="47.18" />
+    <Watch Path="47.19" />
+    <Watch Path="47.22" />
+  </WatchSettings>
 </EditorSettings>

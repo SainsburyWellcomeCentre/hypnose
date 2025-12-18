@@ -13,10 +13,11 @@
                  xmlns:cv="clr-namespace:Bonsai.Vision;assembly=Bonsai.Vision"
                  xmlns:wie="clr-namespace:Bonsai.Windows.Input;assembly=Bonsai.Windows.Input"
                  xmlns:num="clr-namespace:Bonsai.Numerics;assembly=Bonsai.Numerics"
-                 xmlns:dsp="clr-namespace:Bonsai.Dsp;assembly=Bonsai.Dsp"
                  xmlns:p3="clr-namespace:Bonsai.Numerics.Distributions;assembly=Bonsai.Numerics"
-                 xmlns:p4="clr-namespace:SequenceSchema;assembly=Extensions"
-                 xmlns:p5="clr-namespace:Harp.Olfactometer;assembly=Harp.Olfactometer"
+                 xmlns:p4="clr-namespace:System.Reactive;assembly=System.Reactive.Core"
+                 xmlns:dsp="clr-namespace:Bonsai.Dsp;assembly=Bonsai.Dsp"
+                 xmlns:p5="clr-namespace:SequenceSchema;assembly=Extensions"
+                 xmlns:p6="clr-namespace:Harp.Olfactometer;assembly=Harp.Olfactometer"
                  xmlns="https://bonsai-rx.org/2018/workflow">
   <Workflow>
     <Nodes>
@@ -1328,6 +1329,12 @@
               <Name>SampleOnset</Name>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
+              <Name>FakeSampleOnset</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
               <Name>SessionSettings</Name>
             </Expression>
             <Expression xsi:type="MemberSelector">
@@ -1360,6 +1367,12 @@
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>SampleOffset</Name>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>FakeSampleOffset</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Merge" />
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>SessionSettings</Name>
@@ -1445,42 +1458,229 @@
             <Expression xsi:type="rx:BehaviorSubject">
               <Name>SustainedSampleState</Name>
             </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="num:CreateRandom">
+                <num:Seed xsi:nil="true" />
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p3:CreateContinuousUniform">
+                <p3:Lower>0</p3:Lower>
+                <p3:Upper>2</p3:Upper>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="rx:BehaviorSubject">
+              <Name>Random</Name>
+            </Expression>
+            <Expression xsi:type="rx:BehaviorSubject" TypeArguments="p4:Unit">
+              <rx:Name>DoSample</rx:Name>
+            </Expression>
+            <Expression xsi:type="Unit" />
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="rx:SelectMany">
+              <Name>WAIT</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Random</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:WithLatestFrom" />
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item2</Selector>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="p3:Sample" />
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Take">
+                      <rx:Count>1</rx:Count>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:AsyncSubject">
+                    <Name>Delay</Name>
+                  </Expression>
+                  <Expression xsi:type="Unit" />
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Delay</Name>
+                  </Expression>
+                  <Expression xsi:type="scr:ExpressionTransform">
+                    <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="DueTime" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Delay">
+                      <rx:DueTime>PT1.266S</rx:DueTime>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="2" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source2" />
+                  <Edge From="2" To="3" Label="Source1" />
+                  <Edge From="3" To="4" Label="Source1" />
+                  <Edge From="4" To="5" Label="Source1" />
+                  <Edge From="5" To="6" Label="Source1" />
+                  <Edge From="7" To="11" Label="Source1" />
+                  <Edge From="8" To="9" Label="Source1" />
+                  <Edge From="9" To="10" Label="Source1" />
+                  <Edge From="10" To="11" Label="Source2" />
+                  <Edge From="11" To="12" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="ByteProperty">
+                <Value>0</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
+              <Name>BehaviorEvents</Name>
+            </Expression>
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>FakeSampleOnset</Name>
+            </Expression>
+            <Expression xsi:type="rx:SelectMany">
+              <Name>WAIT</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Random</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:WithLatestFrom" />
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Item2</Selector>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="p3:Sample" />
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Take">
+                      <rx:Count>1</rx:Count>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:AsyncSubject">
+                    <Name>Delay</Name>
+                  </Expression>
+                  <Expression xsi:type="Unit" />
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>Delay</Name>
+                  </Expression>
+                  <Expression xsi:type="scr:ExpressionTransform">
+                    <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="DueTime" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Delay">
+                      <rx:DueTime>PT0.063S</rx:DueTime>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="2" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source2" />
+                  <Edge From="2" To="3" Label="Source1" />
+                  <Edge From="3" To="4" Label="Source1" />
+                  <Edge From="4" To="5" Label="Source1" />
+                  <Edge From="5" To="6" Label="Source1" />
+                  <Edge From="7" To="11" Label="Source1" />
+                  <Edge From="8" To="9" Label="Source1" />
+                  <Edge From="9" To="10" Label="Source1" />
+                  <Edge From="10" To="11" Label="Source2" />
+                  <Edge From="11" To="12" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="ByteProperty">
+                <Value>0</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
+              <Name>BehaviorEvents</Name>
+            </Expression>
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>FakeSampleOffset</Name>
+            </Expression>
+            <Expression xsi:type="Unit" />
+            <Expression xsi:type="MulticastSubject">
+              <Name>DoSample</Name>
+            </Expression>
           </Nodes>
           <Edges>
-            <Edge From="0" To="5" Label="Source1" />
-            <Edge From="1" To="2" Label="Source1" />
-            <Edge From="2" To="3" Label="Source1" />
+            <Edge From="0" To="2" Label="Source1" />
+            <Edge From="1" To="2" Label="Source2" />
+            <Edge From="2" To="7" Label="Source1" />
             <Edge From="3" To="4" Label="Source1" />
-            <Edge From="4" To="5" Label="Source2" />
-            <Edge From="5" To="7" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="5" To="6" Label="Source1" />
             <Edge From="6" To="7" Label="Source2" />
-            <Edge From="7" To="8" Label="Source1" />
-            <Edge From="8" To="9" Label="Source1" />
-            <Edge From="10" To="15" Label="Source1" />
-            <Edge From="11" To="12" Label="Source1" />
-            <Edge From="12" To="13" Label="Source1" />
-            <Edge From="13" To="14" Label="Source1" />
-            <Edge From="14" To="15" Label="Source2" />
-            <Edge From="15" To="17" Label="Source1" />
-            <Edge From="16" To="17" Label="Source2" />
+            <Edge From="7" To="9" Label="Source1" />
+            <Edge From="8" To="9" Label="Source2" />
+            <Edge From="9" To="10" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
+            <Edge From="12" To="14" Label="Source1" />
+            <Edge From="13" To="14" Label="Source2" />
+            <Edge From="14" To="19" Label="Source1" />
+            <Edge From="15" To="16" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
             <Edge From="17" To="18" Label="Source1" />
-            <Edge From="18" To="19" Label="Source1" />
-            <Edge From="20" To="21" Label="Source1" />
-            <Edge From="20" To="22" Label="Source1" />
-            <Edge From="21" To="23" Label="Source1" />
-            <Edge From="22" To="23" Label="Source2" />
-            <Edge From="23" To="24" Label="Source1" />
-            <Edge From="24" To="33" Label="Source1" />
-            <Edge From="25" To="26" Label="Source1" />
+            <Edge From="18" To="19" Label="Source2" />
+            <Edge From="19" To="21" Label="Source1" />
+            <Edge From="20" To="21" Label="Source2" />
+            <Edge From="21" To="22" Label="Source1" />
+            <Edge From="22" To="23" Label="Source1" />
+            <Edge From="24" To="25" Label="Source1" />
+            <Edge From="24" To="26" Label="Source1" />
             <Edge From="25" To="27" Label="Source1" />
-            <Edge From="26" To="28" Label="Source1" />
-            <Edge From="27" To="28" Label="Source2" />
-            <Edge From="28" To="29" Label="Source1" />
-            <Edge From="29" To="33" Label="Source2" />
-            <Edge From="30" To="31" Label="Source1" />
-            <Edge From="31" To="32" Label="Source1" />
-            <Edge From="32" To="33" Label="Source3" />
-            <Edge From="33" To="34" Label="Source1" />
+            <Edge From="26" To="27" Label="Source2" />
+            <Edge From="27" To="28" Label="Source1" />
+            <Edge From="28" To="37" Label="Source1" />
+            <Edge From="29" To="30" Label="Source1" />
+            <Edge From="29" To="31" Label="Source1" />
+            <Edge From="30" To="32" Label="Source1" />
+            <Edge From="31" To="32" Label="Source2" />
+            <Edge From="32" To="33" Label="Source1" />
+            <Edge From="33" To="37" Label="Source2" />
+            <Edge From="34" To="35" Label="Source1" />
+            <Edge From="35" To="36" Label="Source1" />
+            <Edge From="36" To="37" Label="Source3" />
+            <Edge From="37" To="38" Label="Source1" />
+            <Edge From="39" To="40" Label="Source1" />
+            <Edge From="40" To="41" Label="Source1" />
+            <Edge From="42" To="44" Label="Source1" />
+            <Edge From="43" To="44" Label="Source2" />
+            <Edge From="44" To="45" Label="Source1" />
+            <Edge From="45" To="46" Label="Source1" />
+            <Edge From="46" To="47" Label="Source1" />
+            <Edge From="47" To="48" Label="Source1" />
+            <Edge From="48" To="49" Label="Source1" />
+            <Edge From="49" To="50" Label="Source1" />
+            <Edge From="50" To="51" Label="Source1" />
+            <Edge From="51" To="52" Label="Source1" />
+            <Edge From="52" To="53" Label="Source1" />
+            <Edge From="53" To="54" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -2830,11 +3030,11 @@ it.Item1.Item1.Item2 as TrialComplete
                     </Operand>
                   </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p4:Valence">
-                      <p4:Rewarded>true</p4:Rewarded>
-                      <p4:MinimumSamplingTime>0</p4:MinimumSamplingTime>
-                      <p4:MaximumSamplingTime>0</p4:MaximumSamplingTime>
-                      <p4:Index>0</p4:Index>
+                    <Combinator xsi:type="p5:Valence">
+                      <p5:Rewarded>true</p5:Rewarded>
+                      <p5:MinimumSamplingTime>0</p5:MinimumSamplingTime>
+                      <p5:MaximumSamplingTime>0</p5:MaximumSamplingTime>
+                      <p5:Index>0</p5:Index>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
@@ -4267,19 +4467,19 @@ it.Item2 as TrialComplete
           <rx:Count>1</rx:Count>
         </Combinator>
       </Expression>
-      <Expression xsi:type="p5:CreateMessage">
+      <Expression xsi:type="p6:CreateMessage">
         <harp:MessageType>Write</harp:MessageType>
-        <harp:Payload xsi:type="p5:CreateEnableFlowPayload">
-          <p5:EnableFlow>Disabled</p5:EnableFlow>
+        <harp:Payload xsi:type="p6:CreateEnableFlowPayload">
+          <p6:EnableFlow>Disabled</p6:EnableFlow>
         </harp:Payload>
       </Expression>
       <Expression xsi:type="MulticastSubject">
         <Name>CommandsO0</Name>
       </Expression>
-      <Expression xsi:type="p5:CreateMessage">
+      <Expression xsi:type="p6:CreateMessage">
         <harp:MessageType>Write</harp:MessageType>
-        <harp:Payload xsi:type="p5:CreateEnableFlowPayload">
-          <p5:EnableFlow>Disabled</p5:EnableFlow>
+        <harp:Payload xsi:type="p6:CreateEnableFlowPayload">
+          <p6:EnableFlow>Disabled</p6:EnableFlow>
         </harp:Payload>
       </Expression>
       <Expression xsi:type="MulticastSubject">
