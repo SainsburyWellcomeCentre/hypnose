@@ -742,7 +742,7 @@
                   <Expression xsi:type="beh:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="beh:CreatePulseSupplyPort1Payload">
-                      <beh:PulseSupplyPort1>130</beh:PulseSupplyPort1>
+                      <beh:PulseSupplyPort1>100</beh:PulseSupplyPort1>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -803,7 +803,7 @@
                   <Expression xsi:type="beh:CreateMessage">
                     <harp:MessageType>Write</harp:MessageType>
                     <harp:Payload xsi:type="beh:CreatePulseSupplyPort2Payload">
-                      <beh:PulseSupplyPort2>130</beh:PulseSupplyPort2>
+                      <beh:PulseSupplyPort2>100</beh:PulseSupplyPort2>
                     </harp:Payload>
                   </Expression>
                   <Expression xsi:type="MulticastSubject">
@@ -1460,7 +1460,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="num:CreateRandom">
-                <num:Seed xsi:nil="true" />
+                <num:Seed>0</num:Seed>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1520,7 +1520,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT1.266S</rx:DueTime>
+                      <rx:DueTime>PT1.641S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -1592,7 +1592,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT0.063S</rx:DueTime>
+                      <rx:DueTime>PT0.573S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -2373,7 +2373,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.2</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
@@ -2439,7 +2439,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.2</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -3237,6 +3237,11 @@ it.Item2 as TrialComplete
                     <Combinator xsi:type="rx:Merge" />
                   </Expression>
                   <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:DelaySubscription">
+                      <rx:DueTime>PT15S</rx:DueTime>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Take">
                       <rx:Count>1</rx:Count>
                     </Combinator>
@@ -3443,17 +3448,18 @@ it.Item2 as TrialComplete
                   <Edge From="99" To="100" Label="Source4" />
                   <Edge From="100" To="101" Label="Source1" />
                   <Edge From="101" To="102" Label="Source1" />
-                  <Edge From="103" To="107" Label="Source1" />
-                  <Edge From="104" To="105" Label="Source1" />
+                  <Edge From="102" To="103" Label="Source1" />
+                  <Edge From="104" To="108" Label="Source1" />
                   <Edge From="105" To="106" Label="Source1" />
-                  <Edge From="106" To="107" Label="Source2" />
-                  <Edge From="107" To="108" Label="Source1" />
+                  <Edge From="106" To="107" Label="Source1" />
+                  <Edge From="107" To="108" Label="Source2" />
                   <Edge From="108" To="109" Label="Source1" />
                   <Edge From="109" To="110" Label="Source1" />
-                  <Edge From="111" To="112" Label="Source1" />
+                  <Edge From="110" To="111" Label="Source1" />
                   <Edge From="112" To="113" Label="Source1" />
                   <Edge From="113" To="114" Label="Source1" />
                   <Edge From="114" To="115" Label="Source1" />
+                  <Edge From="115" To="116" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
