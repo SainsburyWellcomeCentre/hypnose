@@ -3,11 +3,11 @@
   <DockPanel FormatVersion="1.0" DockLeftPortion="0.25" DockRightPortion="0.25" DockTopPortion="0.25" DockBottomPortion="0.25" ActiveDocumentPane="1" ActivePane="1">
     <Contents Count="3">
       <Content ID="0" PersistString="WorkflowFindToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
-      <Content ID="1" PersistString="WatchToolWindow" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
+      <Content ID="1" PersistString="WatchToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
       <Content ID="2" PersistString="WorkflowDockContent" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     </Contents>
     <Panes Count="2">
-      <Pane ID="0" DockState="DockBottom" ActiveContent="1">
+      <Pane ID="0" DockState="DockBottom" ActiveContent="-1">
         <Contents Count="1">
           <Content ID="0" RefID="1" />
         </Contents>
