@@ -1691,7 +1691,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT1.812S</rx:DueTime>
+                      <rx:DueTime>PT1.956S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1769,7 +1769,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT1.118S</rx:DueTime>
+                      <rx:DueTime>PT1.373S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -2588,7 +2588,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.2</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
@@ -2654,7 +2654,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.2</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
