@@ -4,7 +4,7 @@
     <Contents Count="3">
       <Content ID="0" PersistString="WorkflowFindToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
       <Content ID="1" PersistString="WatchToolWindow" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
-      <Content ID="2" PersistString="WorkflowDockContent:3" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
+      <Content ID="2" PersistString="WorkflowDockContent:27" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     </Contents>
     <Panes Count="2">
       <Pane ID="0" DockState="Document" ActiveContent="2">
@@ -68,10 +68,12 @@
     <Watch Path="44.8.19" />
     <Watch Path="44.8.20" />
     <Watch Path="44.8.22" />
+    <Watch Path="44.8.23" />
+    <Watch Path="44.8.24" />
     <Watch Path="44.8.25" />
-    <Watch Path="44.8.26" />
     <Watch Path="44.8.27" />
     <Watch Path="44.8.29" />
+    <Watch Path="44.8.30" />
     <Watch Path="44.8.31" />
     <Watch Path="44.8.32" />
     <Watch Path="44.8.33" />
@@ -126,8 +128,8 @@
     <Watch Path="44.8.82" />
     <Watch Path="44.8.83" />
     <Watch Path="44.8.84" />
-    <Watch Path="44.8.85" />
-    <Watch Path="44.8.86" />
+    <Watch Path="44.8.108" />
+    <Watch Path="44.8.109" />
     <Watch Path="44.8.110" />
     <Watch Path="44.8.111" />
     <Watch Path="44.8.112" />
@@ -142,8 +144,6 @@
     <Watch Path="44.8.121" />
     <Watch Path="44.8.122" />
     <Watch Path="44.8.123" />
-    <Watch Path="44.8.124" />
-    <Watch Path="44.8.125" />
     <Watch Path="44.9" />
     <Watch Path="44.10" />
     <Watch Path="44.11" />
