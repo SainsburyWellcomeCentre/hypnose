@@ -3347,7 +3347,24 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>SustainedSampleOnset</Name>
+                    <Name>SustainedSampleState</Name>
+                  </Expression>
+                  <Expression xsi:type="rx:Condition">
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="WorkflowInput">
+                          <Name>Source1</Name>
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Value</Selector>
+                        </Expression>
+                        <Expression xsi:type="WorkflowOutput" />
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="2" Label="Source1" />
+                      </Edges>
+                    </Workflow>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>SequenceInfo</Name>
@@ -3525,17 +3542,18 @@ it.Item2 as TrialComplete
                   <Edge From="104" To="105" Label="Source4" />
                   <Edge From="105" To="106" Label="Source1" />
                   <Edge From="106" To="107" Label="Source1" />
-                  <Edge From="108" To="112" Label="Source1" />
-                  <Edge From="109" To="110" Label="Source1" />
+                  <Edge From="108" To="109" Label="Source1" />
+                  <Edge From="109" To="113" Label="Source1" />
                   <Edge From="110" To="111" Label="Source1" />
-                  <Edge From="111" To="112" Label="Source2" />
-                  <Edge From="112" To="113" Label="Source1" />
+                  <Edge From="111" To="112" Label="Source1" />
+                  <Edge From="112" To="113" Label="Source2" />
                   <Edge From="113" To="114" Label="Source1" />
                   <Edge From="114" To="115" Label="Source1" />
-                  <Edge From="116" To="117" Label="Source1" />
+                  <Edge From="115" To="116" Label="Source1" />
                   <Edge From="117" To="118" Label="Source1" />
                   <Edge From="118" To="119" Label="Source1" />
                   <Edge From="119" To="120" Label="Source1" />
+                  <Edge From="120" To="121" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
