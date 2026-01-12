@@ -1090,7 +1090,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p2:SequenceSelector">
-                <p2:Path>Schemas/hiddenrule-location0123-stage6-test.yml</p2:Path>
+                <p2:Path>Schemas/hiddenrule-location0123-stage6.yml</p2:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
