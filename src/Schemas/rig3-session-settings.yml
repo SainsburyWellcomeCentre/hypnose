@@ -6,11 +6,11 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  sampleOffsetTime: 0.2
+  sampleOffsetTime: 0.5
   loggingRootPath: C:\temp
   rewardTime: 0.13
   performanceAverageWindow: 5
-  initialSequence: Schemas/quadruples.yml
+  initialSequence: Schemas/doubles-option1-stage1.yml
   maximumInterOdourPokeTime: 2
 
 cameraProperties:
