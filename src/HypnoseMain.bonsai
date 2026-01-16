@@ -2591,27 +2591,14 @@
                                   <Value>0.2</Value>
                                 </Operand>
                               </Expression>
-                              <Expression xsi:type="GreaterThanOrEqual">
-                                <Operand xsi:type="DoubleProperty">
-                                  <Value>0</Value>
-                                </Operand>
-                              </Expression>
-                              <Expression xsi:type="Combinator">
-                                <Combinator xsi:type="rx:Zip" />
-                              </Expression>
-                              <Expression xsi:type="BitwiseAnd" />
                               <Expression xsi:type="WorkflowOutput" />
                             </Nodes>
                             <Edges>
                               <Edge From="0" To="4" Label="Source1" />
-                              <Edge From="0" To="5" Label="Source1" />
                               <Edge From="1" To="2" Label="Source1" />
                               <Edge From="2" To="3" Label="Source1" />
                               <Edge From="3" To="4" Label="Source2" />
-                              <Edge From="4" To="6" Label="Source1" />
-                              <Edge From="5" To="6" Label="Source2" />
-                              <Edge From="6" To="7" Label="Source1" />
-                              <Edge From="7" To="8" Label="Source1" />
+                              <Edge From="4" To="5" Label="Source1" />
                             </Edges>
                           </Workflow>
                         </Expression>
@@ -2912,6 +2899,17 @@
                           <Combinator xsi:type="rx:CombineLatest" />
                         </Expression>
                         <Expression xsi:type="WorkflowOutput" />
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Timer">
+                            <rx:DueTime>PT0S</rx:DueTime>
+                            <rx:Period>PT1S</rx:Period>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>PresentStimulus</Value>
+                          </Combinator>
+                        </Expression>
                       </Nodes>
                       <Edges>
                         <Edge From="0" To="1" Label="Source1" />
@@ -2974,6 +2972,7 @@
                         <Edge From="60" To="61" Label="Source1" />
                         <Edge From="61" To="62" Label="Source2" />
                         <Edge From="62" To="63" Label="Source1" />
+                        <Edge From="64" To="65" Label="Source1" />
                       </Edges>
                     </Workflow>
                   </Expression>
