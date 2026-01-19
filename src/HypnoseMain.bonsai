@@ -2941,6 +2941,23 @@
                             <Value>PresentStimulus</Value>
                           </Combinator>
                         </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>Result</Name>
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Item3</Selector>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="StringProperty">
+                            <Value>NoCase</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:Merge" />
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="rx:WithLatestFrom" />
+                        </Expression>
                       </Nodes>
                       <Edges>
                         <Edge From="0" To="1" Label="Source1" />
@@ -3009,6 +3026,11 @@
                         <Edge From="67" To="68" Label="Source2" />
                         <Edge From="68" To="69" Label="Source1" />
                         <Edge From="70" To="71" Label="Source1" />
+                        <Edge From="71" To="76" Label="Source1" />
+                        <Edge From="72" To="73" Label="Source1" />
+                        <Edge From="73" To="75" Label="Source1" />
+                        <Edge From="74" To="75" Label="Source2" />
+                        <Edge From="75" To="76" Label="Source2" />
                       </Edges>
                     </Workflow>
                   </Expression>
