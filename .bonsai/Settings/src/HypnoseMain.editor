@@ -4,12 +4,17 @@
     <Contents Count="3">
       <Content ID="0" PersistString="WorkflowFindToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
       <Content ID="1" PersistString="WatchToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
-      <Content ID="2" PersistString="WorkflowDockContent:44.8.22" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
+      <Content ID="2" PersistString="WorkflowDockContent:44.20" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     </Contents>
-    <Panes Count="1">
+    <Panes Count="2">
       <Pane ID="0" DockState="Document" ActiveContent="2">
         <Contents Count="1">
           <Content ID="0" RefID="2" />
+        </Contents>
+      </Pane>
+      <Pane ID="1" DockState="DockBottom" ActiveContent="-1">
+        <Contents Count="1">
+          <Content ID="0" RefID="1" />
         </Contents>
       </Pane>
     </Panes>
@@ -19,19 +24,138 @@
           <Pane ID="0" RefID="0" PrevPane="-1" Alignment="Right" Proportion="0.5" />
         </NestedPanes>
       </DockWindow>
-      <DockWindow ID="1" DockState="DockLeft" ZOrderIndex="2">
+      <DockWindow ID="1" DockState="DockLeft" ZOrderIndex="3">
         <NestedPanes Count="0" />
       </DockWindow>
-      <DockWindow ID="2" DockState="DockRight" ZOrderIndex="3">
+      <DockWindow ID="2" DockState="DockRight" ZOrderIndex="4">
         <NestedPanes Count="0" />
       </DockWindow>
-      <DockWindow ID="3" DockState="DockTop" ZOrderIndex="4">
+      <DockWindow ID="3" DockState="DockTop" ZOrderIndex="5">
         <NestedPanes Count="0" />
       </DockWindow>
-      <DockWindow ID="4" DockState="DockBottom" ZOrderIndex="5">
-        <NestedPanes Count="0" />
+      <DockWindow ID="4" DockState="DockBottom" ZOrderIndex="2">
+        <NestedPanes Count="1">
+          <Pane ID="0" RefID="1" PrevPane="-1" Alignment="Right" Proportion="0.5" />
+        </NestedPanes>
       </DockWindow>
     </DockWindows>
     <FloatWindows Count="0" />
   </DockPanel>
+  <WatchSettings>
+    <Watch Path="44.3" />
+    <Watch Path="44.4" />
+    <Watch Path="44.5" />
+    <Watch Path="44.6" />
+    <Watch Path="44.7" />
+    <Watch Path="44.8" />
+    <Watch Path="44.8.0" />
+    <Watch Path="44.8.1" />
+    <Watch Path="44.8.2" />
+    <Watch Path="44.8.3" />
+    <Watch Path="44.8.4" />
+    <Watch Path="44.8.5" />
+    <Watch Path="44.8.8" />
+    <Watch Path="44.8.9" />
+    <Watch Path="44.8.10" />
+    <Watch Path="44.8.11" />
+    <Watch Path="44.8.12" />
+    <Watch Path="44.8.13" />
+    <Watch Path="44.8.14" />
+    <Watch Path="44.8.15" />
+    <Watch Path="44.8.16" />
+    <Watch Path="44.8.17" />
+    <Watch Path="44.8.18" />
+    <Watch Path="44.8.19" />
+    <Watch Path="44.8.20" />
+    <Watch Path="44.8.22" />
+    <Watch Path="44.8.23" />
+    <Watch Path="44.8.24" />
+    <Watch Path="44.8.25" />
+    <Watch Path="44.8.27" />
+    <Watch Path="44.8.29" />
+    <Watch Path="44.8.30" />
+    <Watch Path="44.8.31" />
+    <Watch Path="44.8.32" />
+    <Watch Path="44.8.33" />
+    <Watch Path="44.8.34" />
+    <Watch Path="44.8.35" />
+    <Watch Path="44.8.36" />
+    <Watch Path="44.8.37" />
+    <Watch Path="44.8.38" />
+    <Watch Path="44.8.39" />
+    <Watch Path="44.8.40" />
+    <Watch Path="44.8.41" />
+    <Watch Path="44.8.42" />
+    <Watch Path="44.8.43" />
+    <Watch Path="44.8.44" />
+    <Watch Path="44.8.45" />
+    <Watch Path="44.8.46" />
+    <Watch Path="44.8.47" />
+    <Watch Path="44.8.48" />
+    <Watch Path="44.8.49" />
+    <Watch Path="44.8.50" />
+    <Watch Path="44.8.51" />
+    <Watch Path="44.8.52" />
+    <Watch Path="44.8.53" />
+    <Watch Path="44.8.54" />
+    <Watch Path="44.8.55" />
+    <Watch Path="44.8.56" />
+    <Watch Path="44.8.57" />
+    <Watch Path="44.8.58" />
+    <Watch Path="44.8.59" />
+    <Watch Path="44.8.60" />
+    <Watch Path="44.8.61" />
+    <Watch Path="44.8.62" />
+    <Watch Path="44.8.63" />
+    <Watch Path="44.8.64" />
+    <Watch Path="44.8.65" />
+    <Watch Path="44.8.66" />
+    <Watch Path="44.8.67" />
+    <Watch Path="44.8.68" />
+    <Watch Path="44.8.69" />
+    <Watch Path="44.8.70" />
+    <Watch Path="44.8.71" />
+    <Watch Path="44.8.72" />
+    <Watch Path="44.8.73" />
+    <Watch Path="44.8.74" />
+    <Watch Path="44.8.75" />
+    <Watch Path="44.8.76" />
+    <Watch Path="44.8.77" />
+    <Watch Path="44.8.78" />
+    <Watch Path="44.8.79" />
+    <Watch Path="44.8.80" />
+    <Watch Path="44.8.81" />
+    <Watch Path="44.8.82" />
+    <Watch Path="44.8.83" />
+    <Watch Path="44.8.84" />
+    <Watch Path="44.8.105" />
+    <Watch Path="44.8.106" />
+    <Watch Path="44.8.107" />
+    <Watch Path="44.8.110" />
+    <Watch Path="44.8.111" />
+    <Watch Path="44.8.112" />
+    <Watch Path="44.8.113" />
+    <Watch Path="44.8.114" />
+    <Watch Path="44.8.115" />
+    <Watch Path="44.8.116" />
+    <Watch Path="44.8.117" />
+    <Watch Path="44.8.118" />
+    <Watch Path="44.8.119" />
+    <Watch Path="44.8.120" />
+    <Watch Path="44.8.121" />
+    <Watch Path="44.9" />
+    <Watch Path="44.10" />
+    <Watch Path="44.11" />
+    <Watch Path="44.12" />
+    <Watch Path="44.13" />
+    <Watch Path="44.14" />
+    <Watch Path="44.15" />
+    <Watch Path="44.16" />
+    <Watch Path="44.17" />
+    <Watch Path="44.18" />
+    <Watch Path="44.19" />
+    <Watch Path="44.20" />
+    <Watch Path="44.21" />
+    <Watch Path="44.22" />
+  </WatchSettings>
 </EditorSettings>
