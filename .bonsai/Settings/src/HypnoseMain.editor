@@ -2,7 +2,7 @@
 <EditorSettings Version="2.9.0">
   <DockPanel FormatVersion="1.0" DockLeftPortion="0.25" DockRightPortion="0.25" DockTopPortion="0.25" DockBottomPortion="0.25" ActiveDocumentPane="0" ActivePane="0">
     <Contents Count="3">
-      <Content ID="0" PersistString="WorkflowFindToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
+      <Content ID="0" PersistString="WorkflowFindToolWindow" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
       <Content ID="1" PersistString="WatchToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
       <Content ID="2" PersistString="WorkflowDockContent:2" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     </Contents>
@@ -12,9 +12,10 @@
           <Content ID="0" RefID="2" />
         </Contents>
       </Pane>
-      <Pane ID="1" DockState="DockBottom" ActiveContent="-1">
-        <Contents Count="1">
+      <Pane ID="1" DockState="DockBottom" ActiveContent="0">
+        <Contents Count="2">
           <Content ID="0" RefID="1" />
+          <Content ID="1" RefID="0" />
         </Contents>
       </Pane>
     </Panes>
