@@ -14,35 +14,42 @@
       <ObjectTextVisualizer />
     </VisualizerSettings>
     <NestedLayout>
-      <WindowSettings Index="13">
+      <WindowSettings Index="12">
         <Visible>false</Visible>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
         <VisualizerSettings>
           <ObjectTextVisualizer />
         </VisualizerSettings>
       </WindowSettings>
-      <WindowSettings Index="16">
+      <WindowSettings Index="15">
         <Visible>false</Visible>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
         <VisualizerSettings>
           <ObjectTextVisualizer />
         </VisualizerSettings>
       </WindowSettings>
-      <WindowSettings Index="19">
+      <WindowSettings Index="18">
         <Visible>false</Visible>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
         <VisualizerSettings>
           <ObjectTextVisualizer />
         </VisualizerSettings>
       </WindowSettings>
-      <WindowSettings Index="34">
+      <WindowSettings Index="33">
         <Visible>false</Visible>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
         <VisualizerSettings>
           <ObjectTextVisualizer />
         </VisualizerSettings>
       </WindowSettings>
-      <WindowSettings Index="37">
+      <WindowSettings Index="36">
+        <Visible>false</Visible>
+        <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+        <VisualizerSettings>
+          <ObjectTextVisualizer />
+        </VisualizerSettings>
+      </WindowSettings>
+      <WindowSettings Index="38">
         <Visible>false</Visible>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
         <VisualizerSettings>
@@ -56,14 +63,7 @@
           <ObjectTextVisualizer />
         </VisualizerSettings>
       </WindowSettings>
-      <WindowSettings Index="40">
-        <Visible>false</Visible>
-        <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
-        <VisualizerSettings>
-          <ObjectTextVisualizer />
-        </VisualizerSettings>
-      </WindowSettings>
-      <WindowSettings Index="43">
+      <WindowSettings Index="42">
         <Visible>false</Visible>
         <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
         <VisualizerSettings>
