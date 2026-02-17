@@ -1774,7 +1774,7 @@
                           <Selector>Item2</Selector>
                         </Expression>
                         <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
-                          <Name>BehaviorEvents</Name>
+                          <Name>OlfactometerEvents</Name>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Take">
