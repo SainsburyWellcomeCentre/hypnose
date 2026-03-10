@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EditorSettings Version="2.9.0">
-  <DockPanel FormatVersion="1.0" DockLeftPortion="0.25" DockRightPortion="0.25" DockTopPortion="0.25" DockBottomPortion="0.25" ActiveDocumentPane="0" ActivePane="-1">
+  <DockPanel FormatVersion="1.0" DockLeftPortion="0.25" DockRightPortion="0.25" DockTopPortion="0.25" DockBottomPortion="0.25" ActiveDocumentPane="0" ActivePane="0">
     <Contents Count="3">
       <Content ID="0" PersistString="WorkflowFindToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
       <Content ID="1" PersistString="WatchToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
@@ -19,16 +19,16 @@
           <Pane ID="0" RefID="0" PrevPane="-1" Alignment="Right" Proportion="0.5" />
         </NestedPanes>
       </DockWindow>
-      <DockWindow ID="1" DockState="DockLeft" ZOrderIndex="2">
+      <DockWindow ID="1" DockState="DockLeft" ZOrderIndex="4">
         <NestedPanes Count="0" />
       </DockWindow>
-      <DockWindow ID="2" DockState="DockRight" ZOrderIndex="3">
+      <DockWindow ID="2" DockState="DockRight" ZOrderIndex="5">
         <NestedPanes Count="0" />
       </DockWindow>
-      <DockWindow ID="3" DockState="DockTop" ZOrderIndex="4">
+      <DockWindow ID="3" DockState="DockTop" ZOrderIndex="6">
         <NestedPanes Count="0" />
       </DockWindow>
-      <DockWindow ID="4" DockState="DockBottom" ZOrderIndex="5">
+      <DockWindow ID="4" DockState="DockBottom" ZOrderIndex="7">
         <NestedPanes Count="0" />
       </DockWindow>
     </DockWindows>
