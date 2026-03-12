@@ -4,7 +4,7 @@
     <Contents Count="3">
       <Content ID="0" PersistString="WorkflowFindToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
       <Content ID="1" PersistString="WatchToolWindow" AutoHidePortion="0.25" IsHidden="True" IsFloat="False" />
-      <Content ID="2" PersistString="WorkflowDockContent:0" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
+      <Content ID="2" PersistString="WorkflowDockContent:2" AutoHidePortion="0.25" IsHidden="False" IsFloat="False" />
     </Contents>
     <Panes Count="2">
       <Pane ID="0" DockState="Document" ActiveContent="2">
@@ -41,112 +41,4 @@
     </DockWindows>
     <FloatWindows Count="0" />
   </DockPanel>
-  <WatchSettings>
-    <Watch Path="47.3" />
-    <Watch Path="47.4" />
-    <Watch Path="47.5" />
-    <Watch Path="47.6" />
-    <Watch Path="47.7" />
-    <Watch Path="47.8" />
-    <Watch Path="47.8.0" />
-    <Watch Path="47.8.1" />
-    <Watch Path="47.8.2" />
-    <Watch Path="47.8.3" />
-    <Watch Path="47.8.4" />
-    <Watch Path="47.8.5" />
-    <Watch Path="47.8.8" />
-    <Watch Path="47.8.9" />
-    <Watch Path="47.8.10" />
-    <Watch Path="47.8.11" />
-    <Watch Path="47.8.12" />
-    <Watch Path="47.8.13" />
-    <Watch Path="47.8.14" />
-    <Watch Path="47.8.15" />
-    <Watch Path="47.8.16" />
-    <Watch Path="47.8.17" />
-    <Watch Path="47.8.18" />
-    <Watch Path="47.8.19" />
-    <Watch Path="47.8.20" />
-    <Watch Path="47.8.24" />
-    <Watch Path="47.8.25" />
-    <Watch Path="47.8.26" />
-    <Watch Path="47.8.27" />
-    <Watch Path="47.8.29" />
-    <Watch Path="47.8.31" />
-    <Watch Path="47.8.32" />
-    <Watch Path="47.8.33" />
-    <Watch Path="47.8.34" />
-    <Watch Path="47.8.35" />
-    <Watch Path="47.8.36" />
-    <Watch Path="47.8.37" />
-    <Watch Path="47.8.38" />
-    <Watch Path="47.8.39" />
-    <Watch Path="47.8.40" />
-    <Watch Path="47.8.41" />
-    <Watch Path="47.8.42" />
-    <Watch Path="47.8.43" />
-    <Watch Path="47.8.44" />
-    <Watch Path="47.8.45" />
-    <Watch Path="47.8.46" />
-    <Watch Path="47.8.47" />
-    <Watch Path="47.8.48" />
-    <Watch Path="47.8.49" />
-    <Watch Path="47.8.50" />
-    <Watch Path="47.8.51" />
-    <Watch Path="47.8.52" />
-    <Watch Path="47.8.53" />
-    <Watch Path="47.8.54" />
-    <Watch Path="47.8.55" />
-    <Watch Path="47.8.56" />
-    <Watch Path="47.8.57" />
-    <Watch Path="47.8.58" />
-    <Watch Path="47.8.59" />
-    <Watch Path="47.8.60" />
-    <Watch Path="47.8.61" />
-    <Watch Path="47.8.62" />
-    <Watch Path="47.8.63" />
-    <Watch Path="47.8.64" />
-    <Watch Path="47.8.65" />
-    <Watch Path="47.8.66" />
-    <Watch Path="47.8.67" />
-    <Watch Path="47.8.68" />
-    <Watch Path="47.8.69" />
-    <Watch Path="47.8.70" />
-    <Watch Path="47.8.71" />
-    <Watch Path="47.8.72" />
-    <Watch Path="47.8.73" />
-    <Watch Path="47.8.74" />
-    <Watch Path="47.8.75" />
-    <Watch Path="47.8.76" />
-    <Watch Path="47.8.77" />
-    <Watch Path="47.8.78" />
-    <Watch Path="47.8.79" />
-    <Watch Path="47.8.80" />
-    <Watch Path="47.8.81" />
-    <Watch Path="47.8.82" />
-    <Watch Path="47.8.83" />
-    <Watch Path="47.8.84" />
-    <Watch Path="47.8.85" />
-    <Watch Path="47.8.86" />
-    <Watch Path="47.8.102" />
-    <Watch Path="47.8.112" />
-    <Watch Path="47.8.115" />
-    <Watch Path="47.8.116" />
-    <Watch Path="47.8.117" />
-    <Watch Path="47.8.118" />
-    <Watch Path="47.9" />
-    <Watch Path="47.10" />
-    <Watch Path="47.11" />
-    <Watch Path="47.12" />
-    <Watch Path="47.13" />
-    <Watch Path="47.14" />
-    <Watch Path="47.15" />
-    <Watch Path="47.16" />
-    <Watch Path="47.17" />
-    <Watch Path="47.18" />
-    <Watch Path="47.19" />
-    <Watch Path="47.20" />
-    <Watch Path="47.21" />
-    <Watch Path="47.22" />
-  </WatchSettings>
 </EditorSettings>
