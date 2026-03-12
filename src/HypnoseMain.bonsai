@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.9.0"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:beh="clr-namespace:Harp.Behavior;assembly=Harp.Behavior"
@@ -313,7 +313,7 @@
               <Combinator xsi:type="beh:Device">
                 <harp:OperationMode>Active</harp:OperationMode>
                 <harp:OperationLed>On</harp:OperationLed>
-                <harp:DumpRegisters>true</harp:DumpRegisters>
+                <harp:DumpRegisters>false</harp:DumpRegisters>
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
@@ -3445,7 +3445,6 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="Subtract">
                     <Operand xsi:type="DoubleProperty">
                       <Value>11684.262112</Value>
-                      <Value>12246.145856</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -4257,7 +4256,6 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="Subtract">
                     <Operand xsi:type="DoubleProperty">
                       <Value>0.74086399999941932</Value>
-                      <Value>0.73913600000014412</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="scr:ExpressionTransform">
@@ -4271,7 +4269,6 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
                       <rx:DueTime>PT2.259S</rx:DueTime>
-                      <rx:DueTime>PT4.261S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
