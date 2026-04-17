@@ -356,7 +356,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM11</harp:PortName>
+                <harp:PortName>COM3</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -819,7 +819,7 @@
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
         <PortO0>COM8</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM9</PortO1>
+        <PortO1>COM7</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
@@ -893,19 +893,19 @@
                 <cv:Regions>
                   <cv:ArrayOfPoint>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>190</cv:X>
                       <cv:Y>650</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>190</cv:X>
                       <cv:Y>750</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>750</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>650</cv:Y>
                     </cv:Point>
                   </cv:ArrayOfPoint>
@@ -976,19 +976,19 @@
                 <cv:Regions>
                   <cv:ArrayOfPoint>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>190</cv:X>
                       <cv:Y>650</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>180</cv:X>
+                      <cv:X>190</cv:X>
                       <cv:Y>750</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>750</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1050</cv:X>
+                      <cv:X>1070</cv:X>
                       <cv:Y>650</cv:Y>
                     </cv:Point>
                   </cv:ArrayOfPoint>
@@ -1270,7 +1270,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p1:LoadSessionSettings">
-          <p1:Path>Schemas\rig1-session-settings.yml</p1:Path>
+          <p1:Path>Schemas\rig3-session-settings.yml</p1:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -1331,7 +1331,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:SequenceSelector">
-                <p1:Path>Schemas/quintuples-probe-option2-location1.yml</p1:Path>
+                <p1:Path>Schemas/hiddenrule-location1-option4.yml</p1:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -4806,6 +4806,28 @@ it.Item2 as TrialComplete
         <Name>OlfactometerCommand</Name>
       </Expression>
       <Expression xsi:type="WorkflowOutput" />
+      <Expression xsi:type="ExternalizedMapping">
+        <Property Name="Filter" DisplayName="RestSessionKey" />
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="wie:KeyDown">
+          <wie:Filter>LButton ShiftKey ControlKey Space Prior PageUp D0 D1 Alt</wie:Filter>
+          <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Take">
+          <rx:Count>1</rx:Count>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="Combinator">
+        <Combinator xsi:type="StringProperty">
+          <Value>Default</Value>
+        </Combinator>
+      </Expression>
+      <Expression xsi:type="MulticastSubject">
+        <Name>OlfactometerCommand</Name>
+      </Expression>
       <Expression xsi:type="SubscribeSubject">
         <Name>RewardCommand</Name>
       </Expression>
@@ -4952,19 +4974,23 @@ it.Item2 as TrialComplete
       <Edge From="69" To="70" Label="Source1" />
       <Edge From="70" To="71" Label="Source1" />
       <Edge From="72" To="73" Label="Source1" />
-      <Edge From="72" To="78" Label="Source1" />
       <Edge From="73" To="74" Label="Source1" />
-      <Edge From="74" To="76" Label="Source1" />
-      <Edge From="75" To="76" Label="Source2" />
-      <Edge From="75" To="80" Label="Source2" />
-      <Edge From="76" To="77" Label="Source1" />
-      <Edge From="77" To="82" Label="Source1" />
+      <Edge From="74" To="75" Label="Source1" />
+      <Edge From="75" To="76" Label="Source1" />
+      <Edge From="77" To="78" Label="Source1" />
+      <Edge From="77" To="83" Label="Source1" />
       <Edge From="78" To="79" Label="Source1" />
-      <Edge From="79" To="80" Label="Source1" />
-      <Edge From="80" To="81" Label="Source1" />
-      <Edge From="81" To="82" Label="Source2" />
-      <Edge From="82" To="83" Label="Source1" />
+      <Edge From="79" To="81" Label="Source1" />
+      <Edge From="80" To="81" Label="Source2" />
+      <Edge From="80" To="85" Label="Source2" />
+      <Edge From="81" To="82" Label="Source1" />
+      <Edge From="82" To="87" Label="Source1" />
+      <Edge From="83" To="84" Label="Source1" />
       <Edge From="84" To="85" Label="Source1" />
+      <Edge From="85" To="86" Label="Source1" />
+      <Edge From="86" To="87" Label="Source2" />
+      <Edge From="87" To="88" Label="Source1" />
+      <Edge From="89" To="90" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>

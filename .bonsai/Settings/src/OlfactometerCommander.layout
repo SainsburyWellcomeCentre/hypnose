@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualizerLayout Version="2.9.0">
+  <WindowSettings Index="6">
+    <Visible>false</Visible>
+    <Location>
+      <X>1322</X>
+      <Y>463</Y>
+    </Location>
+    <Size>
+      <Width>755</Width>
+      <Height>564</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
+  </WindowSettings>
+  <WindowSettings Index="7">
+    <Location>
+      <X>244</X>
+      <Y>798</Y>
+    </Location>
+    <Size>
+      <Width>550</Width>
+      <Height>333</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Gui.ListBoxDataSourceVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ListBoxDataSourceVisualizer />
+    </VisualizerSettings>
+  </WindowSettings>
+  <WindowSettings Index="8">
+    <Location>
+      <X>838</X>
+      <Y>822</Y>
+    </Location>
+    <Size>
+      <Width>742</Width>
+      <Height>344</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
+  </WindowSettings>
+  <WindowSettings Index="9">
+    <Location>
+      <X>871</X>
+      <Y>463</Y>
+    </Location>
+    <Size>
+      <Width>615</Width>
+      <Height>311</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
+  </WindowSettings>
+  <WindowSettings Index="11">
+    <Visible>false</Visible>
+    <Location>
+      <X>312</X>
+      <Y>312</Y>
+    </Location>
+    <Size>
+      <Width>316</Width>
+      <Height>189</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Gui.ButtonVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ButtonVisualizer />
+    </VisualizerSettings>
+  </WindowSettings>
+  <WindowSettings Index="13">
+    <Location>
+      <X>1452</X>
+      <Y>258</Y>
+    </Location>
+    <Size>
+      <Width>526</Width>
+      <Height>543</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Gui.TableLayoutPanelVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <TableLayoutPanelVisualizer>
+        <MashupSettings>
+          <Source>7</Source>
+          <VisualizerTypeName>Bonsai.Gui.ListBoxDataSourceVisualizer</VisualizerTypeName>
+          <VisualizerSettings>
+            <ListBoxDataSourceVisualizer />
+          </VisualizerSettings>
+        </MashupSettings>
+        <MashupSettings>
+          <Source>11</Source>
+          <VisualizerTypeName>Bonsai.Gui.ButtonVisualizer</VisualizerTypeName>
+          <VisualizerSettings>
+            <ButtonVisualizer />
+          </VisualizerSettings>
+        </MashupSettings>
+      </TableLayoutPanelVisualizer>
+    </VisualizerSettings>
+  </WindowSettings>
+</VisualizerLayout>
