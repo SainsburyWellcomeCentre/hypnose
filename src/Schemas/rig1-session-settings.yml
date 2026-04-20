@@ -10,7 +10,7 @@ metadata:
   loggingRootPath: C:\temp
   rewardTime: 0.106
   performanceAverageWindow: 5
-  initialSequence: Schemas/quintuples-probe-option2-location1.yml
+  initialSequence: Schemas/odourdiscrimination-stage1.yml
   maximumInterOdourPokeTime: 3
     
 cameraProperties:
