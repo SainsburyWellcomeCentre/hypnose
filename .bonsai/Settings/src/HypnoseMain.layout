@@ -12,7 +12,14 @@
     </NestedLayout>
   </WindowSettings>
   <WindowSettings Index="2">
-    <Visible>false</Visible>
+    <Location>
+      <X>294</X>
+      <Y>233</Y>
+    </Location>
+    <Size>
+      <Width>336</Width>
+      <Height>65</Height>
+    </Size>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
     <VisualizerSettings>
       <ObjectTextVisualizer />
@@ -44,7 +51,14 @@
   <WindowSettings Index="5">
     <NestedLayout>
       <WindowSettings Index="1">
-        <Visible>false</Visible>
+        <Location>
+          <X>654</X>
+          <Y>218</Y>
+        </Location>
+        <Size>
+          <Width>464</Width>
+          <Height>428</Height>
+        </Size>
         <VisualizerTypeName>Bonsai.Vision.Design.IplImageVisualizer</VisualizerTypeName>
         <VisualizerSettings>
           <IplImageVisualizer />
@@ -86,21 +100,42 @@
     </VisualizerSettings>
   </WindowSettings>
   <WindowSettings Index="58">
-    <Visible>false</Visible>
+    <Location>
+      <X>312</X>
+      <Y>312</Y>
+    </Location>
+    <Size>
+      <Width>336</Width>
+      <Height>264</Height>
+    </Size>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
     <VisualizerSettings>
       <ObjectTextVisualizer />
     </VisualizerSettings>
   </WindowSettings>
   <WindowSettings Index="59">
-    <Visible>false</Visible>
+    <Location>
+      <X>309</X>
+      <Y>665</Y>
+    </Location>
+    <Size>
+      <Width>336</Width>
+      <Height>248</Height>
+    </Size>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
     <VisualizerSettings>
       <ObjectTextVisualizer />
     </VisualizerSettings>
   </WindowSettings>
-  <WindowSettings Index="88">
-    <Visible>false</Visible>
+  <WindowSettings Index="89">
+    <Location>
+      <X>697</X>
+      <Y>641</Y>
+    </Location>
+    <Size>
+      <Width>336</Width>
+      <Height>276</Height>
+    </Size>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
     <VisualizerSettings>
       <ObjectTextVisualizer />
