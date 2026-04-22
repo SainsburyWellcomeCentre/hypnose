@@ -3508,31 +3508,6 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:WithLatestFrom" />
                   </Expression>
-                  <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
-                    <Name>BehaviorEvents</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Seconds</Selector>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Seconds</Selector>
-                  </Expression>
-                  <Expression xsi:type="PropertyMapping">
-                    <PropertyMappings>
-                      <Property Name="Value" />
-                    </PropertyMappings>
-                  </Expression>
-                  <Expression xsi:type="Subtract">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>483032.193984</Value>
-                    </Operand>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:WithLatestFrom" />
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="rx:Merge" />
-                  </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Take">
                       <rx:Count>1</rx:Count>
@@ -3707,8 +3682,6 @@ it.Item2 as TrialComplete
                   <Edge From="76" To="77" Label="Source2" />
                   <Edge From="77" To="78" Label="Source1" />
                   <Edge From="78" To="102" Label="Source2" />
-                  <Edge From="78" To="111" Label="Source1" />
-                  <Edge From="78" To="116" Label="Source1" />
                   <Edge From="79" To="80" Label="Source1" />
                   <Edge From="80" To="83" Label="Source1" />
                   <Edge From="81" To="82" Label="Source1" />
@@ -3742,28 +3715,20 @@ it.Item2 as TrialComplete
                   <Edge From="107" To="108" Label="Source1" />
                   <Edge From="108" To="109" Label="Source2" />
                   <Edge From="109" To="110" Label="Source2" />
-                  <Edge From="110" To="117" Label="Source1" />
+                  <Edge From="110" To="111" Label="Source1" />
                   <Edge From="111" To="112" Label="Source1" />
-                  <Edge From="111" To="113" Label="Source1" />
-                  <Edge From="112" To="115" Label="Source1" />
                   <Edge From="113" To="114" Label="Source1" />
-                  <Edge From="114" To="115" Label="Source2" />
-                  <Edge From="115" To="116" Label="Source2" />
-                  <Edge From="116" To="117" Label="Source2" />
-                  <Edge From="117" To="118" Label="Source1" />
+                  <Edge From="114" To="118" Label="Source1" />
+                  <Edge From="115" To="116" Label="Source1" />
+                  <Edge From="116" To="117" Label="Source1" />
+                  <Edge From="117" To="118" Label="Source2" />
                   <Edge From="118" To="119" Label="Source1" />
+                  <Edge From="119" To="120" Label="Source1" />
                   <Edge From="120" To="121" Label="Source1" />
-                  <Edge From="121" To="125" Label="Source1" />
                   <Edge From="122" To="123" Label="Source1" />
                   <Edge From="123" To="124" Label="Source1" />
-                  <Edge From="124" To="125" Label="Source2" />
+                  <Edge From="124" To="125" Label="Source1" />
                   <Edge From="125" To="126" Label="Source1" />
-                  <Edge From="126" To="127" Label="Source1" />
-                  <Edge From="127" To="128" Label="Source1" />
-                  <Edge From="129" To="130" Label="Source1" />
-                  <Edge From="130" To="131" Label="Source1" />
-                  <Edge From="131" To="132" Label="Source1" />
-                  <Edge From="132" To="133" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
