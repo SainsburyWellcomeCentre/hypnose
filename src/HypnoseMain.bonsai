@@ -352,7 +352,7 @@
               <Combinator xsi:type="beh:Device">
                 <harp:OperationMode>Active</harp:OperationMode>
                 <harp:OperationLed>On</harp:OperationLed>
-                <harp:DumpRegisters>false</harp:DumpRegisters>
+                <harp:DumpRegisters>true</harp:DumpRegisters>
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
@@ -1148,7 +1148,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:SequenceSelector">
-                <p1:Path>Schemas/odourdiscrimination-stage1.yml</p1:Path>
+                <p1:Path>Schemas/odourdiscrimination-stage2.yml</p1:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -4758,7 +4758,7 @@ it.Item2 as TrialComplete
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="wie:KeyDown">
-          <wie:Filter>LButton ShiftKey ControlKey Space Prior PageUp D0 D1 Control</wie:Filter>
+          <wie:Filter>LButton RButton Cancel ShiftKey ControlKey Menu Pause Space Prior PageUp Next PageDown End D0 D1 D2 D3 Control</wie:Filter>
           <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
         </Combinator>
       </Expression>
