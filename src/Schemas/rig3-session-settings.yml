@@ -8,10 +8,10 @@ metadata:
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.5
   loggingRootPath: C:\temp
-  rewardTime: 0.26
+  rewardTime: 0.13
   performanceAverageWindow: 5
-  initialSequence: Schemas/hiddenrule-location1-option4.yml
-  maximumInterOdourPokeTime: 5
+  initialSequence: Schemas/odourdiscrimination_protocol/odourdiscrimination-stage3.yml
+  maximumInterOdourPokeTime: 2
 
 cameraProperties:
   frameRate: 60

@@ -141,7 +141,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\hypnose\rawdata\sub-057_id-370\ses-003_date-20260422\behav</Path>
+              <Path>C:\temp</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -1331,7 +1331,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:SequenceSelector">
-                <p1:Path>Schemas/odourdiscrimination_protocol/odourdiscrimination-stage2.yml</p1:Path>
+                <p1:Path>Schemas/odourdiscrimination_protocol/odourdiscrimination-stage3.yml</p1:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -2091,7 +2091,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.05</Value>
+                                  <Value>0.15</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2212,7 +2212,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.05</Value>
+                                  <Value>0.15</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
@@ -2402,7 +2402,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.05</Value>
+                                  <Value>0.15</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2523,7 +2523,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.05</Value>
+                                  <Value>0.15</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
@@ -3424,7 +3424,7 @@ it.Item2 as TrialComplete
                     <Name>PresentationResult</Name>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
-                    <Selector>Item2.Item1.Rewarded</Selector>
+                    <Selector>Item1.Item2</Selector>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:WithLatestFrom" />
@@ -3502,7 +3502,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Subtract">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>644446.64176</Value>
+                      <Value>804510.090688</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -4313,7 +4313,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Subtract">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>0.74323199992068112</Value>
+                      <Value>6.2842880000825971</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="scr:ExpressionTransform">
@@ -4326,7 +4326,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>P1DT3H46M38.257S</rx:DueTime>
+                      <rx:DueTime>P1DT3H46M32.716S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -4807,7 +4807,7 @@ it.Item2 as TrialComplete
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Delay">
-          <rx:DueTime>PT0S</rx:DueTime>
+          <rx:DueTime>PT1S</rx:DueTime>
         </Combinator>
       </Expression>
       <Expression xsi:type="WorkflowOutput" />
