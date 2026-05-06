@@ -2,6 +2,7 @@ using Bonsai;
 using System;
 using System.ComponentModel;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Net.Sockets;
@@ -26,23 +27,51 @@ public class UdpSource : Source<SireniaDatagram>
                 var endPoint = new IPEndPoint(IPAddress.Any, Port);
                 return Observable.FromAsync(client.ReceiveAsync)
                 .Repeat()
-                .Select(result =>
+                .SelectMany(result =>
                 {
                     var packet = result.Buffer;
-                    var datagram = new SireniaDatagram();
-                    datagram.StreamName = Encoding.ASCII.GetString(packet, 0, 25).TrimStart();
+                    SireniaDatagram datagram;
+                    if (TryParseDatagram(packet, out datagram))
+                    {
+                        return Observable.Return(datagram);
+                    }
 
-                    var data = Encoding.ASCII.GetString(packet, 26, packet.Length - 27);
-                    var fields = data.Split(',');
-                    if (fields.Length != 3) throw new InvalidOperationException("Corrupt datagram received.");
-
-                    datagram.Seconds =int.Parse(fields[0]);
-                    datagram.SubSeconds = float.Parse(fields[1]);
-                    datagram.Value = float.Parse(fields[2]);
-                    return datagram;
+                    return Observable.Empty<SireniaDatagram>();
                 });
             }
         );
+    }
+
+    static bool TryParseDatagram(byte[] packet, out SireniaDatagram datagram)
+    {
+        datagram = new SireniaDatagram();
+        if (packet == null || packet.Length < 27)
+        {
+            return false;
+        }
+
+        var data = Encoding.ASCII.GetString(packet, 26, packet.Length - 27);
+        var fields = data.Split(',');
+        if (fields.Length != 3)
+        {
+            return false;
+        }
+
+        int seconds;
+        float subSeconds;
+        float value;
+        if (!int.TryParse(fields[0].Trim(), NumberStyles.Integer, CultureInfo.InvariantCulture, out seconds) ||
+            !float.TryParse(fields[1].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out subSeconds) ||
+            !float.TryParse(fields[2].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out value))
+        {
+            return false;
+        }
+
+        datagram.StreamName = Encoding.ASCII.GetString(packet, 0, 25).TrimStart();
+        datagram.Seconds = seconds;
+        datagram.SubSeconds = subSeconds;
+        datagram.Value = value;
+        return true;
     }
 }
 

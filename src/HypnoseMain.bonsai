@@ -188,23 +188,17 @@
                 <rx:Count>1</rx:Count>
               </Combinator>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="SubscribeSubject">
-                <Name>EegStream</Name>
-              </Builder>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>EegStream</Name>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
-                <Name>BehaviorEvents</Name>
-              </Builder>
+            <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
+              <Name>BehaviorEvents</Name>
             </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
-                <Heartbeats>BehaviorEvents</Heartbeats>
-                <ClosingDuration xsi:nil="true" />
-                <LogName>EegStreamEvents</LogName>
-                <Selector xsi:nil="true" />
-              </Builder>
+            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+              <Heartbeats>BehaviorEvents</Heartbeats>
+              <ClosingDuration xsi:nil="true" />
+              <LogName>EegStreamEvents</LogName>
+              <Selector xsi:nil="true" />
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>EventsO0</Name>
@@ -356,7 +350,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM3</harp:PortName>
+                <harp:PortName>COM11</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -817,36 +811,34 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM8</PortO0>
+        <PortO0>COM13</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM7</PortO1>
+        <PortO1>COM9</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
         <OlfactometerCommand>OlfactometerCommand</OlfactometerCommand>
       </Expression>
-      <Expression xsi:type="Disable">
-        <Builder xsi:type="GroupWorkflow">
-          <Name>EEG</Name>
-          <Workflow>
-            <Nodes>
-              <Expression xsi:type="Combinator">
-                <Combinator xsi:type="p1:UdpSource">
-                  <p1:GroupAddress>239.255.76.67</p1:GroupAddress>
-                  <p1:Port>8866</p1:Port>
-                </Combinator>
-              </Expression>
-              <Expression xsi:type="rx:PublishSubject">
-                <Name>EegStream</Name>
-              </Expression>
-              <Expression xsi:type="WorkflowOutput" />
-            </Nodes>
-            <Edges>
-              <Edge From="0" To="1" Label="Source1" />
-              <Edge From="1" To="2" Label="Source1" />
-            </Edges>
-          </Workflow>
-        </Builder>
+      <Expression xsi:type="GroupWorkflow">
+        <Name>EEG</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p1:UdpSource">
+                <p1:GroupAddress>239.255.76.67</p1:GroupAddress>
+                <p1:Port>8866</p1:Port>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>EegStream</Name>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="1" To="2" Label="Source1" />
+          </Edges>
+        </Workflow>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>Tracking</Name>
@@ -893,19 +885,19 @@
                 <cv:Regions>
                   <cv:ArrayOfPoint>
                     <cv:Point>
-                      <cv:X>190</cv:X>
+                      <cv:X>180</cv:X>
                       <cv:Y>650</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>190</cv:X>
+                      <cv:X>180</cv:X>
                       <cv:Y>750</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1070</cv:X>
+                      <cv:X>1050</cv:X>
                       <cv:Y>750</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1070</cv:X>
+                      <cv:X>1050</cv:X>
                       <cv:Y>650</cv:Y>
                     </cv:Point>
                   </cv:ArrayOfPoint>
@@ -976,19 +968,19 @@
                 <cv:Regions>
                   <cv:ArrayOfPoint>
                     <cv:Point>
-                      <cv:X>190</cv:X>
+                      <cv:X>180</cv:X>
                       <cv:Y>650</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>190</cv:X>
+                      <cv:X>180</cv:X>
                       <cv:Y>750</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1070</cv:X>
+                      <cv:X>1050</cv:X>
                       <cv:Y>750</cv:Y>
                     </cv:Point>
                     <cv:Point>
-                      <cv:X>1070</cv:X>
+                      <cv:X>1050</cv:X>
                       <cv:Y>650</cv:Y>
                     </cv:Point>
                   </cv:ArrayOfPoint>
@@ -1270,7 +1262,7 @@
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="p1:LoadSessionSettings">
-          <p1:Path>Schemas\rig3-session-settings.yml</p1:Path>
+          <p1:Path>Schemas\rig1-session-settings.yml</p1:Path>
         </Combinator>
       </Expression>
       <Expression xsi:type="Combinator">
@@ -1331,7 +1323,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:SequenceSelector">
-                <p1:Path>Schemas/odourdiscrimination_protocol/odourdiscrimination-stage3.yml</p1:Path>
+                <p1:Path>Schemas/odourdiscrimination-stage1.yml</p1:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
