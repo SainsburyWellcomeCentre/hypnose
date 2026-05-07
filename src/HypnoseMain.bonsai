@@ -3475,28 +3475,38 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
                     <Name>BehaviorEvents</Name>
                   </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Seconds</Selector>
+                  </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>SustainedSampleOffset</Name>
+                  </Expression>
+                  <Expression xsi:type="rx:Condition">
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="WorkflowInput">
+                          <Name>Source1</Name>
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>Value</Selector>
+                        </Expression>
+                        <Expression xsi:type="BitwiseNot" />
+                        <Expression xsi:type="WorkflowOutput" />
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="2" Label="Source1" />
+                        <Edge From="2" To="3" Label="Source1" />
+                      </Edges>
+                    </Workflow>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Seconds</Selector>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:WithLatestFrom" />
                   </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Item1.Seconds</Selector>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Item2.Seconds</Selector>
-                  </Expression>
-                  <Expression xsi:type="PropertyMapping">
-                    <PropertyMappings>
-                      <Property Name="Value" />
-                    </PropertyMappings>
-                  </Expression>
-                  <Expression xsi:type="Subtract">
-                    <Operand xsi:type="DoubleProperty">
-                      <Value>804510.090688</Value>
-                    </Operand>
-                  </Expression>
+                  <Expression xsi:type="Subtract" />
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:WithLatestFrom" />
                   </Expression>
@@ -3698,15 +3708,14 @@ it.Item2 as TrialComplete
                   <Edge From="100" To="101" Label="Source1" />
                   <Edge From="101" To="102" Label="Source4" />
                   <Edge From="102" To="103" Label="Source1" />
-                  <Edge From="102" To="110" Label="Source1" />
-                  <Edge From="103" To="105" Label="Source1" />
-                  <Edge From="104" To="105" Label="Source2" />
+                  <Edge From="102" To="110" Label="Source2" />
+                  <Edge From="103" To="104" Label="Source1" />
+                  <Edge From="104" To="108" Label="Source1" />
                   <Edge From="105" To="106" Label="Source1" />
-                  <Edge From="105" To="107" Label="Source1" />
-                  <Edge From="106" To="109" Label="Source1" />
-                  <Edge From="107" To="108" Label="Source1" />
-                  <Edge From="108" To="109" Label="Source2" />
-                  <Edge From="109" To="110" Label="Source2" />
+                  <Edge From="106" To="107" Label="Source1" />
+                  <Edge From="107" To="108" Label="Source2" />
+                  <Edge From="108" To="109" Label="Source1" />
+                  <Edge From="109" To="110" Label="Source1" />
                   <Edge From="110" To="111" Label="Source1" />
                   <Edge From="111" To="112" Label="Source1" />
                   <Edge From="113" To="114" Label="Source1" />
@@ -3732,7 +3741,7 @@ it.Item2 as TrialComplete
                     <Name>Source1</Name>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
-                    <Selector>Item1</Selector>
+                    <Selector>Item2</Selector>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="StringProperty">
@@ -4657,7 +4666,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="WorkflowOutput" />
             <Expression xsi:type="MemberSelector">
-              <Selector>Item2</Selector>
+              <Selector>Item1</Selector>
             </Expression>
             <Expression xsi:type="rx:BehaviorSubject">
               <Name>InitiationSequenceTime</Name>
