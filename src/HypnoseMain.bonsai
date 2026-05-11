@@ -1323,7 +1323,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:SequenceSelector">
-                <p1:Path>Schemas/odourdiscrimination-stage3b.yml</p1:Path>
+                <p1:Path>Schemas/preseq-doubles-stage1.yml</p1:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -2077,7 +2077,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.001</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2198,7 +2198,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.001</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
@@ -2388,7 +2388,7 @@
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.001</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2509,7 +2509,7 @@
                               </Expression>
                               <Expression xsi:type="LessThan">
                                 <Operand xsi:type="DoubleProperty">
-                                  <Value>0.35</Value>
+                                  <Value>0.001</Value>
                                 </Operand>
                               </Expression>
                               <Expression xsi:type="GreaterThanOrEqual">
@@ -4390,7 +4390,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Subtract">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>0.733632000000398</Value>
+                      <Value>0</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="scr:ExpressionTransform">
@@ -4403,7 +4403,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>P1DT3H46M38.266S</rx:DueTime>
+                      <rx:DueTime>P1DT3H46M39S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -4696,7 +4696,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Delay">
-                      <rx:DueTime>PT0S</rx:DueTime>
+                      <rx:DueTime>PT3S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -4838,7 +4838,7 @@ it.Item2 as TrialComplete
       </Expression>
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="wie:KeyDown">
-          <wie:Filter>LButton RButton Cancel ShiftKey ControlKey Menu Pause Space Prior PageUp Next PageDown End D0 D1 D2 D3 Control</wie:Filter>
+          <wie:Filter>LButton ShiftKey ControlKey Space Prior PageUp D0 D1 Control</wie:Filter>
           <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
         </Combinator>
       </Expression>
