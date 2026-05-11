@@ -4,7 +4,7 @@
     <NestedLayout>
       <WindowSettings Index="8">
         <NestedLayout>
-          <WindowSettings Index="100">
+          <WindowSettings Index="104">
             <Location>
               <X>700</X>
               <Y>293</Y>
@@ -18,7 +18,7 @@
               <ObjectTextVisualizer />
             </VisualizerSettings>
           </WindowSettings>
-          <WindowSettings Index="118">
+          <WindowSettings Index="122">
             <Location>
               <X>1548</X>
               <Y>196</Y>
@@ -32,7 +32,7 @@
               <ObjectTextVisualizer />
             </VisualizerSettings>
           </WindowSettings>
-          <WindowSettings Index="124">
+          <WindowSettings Index="128">
             <Location>
               <X>1665</X>
               <Y>814</Y>
