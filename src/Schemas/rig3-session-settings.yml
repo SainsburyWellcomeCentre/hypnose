@@ -7,11 +7,11 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.5
-  loggingRootPath: C:\temp
+  loggingRootPath: C:\hypnose\rawdata\sub-058_id-371\ses-013_date-20260511\behav
   rewardTime: 0.13
   performanceAverageWindow: 5
-  initialSequence: Schemas/odourdiscrimination_protocol/odourdiscrimination-stage3.yml
-  maximumInterOdourPokeTime: 2
+  initialSequence: Schemas/preseq-doubles-stage1.yml
+  maximumInterOdourPokeTime: 3
 
 cameraProperties:
   frameRate: 60
