@@ -565,12 +565,6 @@
                 <beh:EventEnable>PortDI PortDIO AnalogData Camera0</beh:EventEnable>
               </harp:Payload>
             </Expression>
-            <Expression xsi:type="beh:CreateMessage">
-              <harp:MessageType>Write</harp:MessageType>
-              <harp:Payload xsi:type="beh:CreatePokeInputFilterPayload">
-                <beh:PokeInputFilter>30</beh:PokeInputFilter>
-              </harp:Payload>
-            </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Merge" />
             </Expression>
@@ -794,13 +788,12 @@
             <Edge From="38" To="39" Label="Source1" />
             <Edge From="39" To="40" Label="Source1" />
             <Edge From="40" To="41" Label="Source1" />
-            <Edge From="42" To="47" Label="Source1" />
-            <Edge From="43" To="47" Label="Source2" />
-            <Edge From="44" To="47" Label="Source3" />
-            <Edge From="45" To="47" Label="Source4" />
-            <Edge From="46" To="47" Label="Source5" />
-            <Edge From="47" To="48" Label="Source1" />
-            <Edge From="49" To="50" Label="Source1" />
+            <Edge From="42" To="46" Label="Source1" />
+            <Edge From="43" To="46" Label="Source2" />
+            <Edge From="44" To="46" Label="Source3" />
+            <Edge From="45" To="46" Label="Source4" />
+            <Edge From="46" To="47" Label="Source1" />
+            <Edge From="48" To="49" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
