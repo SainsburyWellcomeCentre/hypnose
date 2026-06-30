@@ -141,7 +141,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\hypnose\rawdata\sub-056_id-369\ses-047_date-20260629\behav</Path>
+              <Path>C:\temp</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -350,7 +350,7 @@
                 <harp:VisualIndicators>On</harp:VisualIndicators>
                 <harp:Heartbeat>Enabled</harp:Heartbeat>
                 <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                <harp:PortName>COM14</harp:PortName>
+                <harp:PortName>COM11</harp:PortName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:PublishSubject">
@@ -811,9 +811,9 @@
         </Workflow>
       </Expression>
       <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-        <PortO0>COM5</PortO0>
+        <PortO0>COM13</PortO0>
         <EventsO0>EventsO0</EventsO0>
-        <PortO1>COM7</PortO1>
+        <PortO1>COM9</PortO1>
         <EventsO1>EventsO1</EventsO1>
         <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
         <SessionSettings>SessionSettings</SessionSettings>
@@ -2082,7 +2082,7 @@
                           <Name>RawValence</Name>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
-                          <Name>EventsO0</Name>
+                          <Name>BehaviorEvents</Name>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
                           <Name>SustainedSampleState</Name>
