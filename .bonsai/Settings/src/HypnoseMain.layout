@@ -17,8 +17,8 @@
   </WindowSettings>
   <WindowSettings Index="2">
     <Location>
-      <X>1699</X>
-      <Y>58</Y>
+      <X>180</X>
+      <Y>118</Y>
     </Location>
     <Size>
       <Width>336</Width>
@@ -65,8 +65,8 @@
     <NestedLayout>
       <WindowSettings Index="1">
         <Location>
-          <X>437</X>
-          <Y>432</Y>
+          <X>442</X>
+          <Y>449</Y>
         </Location>
         <Size>
           <Width>673</Width>
@@ -135,6 +135,7 @@
                 </VisualizerSettings>
               </WindowSettings>
               <WindowSettings Index="8">
+                <Visible>false</Visible>
                 <Location>
                   <X>1612</X>
                   <Y>280</Y>
@@ -180,8 +181,8 @@
               </WindowSettings>
               <WindowSettings Index="13">
                 <Location>
-                  <X>1598</X>
-                  <Y>568</Y>
+                  <X>410</X>
+                  <Y>1083</Y>
                 </Location>
                 <Size>
                   <Width>336</Width>
@@ -208,6 +209,7 @@
                 </VisualizerSettings>
               </WindowSettings>
               <WindowSettings Index="22">
+                <Visible>false</Visible>
                 <Location>
                   <X>2011</X>
                   <Y>608</Y>
@@ -223,8 +225,8 @@
               </WindowSettings>
               <WindowSettings Index="62">
                 <Location>
-                  <X>1452</X>
-                  <Y>1080</Y>
+                  <X>102</X>
+                  <Y>1098</Y>
                 </Location>
                 <Size>
                   <Width>336</Width>
@@ -237,8 +239,8 @@
               </WindowSettings>
               <WindowSettings Index="64">
                 <Location>
-                  <X>1813</X>
-                  <Y>1053</Y>
+                  <X>751</X>
+                  <Y>135</Y>
                 </Location>
                 <Size>
                   <Width>336</Width>
@@ -251,8 +253,8 @@
               </WindowSettings>
               <WindowSettings Index="67">
                 <Location>
-                  <X>2195</X>
-                  <Y>1080</Y>
+                  <X>792</X>
+                  <Y>1091</Y>
                 </Location>
                 <Size>
                   <Width>336</Width>
@@ -301,8 +303,8 @@
   </WindowSettings>
   <WindowSettings Index="66">
     <Location>
-      <X>1187</X>
-      <Y>425</Y>
+      <X>49</X>
+      <Y>451</Y>
     </Location>
     <Size>
       <Width>336</Width>
@@ -315,8 +317,8 @@
   </WindowSettings>
   <WindowSettings Index="67">
     <Location>
-      <X>1192</X>
-      <Y>731</Y>
+      <X>45</X>
+      <Y>807</Y>
     </Location>
     <Size>
       <Width>336</Width>
@@ -329,8 +331,8 @@
   </WindowSettings>
   <WindowSettings Index="97">
     <Location>
-      <X>1262</X>
-      <Y>146</Y>
+      <X>86</X>
+      <Y>194</Y>
     </Location>
     <Size>
       <Width>336</Width>
