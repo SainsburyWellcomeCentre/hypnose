@@ -8,9 +8,9 @@ metadata:
   minimumSampleTime: 0.05
   sampleOffsetTime: 0.5
   loggingRootPath: C:\temp
-  rewardTime: 0.13
+  rewardTime: 0.26
   performanceAverageWindow: 5
-  initialSequence: Schemas/preseq-doubles-stage1.yml
+  initialSequence: Schemas/singrew-task-stage7.yml
   maximumInterOdourPokeTime: 3
 
 cameraProperties:
