@@ -2082,7 +2082,7 @@
                           <Name>RawValence</Name>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
-                          <Name>BehaviorEvents</Name>
+                          <Name>CommandsO0</Name>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
                           <Name>SustainedSampleState</Name>
@@ -4685,7 +4685,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Subtract">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>0</Value>
+                      <Value>1.2388159999973141</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="scr:ExpressionTransform">
@@ -4698,7 +4698,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:Timer">
-                      <rx:DueTime>P1DT3H46M39S</rx:DueTime>
+                      <rx:DueTime>P1DT3H46M37.761S</rx:DueTime>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
