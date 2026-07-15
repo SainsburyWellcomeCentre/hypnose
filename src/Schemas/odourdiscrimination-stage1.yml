@@ -19,7 +19,7 @@ sequences: [
     ],
     rewardAttempts: 99999,
     enableTrialEndIndicator: False,
-    enableRewardLocationIndicator: True,
+    enableRewardLocationIndicator: Rewarded,
     resetOnReward: True,
     skipSampling: True
     }],
@@ -37,7 +37,7 @@ sequences: [
     ],
     rewardAttempts: 99999,
     enableTrialEndIndicator: False,
-    enableRewardLocationIndicator: True,
+    enableRewardLocationIndicator: Rewarded,
     resetOnReward: True,
     skipSampling: True
     }]

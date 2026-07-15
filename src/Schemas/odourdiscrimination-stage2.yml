@@ -14,13 +14,13 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 0, definition: [
-        [{command: OdorA, rewarded: True, minimumSamplingTime: 0.05, maximumSamplingTime: 1}]
+        [{command: OdorA, rewarded: True, minimumSamplingTime: 0.25, maximumSamplingTime: 1}]
       ]}
     ],
-    rewardAttempts: 99999,
+    rewardAttempts: 0,
     enableTrialStartIndicator: True,
     enableTrialEndIndicator: False,
-    enableRewardLocationIndicator: True,
+    enableRewardLocationIndicator: Both,
     resetOnReward: True,
     skipSampling: False
     },
@@ -33,13 +33,13 @@ sequences: [
     completionRequiresEngagement: True,
     rewardConditions: [
       {position: 1, definition: [
-        [{command: OdorB, rewarded: True, minimumSamplingTime: 0.05, maximumSamplingTime: 1}]
+        [{command: OdorB, rewarded: True, minimumSamplingTime: 0.25, maximumSamplingTime: 1}]
       ]}
     ],
-    rewardAttempts: 99999,
+    rewardAttempts: 0,
     enableTrialStartIndicator: True,
     enableTrialEndIndicator: False,
-    enableRewardLocationIndicator: True,
+    enableRewardLocationIndicator: Both,
     resetOnReward: True,
     skipSampling: False
     }]

@@ -55,9 +55,9 @@
                     "type": "boolean"
                 },
                 "enableRewardLocationIndicator": {
-                    "description": "Boolean specifying whether to enable indicator for where a reward is available",
-                    "default": "False",
-                    "type": "boolean"
+                    "description": "String specifying whether to enable indicator for where a reward is available and for which ports to be enabled",
+                    "default": "None",
+                    "type": "string"
                 },
                 "resetOnReward": {
                     "description": "Boolean specifying whether a trial should ignore the response time and reset once a reward is given",
