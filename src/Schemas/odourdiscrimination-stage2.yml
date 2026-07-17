@@ -9,7 +9,6 @@ sequences: [
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
-    maximumTime: 10,
     responseTime: 99999,
     completionRequiresEngagement: True,
     rewardConditions: [
@@ -28,7 +27,6 @@ sequences: [
     defaultCommand: Default,
     interCommand: Purge,
     interCommandTime: 0.2,
-    maximumTime: 10,
     responseTime: 99999,
     completionRequiresEngagement: True,
     rewardConditions: [

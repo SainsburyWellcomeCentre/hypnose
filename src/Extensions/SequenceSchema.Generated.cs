@@ -27,8 +27,6 @@ namespace SequenceSchema
     
         private double _responseTime;
     
-        private double _maximumTime;
-    
         private System.Collections.Generic.List<RewardCondition> _rewardConditions;
     
         private int _rewardAttempts;
@@ -56,7 +54,6 @@ namespace SequenceSchema
             _interCommandTime = 0.2D;
             _interTrialInterval = 0D;
             _responseTime = 5D;
-            _maximumTime = 10D;
             _rewardConditions = new System.Collections.Generic.List<RewardCondition>();
             _rewardAttempts = 1;
             _enableTrialEndIndicator = false;
@@ -77,7 +74,6 @@ namespace SequenceSchema
             _interCommandTime = other._interCommandTime;
             _interTrialInterval = other._interTrialInterval;
             _responseTime = other._responseTime;
-            _maximumTime = other._maximumTime;
             _rewardConditions = other._rewardConditions;
             _rewardAttempts = other._rewardAttempts;
             _enableTrialEndIndicator = other._enableTrialEndIndicator;
@@ -184,22 +180,6 @@ namespace SequenceSchema
             set
             {
                 _responseTime = value;
-            }
-        }
-    
-        /// <summary>
-        /// The maximum time in seconds that a sequence can last
-        /// </summary>
-        [System.ComponentModel.DescriptionAttribute("The maximum time in seconds that a sequence can last")]
-        public double MaximumTime
-        {
-            get
-            {
-                return _maximumTime;
-            }
-            set
-            {
-                _maximumTime = value;
             }
         }
     
@@ -385,7 +365,6 @@ namespace SequenceSchema
             stringBuilder.Append("InterCommandTime = " + _interCommandTime + ", ");
             stringBuilder.Append("InterTrialInterval = " + _interTrialInterval + ", ");
             stringBuilder.Append("ResponseTime = " + _responseTime + ", ");
-            stringBuilder.Append("MaximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("RewardConditions = " + _rewardConditions + ", ");
             stringBuilder.Append("RewardAttempts = " + _rewardAttempts + ", ");
             stringBuilder.Append("EnableTrialEndIndicator = " + _enableTrialEndIndicator + ", ");

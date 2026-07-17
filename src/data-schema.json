@@ -155,6 +155,23 @@
                 }
             }
         },
+        "hardwarePorts": {
+            "properties": {
+                "behaviorBoard": {
+                    "description": "The COM port for the behavior board",
+                    "default": "Default",
+                    "type": "string"
+                },
+                "olfactometer0": {
+                    "description": "The COM port for the first olfactometer",
+                    "type": "string"
+                },
+                "olfactometer1": {
+                    "description": "The COM port for the second olfactometer",
+                    "type": "string"
+                }
+            }
+        },
         "cameraProperties": {
             "properties": {
                 "frameRate": {

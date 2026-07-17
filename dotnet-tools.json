@@ -1,5 +1,13 @@
 {
   "version": 1,
   "isRoot": true,
-  "tools": {}
+  "tools": {
+    "bonsai.sgen": {
+      "version": "0.9.0",
+      "commands": [
+        "bonsai.sgen"
+      ],
+      "rollForward": false
+    }
+  }
 }

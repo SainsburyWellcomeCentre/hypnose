@@ -33,11 +33,6 @@
                     "default": 5,
                     "type": "number"
                 },
-                "maximumTime": {
-                    "description": "The maximum time in seconds that a sequence can last",
-                    "default": 10,
-                    "type": "number"
-                },
                 "rewardConditions": {
                     "items": {
                         "$ref": "#/definitions/rewardCondition"
