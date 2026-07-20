@@ -1,2 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<VisualizerLayout Version="2.9.1" />
+<VisualizerLayout Version="2.9.1">
+  <WindowSettings Index="66">
+    <Location>
+      <X>130</X>
+      <Y>130</Y>
+    </Location>
+    <Size>
+      <Width>336</Width>
+      <Height>237</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
+  </WindowSettings>
+  <WindowSettings Index="67">
+    <Location>
+      <X>124</X>
+      <Y>459</Y>
+    </Location>
+    <Size>
+      <Width>336</Width>
+      <Height>303</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
+  </WindowSettings>
+  <WindowSettings Index="92">
+    <Location>
+      <X>509</X>
+      <Y>131</Y>
+    </Location>
+    <Size>
+      <Width>336</Width>
+      <Height>241</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
+    </VisualizerSettings>
+  </WindowSettings>
+</VisualizerLayout>
