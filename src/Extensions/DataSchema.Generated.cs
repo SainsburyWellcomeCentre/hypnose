@@ -9,9 +9,9 @@ namespace DataSchema
 {
     #pragma warning disable // Disable all warnings
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class RewardCommand
     {
     
@@ -29,7 +29,6 @@ namespace DataSchema
             _rewardPosition = other._rewardPosition;
         }
     
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardTime")]
         public double RewardTime
         {
             get
@@ -42,7 +41,6 @@ namespace DataSchema
             }
         }
     
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardPosition")]
         public int RewardPosition
         {
             get
@@ -55,20 +53,20 @@ namespace DataSchema
             }
         }
     
-        public System.IObservable<RewardCommand> Process()
+        public System.IObservable<RewardCommand> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new RewardCommand(this)));
         }
     
-        public System.IObservable<RewardCommand> Process<TSource>(System.IObservable<TSource> source)
+        public System.IObservable<RewardCommand> Generate<TSource>(System.IObservable<TSource> source)
         {
             return System.Reactive.Linq.Observable.Select(source, _ => new RewardCommand(this));
         }
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
-            stringBuilder.Append("rewardPosition = " + _rewardPosition);
+            stringBuilder.Append("RewardTime = " + _rewardTime + ", ");
+            stringBuilder.Append("RewardPosition = " + _rewardPosition);
             return true;
         }
     
@@ -87,32 +85,40 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class OlfactometerStateCommand
     {
     
         private string _name;
     
-        private bool _flowEnabledO0 = true;
+        private bool _flowEnabledO0;
     
-        private bool _flowEnabledO1 = true;
+        private bool _flowEnabledO1;
     
-        private System.Collections.Generic.List<int> _valvesOpenO0 = new System.Collections.Generic.List<int>();
+        private System.Collections.Generic.List<int> _valvesOpenO0;
     
-        private System.Collections.Generic.List<int> _valvesOpenO1 = new System.Collections.Generic.List<int>();
+        private System.Collections.Generic.List<int> _valvesOpenO1;
     
-        private System.Collections.Generic.List<int> _endValvesOpenO0 = new System.Collections.Generic.List<int>();
+        private System.Collections.Generic.List<int> _endValvesOpenO0;
     
-        private System.Collections.Generic.List<int> _endValvesOpenO1 = new System.Collections.Generic.List<int>();
+        private System.Collections.Generic.List<int> _endValvesOpenO1;
     
-        private System.Collections.Generic.List<double> _targetFlowO0 = new System.Collections.Generic.List<double>();
+        private System.Collections.Generic.List<double> _targetFlowO0;
     
-        private System.Collections.Generic.List<double> _targetFlowO1 = new System.Collections.Generic.List<double>();
+        private System.Collections.Generic.List<double> _targetFlowO1;
     
         public OlfactometerStateCommand()
         {
+            _flowEnabledO0 = true;
+            _flowEnabledO1 = true;
+            _valvesOpenO0 = new System.Collections.Generic.List<int>();
+            _valvesOpenO1 = new System.Collections.Generic.List<int>();
+            _endValvesOpenO0 = new System.Collections.Generic.List<int>();
+            _endValvesOpenO1 = new System.Collections.Generic.List<int>();
+            _targetFlowO0 = new System.Collections.Generic.List<double>();
+            _targetFlowO1 = new System.Collections.Generic.List<double>();
         }
     
         protected OlfactometerStateCommand(OlfactometerStateCommand other)
@@ -131,7 +137,6 @@ namespace DataSchema
         /// <summary>
         /// The alias of this olfactometer command
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="name")]
         [System.ComponentModel.DescriptionAttribute("The alias of this olfactometer command")]
         public string Name
         {
@@ -148,7 +153,6 @@ namespace DataSchema
         /// <summary>
         /// Boolean specifying whether to enable airflow across all channels in olfactometer 0
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="flowEnabledO0")]
         [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable airflow across all channels in olfactometer " +
             "0")]
         public bool FlowEnabledO0
@@ -166,7 +170,6 @@ namespace DataSchema
         /// <summary>
         /// Boolean specifying whether to enable airflow across all channels in olfactometer 1
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="flowEnabledO1")]
         [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable airflow across all channels in olfactometer " +
             "1")]
         public bool FlowEnabledO1
@@ -182,7 +185,6 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="valvesOpenO0")]
         public System.Collections.Generic.List<int> ValvesOpenO0
         {
             get
@@ -196,7 +198,6 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="valvesOpenO1")]
         public System.Collections.Generic.List<int> ValvesOpenO1
         {
             get
@@ -210,7 +211,6 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="endValvesOpenO0")]
         public System.Collections.Generic.List<int> EndValvesOpenO0
         {
             get
@@ -224,7 +224,6 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="endValvesOpenO1")]
         public System.Collections.Generic.List<int> EndValvesOpenO1
         {
             get
@@ -241,7 +240,6 @@ namespace DataSchema
         /// The target flow rates of the 5 flow channels on olfactometer 0 in ml/min. Range for the odor channels is 0-100ml/min and 0-1000ml/min for the carrier line.
         /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="targetFlowO0")]
         [System.ComponentModel.DescriptionAttribute("The target flow rates of the 5 flow channels on olfactometer 0 in ml/min. Range f" +
             "or the odor channels is 0-100ml/min and 0-1000ml/min for the carrier line.")]
         public System.Collections.Generic.List<double> TargetFlowO0
@@ -260,7 +258,6 @@ namespace DataSchema
         /// The target flow rates of the 5 flow channels on olfactometer 1 in ml/min. Range for the odor channels is 0-100ml/min and 0-1000ml/min for the carrier line.
         /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="targetFlowO1")]
         [System.ComponentModel.DescriptionAttribute("The target flow rates of the 5 flow channels on olfactometer 1 in ml/min. Range f" +
             "or the odor channels is 0-100ml/min and 0-1000ml/min for the carrier line.")]
         public System.Collections.Generic.List<double> TargetFlowO1
@@ -275,27 +272,27 @@ namespace DataSchema
             }
         }
     
-        public System.IObservable<OlfactometerStateCommand> Process()
+        public System.IObservable<OlfactometerStateCommand> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new OlfactometerStateCommand(this)));
         }
     
-        public System.IObservable<OlfactometerStateCommand> Process<TSource>(System.IObservable<TSource> source)
+        public System.IObservable<OlfactometerStateCommand> Generate<TSource>(System.IObservable<TSource> source)
         {
             return System.Reactive.Linq.Observable.Select(source, _ => new OlfactometerStateCommand(this));
         }
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("name = " + _name + ", ");
-            stringBuilder.Append("flowEnabledO0 = " + _flowEnabledO0 + ", ");
-            stringBuilder.Append("flowEnabledO1 = " + _flowEnabledO1 + ", ");
-            stringBuilder.Append("valvesOpenO0 = " + _valvesOpenO0 + ", ");
-            stringBuilder.Append("valvesOpenO1 = " + _valvesOpenO1 + ", ");
-            stringBuilder.Append("endValvesOpenO0 = " + _endValvesOpenO0 + ", ");
-            stringBuilder.Append("endValvesOpenO1 = " + _endValvesOpenO1 + ", ");
-            stringBuilder.Append("targetFlowO0 = " + _targetFlowO0 + ", ");
-            stringBuilder.Append("targetFlowO1 = " + _targetFlowO1);
+            stringBuilder.Append("Name = " + _name + ", ");
+            stringBuilder.Append("FlowEnabledO0 = " + _flowEnabledO0 + ", ");
+            stringBuilder.Append("FlowEnabledO1 = " + _flowEnabledO1 + ", ");
+            stringBuilder.Append("ValvesOpenO0 = " + _valvesOpenO0 + ", ");
+            stringBuilder.Append("ValvesOpenO1 = " + _valvesOpenO1 + ", ");
+            stringBuilder.Append("EndValvesOpenO0 = " + _endValvesOpenO0 + ", ");
+            stringBuilder.Append("EndValvesOpenO1 = " + _endValvesOpenO1 + ", ");
+            stringBuilder.Append("TargetFlowO0 = " + _targetFlowO0 + ", ");
+            stringBuilder.Append("TargetFlowO1 = " + _targetFlowO1);
             return true;
         }
     
@@ -314,9 +311,9 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class Point2d
     {
     
@@ -334,7 +331,6 @@ namespace DataSchema
             _y = other._y;
         }
     
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="x")]
         public double X
         {
             get
@@ -347,7 +343,6 @@ namespace DataSchema
             }
         }
     
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="y")]
         public double Y
         {
             get
@@ -360,20 +355,20 @@ namespace DataSchema
             }
         }
     
-        public System.IObservable<Point2d> Process()
+        public System.IObservable<Point2d> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Point2d(this)));
         }
     
-        public System.IObservable<Point2d> Process<TSource>(System.IObservable<TSource> source)
+        public System.IObservable<Point2d> Generate<TSource>(System.IObservable<TSource> source)
         {
             return System.Reactive.Linq.Observable.Select(source, _ => new Point2d(this));
         }
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("x = " + _x + ", ");
-            stringBuilder.Append("y = " + _y);
+            stringBuilder.Append("X = " + _x + ", ");
+            stringBuilder.Append("Y = " + _y);
             return true;
         }
     
@@ -392,31 +387,37 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class HypnoseSession
     {
     
         private Metadata _metadata;
     
+        private ShortcutKeys _shortcutKeys;
+    
+        private HardwarePorts _hardwarePorts;
+    
         private CameraProperties _cameraProperties;
     
-        private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
+        private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands;
     
         public HypnoseSession()
         {
+            _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
         }
     
         protected HypnoseSession(HypnoseSession other)
         {
             _metadata = other._metadata;
+            _shortcutKeys = other._shortcutKeys;
+            _hardwarePorts = other._hardwarePorts;
             _cameraProperties = other._cameraProperties;
             _olfactometerCommands = other._olfactometerCommands;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="metadata")]
         public Metadata Metadata
         {
             get
@@ -430,7 +431,32 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="cameraProperties")]
+        public ShortcutKeys ShortcutKeys
+        {
+            get
+            {
+                return _shortcutKeys;
+            }
+            set
+            {
+                _shortcutKeys = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public HardwarePorts HardwarePorts
+        {
+            get
+            {
+                return _hardwarePorts;
+            }
+            set
+            {
+                _hardwarePorts = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
         public CameraProperties CameraProperties
         {
             get
@@ -444,7 +470,6 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="olfactometerCommands")]
         public System.Collections.Generic.List<OlfactometerStateCommand> OlfactometerCommands
         {
             get
@@ -457,21 +482,23 @@ namespace DataSchema
             }
         }
     
-        public System.IObservable<HypnoseSession> Process()
+        public System.IObservable<HypnoseSession> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new HypnoseSession(this)));
         }
     
-        public System.IObservable<HypnoseSession> Process<TSource>(System.IObservable<TSource> source)
+        public System.IObservable<HypnoseSession> Generate<TSource>(System.IObservable<TSource> source)
         {
             return System.Reactive.Linq.Observable.Select(source, _ => new HypnoseSession(this));
         }
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("metadata = " + _metadata + ", ");
-            stringBuilder.Append("cameraProperties = " + _cameraProperties + ", ");
-            stringBuilder.Append("olfactometerCommands = " + _olfactometerCommands);
+            stringBuilder.Append("Metadata = " + _metadata + ", ");
+            stringBuilder.Append("ShortcutKeys = " + _shortcutKeys + ", ");
+            stringBuilder.Append("HardwarePorts = " + _hardwarePorts + ", ");
+            stringBuilder.Append("CameraProperties = " + _cameraProperties + ", ");
+            stringBuilder.Append("OlfactometerCommands = " + _olfactometerCommands);
             return true;
         }
     
@@ -490,34 +517,43 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class Metadata
     {
     
-        private string _animalId = "";
+        private string _animalId;
     
-        private string _rootPath = "";
+        private string _rootPath;
     
-        private double _minimumSampleTime = 0.1D;
+        private double _minimumSampleTime;
     
-        private double _sampleOffsetTime = 0.1D;
+        private double _sampleOffsetTime;
     
-        private double _maximumInterOdourPokeTime = 0.5D;
+        private double _maximumInterOdourPokeTime;
     
-        private double _rewardTime = 0.1D;
+        private double _rewardTime;
     
-        private string _loggingRootPath = "";
+        private string _loggingRootPath;
     
-        private int _performanceAverageWindow = 10;
+        private int _performanceAverageWindow;
     
         private string _initialSequence;
     
-        private double _rewardBecomeAvailableTime = 1.5D;
+        private double _rewardBecomeAvailableTime;
     
         public Metadata()
         {
+            _animalId = "";
+            _rootPath = "";
+            _minimumSampleTime = 0.1D;
+            _sampleOffsetTime = 0.1D;
+            _maximumInterOdourPokeTime = 0.5D;
+            _rewardTime = 0.1D;
+            _loggingRootPath = "";
+            _performanceAverageWindow = 10;
+            _rewardBecomeAvailableTime = 1.5D;
         }
     
         protected Metadata(Metadata other)
@@ -534,7 +570,6 @@ namespace DataSchema
             _rewardBecomeAvailableTime = other._rewardBecomeAvailableTime;
         }
     
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="animalId")]
         public string AnimalId
         {
             get
@@ -547,7 +582,6 @@ namespace DataSchema
             }
         }
     
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rootPath")]
         public string RootPath
         {
             get
@@ -563,7 +597,6 @@ namespace DataSchema
         /// <summary>
         /// Minimum amount of time in seconds a subject must sample the port to initiate a trial.
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="minimumSampleTime")]
         [System.ComponentModel.DescriptionAttribute("Minimum amount of time in seconds a subject must sample the port to initiate a tr" +
             "ial.")]
         public double MinimumSampleTime
@@ -581,7 +614,6 @@ namespace DataSchema
         /// <summary>
         /// Time in seconds after sampling offset when subject is considered to have disengaged sampling.
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="sampleOffsetTime")]
         [System.ComponentModel.DescriptionAttribute("Time in seconds after sampling offset when subject is considered to have disengag" +
             "ed sampling.")]
         public double SampleOffsetTime
@@ -599,7 +631,6 @@ namespace DataSchema
         /// <summary>
         /// Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="maximumInterOdourPokeTime")]
         [System.ComponentModel.DescriptionAttribute("Maximum time after interCommandTime that subject has to repoke - otherwise trial " +
             "ends.")]
         public double MaximumInterOdourPokeTime
@@ -617,7 +648,6 @@ namespace DataSchema
         /// <summary>
         /// Time in seconds to deliver rewards
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardTime")]
         [System.ComponentModel.DescriptionAttribute("Time in seconds to deliver rewards")]
         public double RewardTime
         {
@@ -634,7 +664,6 @@ namespace DataSchema
         /// <summary>
         /// The local root folder to save data for this session
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="loggingRootPath")]
         [System.ComponentModel.DescriptionAttribute("The local root folder to save data for this session")]
         public string LoggingRootPath
         {
@@ -651,7 +680,6 @@ namespace DataSchema
         /// <summary>
         /// Size of the window to calculate performance average over
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="performanceAverageWindow")]
         [System.ComponentModel.DescriptionAttribute("Size of the window to calculate performance average over")]
         public int PerformanceAverageWindow
         {
@@ -668,7 +696,6 @@ namespace DataSchema
         /// <summary>
         /// Path to the initial sequence .yml file to run
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="initialSequence")]
         [System.ComponentModel.DescriptionAttribute("Path to the initial sequence .yml file to run")]
         public string InitialSequence
         {
@@ -685,7 +712,6 @@ namespace DataSchema
         /// <summary>
         /// Time in seconds after leaving odour port following rewared odour that it becomes available
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="rewardBecomeAvailableTime")]
         [System.ComponentModel.DescriptionAttribute("Time in seconds after leaving odour port following rewared odour that it becomes " +
             "available")]
         public double RewardBecomeAvailableTime
@@ -700,28 +726,28 @@ namespace DataSchema
             }
         }
     
-        public System.IObservable<Metadata> Process()
+        public System.IObservable<Metadata> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
         }
     
-        public System.IObservable<Metadata> Process<TSource>(System.IObservable<TSource> source)
+        public System.IObservable<Metadata> Generate<TSource>(System.IObservable<TSource> source)
         {
             return System.Reactive.Linq.Observable.Select(source, _ => new Metadata(this));
         }
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("animalId = " + _animalId + ", ");
-            stringBuilder.Append("rootPath = " + _rootPath + ", ");
-            stringBuilder.Append("minimumSampleTime = " + _minimumSampleTime + ", ");
-            stringBuilder.Append("sampleOffsetTime = " + _sampleOffsetTime + ", ");
-            stringBuilder.Append("maximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
-            stringBuilder.Append("rewardTime = " + _rewardTime + ", ");
-            stringBuilder.Append("loggingRootPath = " + _loggingRootPath + ", ");
-            stringBuilder.Append("performanceAverageWindow = " + _performanceAverageWindow + ", ");
-            stringBuilder.Append("initialSequence = " + _initialSequence + ", ");
-            stringBuilder.Append("rewardBecomeAvailableTime = " + _rewardBecomeAvailableTime);
+            stringBuilder.Append("AnimalId = " + _animalId + ", ");
+            stringBuilder.Append("RootPath = " + _rootPath + ", ");
+            stringBuilder.Append("MinimumSampleTime = " + _minimumSampleTime + ", ");
+            stringBuilder.Append("SampleOffsetTime = " + _sampleOffsetTime + ", ");
+            stringBuilder.Append("MaximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
+            stringBuilder.Append("RewardTime = " + _rewardTime + ", ");
+            stringBuilder.Append("LoggingRootPath = " + _loggingRootPath + ", ");
+            stringBuilder.Append("PerformanceAverageWindow = " + _performanceAverageWindow + ", ");
+            stringBuilder.Append("InitialSequence = " + _initialSequence + ", ");
+            stringBuilder.Append("RewardBecomeAvailableTime = " + _rewardBecomeAvailableTime);
             return true;
         }
     
@@ -740,28 +766,228 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class ShortcutKeys
+    {
+    
+        private string _endSessionKey;
+    
+        private string _startOlfactometerPurgeKey;
+    
+        public ShortcutKeys()
+        {
+            _endSessionKey = "Ctrl+1";
+            _startOlfactometerPurgeKey = "Shift+1";
+        }
+    
+        protected ShortcutKeys(ShortcutKeys other)
+        {
+            _endSessionKey = other._endSessionKey;
+            _startOlfactometerPurgeKey = other._startOlfactometerPurgeKey;
+        }
+    
+        /// <summary>
+        /// The key to press to end the session
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The key to press to end the session")]
+        public string EndSessionKey
+        {
+            get
+            {
+                return _endSessionKey;
+            }
+            set
+            {
+                _endSessionKey = value;
+            }
+        }
+    
+        /// <summary>
+        /// The key to press to start the olfactometer purge
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The key to press to start the olfactometer purge")]
+        public string StartOlfactometerPurgeKey
+        {
+            get
+            {
+                return _startOlfactometerPurgeKey;
+            }
+            set
+            {
+                _startOlfactometerPurgeKey = value;
+            }
+        }
+    
+        public System.IObservable<ShortcutKeys> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new ShortcutKeys(this)));
+        }
+    
+        public System.IObservable<ShortcutKeys> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new ShortcutKeys(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("EndSessionKey = " + _endSessionKey + ", ");
+            stringBuilder.Append("StartOlfactometerPurgeKey = " + _startOlfactometerPurgeKey);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class HardwarePorts
+    {
+    
+        private string _behaviorBoard;
+    
+        private string _olfactometer0;
+    
+        private string _olfactometer1;
+    
+        public HardwarePorts()
+        {
+            _behaviorBoard = "Default";
+        }
+    
+        protected HardwarePorts(HardwarePorts other)
+        {
+            _behaviorBoard = other._behaviorBoard;
+            _olfactometer0 = other._olfactometer0;
+            _olfactometer1 = other._olfactometer1;
+        }
+    
+        /// <summary>
+        /// The COM port for the behavior board
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The COM port for the behavior board")]
+        public string BehaviorBoard
+        {
+            get
+            {
+                return _behaviorBoard;
+            }
+            set
+            {
+                _behaviorBoard = value;
+            }
+        }
+    
+        /// <summary>
+        /// The COM port for the first olfactometer
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The COM port for the first olfactometer")]
+        public string Olfactometer0
+        {
+            get
+            {
+                return _olfactometer0;
+            }
+            set
+            {
+                _olfactometer0 = value;
+            }
+        }
+    
+        /// <summary>
+        /// The COM port for the second olfactometer
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The COM port for the second olfactometer")]
+        public string Olfactometer1
+        {
+            get
+            {
+                return _olfactometer1;
+            }
+            set
+            {
+                _olfactometer1 = value;
+            }
+        }
+    
+        public System.IObservable<HardwarePorts> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new HardwarePorts(this)));
+        }
+    
+        public System.IObservable<HardwarePorts> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new HardwarePorts(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("BehaviorBoard = " + _behaviorBoard + ", ");
+            stringBuilder.Append("Olfactometer0 = " + _olfactometer0 + ", ");
+            stringBuilder.Append("Olfactometer1 = " + _olfactometer1);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class CameraProperties
     {
     
-        private double _frameRate = 60D;
+        private string _cameraId;
     
-        private double _exposure = 19000D;
+        private double _frameRate;
     
-        private double _gain = 0D;
+        private double _exposure;
     
-        private double _threshold = 15D;
+        private double _gain;
     
-        private RoiSourcePoints _roiSourcePoints = new RoiSourcePoints();
+        private double _threshold;
+    
+        private RoiSourcePoints _roiSourcePoints;
     
         public CameraProperties()
         {
+            _cameraId = "24282618";
+            _frameRate = 60D;
+            _exposure = 19000D;
+            _gain = 0D;
+            _threshold = 15D;
+            _roiSourcePoints = new RoiSourcePoints();
         }
     
         protected CameraProperties(CameraProperties other)
         {
+            _cameraId = other._cameraId;
             _frameRate = other._frameRate;
             _exposure = other._exposure;
             _gain = other._gain;
@@ -770,9 +996,24 @@ namespace DataSchema
         }
     
         /// <summary>
+        /// The camera ID to use for this rig.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The camera ID to use for this rig.")]
+        public string CameraId
+        {
+            get
+            {
+                return _cameraId;
+            }
+            set
+            {
+                _cameraId = value;
+            }
+        }
+    
+        /// <summary>
         /// The target camera frame rate in frames per second.
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="frameRate")]
         [System.ComponentModel.DescriptionAttribute("The target camera frame rate in frames per second.")]
         public double FrameRate
         {
@@ -789,7 +1030,6 @@ namespace DataSchema
         /// <summary>
         /// The frame exposure in microseconds.
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="exposure")]
         [System.ComponentModel.DescriptionAttribute("The frame exposure in microseconds.")]
         public double Exposure
         {
@@ -806,7 +1046,6 @@ namespace DataSchema
         /// <summary>
         /// the gain of the camera sensor.
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="gain")]
         [System.ComponentModel.DescriptionAttribute("the gain of the camera sensor.")]
         public double Gain
         {
@@ -823,7 +1062,6 @@ namespace DataSchema
         /// <summary>
         /// The threshold value for detecting an object against the normalised background of the ROI.
         /// </summary>
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="threshold")]
         [System.ComponentModel.DescriptionAttribute("The threshold value for detecting an object against the normalised background of " +
             "the ROI.")]
         public double Threshold
@@ -842,7 +1080,6 @@ namespace DataSchema
         /// The four source points in the camera image that define the region of interest (in clockwise order starting from top-left).
         /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="roiSourcePoints")]
         [System.ComponentModel.DescriptionAttribute("The four source points in the camera image that define the region of interest (in" +
             " clockwise order starting from top-left).")]
         public RoiSourcePoints RoiSourcePoints
@@ -857,23 +1094,24 @@ namespace DataSchema
             }
         }
     
-        public System.IObservable<CameraProperties> Process()
+        public System.IObservable<CameraProperties> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new CameraProperties(this)));
         }
     
-        public System.IObservable<CameraProperties> Process<TSource>(System.IObservable<TSource> source)
+        public System.IObservable<CameraProperties> Generate<TSource>(System.IObservable<TSource> source)
         {
             return System.Reactive.Linq.Observable.Select(source, _ => new CameraProperties(this));
         }
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("frameRate = " + _frameRate + ", ");
-            stringBuilder.Append("exposure = " + _exposure + ", ");
-            stringBuilder.Append("gain = " + _gain + ", ");
-            stringBuilder.Append("threshold = " + _threshold + ", ");
-            stringBuilder.Append("roiSourcePoints = " + _roiSourcePoints);
+            stringBuilder.Append("CameraId = " + _cameraId + ", ");
+            stringBuilder.Append("FrameRate = " + _frameRate + ", ");
+            stringBuilder.Append("Exposure = " + _exposure + ", ");
+            stringBuilder.Append("Gain = " + _gain + ", ");
+            stringBuilder.Append("Threshold = " + _threshold + ", ");
+            stringBuilder.Append("RoiSourcePoints = " + _roiSourcePoints);
             return true;
         }
     
@@ -892,16 +1130,17 @@ namespace DataSchema
     }
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [Bonsai.CombinatorAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class RoiSourcePoints
     {
     
-        private System.Collections.Generic.List<Point2d> _points = new System.Collections.Generic.List<Point2d>();
+        private System.Collections.Generic.List<Point2d> _points;
     
         public RoiSourcePoints()
         {
+            _points = new System.Collections.Generic.List<Point2d>();
         }
     
         protected RoiSourcePoints(RoiSourcePoints other)
@@ -910,7 +1149,6 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        [YamlDotNet.Serialization.YamlMemberAttribute(Alias="points")]
         public System.Collections.Generic.List<Point2d> Points
         {
             get
@@ -923,19 +1161,19 @@ namespace DataSchema
             }
         }
     
-        public System.IObservable<RoiSourcePoints> Process()
+        public System.IObservable<RoiSourcePoints> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new RoiSourcePoints(this)));
         }
     
-        public System.IObservable<RoiSourcePoints> Process<TSource>(System.IObservable<TSource> source)
+        public System.IObservable<RoiSourcePoints> Generate<TSource>(System.IObservable<TSource> source)
         {
             return System.Reactive.Linq.Observable.Select(source, _ => new RoiSourcePoints(this));
         }
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
-            stringBuilder.Append("points = " + _points);
+            stringBuilder.Append("Points = " + _points);
             return true;
         }
     
@@ -950,115 +1188,6 @@ namespace DataSchema
             }
             stringBuilder.Append("}");
             return stringBuilder.ToString();
-        }
-    }
-
-
-    /// <summary>
-    /// Serializes a sequence of data model objects into YAML strings.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [System.ComponentModel.DescriptionAttribute("Serializes a sequence of data model objects into YAML strings.")]
-    [Bonsai.CombinatorAttribute()]
-    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
-    public partial class SerializeToYaml
-    {
-    
-        private System.IObservable<string> Process<T>(System.IObservable<T> source)
-        {
-            return System.Reactive.Linq.Observable.Defer(() =>
-            {
-                var serializer = new YamlDotNet.Serialization.SerializerBuilder()
-                    .Build();
-                return System.Reactive.Linq.Observable.Select(source, value => serializer.Serialize(value)); 
-            });
-        }
-
-        public System.IObservable<string> Process(System.IObservable<RewardCommand> source)
-        {
-            return Process<RewardCommand>(source);
-        }
-
-        public System.IObservable<string> Process(System.IObservable<OlfactometerStateCommand> source)
-        {
-            return Process<OlfactometerStateCommand>(source);
-        }
-
-        public System.IObservable<string> Process(System.IObservable<Point2d> source)
-        {
-            return Process<Point2d>(source);
-        }
-
-        public System.IObservable<string> Process(System.IObservable<HypnoseSession> source)
-        {
-            return Process<HypnoseSession>(source);
-        }
-
-        public System.IObservable<string> Process(System.IObservable<Metadata> source)
-        {
-            return Process<Metadata>(source);
-        }
-
-        public System.IObservable<string> Process(System.IObservable<CameraProperties> source)
-        {
-            return Process<CameraProperties>(source);
-        }
-
-        public System.IObservable<string> Process(System.IObservable<RoiSourcePoints> source)
-        {
-            return Process<RoiSourcePoints>(source);
-        }
-    }
-
-
-    /// <summary>
-    /// Deserializes a sequence of YAML strings into data model objects.
-    /// </summary>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.2.0.0 (YamlDotNet v13.0.0.0)")]
-    [System.ComponentModel.DescriptionAttribute("Deserializes a sequence of YAML strings into data model objects.")]
-    [System.ComponentModel.DefaultPropertyAttribute("Type")]
-    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Transform)]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RewardCommand>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<OlfactometerStateCommand>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Point2d>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<HypnoseSession>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<Metadata>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<CameraProperties>))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(Bonsai.Expressions.TypeMapping<RoiSourcePoints>))]
-    public partial class DeserializeFromYaml : Bonsai.Expressions.SingleArgumentExpressionBuilder
-    {
-    
-        public DeserializeFromYaml()
-        {
-            Type = new Bonsai.Expressions.TypeMapping<HypnoseSession>();
-        }
-
-        public Bonsai.Expressions.TypeMapping Type { get; set; }
-
-        public override System.Linq.Expressions.Expression Build(System.Collections.Generic.IEnumerable<System.Linq.Expressions.Expression> arguments)
-        {
-            var typeMapping = (Bonsai.Expressions.TypeMapping)Type;
-            var returnType = typeMapping.GetType().GetGenericArguments()[0];
-            return System.Linq.Expressions.Expression.Call(
-                typeof(DeserializeFromYaml),
-                "Process",
-                new System.Type[] { returnType },
-                System.Linq.Enumerable.Single(arguments));
-        }
-
-        private static System.IObservable<T> Process<T>(System.IObservable<string> source)
-        {
-            return System.Reactive.Linq.Observable.Defer(() =>
-            {
-                var serializer = new YamlDotNet.Serialization.DeserializerBuilder()
-                    .Build();
-                return System.Reactive.Linq.Observable.Select(source, value =>
-                {
-                    var reader = new System.IO.StringReader(value);
-                    var parser = new YamlDotNet.Core.MergingParser(new YamlDotNet.Core.Parser(reader));
-                    return serializer.Deserialize<T>(parser);
-                });
-            });
         }
     }
 }

@@ -155,6 +155,20 @@
                 }
             }
         },
+        "shortcutKeys": {
+            "properties": {
+                "endSessionKey": {
+                    "description": "The key to press to end the session",
+                    "default": "Ctrl+1",
+                    "type": "string"
+                },
+                "startOlfactometerPurgeKey": {
+                    "description": "The key to press to start the olfactometer purge",
+                    "default": "Shift+1",
+                    "type": "string"
+                }
+            }
+        },
         "hardwarePorts": {
             "properties": {
                 "behaviorBoard": {
@@ -174,6 +188,11 @@
         },
         "cameraProperties": {
             "properties": {
+                "cameraId": {
+                    "default": 24282618,
+                    "type": "string",
+                    "description": "The camera ID to use for this rig."
+                },
                 "frameRate": {
                     "default": 60,
                     "type": "number",

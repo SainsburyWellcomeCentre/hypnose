@@ -10,10 +10,20 @@ metadata:
   loggingRootPath: C:\temp
   rewardTime: 0.106
   performanceAverageWindow: 5
-  initialSequence: Schemas/odourdiscrimination-stage3.yml
+  initialSequence: Schemas/triples-option4-easy.yml
   maximumInterOdourPokeTime: 3
-    
+
+shortcutKeys:
+  endSessionKey: Ctrl+1
+  startOlfactometerPurgeKey: Shift+1
+
+hardwarePorts:
+  behaviorBoard: COM11
+  olfactometer0: COM9
+  olfactometer1: COM3
+
 cameraProperties:
+  cameraId: 24282618
   frameRate: 60
   exposure: 15000
   gain: 10
