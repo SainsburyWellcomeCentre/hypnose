@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VisualizerLayout Version="2.9.1">
-  <WindowSettings Index="67">
+  <WindowSettings Index="48">
     <Location>
-      <X>312</X>
-      <Y>312</Y>
+      <X>938</X>
+      <Y>371</Y>
     </Location>
     <Size>
       <Width>336</Width>
-      <Height>251</Height>
+      <Height>273</Height>
     </Size>
     <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
     <VisualizerSettings>
