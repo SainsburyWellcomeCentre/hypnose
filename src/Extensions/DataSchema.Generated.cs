@@ -537,6 +537,8 @@ namespace DataSchema
     
         private double _rewardBecomeAvailableTime;
     
+        private bool _eegRecordingEnabled;
+    
         public Metadata()
         {
             _animalId = "";
@@ -545,6 +547,7 @@ namespace DataSchema
             _rewardTime = 0.1D;
             _loggingRootPath = "";
             _rewardBecomeAvailableTime = 1.5D;
+            _eegRecordingEnabled = false;
         }
     
         protected Metadata(Metadata other)
@@ -556,6 +559,7 @@ namespace DataSchema
             _loggingRootPath = other._loggingRootPath;
             _initialSequence = other._initialSequence;
             _rewardBecomeAvailableTime = other._rewardBecomeAvailableTime;
+            _eegRecordingEnabled = other._eegRecordingEnabled;
         }
     
         public string AnimalId
@@ -664,6 +668,22 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Boolean specifying whether to enable EEG recording for this session
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Boolean specifying whether to enable EEG recording for this session")]
+        public bool EegRecordingEnabled
+        {
+            get
+            {
+                return _eegRecordingEnabled;
+            }
+            set
+            {
+                _eegRecordingEnabled = value;
+            }
+        }
+    
         public System.IObservable<Metadata> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
@@ -682,7 +702,8 @@ namespace DataSchema
             stringBuilder.Append("RewardTime = " + _rewardTime + ", ");
             stringBuilder.Append("LoggingRootPath = " + _loggingRootPath + ", ");
             stringBuilder.Append("InitialSequence = " + _initialSequence + ", ");
-            stringBuilder.Append("RewardBecomeAvailableTime = " + _rewardBecomeAvailableTime);
+            stringBuilder.Append("RewardBecomeAvailableTime = " + _rewardBecomeAvailableTime + ", ");
+            stringBuilder.Append("EegRecordingEnabled = " + _eegRecordingEnabled);
             return true;
         }
     

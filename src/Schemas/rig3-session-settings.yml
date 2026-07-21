@@ -8,7 +8,8 @@ metadata:
   minimumSampleTime: 0.05
   loggingRootPath: C:\temp
   rewardTime: 0.01625
-  initialSequence: Schemas/odourdiscrimination-stage2.yml
+  initialSequence: Schemas/quintuples-option4.yml
+  eegRecordingEnabled: False
 
 shortcutKeys:
   endSessionKey: Ctrl+3
@@ -16,9 +17,9 @@ shortcutKeys:
   startCamera: Alt+3
 
 hardwarePorts:
-  behaviorBoard: COM11
-  olfactometer0: COM9
-  olfactometer1: COM3
+  behaviorBoard: COM3
+  olfactometer0: COM8
+  olfactometer1: COM7
 
 cameraProperties:
   frameRate: 60

@@ -137,6 +137,11 @@
                     "description": "Time in seconds after leaving odour port following rewared odour that it becomes available",
                     "default": 1.5,
                     "type": "number"
+                },
+                "eegRecordingEnabled": {
+                    "description": "Boolean specifying whether to enable EEG recording for this session",
+                    "default": false,
+                    "type": "boolean"
                 }
             }
         },
