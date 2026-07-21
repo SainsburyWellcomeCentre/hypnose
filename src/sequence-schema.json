@@ -89,6 +89,11 @@
                     "description": "Time in seconds after sampling offset when subject is considered to have disengaged sampling.",
                     "default": 0.1,
                     "type": "number"
+                },
+                "rewardVolume": {
+                    "description": "Volume of reward in uL",
+                    "default": 1,
+                    "type": "number"
                 }
             }
         },

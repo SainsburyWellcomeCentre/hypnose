@@ -49,6 +49,8 @@ namespace SequenceSchema
     
         private double _sampleOffsetTime;
     
+        private double _rewardVolume;
+    
         public Sequence()
         {
             _defaultCommand = "Default";
@@ -67,6 +69,7 @@ namespace SequenceSchema
             _enableTrialStartIndicator = false;
             _sequenceLengthIndex = 0;
             _sampleOffsetTime = 0.1D;
+            _rewardVolume = 1D;
         }
     
         protected Sequence(Sequence other)
@@ -88,6 +91,7 @@ namespace SequenceSchema
             _enableTrialStartIndicator = other._enableTrialStartIndicator;
             _sequenceLengthIndex = other._sequenceLengthIndex;
             _sampleOffsetTime = other._sampleOffsetTime;
+            _rewardVolume = other._rewardVolume;
         }
     
         /// <summary>
@@ -368,6 +372,22 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// Volume of reward in uL
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Volume of reward in uL")]
+        public double RewardVolume
+        {
+            get
+            {
+                return _rewardVolume;
+            }
+            set
+            {
+                _rewardVolume = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -396,7 +416,8 @@ namespace SequenceSchema
             stringBuilder.Append("RewardAvailablePokeReset = " + _rewardAvailablePokeReset + ", ");
             stringBuilder.Append("EnableTrialStartIndicator = " + _enableTrialStartIndicator + ", ");
             stringBuilder.Append("SequenceLengthIndex = " + _sequenceLengthIndex + ", ");
-            stringBuilder.Append("SampleOffsetTime = " + _sampleOffsetTime);
+            stringBuilder.Append("SampleOffsetTime = " + _sampleOffsetTime + ", ");
+            stringBuilder.Append("RewardVolume = " + _rewardVolume);
             return true;
         }
     

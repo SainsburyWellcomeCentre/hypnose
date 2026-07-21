@@ -625,9 +625,9 @@ namespace DataSchema
         }
     
         /// <summary>
-        /// Time in seconds to deliver rewards
+        /// Time in seconds to deliver 1uL of rewards
         /// </summary>
-        [System.ComponentModel.DescriptionAttribute("Time in seconds to deliver rewards")]
+        [System.ComponentModel.DescriptionAttribute("Time in seconds to deliver 1uL of rewards")]
         public double RewardTime
         {
             get

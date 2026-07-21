@@ -125,7 +125,7 @@
                     "type": "number"
                 },
                 "rewardTime": {
-                    "description": "Time in seconds to deliver rewards",
+                    "description": "Time in seconds to deliver 1uL of rewards",
                     "default": 0.1,
                     "type": "number"
                 },
