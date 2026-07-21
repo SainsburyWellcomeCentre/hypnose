@@ -10,6 +10,7 @@ metadata:
   rewardTime: 0.01625
   initialSequence: Schemas/quintuples-option4.yml
   eegRecordingEnabled: False
+  maximumRewardsAvailable: 200
 
 shortcutKeys:
   endSessionKey: Ctrl+3
@@ -22,6 +23,7 @@ hardwarePorts:
   olfactometer1: COM7
 
 cameraProperties:
+  cameraId: 24282626
   frameRate: 60
   exposure: 15000
   gain: 10

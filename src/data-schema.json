@@ -142,6 +142,11 @@
                     "description": "Boolean specifying whether to enable EEG recording for this session",
                     "default": false,
                     "type": "boolean"
+                },
+                "maximumRewardsAvailable": {
+                    "description": "Maximum number of rewards available for this session.",
+                    "default": 200,
+                    "type": "integer"
                 }
             }
         },

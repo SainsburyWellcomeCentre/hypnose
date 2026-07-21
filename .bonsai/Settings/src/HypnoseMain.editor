@@ -8,8 +8,9 @@
     </Contents>
     <Panes Count="2">
       <Pane ID="0" DockState="DockBottom" ActiveContent="-1">
-        <Contents Count="1">
+        <Contents Count="2">
           <Content ID="0" RefID="1" />
+          <Content ID="1" RefID="0" />
         </Contents>
       </Pane>
       <Pane ID="1" DockState="Document" ActiveContent="2">

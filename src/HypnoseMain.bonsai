@@ -2118,7 +2118,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT2S</rx:DueTime>
+                                  <rx:DueTime>PT1S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -2219,7 +2219,7 @@
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.001</Value>
+                                        <Value>0.25</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="SubscribeSubject">
@@ -2251,7 +2251,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>2.2</Value>
+                                        <Value>1.2</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="Combinator">
@@ -2340,7 +2340,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.001</Value>
+                                        <Value>0.25</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
@@ -2435,7 +2435,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT2S</rx:DueTime>
+                                  <rx:DueTime>PT1S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2530,7 +2530,7 @@
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.001</Value>
+                                        <Value>0.25</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="SubscribeSubject">
@@ -2562,7 +2562,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>2.2</Value>
+                                        <Value>1.2</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="Combinator">
@@ -2651,7 +2651,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.001</Value>
+                                        <Value>0.25</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
@@ -2731,7 +2731,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Timer">
-                                  <rx:DueTime>PT5S</rx:DueTime>
+                                  <rx:DueTime>PT3S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -4633,7 +4633,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT5S</rx:DueTime>
+                            <rx:DueTime>P1DT3H46M39S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -4934,7 +4934,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT3S</rx:DueTime>
+                            <rx:DueTime>PT0S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -5475,7 +5475,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:LoadSessionSettings">
-                <p1:Path>Schemas\rig1-session-settings.yml</p1:Path>
+                <p1:Path>Schemas\testrig-session-settings.yml</p1:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -5543,7 +5543,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:SequenceSelector">
-                      <p1:Path>Schemas/quintuples-option4.yml</p1:Path>
+                      <p1:Path>Schemas/odourdiscrimination-stage2.yml</p1:Path>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -5638,8 +5638,142 @@ it.Item2 as TrialComplete
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:Take">
-                <rx:Count>1</rx:Count>
+              <Combinator xsi:type="rx:Delay">
+                <rx:DueTime>PT1S</rx:DueTime>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="p5:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="p5:CreateEnableFlowPayload">
+                <p5:EnableFlow>Disabled</p5:EnableFlow>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>CommandsO0</Name>
+            </Expression>
+            <Expression xsi:type="p5:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="p5:CreateEnableFlowPayload">
+                <p5:EnableFlow>Disabled</p5:EnableFlow>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>CommandsO1</Name>
+            </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreateOutputClearPayload">
+                <beh:OutputClear>DOPort0 DOPort1 DOPort2</beh:OutputClear>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>BehaviorCommands</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="StringProperty">
+                <Value>Default</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>OlfactometerCommand</Name>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>RewardCommand</Name>
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Name>R1</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>RewardPosition</Selector>
+                  </Expression>
+                  <Expression xsi:type="Equal">
+                    <Operand xsi:type="IntProperty">
+                      <Value>0</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="IntProperty">
+                <Value>1</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Name>R2</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>RewardPosition</Selector>
+                  </Expression>
+                  <Expression xsi:type="Equal">
+                    <Operand xsi:type="IntProperty">
+                      <Value>1</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="IntProperty">
+                <Value>1</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="rx:Accumulate" />
+            <Expression xsi:type="SubscribeSubject">
+              <Name>SessionSettings</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>Metadata.MaximumRewardsAvailable</Selector>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="Value" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="Equal">
+              <Operand xsi:type="IntProperty">
+                <Value>2</Value>
+              </Operand>
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Delay">
+                <rx:DueTime>PT1S</rx:DueTime>
               </Combinator>
             </Expression>
             <Expression xsi:type="p5:CreateMessage">
@@ -5678,8 +5812,11 @@ it.Item2 as TrialComplete
               <Name>OlfactometerCommand</Name>
             </Expression>
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:Delay">
-                <rx:DueTime>PT1S</rx:DueTime>
+              <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Take">
+                <rx:Count>1</rx:Count>
               </Combinator>
             </Expression>
           </Nodes>
@@ -5699,7 +5836,30 @@ it.Item2 as TrialComplete
             <Edge From="12" To="13" Label="Source1" />
             <Edge From="13" To="14" Label="Source1" />
             <Edge From="14" To="15" Label="Source1" />
-            <Edge From="15" To="16" Label="Source1" />
+            <Edge From="15" To="37" Label="Source1" />
+            <Edge From="16" To="17" Label="Source1" />
+            <Edge From="16" To="19" Label="Source1" />
+            <Edge From="17" To="18" Label="Source1" />
+            <Edge From="18" To="21" Label="Source1" />
+            <Edge From="19" To="20" Label="Source1" />
+            <Edge From="20" To="21" Label="Source2" />
+            <Edge From="21" To="22" Label="Source1" />
+            <Edge From="22" To="26" Label="Source1" />
+            <Edge From="23" To="24" Label="Source1" />
+            <Edge From="24" To="25" Label="Source1" />
+            <Edge From="25" To="26" Label="Source2" />
+            <Edge From="26" To="27" Label="Source1" />
+            <Edge From="27" To="28" Label="Source1" />
+            <Edge From="28" To="29" Label="Source1" />
+            <Edge From="29" To="30" Label="Source1" />
+            <Edge From="30" To="31" Label="Source1" />
+            <Edge From="31" To="32" Label="Source1" />
+            <Edge From="32" To="33" Label="Source1" />
+            <Edge From="33" To="34" Label="Source1" />
+            <Edge From="34" To="35" Label="Source1" />
+            <Edge From="35" To="36" Label="Source1" />
+            <Edge From="36" To="37" Label="Source2" />
+            <Edge From="37" To="38" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>

@@ -10,6 +10,7 @@ metadata:
   rewardTime: 0.015
   initialSequence: Schemas/odourdiscrimination-stage3.yml
   eegRecordingEnabled: False
+  maximumRewardsAvailable: 200
 
 shortcutKeys:
   endSessionKey: Ctrl+2
@@ -22,6 +23,7 @@ hardwarePorts:
   olfactometer1: COM9
 
 cameraProperties:
+  cameraId: 24282622
   frameRate: 60
   exposure: 15000
   gain: 10

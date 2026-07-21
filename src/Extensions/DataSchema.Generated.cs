@@ -539,6 +539,8 @@ namespace DataSchema
     
         private bool _eegRecordingEnabled;
     
+        private int _maximumRewardsAvailable;
+    
         public Metadata()
         {
             _animalId = "";
@@ -548,6 +550,7 @@ namespace DataSchema
             _loggingRootPath = "";
             _rewardBecomeAvailableTime = 1.5D;
             _eegRecordingEnabled = false;
+            _maximumRewardsAvailable = 200;
         }
     
         protected Metadata(Metadata other)
@@ -560,6 +563,7 @@ namespace DataSchema
             _initialSequence = other._initialSequence;
             _rewardBecomeAvailableTime = other._rewardBecomeAvailableTime;
             _eegRecordingEnabled = other._eegRecordingEnabled;
+            _maximumRewardsAvailable = other._maximumRewardsAvailable;
         }
     
         public string AnimalId
@@ -684,6 +688,22 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Maximum number of rewards available for this session.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum number of rewards available for this session.")]
+        public int MaximumRewardsAvailable
+        {
+            get
+            {
+                return _maximumRewardsAvailable;
+            }
+            set
+            {
+                _maximumRewardsAvailable = value;
+            }
+        }
+    
         public System.IObservable<Metadata> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Metadata(this)));
@@ -703,7 +723,8 @@ namespace DataSchema
             stringBuilder.Append("LoggingRootPath = " + _loggingRootPath + ", ");
             stringBuilder.Append("InitialSequence = " + _initialSequence + ", ");
             stringBuilder.Append("RewardBecomeAvailableTime = " + _rewardBecomeAvailableTime + ", ");
-            stringBuilder.Append("EegRecordingEnabled = " + _eegRecordingEnabled);
+            stringBuilder.Append("EegRecordingEnabled = " + _eegRecordingEnabled + ", ");
+            stringBuilder.Append("MaximumRewardsAvailable = " + _maximumRewardsAvailable);
             return true;
         }
     
