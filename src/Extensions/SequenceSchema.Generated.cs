@@ -53,6 +53,8 @@ namespace SequenceSchema
     
         private double _maximumInterOdourPokeTime;
     
+        private int _performanceAverageWindow;
+    
         public Sequence()
         {
             _defaultCommand = "Default";
@@ -73,6 +75,7 @@ namespace SequenceSchema
             _sampleOffsetTime = 0.1D;
             _rewardVolume = 1D;
             _maximumInterOdourPokeTime = 0.5D;
+            _performanceAverageWindow = 10;
         }
     
         protected Sequence(Sequence other)
@@ -96,6 +99,7 @@ namespace SequenceSchema
             _sampleOffsetTime = other._sampleOffsetTime;
             _rewardVolume = other._rewardVolume;
             _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
+            _performanceAverageWindow = other._performanceAverageWindow;
         }
     
         /// <summary>
@@ -409,6 +413,22 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// Size of the window to calculate performance average over
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Size of the window to calculate performance average over")]
+        public int PerformanceAverageWindow
+        {
+            get
+            {
+                return _performanceAverageWindow;
+            }
+            set
+            {
+                _performanceAverageWindow = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -439,7 +459,8 @@ namespace SequenceSchema
             stringBuilder.Append("SequenceLengthIndex = " + _sequenceLengthIndex + ", ");
             stringBuilder.Append("SampleOffsetTime = " + _sampleOffsetTime + ", ");
             stringBuilder.Append("RewardVolume = " + _rewardVolume + ", ");
-            stringBuilder.Append("MaximumInterOdourPokeTime = " + _maximumInterOdourPokeTime);
+            stringBuilder.Append("MaximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
+            stringBuilder.Append("PerformanceAverageWindow = " + _performanceAverageWindow);
             return true;
         }
     

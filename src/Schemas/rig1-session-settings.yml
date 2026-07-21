@@ -8,7 +8,6 @@ metadata:
   minimumSampleTime: 0.05
   loggingRootPath: C:\temp
   rewardTime: 0.015
-  performanceAverageWindow: 5
   initialSequence: Schemas/odourdiscrimination-stage2.yml
 
 shortcutKeys:

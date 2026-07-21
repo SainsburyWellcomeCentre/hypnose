@@ -533,8 +533,6 @@ namespace DataSchema
     
         private string _loggingRootPath;
     
-        private int _performanceAverageWindow;
-    
         private string _initialSequence;
     
         private double _rewardBecomeAvailableTime;
@@ -546,7 +544,6 @@ namespace DataSchema
             _minimumSampleTime = 0.1D;
             _rewardTime = 0.1D;
             _loggingRootPath = "";
-            _performanceAverageWindow = 10;
             _rewardBecomeAvailableTime = 1.5D;
         }
     
@@ -557,7 +554,6 @@ namespace DataSchema
             _minimumSampleTime = other._minimumSampleTime;
             _rewardTime = other._rewardTime;
             _loggingRootPath = other._loggingRootPath;
-            _performanceAverageWindow = other._performanceAverageWindow;
             _initialSequence = other._initialSequence;
             _rewardBecomeAvailableTime = other._rewardBecomeAvailableTime;
         }
@@ -636,22 +632,6 @@ namespace DataSchema
         }
     
         /// <summary>
-        /// Size of the window to calculate performance average over
-        /// </summary>
-        [System.ComponentModel.DescriptionAttribute("Size of the window to calculate performance average over")]
-        public int PerformanceAverageWindow
-        {
-            get
-            {
-                return _performanceAverageWindow;
-            }
-            set
-            {
-                _performanceAverageWindow = value;
-            }
-        }
-    
-        /// <summary>
         /// Path to the initial sequence .yml file to run
         /// </summary>
         [System.ComponentModel.DescriptionAttribute("Path to the initial sequence .yml file to run")]
@@ -701,7 +681,6 @@ namespace DataSchema
             stringBuilder.Append("MinimumSampleTime = " + _minimumSampleTime + ", ");
             stringBuilder.Append("RewardTime = " + _rewardTime + ", ");
             stringBuilder.Append("LoggingRootPath = " + _loggingRootPath + ", ");
-            stringBuilder.Append("PerformanceAverageWindow = " + _performanceAverageWindow + ", ");
             stringBuilder.Append("InitialSequence = " + _initialSequence + ", ");
             stringBuilder.Append("RewardBecomeAvailableTime = " + _rewardBecomeAvailableTime);
             return true;

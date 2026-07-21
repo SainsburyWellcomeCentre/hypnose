@@ -1933,10 +1933,10 @@
         <scr:Expression>Convert.ToInt32(it)</scr:Expression>
       </Expression>
       <Expression xsi:type="SubscribeSubject">
-        <Name>SessionSettings</Name>
+        <Name>ProtocolSettings</Name>
       </Expression>
       <Expression xsi:type="MemberSelector">
-        <Selector>Metadata.PerformanceAverageWindow</Selector>
+        <Selector>PerformanceAverageWindow</Selector>
       </Expression>
       <Expression xsi:type="PropertyMapping">
         <PropertyMappings>

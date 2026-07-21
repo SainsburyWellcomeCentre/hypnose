@@ -24,7 +24,8 @@ sequences: [
     skipSampling: False,
     sampleOffsetTime: 0.5,
     rewardVolume: 8,
-    maximumInterOdourPokeTime: 3
+    maximumInterOdourPokeTime: 3,
+    performanceAverageWindow: 5
     },
     {name: OdourDiscriminationB_Stage2,
     defaultCommand: Default,
@@ -45,6 +46,7 @@ sequences: [
     skipSampling: False,
     sampleOffsetTime: 0.5,
     rewardVolume: 8,
-    maximumInterOdourPokeTime: 3
+    maximumInterOdourPokeTime: 3,
+    performanceAverageWindow: 5
     }]
 ]
