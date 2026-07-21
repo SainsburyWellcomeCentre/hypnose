@@ -13,6 +13,7 @@ metadata:
 shortcutKeys:
   endSessionKey: Ctrl+1
   startOlfactometerPurgeKey: Shift+1
+  startCamera: Alt+1
 
 hardwarePorts:
   behaviorBoard: COM11

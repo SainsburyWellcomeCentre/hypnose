@@ -711,16 +711,20 @@ namespace DataSchema
     
         private string _startOlfactometerPurgeKey;
     
+        private string _startCamera;
+    
         public ShortcutKeys()
         {
             _endSessionKey = "Ctrl+1";
             _startOlfactometerPurgeKey = "Shift+1";
+            _startCamera = "S+1";
         }
     
         protected ShortcutKeys(ShortcutKeys other)
         {
             _endSessionKey = other._endSessionKey;
             _startOlfactometerPurgeKey = other._startOlfactometerPurgeKey;
+            _startCamera = other._startCamera;
         }
     
         /// <summary>
@@ -755,6 +759,22 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// The key to press to start the camera
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The key to press to start the camera")]
+        public string StartCamera
+        {
+            get
+            {
+                return _startCamera;
+            }
+            set
+            {
+                _startCamera = value;
+            }
+        }
+    
         public System.IObservable<ShortcutKeys> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new ShortcutKeys(this)));
@@ -768,7 +788,8 @@ namespace DataSchema
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
         {
             stringBuilder.Append("EndSessionKey = " + _endSessionKey + ", ");
-            stringBuilder.Append("StartOlfactometerPurgeKey = " + _startOlfactometerPurgeKey);
+            stringBuilder.Append("StartOlfactometerPurgeKey = " + _startOlfactometerPurgeKey + ", ");
+            stringBuilder.Append("StartCamera = " + _startCamera);
             return true;
         }
     

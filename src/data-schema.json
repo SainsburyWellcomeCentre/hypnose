@@ -150,6 +150,11 @@
                 "startOlfactometerPurgeKey": {
                     "description": "The key to press to start the olfactometer purge",
                     "default": "Shift+1",
+                    "type": "string"    
+                },
+                "startCamera": {
+                    "description": "The key to press to start the camera",
+                    "default": "S+1",
                     "type": "string"
                 }
             }
