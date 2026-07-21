@@ -10,7 +10,6 @@ metadata:
   rewardTime: 0.015
   performanceAverageWindow: 5
   initialSequence: Schemas/odourdiscrimination-stage2.yml
-  maximumInterOdourPokeTime: 3
 
 shortcutKeys:
   endSessionKey: Ctrl+1

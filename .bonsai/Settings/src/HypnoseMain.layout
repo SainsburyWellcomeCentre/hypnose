@@ -30,9 +30,53 @@
       <ObjectTextVisualizer />
     </VisualizerSettings>
     <NestedLayout>
+      <WindowSettings Index="8">
+        <NestedLayout>
+          <WindowSettings Index="20">
+            <NestedLayout>
+              <WindowSettings Index="144">
+                <Visible>false</Visible>
+                <Location>
+                  <X>286</X>
+                  <Y>286</Y>
+                </Location>
+                <Size>
+                  <Width>336</Width>
+                  <Height>223</Height>
+                </Size>
+                <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+                <VisualizerSettings>
+                  <ObjectTextVisualizer />
+                </VisualizerSettings>
+              </WindowSettings>
+              <WindowSettings Index="145">
+                <Visible>false</Visible>
+                <Location>
+                  <X>260</X>
+                  <Y>260</Y>
+                </Location>
+                <Size>
+                  <Width>416</Width>
+                  <Height>279</Height>
+                </Size>
+                <VisualizerTypeName>Bonsai.Design.Visualizers.TimeSeriesVisualizer</VisualizerTypeName>
+                <VisualizerSettings>
+                  <TimeSeriesVisualizer>
+                    <Capacity>640</Capacity>
+                    <Min>-1</Min>
+                    <Max>1</Max>
+                    <AutoScale>true</AutoScale>
+                  </TimeSeriesVisualizer>
+                </VisualizerSettings>
+              </WindowSettings>
+            </NestedLayout>
+          </WindowSettings>
+        </NestedLayout>
+      </WindowSettings>
       <WindowSettings Index="12">
         <NestedLayout>
           <WindowSettings Index="16">
+            <Visible>false</Visible>
             <Location>
               <X>821</X>
               <Y>807</Y>
@@ -47,6 +91,7 @@
             </VisualizerSettings>
           </WindowSettings>
           <WindowSettings Index="33">
+            <Visible>false</Visible>
             <Location>
               <X>1249</X>
               <Y>819</Y>

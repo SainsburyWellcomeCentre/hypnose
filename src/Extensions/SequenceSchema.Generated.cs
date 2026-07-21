@@ -51,6 +51,8 @@ namespace SequenceSchema
     
         private double _rewardVolume;
     
+        private double _maximumInterOdourPokeTime;
+    
         public Sequence()
         {
             _defaultCommand = "Default";
@@ -70,6 +72,7 @@ namespace SequenceSchema
             _sequenceLengthIndex = 0;
             _sampleOffsetTime = 0.1D;
             _rewardVolume = 1D;
+            _maximumInterOdourPokeTime = 0.5D;
         }
     
         protected Sequence(Sequence other)
@@ -92,6 +95,7 @@ namespace SequenceSchema
             _sequenceLengthIndex = other._sequenceLengthIndex;
             _sampleOffsetTime = other._sampleOffsetTime;
             _rewardVolume = other._rewardVolume;
+            _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
         }
     
         /// <summary>
@@ -388,6 +392,23 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum time after interCommandTime that subject has to repoke - otherwise trial " +
+            "ends.")]
+        public double MaximumInterOdourPokeTime
+        {
+            get
+            {
+                return _maximumInterOdourPokeTime;
+            }
+            set
+            {
+                _maximumInterOdourPokeTime = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -417,7 +438,8 @@ namespace SequenceSchema
             stringBuilder.Append("EnableTrialStartIndicator = " + _enableTrialStartIndicator + ", ");
             stringBuilder.Append("SequenceLengthIndex = " + _sequenceLengthIndex + ", ");
             stringBuilder.Append("SampleOffsetTime = " + _sampleOffsetTime + ", ");
-            stringBuilder.Append("RewardVolume = " + _rewardVolume);
+            stringBuilder.Append("RewardVolume = " + _rewardVolume + ", ");
+            stringBuilder.Append("MaximumInterOdourPokeTime = " + _maximumInterOdourPokeTime);
             return true;
         }
     

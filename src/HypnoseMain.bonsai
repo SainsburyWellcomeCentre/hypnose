@@ -3096,10 +3096,10 @@
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
-                          <Name>SessionSettings</Name>
+                          <Name>ProtocolSettings</Name>
                         </Expression>
                         <Expression xsi:type="MemberSelector">
-                          <Selector>Metadata.MaximumInterOdourPokeTime</Selector>
+                          <Selector>MaximumInterOdourPokeTime</Selector>
                         </Expression>
                         <Expression xsi:type="scr:ExpressionTransform">
                           <scr:Expression>TimeSpan.FromSeconds(it)</scr:Expression>

@@ -23,7 +23,8 @@ sequences: [
     resetOnReward: True,
     skipSampling: False,
     sampleOffsetTime: 0.5,
-    rewardVolume: 8
+    rewardVolume: 8,
+    maximumInterOdourPokeTime: 3
     },
     {name: OdourDiscriminationB_Stage2,
     defaultCommand: Default,
@@ -43,6 +44,7 @@ sequences: [
     resetOnReward: True,
     skipSampling: False,
     sampleOffsetTime: 0.5,
-    rewardVolume: 8
+    rewardVolume: 8,
+    maximumInterOdourPokeTime: 3
     }]
 ]

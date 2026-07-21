@@ -94,6 +94,11 @@
                     "description": "Volume of reward in uL",
                     "default": 1,
                     "type": "number"
+                },
+                "maximumInterOdourPokeTime": {
+                    "description": "Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.",
+                    "default": 0.5,
+                    "type": "number"
                 }
             }
         },

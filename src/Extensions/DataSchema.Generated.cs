@@ -529,8 +529,6 @@ namespace DataSchema
     
         private double _minimumSampleTime;
     
-        private double _maximumInterOdourPokeTime;
-    
         private double _rewardTime;
     
         private string _loggingRootPath;
@@ -546,7 +544,6 @@ namespace DataSchema
             _animalId = "";
             _rootPath = "";
             _minimumSampleTime = 0.1D;
-            _maximumInterOdourPokeTime = 0.5D;
             _rewardTime = 0.1D;
             _loggingRootPath = "";
             _performanceAverageWindow = 10;
@@ -558,7 +555,6 @@ namespace DataSchema
             _animalId = other._animalId;
             _rootPath = other._rootPath;
             _minimumSampleTime = other._minimumSampleTime;
-            _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
             _rewardTime = other._rewardTime;
             _loggingRootPath = other._loggingRootPath;
             _performanceAverageWindow = other._performanceAverageWindow;
@@ -604,23 +600,6 @@ namespace DataSchema
             set
             {
                 _minimumSampleTime = value;
-            }
-        }
-    
-        /// <summary>
-        /// Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.
-        /// </summary>
-        [System.ComponentModel.DescriptionAttribute("Maximum time after interCommandTime that subject has to repoke - otherwise trial " +
-            "ends.")]
-        public double MaximumInterOdourPokeTime
-        {
-            get
-            {
-                return _maximumInterOdourPokeTime;
-            }
-            set
-            {
-                _maximumInterOdourPokeTime = value;
             }
         }
     
@@ -720,7 +699,6 @@ namespace DataSchema
             stringBuilder.Append("AnimalId = " + _animalId + ", ");
             stringBuilder.Append("RootPath = " + _rootPath + ", ");
             stringBuilder.Append("MinimumSampleTime = " + _minimumSampleTime + ", ");
-            stringBuilder.Append("MaximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
             stringBuilder.Append("RewardTime = " + _rewardTime + ", ");
             stringBuilder.Append("LoggingRootPath = " + _loggingRootPath + ", ");
             stringBuilder.Append("PerformanceAverageWindow = " + _performanceAverageWindow + ", ");
