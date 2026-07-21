@@ -529,8 +529,6 @@ namespace DataSchema
     
         private double _minimumSampleTime;
     
-        private double _sampleOffsetTime;
-    
         private double _maximumInterOdourPokeTime;
     
         private double _rewardTime;
@@ -548,7 +546,6 @@ namespace DataSchema
             _animalId = "";
             _rootPath = "";
             _minimumSampleTime = 0.1D;
-            _sampleOffsetTime = 0.1D;
             _maximumInterOdourPokeTime = 0.5D;
             _rewardTime = 0.1D;
             _loggingRootPath = "";
@@ -561,7 +558,6 @@ namespace DataSchema
             _animalId = other._animalId;
             _rootPath = other._rootPath;
             _minimumSampleTime = other._minimumSampleTime;
-            _sampleOffsetTime = other._sampleOffsetTime;
             _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
             _rewardTime = other._rewardTime;
             _loggingRootPath = other._loggingRootPath;
@@ -608,23 +604,6 @@ namespace DataSchema
             set
             {
                 _minimumSampleTime = value;
-            }
-        }
-    
-        /// <summary>
-        /// Time in seconds after sampling offset when subject is considered to have disengaged sampling.
-        /// </summary>
-        [System.ComponentModel.DescriptionAttribute("Time in seconds after sampling offset when subject is considered to have disengag" +
-            "ed sampling.")]
-        public double SampleOffsetTime
-        {
-            get
-            {
-                return _sampleOffsetTime;
-            }
-            set
-            {
-                _sampleOffsetTime = value;
             }
         }
     
@@ -741,7 +720,6 @@ namespace DataSchema
             stringBuilder.Append("AnimalId = " + _animalId + ", ");
             stringBuilder.Append("RootPath = " + _rootPath + ", ");
             stringBuilder.Append("MinimumSampleTime = " + _minimumSampleTime + ", ");
-            stringBuilder.Append("SampleOffsetTime = " + _sampleOffsetTime + ", ");
             stringBuilder.Append("MaximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
             stringBuilder.Append("RewardTime = " + _rewardTime + ", ");
             stringBuilder.Append("LoggingRootPath = " + _loggingRootPath + ", ");

@@ -21,7 +21,8 @@ sequences: [
     enableTrialEndIndicator: False,
     enableRewardLocationIndicator: Both,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    sampleOffsetTime: 0.5
     },
     {name: OdourDiscriminationB_Stage2,
     defaultCommand: Default,
@@ -39,6 +40,7 @@ sequences: [
     enableTrialEndIndicator: False,
     enableRewardLocationIndicator: Both,
     resetOnReward: True,
-    skipSampling: False
+    skipSampling: False,
+    sampleOffsetTime: 0.5
     }]
 ]

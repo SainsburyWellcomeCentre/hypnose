@@ -119,11 +119,6 @@
                     "default": 0.1,
                     "type": "number"
                 },
-                "sampleOffsetTime": {
-                    "description": "Time in seconds after sampling offset when subject is considered to have disengaged sampling.",
-                    "default": 0.1,
-                    "type": "number"
-                },
                 "maximumInterOdourPokeTime": {
                     "description": "Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.",
                     "default": 0.5,

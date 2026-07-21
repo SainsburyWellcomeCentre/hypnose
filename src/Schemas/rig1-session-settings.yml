@@ -6,11 +6,10 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  sampleOffsetTime: 0.5
   loggingRootPath: C:\temp
   rewardTime: 0.106
   performanceAverageWindow: 5
-  initialSequence: Schemas/triples-option4-easy.yml
+  initialSequence: Schemas/odourdiscrimination-stage2.yml
   maximumInterOdourPokeTime: 3
 
 shortcutKeys:

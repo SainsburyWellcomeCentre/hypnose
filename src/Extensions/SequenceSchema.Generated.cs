@@ -47,6 +47,8 @@ namespace SequenceSchema
     
         private int _sequenceLengthIndex;
     
+        private double _sampleOffsetTime;
+    
         public Sequence()
         {
             _defaultCommand = "Default";
@@ -64,6 +66,7 @@ namespace SequenceSchema
             _rewardAvailablePokeReset = false;
             _enableTrialStartIndicator = false;
             _sequenceLengthIndex = 0;
+            _sampleOffsetTime = 0.1D;
         }
     
         protected Sequence(Sequence other)
@@ -84,6 +87,7 @@ namespace SequenceSchema
             _rewardAvailablePokeReset = other._rewardAvailablePokeReset;
             _enableTrialStartIndicator = other._enableTrialStartIndicator;
             _sequenceLengthIndex = other._sequenceLengthIndex;
+            _sampleOffsetTime = other._sampleOffsetTime;
         }
     
         /// <summary>
@@ -347,6 +351,23 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// Time in seconds after sampling offset when subject is considered to have disengaged sampling.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Time in seconds after sampling offset when subject is considered to have disengag" +
+            "ed sampling.")]
+        public double SampleOffsetTime
+        {
+            get
+            {
+                return _sampleOffsetTime;
+            }
+            set
+            {
+                _sampleOffsetTime = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -374,7 +395,8 @@ namespace SequenceSchema
             stringBuilder.Append("SkipSampling = " + _skipSampling + ", ");
             stringBuilder.Append("RewardAvailablePokeReset = " + _rewardAvailablePokeReset + ", ");
             stringBuilder.Append("EnableTrialStartIndicator = " + _enableTrialStartIndicator + ", ");
-            stringBuilder.Append("SequenceLengthIndex = " + _sequenceLengthIndex);
+            stringBuilder.Append("SequenceLengthIndex = " + _sequenceLengthIndex + ", ");
+            stringBuilder.Append("SampleOffsetTime = " + _sampleOffsetTime);
             return true;
         }
     
