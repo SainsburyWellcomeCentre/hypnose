@@ -7,8 +7,8 @@ metadata:
   rootPath: test
   minimumSampleTime: 0.05
   loggingRootPath: C:\temp
-  rewardTime: 0.015
-  initialSequence: Schemas/odourdiscrimination-stage2.yml
+  rewardTime: 0.014875
+  initialSequence: Schemas/quintuples-option4.yml
 
 shortcutKeys:
   endSessionKey: Ctrl+1
