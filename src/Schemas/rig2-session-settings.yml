@@ -6,7 +6,7 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  loggingRootPath: C:\temp
+  loggingRootPath: C:\hypnose\rawdata\sub-062_id-426\ses-011_date-20260723\behav
   rewardTime: 0.015
   initialSequence: Schemas/odourdiscrimination-stage3.yml
   eegRecordingEnabled: False
