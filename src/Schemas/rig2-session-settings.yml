@@ -6,14 +6,24 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  sampleOffsetTime: 0.5
-  loggingRootPath: C:\hypnose\rawdata\sub-062_id-426\ses-004_date-20260713\behav
-  rewardTime: 0.122
-  performanceAverageWindow: 5
-  initialSequence: Schemas/odourdiscrimination-stage2a.yml
-  maximumInterOdourPokeTime: 3
+  loggingRootPath: C:\hypnose\rawdata\sub-062_id-426\ses-011_date-20260723\behav
+  rewardTime: 0.015
+  initialSequence: Schemas/odourdiscrimination-stage3.yml
+  eegRecordingEnabled: False
+  maximumRewardsAvailable: 200
+
+shortcutKeys:
+  endSessionKey: Ctrl+2
+  startOlfactometerPurgeKey: Shift+2
+  startCamera: Alt+2
+
+hardwarePorts:
+  behaviorBoard: COM4
+  olfactometer0: COM8
+  olfactometer1: COM9
 
 cameraProperties:
+  cameraId: 24282622
   frameRate: 60
   exposure: 15000
   gain: 10

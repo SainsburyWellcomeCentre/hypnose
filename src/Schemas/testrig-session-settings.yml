@@ -18,9 +18,9 @@ shortcutKeys:
   startCamera: Alt+1
 
 hardwarePorts:
-  behaviorBoard: COM14
-  olfactometer0: COM5
-  olfactometer1: COM7
+  behaviorBoard: COM11
+  olfactometer0: COM9
+  olfactometer1: COM3
 
 cameraProperties:
   cameraId: 24282618

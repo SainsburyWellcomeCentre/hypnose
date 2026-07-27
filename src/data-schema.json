@@ -119,18 +119,8 @@
                     "default": 0.1,
                     "type": "number"
                 },
-                "sampleOffsetTime": {
-                    "description": "Time in seconds after sampling offset when subject is considered to have disengaged sampling.",
-                    "default": 0.1,
-                    "type": "number"
-                },
-                "maximumInterOdourPokeTime": {
-                    "description": "Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.",
-                    "default": 0.5,
-                    "type": "number"
-                },
                 "rewardTime": {
-                    "description": "Time in seconds to deliver rewards",
+                    "description": "Time in seconds to deliver 1uL of rewards",
                     "default": 0.1,
                     "type": "number"
                 },
@@ -138,11 +128,6 @@
                     "description": "The local root folder to save data for this session",
                     "default": "",
                     "type": "string"
-                },
-                "performanceAverageWindow": {
-                    "description": "Size of the window to calculate performance average over",
-                    "default": 10,
-                    "type": "integer"
                 },
                 "initialSequence": {
                     "description": "Path to the initial sequence .yml file to run",
@@ -152,11 +137,62 @@
                     "description": "Time in seconds after leaving odour port following rewared odour that it becomes available",
                     "default": 1.5,
                     "type": "number"
+                },
+                "eegRecordingEnabled": {
+                    "description": "Boolean specifying whether to enable EEG recording for this session",
+                    "default": false,
+                    "type": "boolean"
+                },
+                "maximumRewardsAvailable": {
+                    "description": "Maximum number of rewards available for this session.",
+                    "default": 200,
+                    "type": "integer"
+                }
+            }
+        },
+        "shortcutKeys": {
+            "properties": {
+                "endSessionKey": {
+                    "description": "The key to press to end the session",
+                    "default": "Ctrl+1",
+                    "type": "string"
+                },
+                "startOlfactometerPurgeKey": {
+                    "description": "The key to press to start the olfactometer purge",
+                    "default": "Shift+1",
+                    "type": "string"    
+                },
+                "startCamera": {
+                    "description": "The key to press to start the camera",
+                    "default": "S+1",
+                    "type": "string"
+                }
+            }
+        },
+        "hardwarePorts": {
+            "properties": {
+                "behaviorBoard": {
+                    "description": "The COM port for the behavior board",
+                    "default": "Default",
+                    "type": "string"
+                },
+                "olfactometer0": {
+                    "description": "The COM port for the first olfactometer",
+                    "type": "string"
+                },
+                "olfactometer1": {
+                    "description": "The COM port for the second olfactometer",
+                    "type": "string"
                 }
             }
         },
         "cameraProperties": {
             "properties": {
+                "cameraId": {
+                    "default": 24282618,
+                    "type": "string",
+                    "description": "The camera ID to use for this rig."
+                },
                 "frameRate": {
                     "default": 60,
                     "type": "number",

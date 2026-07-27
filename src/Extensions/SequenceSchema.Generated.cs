@@ -27,8 +27,6 @@ namespace SequenceSchema
     
         private double _responseTime;
     
-        private double _maximumTime;
-    
         private System.Collections.Generic.List<RewardCondition> _rewardConditions;
     
         private int _rewardAttempts;
@@ -49,6 +47,14 @@ namespace SequenceSchema
     
         private int _sequenceLengthIndex;
     
+        private double _sampleOffsetTime;
+    
+        private double _rewardVolume;
+    
+        private double _maximumInterOdourPokeTime;
+    
+        private int _performanceAverageWindow;
+    
         public Sequence()
         {
             _defaultCommand = "Default";
@@ -56,7 +62,6 @@ namespace SequenceSchema
             _interCommandTime = 0.2D;
             _interTrialInterval = 0D;
             _responseTime = 5D;
-            _maximumTime = 10D;
             _rewardConditions = new System.Collections.Generic.List<RewardCondition>();
             _rewardAttempts = 1;
             _enableTrialEndIndicator = false;
@@ -67,6 +72,10 @@ namespace SequenceSchema
             _rewardAvailablePokeReset = false;
             _enableTrialStartIndicator = false;
             _sequenceLengthIndex = 0;
+            _sampleOffsetTime = 0.1D;
+            _rewardVolume = 1D;
+            _maximumInterOdourPokeTime = 0.5D;
+            _performanceAverageWindow = 10;
         }
     
         protected Sequence(Sequence other)
@@ -77,7 +86,6 @@ namespace SequenceSchema
             _interCommandTime = other._interCommandTime;
             _interTrialInterval = other._interTrialInterval;
             _responseTime = other._responseTime;
-            _maximumTime = other._maximumTime;
             _rewardConditions = other._rewardConditions;
             _rewardAttempts = other._rewardAttempts;
             _enableTrialEndIndicator = other._enableTrialEndIndicator;
@@ -88,6 +96,10 @@ namespace SequenceSchema
             _rewardAvailablePokeReset = other._rewardAvailablePokeReset;
             _enableTrialStartIndicator = other._enableTrialStartIndicator;
             _sequenceLengthIndex = other._sequenceLengthIndex;
+            _sampleOffsetTime = other._sampleOffsetTime;
+            _rewardVolume = other._rewardVolume;
+            _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
+            _performanceAverageWindow = other._performanceAverageWindow;
         }
     
         /// <summary>
@@ -184,22 +196,6 @@ namespace SequenceSchema
             set
             {
                 _responseTime = value;
-            }
-        }
-    
-        /// <summary>
-        /// The maximum time in seconds that a sequence can last
-        /// </summary>
-        [System.ComponentModel.DescriptionAttribute("The maximum time in seconds that a sequence can last")]
-        public double MaximumTime
-        {
-            get
-            {
-                return _maximumTime;
-            }
-            set
-            {
-                _maximumTime = value;
             }
         }
     
@@ -367,6 +363,72 @@ namespace SequenceSchema
             }
         }
     
+        /// <summary>
+        /// Time in seconds after sampling offset when subject is considered to have disengaged sampling.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Time in seconds after sampling offset when subject is considered to have disengag" +
+            "ed sampling.")]
+        public double SampleOffsetTime
+        {
+            get
+            {
+                return _sampleOffsetTime;
+            }
+            set
+            {
+                _sampleOffsetTime = value;
+            }
+        }
+    
+        /// <summary>
+        /// Volume of reward in uL
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Volume of reward in uL")]
+        public double RewardVolume
+        {
+            get
+            {
+                return _rewardVolume;
+            }
+            set
+            {
+                _rewardVolume = value;
+            }
+        }
+    
+        /// <summary>
+        /// Maximum time after interCommandTime that subject has to repoke - otherwise trial ends.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Maximum time after interCommandTime that subject has to repoke - otherwise trial " +
+            "ends.")]
+        public double MaximumInterOdourPokeTime
+        {
+            get
+            {
+                return _maximumInterOdourPokeTime;
+            }
+            set
+            {
+                _maximumInterOdourPokeTime = value;
+            }
+        }
+    
+        /// <summary>
+        /// Size of the window to calculate performance average over
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Size of the window to calculate performance average over")]
+        public int PerformanceAverageWindow
+        {
+            get
+            {
+                return _performanceAverageWindow;
+            }
+            set
+            {
+                _performanceAverageWindow = value;
+            }
+        }
+    
         public System.IObservable<Sequence> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Sequence(this)));
@@ -385,7 +447,6 @@ namespace SequenceSchema
             stringBuilder.Append("InterCommandTime = " + _interCommandTime + ", ");
             stringBuilder.Append("InterTrialInterval = " + _interTrialInterval + ", ");
             stringBuilder.Append("ResponseTime = " + _responseTime + ", ");
-            stringBuilder.Append("MaximumTime = " + _maximumTime + ", ");
             stringBuilder.Append("RewardConditions = " + _rewardConditions + ", ");
             stringBuilder.Append("RewardAttempts = " + _rewardAttempts + ", ");
             stringBuilder.Append("EnableTrialEndIndicator = " + _enableTrialEndIndicator + ", ");
@@ -395,7 +456,11 @@ namespace SequenceSchema
             stringBuilder.Append("SkipSampling = " + _skipSampling + ", ");
             stringBuilder.Append("RewardAvailablePokeReset = " + _rewardAvailablePokeReset + ", ");
             stringBuilder.Append("EnableTrialStartIndicator = " + _enableTrialStartIndicator + ", ");
-            stringBuilder.Append("SequenceLengthIndex = " + _sequenceLengthIndex);
+            stringBuilder.Append("SequenceLengthIndex = " + _sequenceLengthIndex + ", ");
+            stringBuilder.Append("SampleOffsetTime = " + _sampleOffsetTime + ", ");
+            stringBuilder.Append("RewardVolume = " + _rewardVolume + ", ");
+            stringBuilder.Append("MaximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
+            stringBuilder.Append("PerformanceAverageWindow = " + _performanceAverageWindow);
             return true;
         }
     

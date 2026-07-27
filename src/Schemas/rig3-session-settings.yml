@@ -6,14 +6,24 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  sampleOffsetTime: 0.5
   loggingRootPath: C:\temp
-  rewardTime: 0.26
-  performanceAverageWindow: 5
-  initialSequence: Schemas/singrew-task-stage7.yml
-  maximumInterOdourPokeTime: 3
+  rewardTime: 0.01625
+  initialSequence: Schemas/quintuples-option4.yml
+  eegRecordingEnabled: False
+  maximumRewardsAvailable: 200
+
+shortcutKeys:
+  endSessionKey: Ctrl+3
+  startOlfactometerPurgeKey: Shift+3
+  startCamera: Alt+3
+
+hardwarePorts:
+  behaviorBoard: COM3
+  olfactometer0: COM8
+  olfactometer1: COM7
 
 cameraProperties:
+  cameraId: 24282626
   frameRate: 60
   exposure: 15000
   gain: 10
