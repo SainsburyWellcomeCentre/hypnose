@@ -8,9 +8,9 @@ metadata:
   minimumSampleTime: 0.05
   loggingRootPath: C:\temp
   rewardTime: 0.01625
-  initialSequence: Schemas/quintuples-option4.yml
+  initialSequence: Schemas/hiddenrule-location1-option4.yml
   eegRecordingEnabled: False
-  maximumRewardsAvailable: 200
+  maximumRewardsAvailable: 100
 
 shortcutKeys:
   endSessionKey: Ctrl+3
