@@ -166,6 +166,16 @@
                     "description": "The key to press to start the camera",
                     "default": "S+1",
                     "type": "string"
+                },
+                "pulse1Key": {
+                    "description": "The key to press to trigger pulse 1",
+                    "default": "Ctrl+2",
+                    "type": "string"
+                },
+                "pulse2Key": {
+                    "description": "The key to press to trigger pulse 2",
+                    "default": "Ctrl+3",
+                    "type": "string"
                 }
             }
         },

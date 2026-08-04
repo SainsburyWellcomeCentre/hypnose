@@ -16,6 +16,9 @@ shortcutKeys:
   endSessionKey: Ctrl+1
   startOlfactometerPurgeKey: Shift+1
   startCamera: Alt+1
+  pulse1Key: Ctrl+3
+  pulse2Key: Ctrl+4
+  # Use Shift+5 to set 5s pulse time, Shift+6 to set 1s pulse time (default)
 
 hardwarePorts:
   behaviorBoard: COM14

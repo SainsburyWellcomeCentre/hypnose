@@ -755,11 +755,17 @@ namespace DataSchema
     
         private string _startCamera;
     
+        private string _pulse1Key;
+    
+        private string _pulse2Key;
+    
         public ShortcutKeys()
         {
             _endSessionKey = "Ctrl+1";
             _startOlfactometerPurgeKey = "Shift+1";
             _startCamera = "S+1";
+            _pulse1Key = "Ctrl+2";
+            _pulse2Key = "Ctrl+3";
         }
     
         protected ShortcutKeys(ShortcutKeys other)
@@ -767,6 +773,8 @@ namespace DataSchema
             _endSessionKey = other._endSessionKey;
             _startOlfactometerPurgeKey = other._startOlfactometerPurgeKey;
             _startCamera = other._startCamera;
+            _pulse1Key = other._pulse1Key;
+            _pulse2Key = other._pulse2Key;
         }
     
         /// <summary>
@@ -817,6 +825,38 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// The key to press to trigger pulse 1
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The key to press to trigger pulse 1")]
+        public string Pulse1Key
+        {
+            get
+            {
+                return _pulse1Key;
+            }
+            set
+            {
+                _pulse1Key = value;
+            }
+        }
+    
+        /// <summary>
+        /// The key to press to trigger pulse 2
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The key to press to trigger pulse 2")]
+        public string Pulse2Key
+        {
+            get
+            {
+                return _pulse2Key;
+            }
+            set
+            {
+                _pulse2Key = value;
+            }
+        }
+    
         public System.IObservable<ShortcutKeys> Generate()
         {
             return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new ShortcutKeys(this)));
@@ -831,7 +871,9 @@ namespace DataSchema
         {
             stringBuilder.Append("EndSessionKey = " + _endSessionKey + ", ");
             stringBuilder.Append("StartOlfactometerPurgeKey = " + _startOlfactometerPurgeKey + ", ");
-            stringBuilder.Append("StartCamera = " + _startCamera);
+            stringBuilder.Append("StartCamera = " + _startCamera + ", ");
+            stringBuilder.Append("Pulse1Key = " + _pulse1Key + ", ");
+            stringBuilder.Append("Pulse2Key = " + _pulse2Key);
             return true;
         }
     
