@@ -8,9 +8,9 @@ metadata:
   minimumSampleTime: 0.05
   loggingRootPath: C:\temp
   rewardTime: 0.014875
-  initialSequence: Schemas/odourdiscrimination-stage2.yml
+  initialSequence: Schemas/triples-option5.yml
   eegRecordingEnabled: True
-  maximumRewardsAvailable: 200
+  maximumRewardsAvailable: 150
 
 shortcutKeys:
   endSessionKey: Ctrl+1

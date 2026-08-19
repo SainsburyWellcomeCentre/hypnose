@@ -6,11 +6,11 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  loggingRootPath: C:\hypnose\rawdata\sub-062_id-426\ses-011_date-20260723\behav
+  loggingRootPath: C:\temp
   rewardTime: 0.015
-  initialSequence: Schemas/odourdiscrimination-stage3.yml
+  initialSequence: Schemas/quadruples-option5.yml
   eegRecordingEnabled: False
-  maximumRewardsAvailable: 200
+  maximumRewardsAvailable: 150
 
 shortcutKeys:
   endSessionKey: Ctrl+2
