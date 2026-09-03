@@ -1013,6 +1013,8 @@ namespace DataSchema
     
         private double _threshold;
     
+        private double _binaryThreshold;
+    
         private RoiSourcePoints _roiSourcePoints;
     
         public CameraProperties()
@@ -1022,6 +1024,7 @@ namespace DataSchema
             _exposure = 19000D;
             _gain = 0D;
             _threshold = 15D;
+            _binaryThreshold = 110D;
             _roiSourcePoints = new RoiSourcePoints();
         }
     
@@ -1032,6 +1035,7 @@ namespace DataSchema
             _exposure = other._exposure;
             _gain = other._gain;
             _threshold = other._threshold;
+            _binaryThreshold = other._binaryThreshold;
             _roiSourcePoints = other._roiSourcePoints;
         }
     
@@ -1117,6 +1121,23 @@ namespace DataSchema
         }
     
         /// <summary>
+        /// The threshold value for detecting an object against the normalised background of the ROI.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The threshold value for detecting an object against the normalised background of " +
+            "the ROI.")]
+        public double BinaryThreshold
+        {
+            get
+            {
+                return _binaryThreshold;
+            }
+            set
+            {
+                _binaryThreshold = value;
+            }
+        }
+    
+        /// <summary>
         /// The four source points in the camera image that define the region of interest (in clockwise order starting from top-left).
         /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -1151,6 +1172,7 @@ namespace DataSchema
             stringBuilder.Append("Exposure = " + _exposure + ", ");
             stringBuilder.Append("Gain = " + _gain + ", ");
             stringBuilder.Append("Threshold = " + _threshold + ", ");
+            stringBuilder.Append("BinaryThreshold = " + _binaryThreshold + ", ");
             stringBuilder.Append("RoiSourcePoints = " + _roiSourcePoints);
             return true;
         }
