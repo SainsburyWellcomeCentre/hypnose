@@ -6,11 +6,11 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  loggingRootPath: C:\temp
+  loggingRootPath: C:\hypnose\rawdata\sub-063_id-430\ses-032_date-20260903\behav
   rewardTime: 0.014875
   initialSequence: Schemas/quintuples-option6.yml
   eegRecordingEnabled: True
-  maximumRewardsAvailable: 100
+  maximumRewardsAvailable: 150
 
 shortcutKeys:
   endSessionKey: Ctrl+1
@@ -33,9 +33,9 @@ cameraProperties:
   threshold: 3
   roiSourcePoints:
     points:
-      - x: 180
+      - x: 200
         y: 650
-      - x: 180
+      - x: 200
         y: 750
       - x: 1050
         y: 750
