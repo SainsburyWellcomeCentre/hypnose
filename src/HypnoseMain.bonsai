@@ -579,7 +579,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\temp</Path>
+              <Path>C:\hypnose\rawdata\sub-066_id-427\ses-048_date-20260925\behav</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -795,7 +795,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:Threshold">
-                      <cv:ThresholdValue>90</cv:ThresholdValue>
+                      <cv:ThresholdValue>110</cv:ThresholdValue>
                       <cv:MaxValue>255</cv:MaxValue>
                       <cv:ThresholdType>BinaryInv</cv:ThresholdType>
                     </Combinator>
@@ -825,19 +825,19 @@
                       <cv:Regions>
                         <cv:ArrayOfPoint>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                         </cv:ArrayOfPoint>
@@ -889,7 +889,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:Threshold">
-                      <cv:ThresholdValue>40</cv:ThresholdValue>
+                      <cv:ThresholdValue>110</cv:ThresholdValue>
                       <cv:MaxValue>255</cv:MaxValue>
                       <cv:ThresholdType>BinaryInv</cv:ThresholdType>
                     </Combinator>
@@ -919,19 +919,19 @@
                       <cv:Regions>
                         <cv:ArrayOfPoint>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                         </cv:ArrayOfPoint>
@@ -976,7 +976,7 @@
                   </Expression>
                   <Expression xsi:type="GreaterThan">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>3</Value>
+                      <Value>5</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="rx:PublishSubject">
@@ -4684,7 +4684,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>0.73715200007427484</Value>
+                            <Value>2.2750400002114475</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="scr:ExpressionTransform">
@@ -4697,7 +4697,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT4.263S</rx:DueTime>
+                            <rx:DueTime>PT2.725S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -5864,7 +5864,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:SequenceSelector">
-                      <p1:Path>Schemas/quintuples-option6.yml</p1:Path>
+                      <p1:Path>Schemas/hiddenrule-location1-option6.yml</p1:Path>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">

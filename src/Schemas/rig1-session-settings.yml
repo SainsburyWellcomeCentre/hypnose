@@ -6,11 +6,11 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  loggingRootPath: C:\hypnose\rawdata\sub-063_id-430\ses-032_date-20260903\behav
+  loggingRootPath: C:\hypnose\rawdata\sub-065_id-429\ses-026_date-20260929\behav
   rewardTime: 0.014875
-  initialSequence: Schemas/quintuples-option6.yml
+  initialSequence: Schemas/hiddenrule-location1-option6.yml
   eegRecordingEnabled: True
-  maximumRewardsAvailable: 150
+  maximumRewardsAvailable: 100
 
 shortcutKeys:
   endSessionKey: Ctrl+1
@@ -30,16 +30,17 @@ cameraProperties:
   frameRate: 60
   exposure: 15000
   gain: 10
-  threshold: 3
+  threshold: 5
+  binaryThreshold: 110
   roiSourcePoints:
     points:
-      - x: 200
+      - x: 240
         y: 650
-      - x: 200
+      - x: 240
         y: 750
-      - x: 1050
+      - x: 1070
         y: 750
-      - x: 1050
+      - x: 1070
         y: 650
 
 olfactometerCommands:
