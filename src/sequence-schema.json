@@ -109,23 +109,6 @@
         },
         "rewardCondition": {
             "properties": {
-                "position": {
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "definition": {
-                    "items": {
-                        "items": {
-                            "$ref": "#/definitions/valence"
-                        },
-                        "type": "array"
-                    },
-                    "type": "array"
-                }
-            }
-        },
-        "valence": {
-            "properties": {
                 "command": {
                     "type": "string"
                 },
@@ -144,8 +127,14 @@
                     "type": "integer",
                     "minimum": 0,
                     "description": "The index of the command in the sequence, used for multi-command sequences."
+                },
+                "position": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "description": "The position of the reward port with the relevant odour"
                 }
-            }
+            },
+            "type": "object"
         }
     },
     "properties": {

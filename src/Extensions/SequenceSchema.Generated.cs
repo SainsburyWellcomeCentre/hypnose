@@ -485,84 +485,6 @@ namespace SequenceSchema
     public partial class RewardCondition
     {
     
-        private int _position;
-    
-        private System.Collections.Generic.List<System.Collections.Generic.List<Valence>> _definition;
-    
-        public RewardCondition()
-        {
-            _definition = new System.Collections.Generic.List<System.Collections.Generic.List<Valence>>();
-        }
-    
-        protected RewardCondition(RewardCondition other)
-        {
-            _position = other._position;
-            _definition = other._definition;
-        }
-    
-        public int Position
-        {
-            get
-            {
-                return _position;
-            }
-            set
-            {
-                _position = value;
-            }
-        }
-    
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public System.Collections.Generic.List<System.Collections.Generic.List<Valence>> Definition
-        {
-            get
-            {
-                return _definition;
-            }
-            set
-            {
-                _definition = value;
-            }
-        }
-    
-        public System.IObservable<RewardCondition> Generate()
-        {
-            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new RewardCondition(this)));
-        }
-    
-        public System.IObservable<RewardCondition> Generate<TSource>(System.IObservable<TSource> source)
-        {
-            return System.Reactive.Linq.Observable.Select(source, _ => new RewardCondition(this));
-        }
-    
-        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
-        {
-            stringBuilder.Append("Position = " + _position + ", ");
-            stringBuilder.Append("Definition = " + _definition);
-            return true;
-        }
-    
-        public override string ToString()
-        {
-            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
-            stringBuilder.Append(GetType().Name);
-            stringBuilder.Append(" { ");
-            if (PrintMembers(stringBuilder))
-            {
-                stringBuilder.Append(" ");
-            }
-            stringBuilder.Append("}");
-            return stringBuilder.ToString();
-        }
-    }
-
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
-    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
-    [Bonsai.CombinatorAttribute(MethodName="Generate")]
-    public partial class Valence
-    {
-    
         private string _command;
     
         private bool _rewarded;
@@ -573,17 +495,20 @@ namespace SequenceSchema
     
         private int _index;
     
-        public Valence()
+        private int _position;
+    
+        public RewardCondition()
         {
         }
     
-        protected Valence(Valence other)
+        protected RewardCondition(RewardCondition other)
         {
             _command = other._command;
             _rewarded = other._rewarded;
             _minimumSamplingTime = other._minimumSamplingTime;
             _maximumSamplingTime = other._maximumSamplingTime;
             _index = other._index;
+            _position = other._position;
         }
     
         public string Command
@@ -659,14 +584,30 @@ namespace SequenceSchema
             }
         }
     
-        public System.IObservable<Valence> Generate()
+        /// <summary>
+        /// The position of the reward port with the relevant odour
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The position of the reward port with the relevant odour")]
+        public int Position
         {
-            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new Valence(this)));
+            get
+            {
+                return _position;
+            }
+            set
+            {
+                _position = value;
+            }
         }
     
-        public System.IObservable<Valence> Generate<TSource>(System.IObservable<TSource> source)
+        public System.IObservable<RewardCondition> Generate()
         {
-            return System.Reactive.Linq.Observable.Select(source, _ => new Valence(this));
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new RewardCondition(this)));
+        }
+    
+        public System.IObservable<RewardCondition> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new RewardCondition(this));
         }
     
         protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
@@ -675,7 +616,8 @@ namespace SequenceSchema
             stringBuilder.Append("Rewarded = " + _rewarded + ", ");
             stringBuilder.Append("MinimumSamplingTime = " + _minimumSamplingTime + ", ");
             stringBuilder.Append("MaximumSamplingTime = " + _maximumSamplingTime + ", ");
-            stringBuilder.Append("Index = " + _index);
+            stringBuilder.Append("Index = " + _index + ", ");
+            stringBuilder.Append("Position = " + _position);
             return true;
         }
     
