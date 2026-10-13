@@ -18,7 +18,7 @@ public class UniformSampleList
         return source.Select(x => x[random.Next(x.Count)]);
     }
 
-    public IObservable<Valence> Process(IObservable<List<Valence>> source)
+    public IObservable<RewardCondition> Process(IObservable<List<RewardCondition>> source)
     {
         return source.Select(x => x[random.Next(x.Count)]);
     }
