@@ -11,7 +11,7 @@ using SequenceSchema;
 [WorkflowElementCategory(ElementCategory.Transform)]
 public class NullOrUnrewarded
 {
-    public IObservable<bool> Process(IObservable<Valence> source)
+    public IObservable<bool> Process(IObservable<RewardCondition> source)
     {
         return source.Select(value => {
             if (value == null) {
