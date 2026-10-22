@@ -1,7 +1,9 @@
 using Bonsai;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Reactive.Linq;
@@ -27,8 +29,11 @@ public class UdpSource : Source<SireniaDatagram>
     [Description("Optional IP of the network adapter to join the group on (e.g. 127.0.0.1 if Pinnacle runs on this PC). Empty = OS default.")]
     public string LocalAddress { get; set; }
 
-    [Description("Optional. Only emit packets whose full stream ID (e.g. 'Mouse1_EEG1') matches this, case-insensitive. Empty = all streams.")]
+    [Description("Optional. Comma-separated stream IDs to emit (e.g. 'EEG1,EEG2,EMG' for one source, 'EEG1.1,EEG2.1,EMG.1' for the other), case-insensitive. Empty = all streams.")]
     public string StreamName { get; set; }
+
+    [Description("Optional. Device/dongle ID to put in Device on every emitted datagram. The packets do not carry one, so this is set here.")]
+    public string DeviceName { get; set; }
 
     public override IObservable<SireniaDatagram> Generate()
     {
@@ -36,15 +41,22 @@ public class UdpSource : Source<SireniaDatagram>
             () => CreateClient(),
             client =>
             {
-                var filter = string.IsNullOrWhiteSpace(StreamName) ? null : StreamName.Trim();
+                var filter = string.IsNullOrWhiteSpace(StreamName)
+                    ? null
+                    : new HashSet<string>(
+                        StreamName.Split(',').Select(s => s.Trim()).Where(s => s.Length > 0),
+                        StringComparer.OrdinalIgnoreCase);
+                var device = string.IsNullOrWhiteSpace(DeviceName) ? null : DeviceName.Trim();
                 return Observable.FromAsync(client.ReceiveAsync)
                     .Repeat()
                     .SelectMany(result =>
                     {
                         SireniaDatagram datagram;
                         if (TryParseDatagram(result.Buffer, out datagram) &&
-                            (filter == null || string.Equals(datagram.StreamName, filter, StringComparison.OrdinalIgnoreCase)))
+                            (filter == null || filter.Contains(datagram.StreamName)))
                         {
+                            if (device != null)
+                                datagram.Device = device;
                             return Observable.Return(datagram);
                         }
                         return Observable.Empty<SireniaDatagram>();
@@ -104,7 +116,7 @@ public class UdpSource : Source<SireniaDatagram>
 
         var split = streamId.IndexOf('_');
         datagram.StreamName = streamId;
-        datagram.DeviceName = split > 0 ? streamId.Substring(0, split) : streamId;
+        datagram.Device = split > 0 ? streamId.Substring(0, split) : streamId;
         datagram.ChannelName = split > 0 ? streamId.Substring(split + 1) : streamId;
         datagram.Seconds = seconds;
         datagram.SubSeconds = subSeconds;
@@ -113,10 +125,26 @@ public class UdpSource : Source<SireniaDatagram>
     }
 }
 
+public struct DeviceId
+{
+    // CsvWriter drops the last member name of a string column header, so the string sits one level below Device.
+    public string Id { get; set; }
+
+    public static implicit operator DeviceId(string id)
+    {
+        return new DeviceId { Id = id };
+    }
+
+    public override string ToString()
+    {
+        return Id;
+    }
+}
+
 public struct SireniaDatagram
 {
     public string StreamName { get; set; }   // full ID, e.g. "Mouse1_EEG1"
-    public string DeviceName { get; set; }   // part before the first '_'
+    public DeviceId Device { get; set; }     // part before the first '_', or the node's DeviceName
     public string ChannelName { get; set; }  // part after the first '_'
 
     public int Seconds { get; set; }

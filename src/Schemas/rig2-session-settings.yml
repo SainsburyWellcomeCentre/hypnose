@@ -6,10 +6,10 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  loggingRootPath: C:\hypnose\rawdata\sub-061_id-425\ses-057_date-20260929\behav
+  loggingRootPath: C:\temp
   rewardTime: 0.015
   initialSequence: Schemas/hiddenrule-location1-option6.yml
-  eegRecordingEnabled: False
+  eegRecordingEnabled: True
   maximumRewardsAvailable: 100
 
 shortcutKeys:
