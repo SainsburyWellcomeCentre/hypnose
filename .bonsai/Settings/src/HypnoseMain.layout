@@ -51,7 +51,7 @@
               <TimeSeriesVisualizer>
                 <Capacity>640</Capacity>
                 <Min>0</Min>
-                <Max>500</Max>
+                <Max>500.00000000000006</Max>
                 <AutoScale>true</AutoScale>
               </TimeSeriesVisualizer>
             </VisualizerSettings>
@@ -92,7 +92,7 @@
               <TimeSeriesVisualizer>
                 <Capacity>640</Capacity>
                 <Min>0.94000000000000006</Min>
-                <Max>1.08</Max>
+                <Max>1.06</Max>
                 <AutoScale>true</AutoScale>
               </TimeSeriesVisualizer>
             </VisualizerSettings>

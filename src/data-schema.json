@@ -196,6 +196,20 @@
                 }
             }
         },
+        "eegProperties": {
+            "properties": {
+                "deviceName": {
+                    "description": "The ID of the EEG device to use for this rig.",
+                    "default": "Default",
+                    "type": "string"
+                },
+                "streamName": {
+                    "description": "The names of the EEG streams to use for this rig.",
+                    "default": "EEG1,EEG2,EMG",
+                    "type": "string"
+                }
+            }
+        },
         "cameraProperties": {
             "properties": {
                 "cameraId": {

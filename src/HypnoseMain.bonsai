@@ -56,7 +56,7 @@
                       <harp:VisualIndicators>On</harp:VisualIndicators>
                       <harp:Heartbeat>Enabled</harp:Heartbeat>
                       <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                      <harp:PortName>COM11</harp:PortName>
+                      <harp:PortName>COM14</harp:PortName>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="rx:PublishSubject">
@@ -539,9 +539,9 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-              <PortO0>COM9</PortO0>
+              <PortO0>COM5</PortO0>
               <EventsO0>EventsO0</EventsO0>
-              <PortO1>COM3</PortO1>
+              <PortO1>COM7</PortO1>
               <EventsO1>EventsO1</EventsO1>
               <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
               <SessionSettings>SessionSettings</SessionSettings>
@@ -823,19 +823,19 @@
                       <cv:Regions>
                         <cv:ArrayOfPoint>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                         </cv:ArrayOfPoint>
@@ -917,19 +917,19 @@
                       <cv:Regions>
                         <cv:ArrayOfPoint>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                         </cv:ArrayOfPoint>
@@ -974,7 +974,7 @@
                   </Expression>
                   <Expression xsi:type="GreaterThan">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>3</Value>
+                      <Value>5</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="rx:PublishSubject">
@@ -1250,10 +1250,34 @@
         <Name>EEG</Name>
         <Workflow>
           <Nodes>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>SessionSettings</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>EegProperties.DeviceName</Selector>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="DeviceName" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>SessionSettings</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>EegProperties.StreamName</Selector>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="StreamName" />
+              </PropertyMappings>
+            </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:UdpSource">
                 <p1:GroupAddress>239.255.76.67</p1:GroupAddress>
                 <p1:Port>8866</p1:Port>
+                <p1:StreamName>EEG1,EEG2,EMG</p1:StreamName>
+                <p1:DeviceName>25087</p1:DeviceName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:Condition">
@@ -1297,7 +1321,13 @@
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="1" To="2" Label="Source1" />
-            <Edge From="2" To="3" Label="Source1" />
+            <Edge From="2" To="6" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="5" To="6" Label="Source2" />
+            <Edge From="6" To="7" Label="Source1" />
+            <Edge From="7" To="8" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -3289,7 +3319,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Equal">
                           <Operand xsi:type="IntProperty">
-                            <Value>1</Value>
+                            <Value>4</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="BitwiseNot" />
@@ -5284,7 +5314,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Ctrl+2</Value>
+                <Value>Ctrl+3</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -5297,7 +5327,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="wie:KeyDown">
-                <wie:Filter>RButton ShiftKey Menu Space Next PageDown D0 D2 Control</wie:Filter>
+                <wie:Filter>LButton RButton Cancel ShiftKey ControlKey Menu Pause Space Prior PageUp Next PageDown End D0 D1 D2 D3 Control</wie:Filter>
                 <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
               </Combinator>
             </Expression>
@@ -5391,7 +5421,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Ctrl+3</Value>
+                <Value>Ctrl+4</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -5404,7 +5434,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="wie:KeyDown">
-                <wie:Filter>LButton RButton Cancel ShiftKey ControlKey Menu Pause Space Prior PageUp Next PageDown End D0 D1 D2 D3 Control</wie:Filter>
+                <wie:Filter>MButton ShiftKey Capital CapsLock Space Home D0 D4 Control</wie:Filter>
                 <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
               </Combinator>
             </Expression>
@@ -5565,7 +5595,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:LoadSessionSettings">
-                <p1:Path>Schemas\testrig-session-settings.yml</p1:Path>
+                <p1:Path>Schemas\rig1-session-settings.yml</p1:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -5633,7 +5663,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:SequenceSelector">
-                      <p1:Path>Schemas/doubles-option5-stage2.yml</p1:Path>
+                      <p1:Path>Schemas/hiddenrule-location1-option6.yml</p1:Path>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -5845,7 +5875,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Equal">
               <Operand xsi:type="IntProperty">
-                <Value>200</Value>
+                <Value>100</Value>
               </Operand>
             </Expression>
             <Expression xsi:type="rx:Condition">

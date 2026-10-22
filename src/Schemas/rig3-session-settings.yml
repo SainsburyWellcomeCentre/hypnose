@@ -25,6 +25,10 @@ hardwarePorts:
   olfactometer0: COM8
   olfactometer1: COM7
 
+eegProperties:
+  deviceName: 25089
+  streamName: EEG1.1,EEG2.1,EMG.1
+
 cameraProperties:
   cameraId: 24282626
   frameRate: 60
