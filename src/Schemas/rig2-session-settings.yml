@@ -9,7 +9,7 @@ metadata:
   loggingRootPath: C:\temp
   rewardTime: 0.015
   initialSequence: Schemas/hiddenrule-location1-option6.yml
-  eegRecordingEnabled: True
+  eegRecordingEnabled: False
   maximumRewardsAvailable: 100
 
 shortcutKeys:
@@ -24,6 +24,10 @@ hardwarePorts:
   behaviorBoard: COM4
   olfactometer0: COM8
   olfactometer1: COM9
+
+eegProperties:
+  deviceName: Default
+  streamName: Default
 
 cameraProperties:
   cameraId: 24282622
