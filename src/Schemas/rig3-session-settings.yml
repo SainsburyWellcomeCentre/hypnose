@@ -6,9 +6,9 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  loggingRootPath: C:\hypnose\rawdata\sub-068_id-486\ses-002_date-20260929\behav
+  loggingRootPath: C:\temp
   rewardTime: 0.01625
-  initialSequence: Schemas/odourdiscrimination-stage2.yml
+  initialSequence: Schemas/odourdiscrimination-stage4.yml
   eegRecordingEnabled: True
   maximumRewardsAvailable: 150
 
@@ -22,12 +22,11 @@ shortcutKeys:
 
 hardwarePorts:
   behaviorBoard: COM3
-  olfactometer0: COM8
-  olfactometer1: COM7
+  olfactometer0: COM11
+  olfactometer1: COM13
 
 eegProperties:
-  deviceName: 25089
-  streamName: EEG1.1,EEG2.1,EMG.1
+  deviceName: 25087
 
 cameraProperties:
   cameraId: 24282626

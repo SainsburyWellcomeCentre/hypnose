@@ -8,7 +8,7 @@ metadata:
   minimumSampleTime: 0.05
   loggingRootPath: C:\temp
   rewardTime: 0.015
-  initialSequence: Schemas/hiddenrule-location1-option6.yml
+  initialSequence: Schemas/ge-discrimination-stage1.yml
   eegRecordingEnabled: False
   maximumRewardsAvailable: 100
 

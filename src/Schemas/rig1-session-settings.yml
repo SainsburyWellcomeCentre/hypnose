@@ -27,7 +27,6 @@ hardwarePorts:
 
 eegProperties:
   deviceName: 16514
-  streamName: EEG1,EEG2,EMG
 
 cameraProperties:
   cameraId: 24282618

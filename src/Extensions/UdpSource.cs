@@ -9,7 +9,7 @@ using System.Net.Sockets;
 using System.Reactive.Linq;
 using System.Text;
 
-[Description("Receives Sirenia/Pinnacle UDP multicast packets. Set StreamName to receive a single stream, or leave it empty to receive all streams.")]
+[Description("Receives Sirenia/Pinnacle UDP multicast packets. Set DeviceName to receive all streams of that device (e.g. 16514 gives EEG1_16514, EEG2_16514, EMG_16514). Leave it empty to receive everything.")]
 public class UdpSource : Source<SireniaDatagram>
 {
     const int StreamIdLength = 26;
@@ -29,10 +29,7 @@ public class UdpSource : Source<SireniaDatagram>
     [Description("Optional IP of the network adapter to join the group on (e.g. 127.0.0.1 if Pinnacle runs on this PC). Empty = OS default.")]
     public string LocalAddress { get; set; }
 
-    [Description("Optional. Comma-separated stream IDs to emit (e.g. 'EEG1,EEG2,EMG' for one source, 'EEG1.1,EEG2.1,EMG.1' for the other), case-insensitive. Empty = all streams.")]
-    public string StreamName { get; set; }
-
-    [Description("Optional. Device/dongle ID to put in Device on every emitted datagram. The packets do not carry one, so this is set here.")]
+    [Description("Optional. Device/dongle ID (the part after the last underscore in the packet ID, e.g. 16514). Only streams of this device are emitted. Empty = all devices.")]
     public string DeviceName { get; set; }
 
     public override IObservable<SireniaDatagram> Generate()
@@ -41,11 +38,6 @@ public class UdpSource : Source<SireniaDatagram>
             () => CreateClient(),
             client =>
             {
-                var filter = string.IsNullOrWhiteSpace(StreamName)
-                    ? null
-                    : new HashSet<string>(
-                        StreamName.Split(',').Select(s => s.Trim()).Where(s => s.Length > 0),
-                        StringComparer.OrdinalIgnoreCase);
                 var device = string.IsNullOrWhiteSpace(DeviceName) ? null : DeviceName.Trim();
                 return Observable.FromAsync(client.ReceiveAsync)
                     .Repeat()
@@ -53,12 +45,8 @@ public class UdpSource : Source<SireniaDatagram>
                     {
                         SireniaDatagram datagram;
                         if (TryParseDatagram(result.Buffer, out datagram) &&
-                            (filter == null || filter.Contains(datagram.StreamName)))
-                        {
-                            if (device != null)
-                                datagram.Device = device;
+                            (device == null || string.Equals(datagram.Device.Id, device, StringComparison.OrdinalIgnoreCase)))
                             return Observable.Return(datagram);
-                        }
                         return Observable.Empty<SireniaDatagram>();
                     });
             });
@@ -114,10 +102,11 @@ public class UdpSource : Source<SireniaDatagram>
             !float.TryParse(fields[2].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out value))
             return false;
 
-        var split = streamId.IndexOf('_');
+        // Stream ID is "<stream>_<device>", e.g. "EEG1_16514"
+        var split = streamId.LastIndexOf('_');
         datagram.StreamName = streamId;
-        datagram.Device = split > 0 ? streamId.Substring(0, split) : streamId;
-        datagram.ChannelName = split > 0 ? streamId.Substring(split + 1) : streamId;
+        datagram.ChannelName = split > 0 ? streamId.Substring(0, split) : streamId;
+        datagram.Device = split > 0 ? streamId.Substring(split + 1) : string.Empty;
         datagram.Seconds = seconds;
         datagram.SubSeconds = subSeconds;
         datagram.Value = value;
@@ -143,9 +132,9 @@ public struct DeviceId
 
 public struct SireniaDatagram
 {
-    public string StreamName { get; set; }   // full ID, e.g. "Mouse1_EEG1"
-    public DeviceId Device { get; set; }     // part before the first '_', or the node's DeviceName
-    public string ChannelName { get; set; }  // part after the first '_'
+    public string StreamName { get; set; }   // full ID, e.g. "EEG1_16514"
+    public DeviceId Device { get; set; }     // part after the last '_', e.g. "16514"
+    public string ChannelName { get; set; }  // part before the last '_', e.g. "EEG1"
 
     public int Seconds { get; set; }
     public double SubSeconds { get; set; }
