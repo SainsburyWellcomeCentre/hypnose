@@ -6,7 +6,7 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  loggingRootPath: C:\temp
+  loggingRootPath: C:\hypnose\rawdata\sub-061_id-425\ses-074_date-20261026\behav
   rewardTime: 0.015
   initialSequence: Schemas/quintuples-option6.yml
   eegRecordingEnabled: False
