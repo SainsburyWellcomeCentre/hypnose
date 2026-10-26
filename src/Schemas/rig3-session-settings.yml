@@ -26,7 +26,7 @@ hardwarePorts:
   olfactometer1: COM13
 
 eegProperties:
-  deviceName: 25087
+  deviceName: 25088
 
 cameraProperties:
   cameraId: 24282626

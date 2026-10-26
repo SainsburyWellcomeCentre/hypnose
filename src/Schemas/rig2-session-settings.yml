@@ -8,7 +8,7 @@ metadata:
   minimumSampleTime: 0.05
   loggingRootPath: C:\temp
   rewardTime: 0.015
-  initialSequence: Schemas/ge-discrimination-stage1.yml
+  initialSequence: Schemas/quintuples-option6.yml
   eegRecordingEnabled: False
   maximumRewardsAvailable: 100
 

@@ -3,9 +3,10 @@
   <WindowSettings Index="0">
     <NestedLayout>
       <WindowSettings Index="3">
+        <Visible>false</Visible>
         <Location>
-          <X>2086</X>
-          <Y>673</Y>
+          <X>822</X>
+          <Y>33</Y>
         </Location>
         <Size>
           <Width>336</Width>
@@ -19,28 +20,30 @@
       <WindowSettings Index="10">
         <NestedLayout>
           <WindowSettings Index="48">
+            <Visible>false</Visible>
             <Location>
-              <X>2053</X>
-              <Y>926</Y>
+              <X>774</X>
+              <Y>283</Y>
             </Location>
             <Size>
-              <Width>235</Width>
-              <Height>187</Height>
+              <Width>262</Width>
+              <Height>128</Height>
             </Size>
             <VisualizerTypeName>Bonsai.Design.Visualizers.TimeSeriesVisualizer</VisualizerTypeName>
             <VisualizerSettings>
               <TimeSeriesVisualizer>
                 <Capacity>640</Capacity>
-                <Min>-98.702560285876757</Min>
-                <Max>465.16343086351435</Max>
-                <AutoScale>false</AutoScale>
+                <Min>0</Min>
+                <Max>1000</Max>
+                <AutoScale>true</AutoScale>
               </TimeSeriesVisualizer>
             </VisualizerSettings>
           </WindowSettings>
           <WindowSettings Index="60">
+            <Visible>false</Visible>
             <Location>
-              <X>2266</X>
-              <Y>1029</Y>
+              <X>1009</X>
+              <Y>283</Y>
             </Location>
             <Size>
               <Width>296</Width>
@@ -50,8 +53,8 @@
             <VisualizerSettings>
               <TimeSeriesVisualizer>
                 <Capacity>640</Capacity>
-                <Min>50</Min>
-                <Max>450</Max>
+                <Min>0</Min>
+                <Max>500.00000000000006</Max>
                 <AutoScale>true</AutoScale>
               </TimeSeriesVisualizer>
             </VisualizerSettings>
@@ -63,9 +66,10 @@
   <WindowSettings Index="1">
     <NestedLayout>
       <WindowSettings Index="18">
+        <Visible>false</Visible>
         <Location>
-          <X>2053</X>
-          <Y>734</Y>
+          <X>879</X>
+          <Y>425</Y>
         </Location>
         <Size>
           <Width>336</Width>
@@ -84,8 +88,8 @@
         <NestedLayout>
           <WindowSettings Index="33">
             <Location>
-              <X>2022</X>
-              <Y>1141</Y>
+              <X>513</X>
+              <Y>128</Y>
             </Location>
             <Size>
               <Width>308</Width>
@@ -98,8 +102,8 @@
           </WindowSettings>
           <WindowSettings Index="40">
             <Location>
-              <X>1645</X>
-              <Y>1187</Y>
+              <X>551</X>
+              <Y>502</Y>
             </Location>
             <Size>
               <Width>318</Width>
@@ -126,9 +130,10 @@
           <WindowSettings Index="6">
             <NestedLayout>
               <WindowSettings Index="71">
+                <Visible>false</Visible>
                 <Location>
-                  <X>2308</X>
-                  <Y>1214</Y>
+                  <X>952</X>
+                  <Y>486</Y>
                 </Location>
                 <Size>
                   <Width>276</Width>
@@ -146,9 +151,10 @@
     </NestedLayout>
   </WindowSettings>
   <WindowSettings Index="10">
+    <Visible>false</Visible>
     <Location>
-      <X>1603</X>
-      <Y>791</Y>
+      <X>327</X>
+      <Y>67</Y>
     </Location>
     <Size>
       <Width>470</Width>
@@ -161,8 +167,8 @@
   </WindowSettings>
   <WindowSettings Index="11">
     <Location>
-      <X>1273</X>
-      <Y>718</Y>
+      <X>33</X>
+      <Y>75</Y>
     </Location>
     <Size>
       <Width>336</Width>
@@ -175,8 +181,8 @@
   </WindowSettings>
   <WindowSettings Index="12">
     <Location>
-      <X>1261</X>
-      <Y>967</Y>
+      <X>0</X>
+      <Y>302</Y>
     </Location>
     <Size>
       <Width>336</Width>
@@ -189,8 +195,8 @@
   </WindowSettings>
   <WindowSettings Index="13">
     <Location>
-      <X>1257</X>
-      <Y>1097</Y>
+      <X>-5</X>
+      <Y>536</Y>
     </Location>
     <Size>
       <Width>336</Width>
