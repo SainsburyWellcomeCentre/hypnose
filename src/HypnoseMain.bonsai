@@ -56,7 +56,7 @@
                       <harp:VisualIndicators>On</harp:VisualIndicators>
                       <harp:Heartbeat>Enabled</harp:Heartbeat>
                       <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                      <harp:PortName>COM11</harp:PortName>
+                      <harp:PortName>COM14</harp:PortName>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="rx:PublishSubject">
@@ -352,7 +352,7 @@
                         <Expression xsi:type="beh:CreateMessage">
                           <harp:MessageType>Write</harp:MessageType>
                           <harp:Payload xsi:type="beh:CreatePulseSupplyPort1Payload">
-                            <beh:PulseSupplyPort1>119</beh:PulseSupplyPort1>
+                            <beh:PulseSupplyPort1>238</beh:PulseSupplyPort1>
                           </harp:Payload>
                         </Expression>
                         <Expression xsi:type="MulticastSubject">
@@ -413,7 +413,7 @@
                         <Expression xsi:type="beh:CreateMessage">
                           <harp:MessageType>Write</harp:MessageType>
                           <harp:Payload xsi:type="beh:CreatePulseSupplyPort2Payload">
-                            <beh:PulseSupplyPort2>119</beh:PulseSupplyPort2>
+                            <beh:PulseSupplyPort2>238</beh:PulseSupplyPort2>
                           </harp:Payload>
                         </Expression>
                         <Expression xsi:type="MulticastSubject">
@@ -539,9 +539,9 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Extensions\Olfactometer.bonsai">
-              <PortO0>COM9</PortO0>
+              <PortO0>COM5</PortO0>
               <EventsO0>EventsO0</EventsO0>
-              <PortO1>COM3</PortO1>
+              <PortO1>COM7</PortO1>
               <EventsO1>EventsO1</EventsO1>
               <OlfactometerEvents>OlfactometerEvents</OlfactometerEvents>
               <SessionSettings>SessionSettings</SessionSettings>
@@ -823,19 +823,19 @@
                       <cv:Regions>
                         <cv:ArrayOfPoint>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                         </cv:ArrayOfPoint>
@@ -917,19 +917,19 @@
                       <cv:Regions>
                         <cv:ArrayOfPoint>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>180</cv:X>
+                            <cv:X>240</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1050</cv:X>
+                            <cv:X>1070</cv:X>
                             <cv:Y>650</cv:Y>
                           </cv:Point>
                         </cv:ArrayOfPoint>
@@ -974,7 +974,7 @@
                   </Expression>
                   <Expression xsi:type="GreaterThan">
                     <Operand xsi:type="DoubleProperty">
-                      <Value>3</Value>
+                      <Value>5</Value>
                     </Operand>
                   </Expression>
                   <Expression xsi:type="rx:PublishSubject">
@@ -1250,10 +1250,22 @@
         <Name>EEG</Name>
         <Workflow>
           <Nodes>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>SessionSettings</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>EegProperties.DeviceName</Selector>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="DeviceName" />
+              </PropertyMappings>
+            </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:UdpSource">
                 <p1:GroupAddress>239.255.76.67</p1:GroupAddress>
                 <p1:Port>8866</p1:Port>
+                <p1:DeviceName>16514</p1:DeviceName>
               </Combinator>
             </Expression>
             <Expression xsi:type="rx:Condition">
@@ -1275,7 +1287,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="BooleanProperty">
-                      <Value>true</Value>
+                      <Value>false</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="WorkflowOutput" />
@@ -1298,6 +1310,9 @@
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="1" To="2" Label="Source1" />
             <Edge From="2" To="3" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="5" To="6" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1978,7 +1993,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT2S</rx:DueTime>
+                                  <rx:DueTime>PT1S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -2079,7 +2094,7 @@
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.001</Value>
+                                        <Value>0.35</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="SubscribeSubject">
@@ -2111,7 +2126,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>2.2</Value>
+                                        <Value>1.2</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="Combinator">
@@ -2200,7 +2215,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.001</Value>
+                                        <Value>0.35</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
@@ -2295,7 +2310,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.001S</rx:DueTime>
+                                  <rx:DueTime>PT0.35S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2390,7 +2405,7 @@
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.001</Value>
+                                        <Value>0.35</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="SubscribeSubject">
@@ -2422,7 +2437,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>2.2</Value>
+                                        <Value>1.2</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="Combinator">
@@ -2511,7 +2526,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.001</Value>
+                                        <Value>0.35</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
@@ -2591,7 +2606,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Timer">
-                                  <rx:DueTime>PT5S</rx:DueTime>
+                                  <rx:DueTime>PT3S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -3289,7 +3304,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Equal">
                           <Operand xsi:type="IntProperty">
-                            <Value>1</Value>
+                            <Value>0</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="BitwiseNot" />
@@ -4188,7 +4203,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="p2:RewardCommand">
-                            <p2:RewardTime>0.119</p2:RewardTime>
+                            <p2:RewardTime>0.13</p2:RewardTime>
                             <p2:RewardPosition>0</p2:RewardPosition>
                           </Combinator>
                         </Expression>
@@ -4331,7 +4346,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="p2:RewardCommand">
-                            <p2:RewardTime>0.119</p2:RewardTime>
+                            <p2:RewardTime>0.13</p2:RewardTime>
                             <p2:RewardPosition>1</p2:RewardPosition>
                           </Combinator>
                         </Expression>
@@ -4456,7 +4471,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>0.73644799999965471</Value>
+                            <Value>0.00099200000113341957</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="scr:ExpressionTransform">
@@ -4469,7 +4484,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT4.264S</rx:DueTime>
+                            <rx:DueTime>P1DT3H46M38.999S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -5284,7 +5299,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Ctrl+2</Value>
+                <Value>Ctrl+9</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -5297,7 +5312,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="wie:KeyDown">
-                <wie:Filter>RButton ShiftKey Menu Space Next PageDown D0 D2 Control</wie:Filter>
+                <wie:Filter>LButton Back Tab ShiftKey ControlKey FinalMode HanjaMode KanjiMode Space Prior PageUp Down Select D0 D1 D8 D9 Control</wie:Filter>
                 <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
               </Combinator>
             </Expression>
@@ -5391,7 +5406,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Ctrl+3</Value>
+                <Value>Ctrl+4</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -5404,7 +5419,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="wie:KeyDown">
-                <wie:Filter>LButton RButton Cancel ShiftKey ControlKey Menu Pause Space Prior PageUp Next PageDown End D0 D1 D2 D3 Control</wie:Filter>
+                <wie:Filter>MButton ShiftKey Capital CapsLock Space Home D0 D4 Control</wie:Filter>
                 <wie:SuppressRepetitions>false</wie:SuppressRepetitions>
               </Combinator>
             </Expression>
@@ -5565,7 +5580,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="p1:LoadSessionSettings">
-                <p1:Path>Schemas\testrig-session-settings.yml</p1:Path>
+                <p1:Path>Schemas\rig1-session-settings.yml</p1:Path>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -5633,7 +5648,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:SequenceSelector">
-                      <p1:Path>Schemas/doubles-option5-stage2.yml</p1:Path>
+                      <p1:Path>Schemas/ge-discrimination-stage1.yml</p1:Path>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -5845,7 +5860,7 @@ it.Item2 as TrialComplete
             </Expression>
             <Expression xsi:type="Equal">
               <Operand xsi:type="IntProperty">
-                <Value>200</Value>
+                <Value>100</Value>
               </Operand>
             </Expression>
             <Expression xsi:type="rx:Condition">

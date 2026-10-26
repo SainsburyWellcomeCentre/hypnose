@@ -6,9 +6,9 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  loggingRootPath: C:\hypnose\rawdata\sub-068_id-486\ses-002_date-20260929\behav
+  loggingRootPath: C:\temp
   rewardTime: 0.01625
-  initialSequence: Schemas/odourdiscrimination-stage2.yml
+  initialSequence: Schemas/odourdiscrimination-stage4.yml
   eegRecordingEnabled: True
   maximumRewardsAvailable: 150
 
@@ -16,14 +16,17 @@ shortcutKeys:
   endSessionKey: Ctrl+3
   startOlfactometerPurgeKey: Shift+3
   startCamera: Alt+3
-  pulse1Key: Ctrl+5
-  pulse2Key: Ctrl+6
+  pulse1Key: Ctrl+7
+  pulse2Key: Ctrl+8
   # Use Shift+5 to set 5s pulse time, Shift+6 to set 1s pulse time (default)
 
 hardwarePorts:
   behaviorBoard: COM3
-  olfactometer0: COM8
-  olfactometer1: COM7
+  olfactometer0: COM11
+  olfactometer1: COM13
+
+eegProperties:
+  deviceName: 25088
 
 cameraProperties:
   cameraId: 24282626

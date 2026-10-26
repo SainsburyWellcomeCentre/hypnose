@@ -399,6 +399,8 @@ namespace DataSchema
     
         private HardwarePorts _hardwarePorts;
     
+        private EegProperties _eegProperties;
+    
         private CameraProperties _cameraProperties;
     
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands;
@@ -413,6 +415,7 @@ namespace DataSchema
             _metadata = other._metadata;
             _shortcutKeys = other._shortcutKeys;
             _hardwarePorts = other._hardwarePorts;
+            _eegProperties = other._eegProperties;
             _cameraProperties = other._cameraProperties;
             _olfactometerCommands = other._olfactometerCommands;
         }
@@ -457,6 +460,19 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public EegProperties EegProperties
+        {
+            get
+            {
+                return _eegProperties;
+            }
+            set
+            {
+                _eegProperties = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
         public CameraProperties CameraProperties
         {
             get
@@ -497,6 +513,7 @@ namespace DataSchema
             stringBuilder.Append("Metadata = " + _metadata + ", ");
             stringBuilder.Append("ShortcutKeys = " + _shortcutKeys + ", ");
             stringBuilder.Append("HardwarePorts = " + _hardwarePorts + ", ");
+            stringBuilder.Append("EegProperties = " + _eegProperties + ", ");
             stringBuilder.Append("CameraProperties = " + _cameraProperties + ", ");
             stringBuilder.Append("OlfactometerCommands = " + _olfactometerCommands);
             return true;
@@ -979,6 +996,92 @@ namespace DataSchema
             stringBuilder.Append("BehaviorBoard = " + _behaviorBoard + ", ");
             stringBuilder.Append("Olfactometer0 = " + _olfactometer0 + ", ");
             stringBuilder.Append("Olfactometer1 = " + _olfactometer1);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class EegProperties
+    {
+    
+        private string _deviceName;
+    
+        private string _streamName;
+    
+        public EegProperties()
+        {
+            _deviceName = "Default";
+            _streamName = "EEG1,EEG2,EMG";
+        }
+    
+        protected EegProperties(EegProperties other)
+        {
+            _deviceName = other._deviceName;
+            _streamName = other._streamName;
+        }
+    
+        /// <summary>
+        /// The ID of the EEG device to use for this rig.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The ID of the EEG device to use for this rig.")]
+        public string DeviceName
+        {
+            get
+            {
+                return _deviceName;
+            }
+            set
+            {
+                _deviceName = value;
+            }
+        }
+    
+        /// <summary>
+        /// The names of the EEG streams to use for this rig.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The names of the EEG streams to use for this rig.")]
+        public string StreamName
+        {
+            get
+            {
+                return _streamName;
+            }
+            set
+            {
+                _streamName = value;
+            }
+        }
+    
+        public System.IObservable<EegProperties> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new EegProperties(this)));
+        }
+    
+        public System.IObservable<EegProperties> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new EegProperties(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("DeviceName = " + _deviceName + ", ");
+            stringBuilder.Append("StreamName = " + _streamName);
             return true;
         }
     
