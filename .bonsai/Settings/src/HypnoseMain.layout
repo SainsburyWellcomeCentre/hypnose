@@ -86,13 +86,13 @@
     <NestedLayout>
       <WindowSettings Index="0">
         <NestedLayout>
-          <WindowSettings Index="33">
+          <WindowSettings Index="13">
             <Location>
-              <X>513</X>
-              <Y>128</Y>
+              <X>534</X>
+              <Y>138</Y>
             </Location>
             <Size>
-              <Width>308</Width>
+              <Width>336</Width>
               <Height>279</Height>
             </Size>
             <VisualizerTypeName>Bonsai.Vision.Design.RegionActivityCollectionVisualizer</VisualizerTypeName>
@@ -100,10 +100,10 @@
               <RegionActivityCollectionVisualizer />
             </VisualizerSettings>
           </WindowSettings>
-          <WindowSettings Index="40">
+          <WindowSettings Index="24">
             <Location>
-              <X>551</X>
-              <Y>502</Y>
+              <X>550</X>
+              <Y>545</Y>
             </Location>
             <Size>
               <Width>318</Width>
@@ -113,8 +113,8 @@
             <VisualizerSettings>
               <TimeSeriesVisualizer>
                 <Capacity>640</Capacity>
-                <Min>0</Min>
-                <Max>1.1</Max>
+                <Min>0.8</Min>
+                <Max>1.25</Max>
                 <AutoScale>true</AutoScale>
               </TimeSeriesVisualizer>
             </VisualizerSettings>

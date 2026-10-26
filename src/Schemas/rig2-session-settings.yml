@@ -38,13 +38,13 @@ cameraProperties:
   binaryThreshold: 120
   roiSourcePoints:
     points:
-      - x: 190
+      - x: 160
         y: 650
-      - x: 190
+      - x: 160
         y: 760
-      - x: 1010
+      - x: 990
         y: 760
-      - x: 1010
+      - x: 990
         y: 650
 
 olfactometerCommands:
