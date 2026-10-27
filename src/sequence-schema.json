@@ -151,12 +151,25 @@
             "description": "Path to .yml file of the next sequence to advance to.",
             "type": "string"
         },
-        "performaceCriterion": {
+        "decisionAccuracyCriterion": {
             "description": "Performance that must be reached before advancing to the next sequence.",
             "type": "number",
             "minimum": 0,
             "maximum": 1,
-            "default": 0.8
+            "default": 1
+        },
+        "sequenceCompletionCriterion": {
+            "description": "Proprtion of trials that must be completed before advancing to the next sequence.",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 1
+        },
+        "rewardedTrialsCriterion": {
+            "description": "Number of trials that must be rewarded before advancing to the next sequence.",
+            "type": "integer",
+            "minimum": 0,
+            "default": 1000
         }
     },
     "title": "HypnoseSequence",

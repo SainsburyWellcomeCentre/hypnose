@@ -8,7 +8,7 @@ metadata:
   minimumSampleTime: 0.05
   loggingRootPath: C:\temp
   rewardTime: 0.014875
-  initialSequence: Schemas/ge-discrimination-stage1.yml
+  initialSequence: Schemas/odourdiscrimination-test.yml
   eegRecordingEnabled: False
   maximumRewardsAvailable: 100
 

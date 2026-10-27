@@ -3,7 +3,7 @@
 # yaml-language-server: $schema=sequence-schema.json
 
 nextSequence: Schemas/rig1-odourdiscrimination-stage5-test.yml
-performaceCriterion: 1.1
+decisionAccuracyCriterion: 1.1
 sequences: [
     [{name: OdourDiscriminationA_Stage2,
     defaultCommand: Default,

@@ -1,0 +1,50 @@
+%YAML 1.1
+---
+# yaml-language-server: $schema=sequence-schema.json
+
+nextSequence: Schemas/rig1-odourdiscrimination-stage5-test.yml
+decisionAccuracyCriterion: 0.9
+sequenceCompletionCriterion: 1
+rewardedTrialsCriterion: 30
+sequences: [
+    [{name: OdourDiscriminationA_Stage2,
+    defaultCommand: Default,
+    interCommand: Purge,
+    interCommandTime: 0.2,
+    responseTime: 99999,
+    completionRequiresEngagement: True,
+    rewardConditions: [
+      {command: OdorA, rewarded: True, minimumSamplingTime: 0.25, maximumSamplingTime: 1, position: 0}
+    ],
+    rewardAttempts: 0,
+    enableTrialStartIndicator: True,
+    enableTrialEndIndicator: False,
+    enableRewardLocationIndicator: Both,
+    resetOnReward: True,
+    skipSampling: False,
+    sampleOffsetTime: 0.5,
+    rewardVolume: 8,
+    maximumInterOdourPokeTime: 3,
+    performanceAverageWindow: 5
+    },
+    {name: OdourDiscriminationB_Stage2,
+    defaultCommand: Default,
+    interCommand: Purge,
+    interCommandTime: 0.2,
+    responseTime: 99999,
+    completionRequiresEngagement: True,
+    rewardConditions: [
+      {command: OdorB, rewarded: True, minimumSamplingTime: 0.25, maximumSamplingTime: 1, position: 1}
+    ],
+    rewardAttempts: 0,
+    enableTrialStartIndicator: True,
+    enableTrialEndIndicator: False,
+    enableRewardLocationIndicator: Both,
+    resetOnReward: True,
+    skipSampling: False,
+    sampleOffsetTime: 0.5,
+    rewardVolume: 8,
+    maximumInterOdourPokeTime: 3,
+    performanceAverageWindow: 5
+    }]
+]

@@ -646,19 +646,27 @@ namespace SequenceSchema
     
         private string _nextSequence;
     
-        private double _performaceCriterion;
+        private double _decisionAccuracyCriterion;
+    
+        private double _sequenceCompletionCriterion;
+    
+        private int _rewardedTrialsCriterion;
     
         public HypnoseSequence()
         {
             _sequences = new System.Collections.Generic.List<System.Collections.Generic.List<Sequence>>();
-            _performaceCriterion = 0.8D;
+            _decisionAccuracyCriterion = 1D;
+            _sequenceCompletionCriterion = 1D;
+            _rewardedTrialsCriterion = 1000;
         }
     
         protected HypnoseSequence(HypnoseSequence other)
         {
             _sequences = other._sequences;
             _nextSequence = other._nextSequence;
-            _performaceCriterion = other._performaceCriterion;
+            _decisionAccuracyCriterion = other._decisionAccuracyCriterion;
+            _sequenceCompletionCriterion = other._sequenceCompletionCriterion;
+            _rewardedTrialsCriterion = other._rewardedTrialsCriterion;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -694,15 +702,48 @@ namespace SequenceSchema
         /// Performance that must be reached before advancing to the next sequence.
         /// </summary>
         [System.ComponentModel.DescriptionAttribute("Performance that must be reached before advancing to the next sequence.")]
-        public double PerformaceCriterion
+        public double DecisionAccuracyCriterion
         {
             get
             {
-                return _performaceCriterion;
+                return _decisionAccuracyCriterion;
             }
             set
             {
-                _performaceCriterion = value;
+                _decisionAccuracyCriterion = value;
+            }
+        }
+    
+        /// <summary>
+        /// Proprtion of trials that must be completed before advancing to the next sequence.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Proprtion of trials that must be completed before advancing to the next sequence." +
+            "")]
+        public double SequenceCompletionCriterion
+        {
+            get
+            {
+                return _sequenceCompletionCriterion;
+            }
+            set
+            {
+                _sequenceCompletionCriterion = value;
+            }
+        }
+    
+        /// <summary>
+        /// Number of trials that must be rewarded before advancing to the next sequence.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Number of trials that must be rewarded before advancing to the next sequence.")]
+        public int RewardedTrialsCriterion
+        {
+            get
+            {
+                return _rewardedTrialsCriterion;
+            }
+            set
+            {
+                _rewardedTrialsCriterion = value;
             }
         }
     
@@ -720,7 +761,9 @@ namespace SequenceSchema
         {
             stringBuilder.Append("Sequences = " + _sequences + ", ");
             stringBuilder.Append("NextSequence = " + _nextSequence + ", ");
-            stringBuilder.Append("PerformaceCriterion = " + _performaceCriterion);
+            stringBuilder.Append("DecisionAccuracyCriterion = " + _decisionAccuracyCriterion + ", ");
+            stringBuilder.Append("SequenceCompletionCriterion = " + _sequenceCompletionCriterion + ", ");
+            stringBuilder.Append("RewardedTrialsCriterion = " + _rewardedTrialsCriterion);
             return true;
         }
     

@@ -577,7 +577,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\hypnose\rawdata\sub-066_id-427\ses-067_date-20261026\behav</Path>
+              <Path>C:\temp</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -823,20 +823,20 @@
                       <cv:Regions>
                         <cv:ArrayOfPoint>
                           <cv:Point>
-                            <cv:X>120</cv:X>
-                            <cv:Y>310</cv:Y>
+                            <cv:X>240</cv:X>
+                            <cv:Y>650</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>120</cv:X>
-                            <cv:Y>360</cv:Y>
+                            <cv:X>240</cv:X>
+                            <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>540</cv:X>
-                            <cv:Y>360</cv:Y>
+                            <cv:X>1070</cv:X>
+                            <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>540</cv:X>
-                            <cv:Y>310</cv:Y>
+                            <cv:X>1070</cv:X>
+                            <cv:Y>650</cv:Y>
                           </cv:Point>
                         </cv:ArrayOfPoint>
                       </cv:Regions>
@@ -864,6 +864,86 @@
                   </Expression>
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>RoiMovingAverage</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>CameraStream</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Value.Image</Selector>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="cv:Grayscale" />
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SessionSettings</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CameraProperties.BinaryThreshold</Selector>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="ThresholdValue" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="cv:Threshold">
+                      <cv:ThresholdValue>110</cv:ThresholdValue>
+                      <cv:MaxValue>255</cv:MaxValue>
+                      <cv:ThresholdType>BinaryInv</cv:ThresholdType>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SessionSettings</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CameraProperties</Selector>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>RoiSourcePoints</Selector>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Points</Selector>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="p1:ConvertPoints" />
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="Regions" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="cv:RoiActivity">
+                      <cv:Regions>
+                        <cv:ArrayOfPoint>
+                          <cv:Point>
+                            <cv:X>240</cv:X>
+                            <cv:Y>650</cv:Y>
+                          </cv:Point>
+                          <cv:Point>
+                            <cv:X>240</cv:X>
+                            <cv:Y>750</cv:Y>
+                          </cv:Point>
+                          <cv:Point>
+                            <cv:X>1070</cv:X>
+                            <cv:Y>750</cv:Y>
+                          </cv:Point>
+                          <cv:Point>
+                            <cv:X>1070</cv:X>
+                            <cv:Y>650</cv:Y>
+                          </cv:Point>
+                        </cv:ArrayOfPoint>
+                      </cv:Regions>
+                      <cv:Operation>Sum</cv:Operation>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Index">
+                    <Operand xsi:type="IntProperty">
+                      <Value>0</Value>
+                    </Operand>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Activity.Val0</Selector>
                   </Expression>
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>RoiIntensity</Name>
@@ -918,19 +998,34 @@
                   <Edge From="13" To="14" Label="Source1" />
                   <Edge From="14" To="15" Label="Source1" />
                   <Edge From="15" To="16" Label="Source1" />
-                  <Edge From="15" To="20" Label="Source1" />
                   <Edge From="16" To="17" Label="Source1" />
                   <Edge From="17" To="18" Label="Source1" />
                   <Edge From="18" To="19" Label="Source1" />
-                  <Edge From="21" To="23" Label="Source1" />
-                  <Edge From="22" To="23" Label="Source2" />
+                  <Edge From="20" To="21" Label="Source1" />
+                  <Edge From="21" To="22" Label="Source1" />
+                  <Edge From="22" To="26" Label="Source1" />
                   <Edge From="23" To="24" Label="Source1" />
-                  <Edge From="24" To="29" Label="Source1" />
-                  <Edge From="25" To="26" Label="Source1" />
-                  <Edge From="26" To="27" Label="Source1" />
+                  <Edge From="24" To="25" Label="Source1" />
+                  <Edge From="25" To="26" Label="Source2" />
+                  <Edge From="26" To="33" Label="Source1" />
                   <Edge From="27" To="28" Label="Source1" />
-                  <Edge From="28" To="29" Label="Source2" />
+                  <Edge From="28" To="29" Label="Source1" />
                   <Edge From="29" To="30" Label="Source1" />
+                  <Edge From="30" To="31" Label="Source1" />
+                  <Edge From="31" To="32" Label="Source1" />
+                  <Edge From="32" To="33" Label="Source2" />
+                  <Edge From="33" To="34" Label="Source1" />
+                  <Edge From="34" To="35" Label="Source1" />
+                  <Edge From="35" To="36" Label="Source1" />
+                  <Edge From="37" To="39" Label="Source1" />
+                  <Edge From="38" To="39" Label="Source2" />
+                  <Edge From="39" To="40" Label="Source1" />
+                  <Edge From="40" To="45" Label="Source1" />
+                  <Edge From="41" To="42" Label="Source1" />
+                  <Edge From="42" To="43" Label="Source1" />
+                  <Edge From="43" To="44" Label="Source1" />
+                  <Edge From="44" To="45" Label="Source2" />
+                  <Edge From="45" To="46" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -991,6 +1086,9 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="rx:SubscribeWhen" />
                   </Expression>
+                  <Expression xsi:type="ExternalizedMapping">
+                    <Property Name="SerialNumber" DisplayName="CameraSerialNumber" />
+                  </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>SessionSettings</Name>
                   </Expression>
@@ -1013,28 +1111,14 @@
                       <Property Name="Gain" />
                     </PropertyMappings>
                   </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>SessionSettings</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CameraProperties.Binning</Selector>
-                  </Expression>
-                  <Expression xsi:type="PropertyMapping">
-                    <PropertyMappings>
-                      <Property Name="Binning" />
-                    </PropertyMappings>
-                  </Expression>
-                  <Expression xsi:type="ExternalizedMapping">
-                    <Property Name="SerialNumber" DisplayName="CameraSerialNumber" />
-                  </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="aeon-video:SpinnakerCapture">
                       <spk:Index xsi:nil="true" />
                       <spk:SerialNumber>24282618</spk:SerialNumber>
                       <spk:ColorProcessing>Default</spk:ColorProcessing>
-                      <aeon-video:ExposureTime>12000</aeon-video:ExposureTime>
-                      <aeon-video:Gain>0</aeon-video:Gain>
-                      <aeon-video:Binning>2</aeon-video:Binning>
+                      <aeon-video:ExposureTime>15000</aeon-video:ExposureTime>
+                      <aeon-video:Gain>10</aeon-video:Gain>
+                      <aeon-video:Binning>1</aeon-video:Binning>
                       <aeon-video:TriggerSource>Line3</aeon-video:TriggerSource>
                     </Combinator>
                   </Expression>
@@ -1048,19 +1132,16 @@
                   <Edge From="1" To="2" Label="Source1" />
                   <Edge From="2" To="4" Label="Source1" />
                   <Edge From="3" To="4" Label="Source2" />
-                  <Edge From="4" To="15" Label="Source1" />
-                  <Edge From="5" To="6" Label="Source1" />
+                  <Edge From="4" To="12" Label="Source1" />
+                  <Edge From="5" To="12" Label="Source2" />
                   <Edge From="6" To="7" Label="Source1" />
-                  <Edge From="7" To="15" Label="Source2" />
-                  <Edge From="8" To="9" Label="Source1" />
+                  <Edge From="7" To="8" Label="Source1" />
+                  <Edge From="8" To="12" Label="Source3" />
                   <Edge From="9" To="10" Label="Source1" />
-                  <Edge From="10" To="15" Label="Source3" />
-                  <Edge From="11" To="12" Label="Source1" />
+                  <Edge From="10" To="11" Label="Source1" />
+                  <Edge From="11" To="12" Label="Source4" />
                   <Edge From="12" To="13" Label="Source1" />
-                  <Edge From="13" To="15" Label="Source4" />
-                  <Edge From="14" To="15" Label="Source5" />
-                  <Edge From="15" To="16" Label="Source1" />
-                  <Edge From="16" To="17" Label="Source1" />
+                  <Edge From="13" To="14" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -4112,7 +4193,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Multiply">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>16</Value>
+                            <Value>8</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="PropertyMapping">
@@ -4122,7 +4203,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="p2:RewardCommand">
-                            <p2:RewardTime>0.238</p2:RewardTime>
+                            <p2:RewardTime>0.13</p2:RewardTime>
                             <p2:RewardPosition>0</p2:RewardPosition>
                           </Combinator>
                         </Expression>
@@ -4255,7 +4336,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Multiply">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>16</Value>
+                            <Value>8</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="PropertyMapping">
@@ -4265,7 +4346,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="p2:RewardCommand">
-                            <p2:RewardTime>0.238</p2:RewardTime>
+                            <p2:RewardTime>0.13</p2:RewardTime>
                             <p2:RewardPosition>1</p2:RewardPosition>
                           </Combinator>
                         </Expression>
@@ -4390,7 +4471,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>0.73583999997936189</Value>
+                            <Value>0.00099200000113341957</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="scr:ExpressionTransform">
@@ -4403,7 +4484,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>P1DT3H46M38.264S</rx:DueTime>
+                            <rx:DueTime>P1DT3H46M38.999S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -4704,7 +4785,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Delay">
-                            <rx:DueTime>PT0S</rx:DueTime>
+                            <rx:DueTime>PT3S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -4812,7 +4893,7 @@ it.Item2 as TrialComplete
                           <Selector>Item1.Val0</Selector>
                         </Expression>
                         <Expression xsi:type="MemberSelector">
-                          <Selector>Item2.PerformaceCriterion</Selector>
+                          <Selector>Item2.DecisionAccuracyCriterion</Selector>
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Zip" />
