@@ -15,6 +15,39 @@
                 }
             }
         },
+
+        "TrackingProperties": {
+            "type": "object",
+            "properties": {
+                "cropSourcePoints": {
+                    "type": "object",
+                    "description": "Four corner points (clockwise from top-left) of the area used for immobility tracking.",
+                    "properties": {
+                        "points": {
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/point2d" },
+                            "minItems": 4,
+                            "maxItems": 4
+                        }
+                    },
+                    "required": [ "points" ]
+                },
+                "minArea": { "type": "number", "default": 900 },
+                "immobilityAlert": { "$ref": "#/definitions/ImmobilityAlertSettings" }
+            }
+        },
+        "ImmobilityAlertSettings": {
+            "type": "object",
+            "properties": {
+                "radius": { "type": "number", "default": 20 },
+                "alertAfterMinutes": { "type": "number", "default": 90 },
+                "sendTestOnStart": { "type": "boolean", "default": true },
+                "notifyWhenMovingAgain": { "type": "boolean", "default": true },
+                "rigName": { "type": "string", "default": "Hypnose rig" },
+                "webhookUrlFile": { "type": "string", "default": "slack_webhook.txt" }
+            }
+        },
+
         "olfactometerStateCommand": {
             "properties": {
                 "name": {
@@ -267,6 +300,9 @@
             },
             "required": [ "roiSourcePoints"]
         },
+
+        "trackingProperties": { "$ref": "#/definitions/TrackingProperties" },
+
         "olfactometerCommands": {
             "items": {
                 "$ref": "#/definitions/olfactometerStateCommand"

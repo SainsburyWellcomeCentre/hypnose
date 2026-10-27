@@ -39,6 +39,26 @@ cameraProperties:
       - x: 1050
         y: 650
 
+trackingProperties:
+  cropSourcePoints:
+    points:
+      - x: 180
+        y: 102
+      - x: 180
+        y: 947
+      - x: 1025
+        y: 947
+      - x: 1025
+        y: 102
+  minArea: 900
+  immobilityAlert:
+    radius: 20
+    alertAfterMinutes: 90
+    sendTestOnStart: true
+    notifyWhenMovingAgain: true
+    rigName: Hypnose rig
+    webhookUrlFile: slack_webhook.txt
+
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
   - {name: Zero, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], targetFlowO0: [0, 0, 0, 0, 1], targetFlowO1: [0, 0, 0, 0, 1]}

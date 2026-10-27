@@ -88,6 +88,252 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class TrackingProperties
+    {
+    
+        private CropSourcePoints _cropSourcePoints;
+    
+        private double _minArea;
+    
+        private ImmobilityAlertSettings _immobilityAlert;
+    
+        public TrackingProperties()
+        {
+            _minArea = 900D;
+        }
+    
+        protected TrackingProperties(TrackingProperties other)
+        {
+            _cropSourcePoints = other._cropSourcePoints;
+            _minArea = other._minArea;
+            _immobilityAlert = other._immobilityAlert;
+        }
+    
+        /// <summary>
+        /// Four corner points (clockwise from top-left) of the area used for immobility tracking.
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Four corner points (clockwise from top-left) of the area used for immobility trac" +
+            "king.")]
+        public CropSourcePoints CropSourcePoints
+        {
+            get
+            {
+                return _cropSourcePoints;
+            }
+            set
+            {
+                _cropSourcePoints = value;
+            }
+        }
+    
+        public double MinArea
+        {
+            get
+            {
+                return _minArea;
+            }
+            set
+            {
+                _minArea = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public ImmobilityAlertSettings ImmobilityAlert
+        {
+            get
+            {
+                return _immobilityAlert;
+            }
+            set
+            {
+                _immobilityAlert = value;
+            }
+        }
+    
+        public System.IObservable<TrackingProperties> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new TrackingProperties(this)));
+        }
+    
+        public System.IObservable<TrackingProperties> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new TrackingProperties(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("CropSourcePoints = " + _cropSourcePoints + ", ");
+            stringBuilder.Append("MinArea = " + _minArea + ", ");
+            stringBuilder.Append("ImmobilityAlert = " + _immobilityAlert);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class ImmobilityAlertSettings
+    {
+    
+        private double _radius;
+    
+        private double _alertAfterMinutes;
+    
+        private bool _sendTestOnStart;
+    
+        private bool _notifyWhenMovingAgain;
+    
+        private string _rigName;
+    
+        private string _webhookUrlFile;
+    
+        public ImmobilityAlertSettings()
+        {
+            _radius = 20D;
+            _alertAfterMinutes = 90D;
+            _sendTestOnStart = true;
+            _notifyWhenMovingAgain = true;
+            _rigName = "Hypnose rig";
+            _webhookUrlFile = "slack_webhook.txt";
+        }
+    
+        protected ImmobilityAlertSettings(ImmobilityAlertSettings other)
+        {
+            _radius = other._radius;
+            _alertAfterMinutes = other._alertAfterMinutes;
+            _sendTestOnStart = other._sendTestOnStart;
+            _notifyWhenMovingAgain = other._notifyWhenMovingAgain;
+            _rigName = other._rigName;
+            _webhookUrlFile = other._webhookUrlFile;
+        }
+    
+        public double Radius
+        {
+            get
+            {
+                return _radius;
+            }
+            set
+            {
+                _radius = value;
+            }
+        }
+    
+        public double AlertAfterMinutes
+        {
+            get
+            {
+                return _alertAfterMinutes;
+            }
+            set
+            {
+                _alertAfterMinutes = value;
+            }
+        }
+    
+        public bool SendTestOnStart
+        {
+            get
+            {
+                return _sendTestOnStart;
+            }
+            set
+            {
+                _sendTestOnStart = value;
+            }
+        }
+    
+        public bool NotifyWhenMovingAgain
+        {
+            get
+            {
+                return _notifyWhenMovingAgain;
+            }
+            set
+            {
+                _notifyWhenMovingAgain = value;
+            }
+        }
+    
+        public string RigName
+        {
+            get
+            {
+                return _rigName;
+            }
+            set
+            {
+                _rigName = value;
+            }
+        }
+    
+        public string WebhookUrlFile
+        {
+            get
+            {
+                return _webhookUrlFile;
+            }
+            set
+            {
+                _webhookUrlFile = value;
+            }
+        }
+    
+        public System.IObservable<ImmobilityAlertSettings> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new ImmobilityAlertSettings(this)));
+        }
+    
+        public System.IObservable<ImmobilityAlertSettings> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new ImmobilityAlertSettings(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("Radius = " + _radius + ", ");
+            stringBuilder.Append("AlertAfterMinutes = " + _alertAfterMinutes + ", ");
+            stringBuilder.Append("SendTestOnStart = " + _sendTestOnStart + ", ");
+            stringBuilder.Append("NotifyWhenMovingAgain = " + _notifyWhenMovingAgain + ", ");
+            stringBuilder.Append("RigName = " + _rigName + ", ");
+            stringBuilder.Append("WebhookUrlFile = " + _webhookUrlFile);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class OlfactometerStateCommand
     {
     
@@ -403,6 +649,8 @@ namespace DataSchema
     
         private CameraProperties _cameraProperties;
     
+        private TrackingProperties _trackingProperties;
+    
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands;
     
         public HypnoseSession()
@@ -417,6 +665,7 @@ namespace DataSchema
             _hardwarePorts = other._hardwarePorts;
             _eegProperties = other._eegProperties;
             _cameraProperties = other._cameraProperties;
+            _trackingProperties = other._trackingProperties;
             _olfactometerCommands = other._olfactometerCommands;
         }
     
@@ -486,6 +735,19 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public TrackingProperties TrackingProperties
+        {
+            get
+            {
+                return _trackingProperties;
+            }
+            set
+            {
+                _trackingProperties = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
         public System.Collections.Generic.List<OlfactometerStateCommand> OlfactometerCommands
         {
             get
@@ -515,7 +777,70 @@ namespace DataSchema
             stringBuilder.Append("HardwarePorts = " + _hardwarePorts + ", ");
             stringBuilder.Append("EegProperties = " + _eegProperties + ", ");
             stringBuilder.Append("CameraProperties = " + _cameraProperties + ", ");
+            stringBuilder.Append("TrackingProperties = " + _trackingProperties + ", ");
             stringBuilder.Append("OlfactometerCommands = " + _olfactometerCommands);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class CropSourcePoints
+    {
+    
+        private System.Collections.Generic.List<Point2d> _points;
+    
+        public CropSourcePoints()
+        {
+            _points = new System.Collections.Generic.List<Point2d>();
+        }
+    
+        protected CropSourcePoints(CropSourcePoints other)
+        {
+            _points = other._points;
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Collections.Generic.List<Point2d> Points
+        {
+            get
+            {
+                return _points;
+            }
+            set
+            {
+                _points = value;
+            }
+        }
+    
+        public System.IObservable<CropSourcePoints> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new CropSourcePoints(this)));
+        }
+    
+        public System.IObservable<CropSourcePoints> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new CropSourcePoints(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("Points = " + _points);
             return true;
         }
     

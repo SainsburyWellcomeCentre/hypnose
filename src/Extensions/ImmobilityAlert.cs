@@ -19,10 +19,10 @@ public enum AlertService
 [WorkflowElementCategory(ElementCategory.Transform)]
 public class ImmobilityAlert
 {
-    float radius = 15f;
+    double radius = 20;
     [Category("Detection")]
     [Description("Jitter tolerance in pixels. Centroid movements smaller than this are ignored.")]
-    public float Radius
+    public double Radius
     {
         get { return radius; }
         set { radius = value; }
@@ -89,15 +89,20 @@ public class ImmobilityAlert
             var anchor = new Point2f(float.NaN, float.NaN);
             var timer = Stopwatch.StartNew();
             var alerted = false;
-            var url = ResolveUrl();
-
-            if (SendTestOnStart)
-            {
-                Notify(url, string.Format("[{0}] Rig Start: immobility monitor started at {1:HH:mm}.", RigName, DateTime.Now));
-            }
+            var first = true;
 
             return source.Select(p =>
             {
+                // Test message on the first frame (by then values from the session settings have been applied)
+                if (first)
+                {
+                    first = false;
+                    if (SendTestOnStart)
+                    {
+                        Notify(string.Format("[{0}] Rig Start: immobility monitor started at {1:HH:mm}.", RigName, DateTime.Now));
+                    }
+                }
+
                 // Only update when the mouse is actually detected (Centroid gives NaN otherwise)
                 if (!float.IsNaN(p.X) && !float.IsNaN(p.Y))
                 {
@@ -114,7 +119,7 @@ public class ImmobilityAlert
                             alerted = false;
                             if (NotifyWhenMovingAgain)
                             {
-                                Notify(url, string.Format("[{0}] Mouse is moving again ({1:HH:mm}).", RigName, DateTime.Now));
+                                Notify(string.Format("[{0}] Mouse is moving again ({1:HH:mm}).", RigName, DateTime.Now));
                             }
                         }
                     }
@@ -124,7 +129,7 @@ public class ImmobilityAlert
                 if (!alerted && minutes >= AlertAfterMinutes)
                 {
                     alerted = true;
-                    Notify(url, string.Format(
+                    Notify(string.Format(
                         "<!channel> [{0}] ALERT: mouse has not moved for {1:F0} minutes (since {2:HH:mm}). Please check on it.",
                         RigName, minutes, DateTime.Now - timer.Elapsed));
                 }
@@ -149,8 +154,9 @@ public class ImmobilityAlert
         }
     }
 
-    void Notify(string url, string text)
+    void Notify(string text)
     {
+        var url = ResolveUrl();
         var service = Service;
         // Send in the background so the camera pipeline never waits on the network
         Task.Run(() => Post(url, service, text));
