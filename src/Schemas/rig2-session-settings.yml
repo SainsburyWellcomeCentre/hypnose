@@ -27,25 +27,25 @@ hardwarePorts:
 
 eegProperties:
   deviceName: Default
-  streamName: Default
 
 cameraProperties:
   cameraId: 24282622
   frameRate: 60
-  exposure: 15000
-  gain: 10
+  binning: 2
+  exposure: 12000
+  gain: 0
   threshold: 5
-  binaryThreshold: 120
+  binaryThreshold: 140
   roiSourcePoints:
     points:
-      - x: 190
-        y: 650
-      - x: 190
-        y: 760
-      - x: 1010
-        y: 760
-      - x: 1010
-        y: 650
+      - x: 80
+        y: 330
+      - x: 80
+        y: 380
+      - x: 500
+        y: 380
+      - x: 500
+        y: 330
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}

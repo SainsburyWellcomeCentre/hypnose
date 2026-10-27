@@ -1110,6 +1110,8 @@ namespace DataSchema
     
         private double _frameRate;
     
+        private double _binning;
+    
         private double _exposure;
     
         private double _gain;
@@ -1124,6 +1126,7 @@ namespace DataSchema
         {
             _cameraId = "24282618";
             _frameRate = 60D;
+            _binning = 1D;
             _exposure = 19000D;
             _gain = 0D;
             _threshold = 15D;
@@ -1135,6 +1138,7 @@ namespace DataSchema
         {
             _cameraId = other._cameraId;
             _frameRate = other._frameRate;
+            _binning = other._binning;
             _exposure = other._exposure;
             _gain = other._gain;
             _threshold = other._threshold;
@@ -1171,6 +1175,22 @@ namespace DataSchema
             set
             {
                 _frameRate = value;
+            }
+        }
+    
+        /// <summary>
+        /// The camera binning factor.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("The camera binning factor.")]
+        public double Binning
+        {
+            get
+            {
+                return _binning;
+            }
+            set
+            {
+                _binning = value;
             }
         }
     
@@ -1272,6 +1292,7 @@ namespace DataSchema
         {
             stringBuilder.Append("CameraId = " + _cameraId + ", ");
             stringBuilder.Append("FrameRate = " + _frameRate + ", ");
+            stringBuilder.Append("Binning = " + _binning + ", ");
             stringBuilder.Append("Exposure = " + _exposure + ", ");
             stringBuilder.Append("Gain = " + _gain + ", ");
             stringBuilder.Append("Threshold = " + _threshold + ", ");

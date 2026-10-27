@@ -222,6 +222,11 @@
                     "type": "number",
                     "description": "The target camera frame rate in frames per second."
                 },
+                "binning": {
+                    "default": 1,
+                    "type": "number",
+                    "description": "The camera binning factor."
+                },
                 "exposure": {
                     "default": 19000,
                     "type": "number",

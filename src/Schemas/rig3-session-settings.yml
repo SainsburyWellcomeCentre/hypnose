@@ -26,25 +26,26 @@ hardwarePorts:
   olfactometer1: COM13
 
 eegProperties:
-  deviceName: 25088
+  deviceName: 25089
 
 cameraProperties:
   cameraId: 24282626
   frameRate: 60
-  exposure: 15000
-  gain: 10
+  binning: 2
+  exposure: 12000
+  gain: 0
   threshold: 5
   binaryThreshold: 100
   roiSourcePoints:
     points:
-      - x: 160
-        y: 650
-      - x: 160
-        y: 750
-      - x: 1040
-        y: 750
-      - x: 1040
-        y: 650
+      - x: 80
+        y: 330
+      - x: 80
+        y: 380
+      - x: 520
+        y: 380
+      - x: 520
+        y: 330
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
