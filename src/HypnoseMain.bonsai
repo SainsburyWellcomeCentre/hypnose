@@ -793,7 +793,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:Threshold">
-                      <cv:ThresholdValue>110</cv:ThresholdValue>
+                      <cv:ThresholdValue>120</cv:ThresholdValue>
                       <cv:MaxValue>255</cv:MaxValue>
                       <cv:ThresholdType>BinaryInv</cv:ThresholdType>
                     </Combinator>
@@ -823,20 +823,20 @@
                       <cv:Regions>
                         <cv:ArrayOfPoint>
                           <cv:Point>
-                            <cv:X>240</cv:X>
-                            <cv:Y>650</cv:Y>
+                            <cv:X>120</cv:X>
+                            <cv:Y>310</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>240</cv:X>
-                            <cv:Y>750</cv:Y>
+                            <cv:X>120</cv:X>
+                            <cv:Y>360</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1070</cv:X>
-                            <cv:Y>750</cv:Y>
+                            <cv:X>540</cv:X>
+                            <cv:Y>360</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1070</cv:X>
-                            <cv:Y>650</cv:Y>
+                            <cv:X>540</cv:X>
+                            <cv:Y>310</cv:Y>
                           </cv:Point>
                         </cv:ArrayOfPoint>
                       </cv:Regions>
@@ -887,7 +887,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:Threshold">
-                      <cv:ThresholdValue>110</cv:ThresholdValue>
+                      <cv:ThresholdValue>120</cv:ThresholdValue>
                       <cv:MaxValue>255</cv:MaxValue>
                       <cv:ThresholdType>BinaryInv</cv:ThresholdType>
                     </Combinator>
@@ -917,20 +917,20 @@
                       <cv:Regions>
                         <cv:ArrayOfPoint>
                           <cv:Point>
-                            <cv:X>240</cv:X>
-                            <cv:Y>650</cv:Y>
+                            <cv:X>120</cv:X>
+                            <cv:Y>310</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>240</cv:X>
-                            <cv:Y>750</cv:Y>
+                            <cv:X>120</cv:X>
+                            <cv:Y>360</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1070</cv:X>
-                            <cv:Y>750</cv:Y>
+                            <cv:X>540</cv:X>
+                            <cv:Y>360</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>1070</cv:X>
-                            <cv:Y>650</cv:Y>
+                            <cv:X>540</cv:X>
+                            <cv:Y>310</cv:Y>
                           </cv:Point>
                         </cv:ArrayOfPoint>
                       </cv:Regions>
@@ -1116,8 +1116,8 @@
                       <spk:Index xsi:nil="true" />
                       <spk:SerialNumber>24282618</spk:SerialNumber>
                       <spk:ColorProcessing>Default</spk:ColorProcessing>
-                      <aeon-video:ExposureTime>15000</aeon-video:ExposureTime>
-                      <aeon-video:Gain>10</aeon-video:Gain>
+                      <aeon-video:ExposureTime>12000</aeon-video:ExposureTime>
+                      <aeon-video:Gain>0</aeon-video:Gain>
                       <aeon-video:Binning>1</aeon-video:Binning>
                       <aeon-video:TriggerSource>Line3</aeon-video:TriggerSource>
                     </Combinator>
@@ -1993,7 +1993,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT1S</rx:DueTime>
+                                  <rx:DueTime>PT2S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="Combinator">
@@ -2094,7 +2094,7 @@
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.35</Value>
+                                        <Value>0.001</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="SubscribeSubject">
@@ -2126,7 +2126,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>1.2</Value>
+                                        <Value>2.2</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="Combinator">
@@ -2215,7 +2215,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.35</Value>
+                                        <Value>0.001</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
@@ -2310,7 +2310,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Delay">
-                                  <rx:DueTime>PT0.35S</rx:DueTime>
+                                  <rx:DueTime>PT0.001S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -2405,7 +2405,7 @@
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.35</Value>
+                                        <Value>0.001</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="SubscribeSubject">
@@ -2437,7 +2437,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>1.2</Value>
+                                        <Value>2.2</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="Combinator">
@@ -2526,7 +2526,7 @@
                                     </Expression>
                                     <Expression xsi:type="LessThan">
                                       <Operand xsi:type="DoubleProperty">
-                                        <Value>0.35</Value>
+                                        <Value>0.001</Value>
                                       </Operand>
                                     </Expression>
                                     <Expression xsi:type="GreaterThanOrEqual">
@@ -2606,7 +2606,7 @@
                               </Expression>
                               <Expression xsi:type="Combinator">
                                 <Combinator xsi:type="rx:Timer">
-                                  <rx:DueTime>PT3S</rx:DueTime>
+                                  <rx:DueTime>PT5S</rx:DueTime>
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
@@ -3304,7 +3304,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Equal">
                           <Operand xsi:type="IntProperty">
-                            <Value>0</Value>
+                            <Value>4</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="BitwiseNot" />
@@ -4193,7 +4193,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Multiply">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>8</Value>
+                            <Value>16</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="PropertyMapping">
@@ -4203,7 +4203,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="p2:RewardCommand">
-                            <p2:RewardTime>0.13</p2:RewardTime>
+                            <p2:RewardTime>0.238</p2:RewardTime>
                             <p2:RewardPosition>0</p2:RewardPosition>
                           </Combinator>
                         </Expression>
@@ -4336,7 +4336,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Multiply">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>8</Value>
+                            <Value>16</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="PropertyMapping">
@@ -4346,7 +4346,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="p2:RewardCommand">
-                            <p2:RewardTime>0.13</p2:RewardTime>
+                            <p2:RewardTime>0.238</p2:RewardTime>
                             <p2:RewardPosition>1</p2:RewardPosition>
                           </Combinator>
                         </Expression>
@@ -4471,7 +4471,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>0.00099200000113341957</Value>
+                            <Value>0</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="scr:ExpressionTransform">
@@ -4484,7 +4484,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>P1DT3H46M38.999S</rx:DueTime>
+                            <rx:DueTime>PT5S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -4959,6 +4959,85 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>PerformanceAverage</Name>
+                  </Expression>
+                  <Expression xsi:type="GroupWorkflow">
+                    <Name>TrialCounter</Name>
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>ExperimentEvents</Name>
+                        </Expression>
+                        <Expression xsi:type="rx:Condition">
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="WorkflowInput">
+                                <Name>Source1</Name>
+                              </Expression>
+                              <Expression xsi:type="Equal">
+                                <Operand xsi:type="StringProperty">
+                                  <Value>InitiationSequence</Value>
+                                </Operand>
+                              </Expression>
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="1" Label="Source1" />
+                              <Edge From="1" To="2" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="IntProperty">
+                            <Value>1</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="rx:Accumulate" />
+                        <Expression xsi:type="rx:BehaviorSubject">
+                          <Name>TrialCount</Name>
+                        </Expression>
+                        <Expression xsi:type="SubscribeSubject">
+                          <Name>ExperimentEvents</Name>
+                        </Expression>
+                        <Expression xsi:type="rx:Condition">
+                          <Workflow>
+                            <Nodes>
+                              <Expression xsi:type="WorkflowInput">
+                                <Name>Source1</Name>
+                              </Expression>
+                              <Expression xsi:type="Equal">
+                                <Operand xsi:type="StringProperty">
+                                  <Value>AwaitReward</Value>
+                                </Operand>
+                              </Expression>
+                              <Expression xsi:type="WorkflowOutput" />
+                            </Nodes>
+                            <Edges>
+                              <Edge From="0" To="1" Label="Source1" />
+                              <Edge From="1" To="2" Label="Source1" />
+                            </Edges>
+                          </Workflow>
+                        </Expression>
+                        <Expression xsi:type="Combinator">
+                          <Combinator xsi:type="IntProperty">
+                            <Value>1</Value>
+                          </Combinator>
+                        </Expression>
+                        <Expression xsi:type="rx:Accumulate" />
+                        <Expression xsi:type="rx:BehaviorSubject">
+                          <Name>EndSequenceCount</Name>
+                        </Expression>
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="2" Label="Source1" />
+                        <Edge From="2" To="3" Label="Source1" />
+                        <Edge From="3" To="4" Label="Source1" />
+                        <Edge From="5" To="6" Label="Source1" />
+                        <Edge From="6" To="7" Label="Source1" />
+                        <Edge From="7" To="8" Label="Source1" />
+                        <Edge From="8" To="9" Label="Source1" />
+                      </Edges>
+                    </Workflow>
                   </Expression>
                 </Nodes>
                 <Edges>
@@ -5648,7 +5727,7 @@ it.Item2 as TrialComplete
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:SequenceSelector">
-                      <p1:Path>Schemas/ge-discrimination-stage1.yml</p1:Path>
+                      <p1:Path>Schemas/quintuples-option6.yml</p1:Path>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
