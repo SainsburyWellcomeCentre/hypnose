@@ -4,21 +4,7 @@
     <NestedLayout>
       <WindowSettings Index="0">
         <NestedLayout>
-          <WindowSettings Index="1">
-            <Location>
-              <X>213</X>
-              <Y>361</Y>
-            </Location>
-            <Size>
-              <Width>336</Width>
-              <Height>279</Height>
-            </Size>
-            <VisualizerTypeName>Bonsai.Vision.Design.IplImageVisualizer</VisualizerTypeName>
-            <VisualizerSettings>
-              <IplImageVisualizer />
-            </VisualizerSettings>
-          </WindowSettings>
-          <WindowSettings Index="2">
+          <WindowSettings Index="8">
             <Visible>false</Visible>
             <Location>
               <X>592</X>
@@ -33,7 +19,7 @@
               <IplImageVisualizer />
             </VisualizerSettings>
           </WindowSettings>
-          <WindowSettings Index="3">
+          <WindowSettings Index="12">
             <Visible>false</Visible>
             <Location>
               <X>856</X>
@@ -48,10 +34,10 @@
               <ContoursVisualizer />
             </VisualizerSettings>
           </WindowSettings>
-          <WindowSettings Index="4">
+          <WindowSettings Index="13">
             <Location>
-              <X>543</X>
-              <Y>365</Y>
+              <X>226</X>
+              <Y>580</Y>
             </Location>
             <Size>
               <Width>336</Width>
@@ -62,7 +48,7 @@
               <ConnectedComponentCollectionVisualizer />
             </VisualizerSettings>
           </WindowSettings>
-          <WindowSettings Index="5">
+          <WindowSettings Index="14">
             <Location>
               <X>541</X>
               <Y>635</Y>
@@ -76,7 +62,7 @@
               <ConnectedComponentVisualizer />
             </VisualizerSettings>
           </WindowSettings>
-          <WindowSettings Index="6">
+          <WindowSettings Index="15">
             <Location>
               <X>286</X>
               <Y>286</Y>
@@ -90,7 +76,7 @@
               <PointVisualizer />
             </VisualizerSettings>
           </WindowSettings>
-          <WindowSettings Index="7">
+          <WindowSettings Index="19">
             <Location>
               <X>892</X>
               <Y>584</Y>
@@ -103,8 +89,8 @@
             <VisualizerSettings>
               <TimeSeriesVisualizer>
                 <Capacity>640</Capacity>
-                <Min>1.04</Min>
-                <Max>1.1400000000000001</Max>
+                <Min>0.35000000000000003</Min>
+                <Max>0.60000000000000009</Max>
                 <AutoScale>true</AutoScale>
               </TimeSeriesVisualizer>
             </VisualizerSettings>
@@ -113,6 +99,21 @@
       </WindowSettings>
       <WindowSettings Index="1">
         <NestedLayout>
+          <WindowSettings Index="1">
+            <Visible>false</Visible>
+            <Location>
+              <X>738</X>
+              <Y>241</Y>
+            </Location>
+            <Size>
+              <Width>336</Width>
+              <Height>279</Height>
+            </Size>
+            <VisualizerTypeName>Bonsai.Vision.Design.IplImageVisualizer</VisualizerTypeName>
+            <VisualizerSettings>
+              <IplImageVisualizer />
+            </VisualizerSettings>
+          </WindowSettings>
           <WindowSettings Index="6">
             <Location>
               <X>2221</X>
@@ -147,8 +148,8 @@
   </WindowSettings>
   <WindowSettings Index="10">
     <Location>
-      <X>1646</X>
-      <Y>130</Y>
+      <X>1650</X>
+      <Y>139</Y>
     </Location>
     <Size>
       <Width>450</Width>

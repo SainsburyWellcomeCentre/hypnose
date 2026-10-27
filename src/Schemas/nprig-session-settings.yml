@@ -53,10 +53,10 @@ trackingProperties:
   minArea: 900
   immobilityAlert:
     radius: 20
-    alertAfterMinutes: 90
+    alertAfterMinutes: 1
     sendTestOnStart: true
     notifyWhenMovingAgain: true
-    rigName: Hypnose rig
+    rigName: Hypnose NP Rig
     webhookUrlFile: slack_webhook.txt
 
 olfactometerCommands:

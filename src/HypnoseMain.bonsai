@@ -780,14 +780,55 @@
                   <Expression xsi:type="SubscribeSubject">
                     <Name>ThresholdOutput</Name>
                   </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SessionSettings</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>TrackingProperties</Selector>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CropSourcePoints</Selector>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Points</Selector>
+                  </Expression>
                   <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="cv:Crop">
-                      <cv:RegionOfInterest>
-                        <cv:X>180</cv:X>
-                        <cv:Y>102</cv:Y>
-                        <cv:Width>845</cv:Width>
-                        <cv:Height>845</cv:Height>
-                      </cv:RegionOfInterest>
+                    <Combinator xsi:type="p1:ConvertPoints" />
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="Regions" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="cv:CropPolygon">
+                      <cv:Regions>
+                        <cv:ArrayOfPoint>
+                          <cv:Point>
+                            <cv:X>180</cv:X>
+                            <cv:Y>102</cv:Y>
+                          </cv:Point>
+                          <cv:Point>
+                            <cv:X>180</cv:X>
+                            <cv:Y>947</cv:Y>
+                          </cv:Point>
+                          <cv:Point>
+                            <cv:X>1025</cv:X>
+                            <cv:Y>947</cv:Y>
+                          </cv:Point>
+                          <cv:Point>
+                            <cv:X>1025</cv:X>
+                            <cv:Y>102</cv:Y>
+                          </cv:Point>
+                        </cv:ArrayOfPoint>
+                      </cv:Regions>
+                      <cv:MaskType>ToZero</cv:MaskType>
+                      <cv:FillValue>
+                        <cv:Val0>0</cv:Val0>
+                        <cv:Val1>0</cv:Val1>
+                        <cv:Val2>0</cv:Val2>
+                        <cv:Val3>0</cv:Val3>
+                      </cv:FillValue>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -804,6 +845,17 @@
                       <cv:Iterations>1</cv:Iterations>
                       <cv:Operation>Open</cv:Operation>
                     </Combinator>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SessionSettings</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>TrackingProperties.MinArea</Selector>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="MinArea" />
+                    </PropertyMappings>
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:FindContours">
@@ -826,10 +878,26 @@
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:Centroid" />
                   </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SessionSettings</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>TrackingProperties.ImmobilityAlert</Selector>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="Radius" Selector="Radius" />
+                      <Property Name="AlertAfterMinutes" Selector="AlertAfterMinutes" />
+                      <Property Name="SendTestOnStart" Selector="SendTestOnStart" />
+                      <Property Name="NotifyWhenMovingAgain" Selector="NotifyWhenMovingAgain" />
+                      <Property Name="RigName" Selector="RigName" />
+                      <Property Name="WebhookUrlFile" Selector="WebhookUrlFile" />
+                    </PropertyMappings>
+                  </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:ImmobilityAlert">
                       <p1:Radius>20</p1:Radius>
-                      <p1:AlertAfterMinutes>90</p1:AlertAfterMinutes>
+                      <p1:AlertAfterMinutes>1</p1:AlertAfterMinutes>
                       <p1:Service>Slack</p1:Service>
                       <p1:WebhookUrlFile>slack_webhook.txt</p1:WebhookUrlFile>
                       <p1:RigName>Hypnose NP Rig</p1:RigName>
@@ -839,13 +907,25 @@
                   </Expression>
                 </Nodes>
                 <Edges>
-                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="0" To="7" Label="Source1" />
                   <Edge From="1" To="2" Label="Source1" />
                   <Edge From="2" To="3" Label="Source1" />
                   <Edge From="3" To="4" Label="Source1" />
                   <Edge From="4" To="5" Label="Source1" />
                   <Edge From="5" To="6" Label="Source1" />
-                  <Edge From="6" To="7" Label="Source1" />
+                  <Edge From="6" To="7" Label="Source2" />
+                  <Edge From="7" To="8" Label="Source1" />
+                  <Edge From="8" To="12" Label="Source1" />
+                  <Edge From="9" To="10" Label="Source1" />
+                  <Edge From="10" To="11" Label="Source1" />
+                  <Edge From="11" To="12" Label="Source2" />
+                  <Edge From="12" To="13" Label="Source1" />
+                  <Edge From="13" To="14" Label="Source1" />
+                  <Edge From="14" To="15" Label="Source1" />
+                  <Edge From="15" To="19" Label="Source1" />
+                  <Edge From="16" To="17" Label="Source1" />
+                  <Edge From="17" To="18" Label="Source1" />
+                  <Edge From="18" To="19" Label="Source2" />
                 </Edges>
               </Workflow>
             </Expression>
