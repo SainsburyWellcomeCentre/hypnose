@@ -25,6 +25,7 @@ hardwarePorts:
 cameraProperties:
   cameraId: 24284790
   frameRate: 60
+  binning: 1
   exposure: 12000
   gain: 10
   threshold: 3
