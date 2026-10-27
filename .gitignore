@@ -4,6 +4,7 @@ Packages
 .bonsai/Bonsai.exe.settings
 
 src/obj/
+src/slack_webhook.txt
 
 temp_data/
 example_data/

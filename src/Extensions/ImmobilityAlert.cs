@@ -19,27 +19,27 @@ public enum AlertService
 [WorkflowElementCategory(ElementCategory.Transform)]
 public class ImmobilityAlert
 {
+    float radius = 15f;
     [Category("Detection")]
     [Description("Jitter tolerance in pixels. Centroid movements smaller than this are ignored.")]
-    float radius = 15f;
     public float Radius
     {
         get { return radius; }
         set { radius = value; }
     }
 
+    double alertAfterMinutes = 90;
     [Category("Detection")]
     [Description("Send an alert once the mouse has been stationary for this many minutes.")]
-    double alertAfterMinutes = 90;
     public double AlertAfterMinutes
     {
         get { return alertAfterMinutes; }
         set { alertAfterMinutes = value; }
     }
 
+    AlertService service = AlertService.Slack;
     [Category("Notification")]
     [Description("Slack or Teams (Workflows) webhook.")]
-    AlertService service = AlertService.Slack;
     public AlertService Service
     {
         get { return service; }
@@ -47,30 +47,35 @@ public class ImmobilityAlert
     }
 
     [Category("Notification")]
-    [Description("The incoming webhook URL. Leave empty to disable messages.")]
+    [Description("The incoming webhook URL. Leave empty to use WebhookUrlFile instead.")]
     public string WebhookUrl { get; set; }
 
     [Category("Notification")]
+    [Description("Optional: path to a text file containing only the webhook URL (keeps the URL out of the .bonsai file / Git). Used when WebhookUrl is empty. Relative paths are relative to the workflow folder.")]
+    [Editor("Bonsai.Design.OpenFileNameEditor, Bonsai.Design", "System.Drawing.Design.UITypeEditor, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    public string WebhookUrlFile { get; set; }
+
+    string rigName = "Hypnose NP Rig";
+    [Category("Notification")]
     [Description("Name used in the message so the researcher knows which rig/mouse it is.")]
-    string rigName = "Hypnose rig";
     public string RigName
     {
         get { return rigName; }
         set { rigName = value; }
     }
 
+    bool notifyWhenMovingAgain = true;
     [Category("Notification")]
     [Description("Also send a message when the mouse starts moving again after an alert.")]
-    bool notifyWhenMovingAgain = true;
     public bool NotifyWhenMovingAgain
     {
         get { return notifyWhenMovingAgain; }
         set { notifyWhenMovingAgain = value; }
     }
 
+    bool sendTestOnStart = true;
     [Category("Notification")]
     [Description("Send a test message when the workflow starts, to check the webhook works.")]
-    bool sendTestOnStart = false;
     public bool SendTestOnStart
     {
         get { return sendTestOnStart; }
@@ -84,10 +89,11 @@ public class ImmobilityAlert
             var anchor = new Point2f(float.NaN, float.NaN);
             var timer = Stopwatch.StartNew();
             var alerted = false;
+            var url = ResolveUrl();
 
             if (SendTestOnStart)
             {
-                Notify(string.Format("[{0}] Test: immobility monitor started at {1:HH:mm}.", RigName, DateTime.Now));
+                Notify(url, string.Format("[{0}] Rig Start: immobility monitor started at {1:HH:mm}.", RigName, DateTime.Now));
             }
 
             return source.Select(p =>
@@ -108,7 +114,7 @@ public class ImmobilityAlert
                             alerted = false;
                             if (NotifyWhenMovingAgain)
                             {
-                                Notify(string.Format("[{0}] Mouse is moving again ({1:HH:mm}).", RigName, DateTime.Now));
+                                Notify(url, string.Format("[{0}] Mouse is moving again ({1:HH:mm}).", RigName, DateTime.Now));
                             }
                         }
                     }
@@ -118,8 +124,8 @@ public class ImmobilityAlert
                 if (!alerted && minutes >= AlertAfterMinutes)
                 {
                     alerted = true;
-                    Notify(string.Format(
-                        "[{0}] ALERT: mouse has not moved for {1:F0} minutes (since {2:HH:mm}). Please check on it.",
+                    Notify(url, string.Format(
+                        "<!channel> [{0}] ALERT: mouse has not moved for {1:F0} minutes (since {2:HH:mm}). Please check on it.",
                         RigName, minutes, DateTime.Now - timer.Elapsed));
                 }
 
@@ -128,9 +134,23 @@ public class ImmobilityAlert
         });
     }
 
-    void Notify(string text)
+    string ResolveUrl()
     {
-        var url = WebhookUrl;
+        if (!string.IsNullOrWhiteSpace(WebhookUrl)) return WebhookUrl.Trim();
+        if (string.IsNullOrWhiteSpace(WebhookUrlFile)) return null;
+        try
+        {
+            return System.IO.File.ReadAllText(WebhookUrlFile).Trim();
+        }
+        catch (Exception ex)
+        {
+            Trace.WriteLine("ImmobilityAlert could not read WebhookUrlFile: " + ex.Message);
+            return null;
+        }
+    }
+
+    void Notify(string url, string text)
+    {
         var service = Service;
         // Send in the background so the camera pipeline never waits on the network
         Task.Run(() => Post(url, service, text));

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <WorkflowBuilder Version="2.9.1"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:rx="clr-namespace:Bonsai.Reactive;assembly=Bonsai.Core"
@@ -774,6 +774,20 @@
         <Workflow>
           <Nodes>
             <Expression xsi:type="GroupWorkflow">
+              <Name>ImmobilityTracking</Name>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="GroupWorkflow">
               <Name>Tracking</Name>
               <Workflow>
                 <Nodes>
@@ -799,7 +813,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:Threshold">
-                      <cv:ThresholdValue>120</cv:ThresholdValue>
+                      <cv:ThresholdValue>110</cv:ThresholdValue>
                       <cv:MaxValue>255</cv:MaxValue>
                       <cv:ThresholdType>BinaryInv</cv:ThresholdType>
                     </Combinator>
@@ -829,20 +843,20 @@
                       <cv:Regions>
                         <cv:ArrayOfPoint>
                           <cv:Point>
-                            <cv:X>120</cv:X>
-                            <cv:Y>310</cv:Y>
+                            <cv:X>180</cv:X>
+                            <cv:Y>650</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>120</cv:X>
-                            <cv:Y>360</cv:Y>
+                            <cv:X>180</cv:X>
+                            <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>540</cv:X>
-                            <cv:Y>360</cv:Y>
+                            <cv:X>1050</cv:X>
+                            <cv:Y>750</cv:Y>
                           </cv:Point>
                           <cv:Point>
-                            <cv:X>540</cv:X>
-                            <cv:Y>310</cv:Y>
+                            <cv:X>1050</cv:X>
+                            <cv:Y>650</cv:Y>
                           </cv:Point>
                         </cv:ArrayOfPoint>
                       </cv:Regions>
@@ -875,6 +889,31 @@
                     <Name>RoiIntensity</Name>
                   </Expression>
                   <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="cv:Crop">
+                      <cv:RegionOfInterest>
+                        <cv:X>180</cv:X>
+                        <cv:Y>102</cv:Y>
+                        <cv:Width>845</cv:Width>
+                        <cv:Height>845</cv:Height>
+                      </cv:RegionOfInterest>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="cv:MorphologicalOperator">
+                      <cv:Size>
+                        <cv:Width>5</cv:Width>
+                        <cv:Height>5</cv:Height>
+                      </cv:Size>
+                      <cv:Anchor>
+                        <cv:X>-1</cv:X>
+                        <cv:Y>-1</cv:Y>
+                      </cv:Anchor>
+                      <cv:Shape>Ellipse</cv:Shape>
+                      <cv:Iterations>1</cv:Iterations>
+                      <cv:Operation>Open</cv:Operation>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:FindContours">
                       <cv:Mode>External</cv:Mode>
                       <cv:Method>ChainApproxNone</cv:Method>
@@ -882,7 +921,7 @@
                         <cv:X>0</cv:X>
                         <cv:Y>0</cv:Y>
                       </cv:Offset>
-                      <cv:MinArea>300</cv:MinArea>
+                      <cv:MinArea>900</cv:MinArea>
                       <cv:MaxArea xsi:nil="true" />
                     </Combinator>
                   </Expression>
@@ -897,12 +936,13 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="p1:ImmobilityAlert">
-                      <p1:Radius>15</p1:Radius>
+                      <p1:Radius>20</p1:Radius>
                       <p1:AlertAfterMinutes>90</p1:AlertAfterMinutes>
                       <p1:Service>Slack</p1:Service>
-                      <p1:RigName>Hypnose rig</p1:RigName>
+                      <p1:WebhookUrlFile>slack_webhook.txt</p1:WebhookUrlFile>
+                      <p1:RigName>Hypnose NP Rig</p1:RigName>
                       <p1:NotifyWhenMovingAgain>true</p1:NotifyWhenMovingAgain>
-                      <p1:SendTestOnStart>false</p1:SendTestOnStart>
+                      <p1:SendTestOnStart>true</p1:SendTestOnStart>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
@@ -964,15 +1004,17 @@
                   <Edge From="22" To="23" Label="Source1" />
                   <Edge From="23" To="24" Label="Source1" />
                   <Edge From="24" To="25" Label="Source1" />
-                  <Edge From="26" To="28" Label="Source1" />
-                  <Edge From="27" To="28" Label="Source2" />
-                  <Edge From="28" To="29" Label="Source1" />
-                  <Edge From="29" To="34" Label="Source1" />
+                  <Edge From="25" To="26" Label="Source1" />
+                  <Edge From="26" To="27" Label="Source1" />
+                  <Edge From="28" To="30" Label="Source1" />
+                  <Edge From="29" To="30" Label="Source2" />
                   <Edge From="30" To="31" Label="Source1" />
-                  <Edge From="31" To="32" Label="Source1" />
+                  <Edge From="31" To="36" Label="Source1" />
                   <Edge From="32" To="33" Label="Source1" />
-                  <Edge From="33" To="34" Label="Source2" />
+                  <Edge From="33" To="34" Label="Source1" />
                   <Edge From="34" To="35" Label="Source1" />
+                  <Edge From="35" To="36" Label="Source2" />
+                  <Edge From="36" To="37" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -1075,8 +1117,8 @@
                       <spk:SerialNumber>24284790</spk:SerialNumber>
                       <spk:ColorProcessing>Default</spk:ColorProcessing>
                       <aeon-video:ExposureTime>12000</aeon-video:ExposureTime>
-                      <aeon-video:Gain>0</aeon-video:Gain>
-                      <aeon-video:Binning>2</aeon-video:Binning>
+                      <aeon-video:Gain>10</aeon-video:Gain>
+                      <aeon-video:Binning>1</aeon-video:Binning>
                       <aeon-video:TriggerSource>Line3</aeon-video:TriggerSource>
                     </Combinator>
                   </Expression>
@@ -1195,15 +1237,15 @@
             </Expression>
           </Nodes>
           <Edges>
-            <Edge From="1" To="2" Label="Source1" />
             <Edge From="2" To="3" Label="Source1" />
             <Edge From="3" To="4" Label="Source1" />
-            <Edge From="5" To="6" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
             <Edge From="6" To="7" Label="Source1" />
             <Edge From="7" To="8" Label="Source1" />
             <Edge From="8" To="9" Label="Source1" />
             <Edge From="9" To="10" Label="Source1" />
             <Edge From="10" To="11" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
