@@ -9,7 +9,7 @@ metadata:
   loggingRootPath: C:\temp
   rewardTime: 0.014875
   initialSequence: Schemas/doubles-option5-stage2.yml
-  eegRecordingEnabled: True
+  eegRecordingEnabled: False
   maximumRewardsAvailable: 200
 
 shortcutKeys:
@@ -23,7 +23,7 @@ hardwarePorts:
   olfactometer1: COM9
 
 cameraProperties:
-  cameraId: 24282618
+  cameraId: 24284790
   frameRate: 60
   exposure: 12000
   gain: 10
