@@ -13,19 +13,19 @@ metadata:
   maximumRewardsAvailable: 200
 
 shortcutKeys:
-  endSessionKey: Ctrl+1
-  startOlfactometerPurgeKey: Shift+1
-  startCamera: Alt+1
+  endSessionKey: Ctrl+4
+  startOlfactometerPurgeKey: Shift+4
+  startCamera: Alt+4
 
 hardwarePorts:
-  behaviorBoard: COM11
-  olfactometer0: COM9
-  olfactometer1: COM3
+  behaviorBoard: COM5
+  olfactometer0: COM4
+  olfactometer1: COM9
 
 cameraProperties:
   cameraId: 24282618
   frameRate: 60
-  exposure: 15000
+  exposure: 12000
   gain: 10
   threshold: 3
   roiSourcePoints:
@@ -40,13 +40,14 @@ cameraProperties:
         y: 650
 
 olfactometerCommands:
-  - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
-  - {name: Zero, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1], targetFlowO1: [0, 0, 0, 0, 1]}
-  - {name: Purge, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], endValvesOpenO1: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
-  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [100, 0, 0, 0, 810], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorB, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [100, 0, 0, 0, 345]}
-  - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 100, 0, 825], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 100, 820], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorE, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 100, 0, 0, 850], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 100, 0, 0, 358]}
-  - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 100, 0, 345]}
+  - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
+  - {name: Zero, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], targetFlowO0: [0, 0, 0, 0, 1], targetFlowO1: [0, 0, 0, 0, 1]}
+  - {name: Purge, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 0, 400]}
+  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [100, 0, 0, 0, 810], targetFlowO1: [0, 0, 0, 0, 400]}
+  - {name: OdorB, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [100, 0, 0, 0, 400]}
+  - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 100, 0, 825], targetFlowO1: [0, 0, 0, 0, 400]}
+  - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 100, 820], targetFlowO1: [0, 0, 0, 0, 400]}
+  - {name: OdorE, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 100, 0, 0, 850], targetFlowO1: [0, 0, 0, 0, 400]}
+  - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 100, 0, 0, 400]}
+  - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 100, 0, 400]}
+  - {name: OdorH, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}

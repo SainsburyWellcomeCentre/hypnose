@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<VisualizerLayout Version="2.9.0">
+<VisualizerLayout Version="2.9.1">
   <WindowSettings Index="6">
     <Visible>false</Visible>
     <Location>
@@ -45,8 +45,8 @@
   </WindowSettings>
   <WindowSettings Index="9">
     <Location>
-      <X>871</X>
-      <Y>463</Y>
+      <X>724</X>
+      <Y>406</Y>
     </Location>
     <Size>
       <Width>615</Width>
