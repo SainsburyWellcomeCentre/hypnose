@@ -8,7 +8,7 @@ metadata:
   minimumSampleTime: 0.05
   loggingRootPath: C:\temp
   rewardTime: 0.014875
-  initialSequence: Schemas/hiddenrule-location1-option6.yml
+  initialSequence: Schemas/ge-discrimination-stage1.yml
   eegRecordingEnabled: False
   maximumRewardsAvailable: 100
 
@@ -31,10 +31,11 @@ eegProperties:
 cameraProperties:
   cameraId: 24282618
   frameRate: 60
-  exposure: 15000
+  binning: 2
+  exposure: 12000
   gain: 0
   threshold: 5
-  binaryThreshold: 110
+  binaryThreshold: 120
   roiSourcePoints:
     points:
       - x: 120

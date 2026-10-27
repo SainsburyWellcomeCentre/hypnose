@@ -6,7 +6,7 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  loggingRootPath: C:\hypnose\rawdata\sub-061_id-425\ses-074_date-20261026\behav
+  loggingRootPath: C:\temp
   rewardTime: 0.015
   initialSequence: Schemas/quintuples-option6.yml
   eegRecordingEnabled: False
@@ -27,25 +27,25 @@ hardwarePorts:
 
 eegProperties:
   deviceName: Default
-  streamName: Default
 
 cameraProperties:
   cameraId: 24282622
   frameRate: 60
-  exposure: 15000
-  gain: 10
+  binning: 2
+  exposure: 12000
+  gain: 0
   threshold: 5
-  binaryThreshold: 120
+  binaryThreshold: 140
   roiSourcePoints:
     points:
-      - x: 160
-        y: 650
-      - x: 160
-        y: 760
-      - x: 990
-        y: 760
-      - x: 990
-        y: 650
+      - x: 80
+        y: 330
+      - x: 80
+        y: 380
+      - x: 500
+        y: 380
+      - x: 500
+        y: 330
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
