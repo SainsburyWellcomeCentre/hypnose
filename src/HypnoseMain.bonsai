@@ -5197,10 +5197,25 @@ it.Item2 as TrialComplete
               </Combinator>
             </Expression>
             <Expression xsi:type="scr:ExpressionTransform">
-              <scr:Expression>DateTime.Now.Hour &gt;= 8 and DateTime.Now.Hour &lt; 20</scr:Expression>
+              <scr:Expression>DateTime.Now.Hour &gt;= 22 and DateTime.Now.Hour &lt; 24</scr:Expression>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:DistinctUntilChanged" />
             </Expression>
             <Expression xsi:type="scr:ExpressionTransform">
-              <scr:Expression>DateTime.Now.Hour &gt;= 20 and DateTime.Now.Hour &lt; 8</scr:Expression>
+              <scr:Expression>DateTime.Now.Minute &gt;= 5 and DateTime.Now.Minute &lt; 7</scr:Expression>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:DistinctUntilChanged" />
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="rx:BehaviorSubject">
+              <Name>TaskAvailable</Name>
+            </Expression>
+            <Expression xsi:type="scr:ExpressionTransform">
+              <scr:Expression>DateTime.Now</scr:Expression>
             </Expression>
           </Nodes>
           <Edges>
@@ -5211,7 +5226,13 @@ it.Item2 as TrialComplete
             <Edge From="4" To="5" Label="Source1" />
             <Edge From="5" To="6" Label="Source1" />
             <Edge From="10" To="11" Label="Source1" />
-            <Edge From="10" To="12" Label="Source1" />
+            <Edge From="10" To="13" Label="Source1" />
+            <Edge From="10" To="17" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
+            <Edge From="12" To="15" Label="Source1" />
+            <Edge From="13" To="14" Label="Source1" />
+            <Edge From="14" To="15" Label="Source2" />
+            <Edge From="15" To="16" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
