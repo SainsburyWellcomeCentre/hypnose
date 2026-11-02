@@ -3848,6 +3848,28 @@ it.Item2 as TrialComplete
                       </Edges>
                     </Workflow>
                   </Expression>
+                  <Expression xsi:type="rx:Sink">
+                    <Name>TrialCompletionPerformance</Name>
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="WorkflowInput">
+                          <Name>Source1</Name>
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>TrialComplete</Selector>
+                        </Expression>
+                        <Expression xsi:type="rx:BehaviorSubject">
+                          <Name>TrialCompletionResult</Name>
+                        </Expression>
+                        <Expression xsi:type="WorkflowOutput" />
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="2" Label="Source1" />
+                        <Edge From="2" To="3" Label="Source1" />
+                      </Edges>
+                    </Workflow>
+                  </Expression>
                   <Expression xsi:type="rx:Condition">
                     <Name>TrialValid</Name>
                     <Workflow>
@@ -4649,7 +4671,7 @@ it.Item2 as TrialComplete
                     </Workflow>
                   </Expression>
                   <Expression xsi:type="rx:Sink">
-                    <Name>UpdatePerformance</Name>
+                    <Name>DecisionAccuracyPerformance</Name>
                     <Workflow>
                       <Nodes>
                         <Expression xsi:type="WorkflowInput">
@@ -4699,7 +4721,7 @@ it.Item2 as TrialComplete
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="rx:Sink">
-                    <Name>UpdatePerformance</Name>
+                    <Name>DecisionAccuracyPerformance</Name>
                     <Workflow>
                       <Nodes>
                         <Expression xsi:type="WorkflowInput">
@@ -4844,22 +4866,23 @@ it.Item2 as TrialComplete
                   <Edge From="4" To="5" Label="Source1" />
                   <Edge From="5" To="6" Label="Source1" />
                   <Edge From="6" To="7" Label="Source1" />
-                  <Edge From="6" To="21" Label="Source1" />
+                  <Edge From="6" To="22" Label="Source1" />
                   <Edge From="7" To="8" Label="Source1" />
-                  <Edge From="7" To="12" Label="Source1" />
                   <Edge From="8" To="9" Label="Source1" />
+                  <Edge From="8" To="13" Label="Source1" />
                   <Edge From="9" To="10" Label="Source1" />
                   <Edge From="10" To="11" Label="Source1" />
-                  <Edge From="11" To="16" Label="Source1" />
-                  <Edge From="12" To="13" Label="Source1" />
+                  <Edge From="11" To="12" Label="Source1" />
+                  <Edge From="12" To="17" Label="Source1" />
                   <Edge From="13" To="14" Label="Source1" />
                   <Edge From="14" To="15" Label="Source1" />
-                  <Edge From="15" To="16" Label="Source2" />
-                  <Edge From="16" To="17" Label="Source1" />
+                  <Edge From="15" To="16" Label="Source1" />
+                  <Edge From="16" To="17" Label="Source2" />
                   <Edge From="17" To="18" Label="Source1" />
                   <Edge From="18" To="19" Label="Source1" />
                   <Edge From="19" To="20" Label="Source1" />
-                  <Edge From="21" To="22" Label="Source1" />
+                  <Edge From="20" To="21" Label="Source1" />
+                  <Edge From="22" To="23" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -4874,7 +4897,7 @@ it.Item2 as TrialComplete
               <Workflow>
                 <Nodes>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>PerformanceAverage</Name>
+                    <Name>DecisionAccuracyAverage</Name>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>CurrentSequences</Name>
@@ -4958,86 +4981,40 @@ it.Item2 as TrialComplete
                     <Combinator xsi:type="rx:Repeat" />
                   </Expression>
                   <Expression xsi:type="rx:BehaviorSubject">
-                    <Name>PerformanceAverage</Name>
+                    <Name>DecisionAccuracyAverage</Name>
                   </Expression>
-                  <Expression xsi:type="GroupWorkflow">
-                    <Name>TrialCounter</Name>
-                    <Workflow>
-                      <Nodes>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>ExperimentEvents</Name>
-                        </Expression>
-                        <Expression xsi:type="rx:Condition">
-                          <Workflow>
-                            <Nodes>
-                              <Expression xsi:type="WorkflowInput">
-                                <Name>Source1</Name>
-                              </Expression>
-                              <Expression xsi:type="Equal">
-                                <Operand xsi:type="StringProperty">
-                                  <Value>InitiationSequence</Value>
-                                </Operand>
-                              </Expression>
-                              <Expression xsi:type="WorkflowOutput" />
-                            </Nodes>
-                            <Edges>
-                              <Edge From="0" To="1" Label="Source1" />
-                              <Edge From="1" To="2" Label="Source1" />
-                            </Edges>
-                          </Workflow>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="IntProperty">
-                            <Value>1</Value>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="rx:Accumulate" />
-                        <Expression xsi:type="rx:BehaviorSubject">
-                          <Name>TrialCount</Name>
-                        </Expression>
-                        <Expression xsi:type="SubscribeSubject">
-                          <Name>ExperimentEvents</Name>
-                        </Expression>
-                        <Expression xsi:type="rx:Condition">
-                          <Workflow>
-                            <Nodes>
-                              <Expression xsi:type="WorkflowInput">
-                                <Name>Source1</Name>
-                              </Expression>
-                              <Expression xsi:type="Equal">
-                                <Operand xsi:type="StringProperty">
-                                  <Value>AwaitReward</Value>
-                                </Operand>
-                              </Expression>
-                              <Expression xsi:type="WorkflowOutput" />
-                            </Nodes>
-                            <Edges>
-                              <Edge From="0" To="1" Label="Source1" />
-                              <Edge From="1" To="2" Label="Source1" />
-                            </Edges>
-                          </Workflow>
-                        </Expression>
-                        <Expression xsi:type="Combinator">
-                          <Combinator xsi:type="IntProperty">
-                            <Value>1</Value>
-                          </Combinator>
-                        </Expression>
-                        <Expression xsi:type="rx:Accumulate" />
-                        <Expression xsi:type="rx:BehaviorSubject">
-                          <Name>EndSequenceCount</Name>
-                        </Expression>
-                      </Nodes>
-                      <Edges>
-                        <Edge From="0" To="1" Label="Source1" />
-                        <Edge From="1" To="2" Label="Source1" />
-                        <Edge From="2" To="3" Label="Source1" />
-                        <Edge From="3" To="4" Label="Source1" />
-                        <Edge From="5" To="6" Label="Source1" />
-                        <Edge From="6" To="7" Label="Source1" />
-                        <Edge From="7" To="8" Label="Source1" />
-                        <Edge From="8" To="9" Label="Source1" />
-                      </Edges>
-                    </Workflow>
+                  <Expression xsi:type="rx:BehaviorSubject" TypeArguments="sys:Boolean">
+                    <rx:Name>TrialCompletionResult</rx:Name>
+                  </Expression>
+                  <Expression xsi:type="scr:ExpressionTransform">
+                    <scr:Expression>Convert.ToInt32(it)</scr:Expression>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="dsp:Buffer">
+                      <dsp:Count>5</dsp:Count>
+                      <dsp:Skip>1</dsp:Skip>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="dsp:Average" />
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Repeat" />
+                  </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>TrialCompletionAverage</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>DecisionAccuracyAverage</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>TrialCompletionAverage</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>RewardCounter</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:CombineLatest" />
                   </Expression>
                 </Nodes>
                 <Edges>
@@ -5057,6 +5034,14 @@ it.Item2 as TrialComplete
                   <Edge From="14" To="15" Label="Source2" />
                   <Edge From="15" To="16" Label="Source1" />
                   <Edge From="16" To="17" Label="Source1" />
+                  <Edge From="18" To="19" Label="Source1" />
+                  <Edge From="19" To="20" Label="Source1" />
+                  <Edge From="20" To="21" Label="Source1" />
+                  <Edge From="21" To="22" Label="Source1" />
+                  <Edge From="22" To="23" Label="Source1" />
+                  <Edge From="24" To="27" Label="Source1" />
+                  <Edge From="25" To="27" Label="Source2" />
+                  <Edge From="26" To="27" Label="Source3" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -5148,6 +5133,74 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>RewardCounter</Name>
                   </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>RewardCommand</Name>
+                  </Expression>
+                  <Expression xsi:type="rx:Condition">
+                    <Name>R1</Name>
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="WorkflowInput">
+                          <Name>Source1</Name>
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>RewardPosition</Selector>
+                        </Expression>
+                        <Expression xsi:type="Equal">
+                          <Operand xsi:type="IntProperty">
+                            <Value>0</Value>
+                          </Operand>
+                        </Expression>
+                        <Expression xsi:type="WorkflowOutput" />
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="2" Label="Source1" />
+                        <Edge From="2" To="3" Label="Source1" />
+                      </Edges>
+                    </Workflow>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="IntProperty">
+                      <Value>1</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="rx:Condition">
+                    <Name>R2</Name>
+                    <Workflow>
+                      <Nodes>
+                        <Expression xsi:type="WorkflowInput">
+                          <Name>Source1</Name>
+                        </Expression>
+                        <Expression xsi:type="MemberSelector">
+                          <Selector>RewardPosition</Selector>
+                        </Expression>
+                        <Expression xsi:type="Equal">
+                          <Operand xsi:type="IntProperty">
+                            <Value>1</Value>
+                          </Operand>
+                        </Expression>
+                        <Expression xsi:type="WorkflowOutput" />
+                      </Nodes>
+                      <Edges>
+                        <Edge From="0" To="1" Label="Source1" />
+                        <Edge From="1" To="2" Label="Source1" />
+                        <Edge From="2" To="3" Label="Source1" />
+                      </Edges>
+                    </Workflow>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="IntProperty">
+                      <Value>1</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Merge" />
+                  </Expression>
+                  <Expression xsi:type="rx:Accumulate" />
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>TotalRewards</Name>
+                  </Expression>
                 </Nodes>
                 <Edges>
                   <Edge From="0" To="1" Label="Source1" />
@@ -5164,6 +5217,14 @@ it.Item2 as TrialComplete
                   <Edge From="9" To="10" Label="Source2" />
                   <Edge From="10" To="11" Label="Source1" />
                   <Edge From="11" To="12" Label="Source1" />
+                  <Edge From="13" To="14" Label="Source1" />
+                  <Edge From="13" To="16" Label="Source1" />
+                  <Edge From="14" To="15" Label="Source1" />
+                  <Edge From="15" To="18" Label="Source1" />
+                  <Edge From="16" To="17" Label="Source1" />
+                  <Edge From="17" To="18" Label="Source2" />
+                  <Edge From="18" To="19" Label="Source1" />
+                  <Edge From="19" To="20" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
