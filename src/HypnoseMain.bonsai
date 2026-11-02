@@ -577,7 +577,7 @@
               </PropertyMappings>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\hypnose\rawdata\sub-066_id-427\ses-067_date-20261026\behav</Path>
+              <Path>C:\temp</Path>
               <ChunkSize>1</ChunkSize>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
@@ -793,7 +793,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="cv:Threshold">
-                      <cv:ThresholdValue>110</cv:ThresholdValue>
+                      <cv:ThresholdValue>120</cv:ThresholdValue>
                       <cv:MaxValue>255</cv:MaxValue>
                       <cv:ThresholdType>BinaryInv</cv:ThresholdType>
                     </Combinator>
@@ -4390,7 +4390,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>0.73583999997936189</Value>
+                            <Value>0.728000000002794</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="scr:ExpressionTransform">
@@ -4403,7 +4403,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>P1DT3H46M38.264S</rx:DueTime>
+                            <rx:DueTime>P1DT3H46M38.272S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -5190,6 +5190,18 @@ it.Item2 as TrialComplete
                 </Edges>
               </Workflow>
             </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Timer">
+                <rx:DueTime>PT0S</rx:DueTime>
+                <rx:Period>PT1S</rx:Period>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="scr:ExpressionTransform">
+              <scr:Expression>DateTime.Now.Hour &gt;= 8 and DateTime.Now.Hour &lt; 20</scr:Expression>
+            </Expression>
+            <Expression xsi:type="scr:ExpressionTransform">
+              <scr:Expression>DateTime.Now.Hour &gt;= 20 and DateTime.Now.Hour &lt; 8</scr:Expression>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -5198,6 +5210,8 @@ it.Item2 as TrialComplete
             <Edge From="3" To="4" Label="Source1" />
             <Edge From="4" To="5" Label="Source1" />
             <Edge From="5" To="6" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
+            <Edge From="10" To="12" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
