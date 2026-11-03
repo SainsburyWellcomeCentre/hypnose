@@ -16,6 +16,8 @@ shortcutKeys:
   endSessionKey: Ctrl+4
   startOlfactometerPurgeKey: Shift+4
   startCamera: Alt+4
+  pulse1Key: Ctrl+5
+  pulse2Key: Ctrl+6
 
 hardwarePorts:
   behaviorBoard: COM5
@@ -46,6 +48,10 @@ lightCycle:
   duskStart: "21:00:00"
   duskDuration: "01:00:00"
   pwmFrequency: 1000
+
+taskAccess:
+  - {start: "23:00:00", end: "01:00:00"}
+  - {start: "05:00:00", end: "07:00:00"}
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}

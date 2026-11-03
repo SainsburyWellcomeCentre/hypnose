@@ -387,6 +387,97 @@ namespace DataSchema
     }
 
 
+    /// <summary>
+    /// A daily time window on the 24 h clock, open from start (inclusive) to end (exclusive). If end is earlier than start, the window runs past midnight (e.g. 22:00:00 to 02:00:00).
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [System.ComponentModel.DescriptionAttribute("A daily time window on the 24 h clock, open from start (inclusive) to end (exclus" +
+        "ive). If end is earlier than start, the window runs past midnight (e.g. 22:00:00" +
+        " to 02:00:00).")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class TaskAccessWindow
+    {
+    
+        private string _start;
+    
+        private string _end;
+    
+        public TaskAccessWindow()
+        {
+        }
+    
+        protected TaskAccessWindow(TaskAccessWindow other)
+        {
+            _start = other._start;
+            _end = other._end;
+        }
+    
+        /// <summary>
+        /// Time of day the window opens, as HH:mm:ss (quoted).
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Time of day the window opens, as HH:mm:ss (quoted).")]
+        public string Start
+        {
+            get
+            {
+                return _start;
+            }
+            set
+            {
+                _start = value;
+            }
+        }
+    
+        /// <summary>
+        /// Time of day the window closes, as HH:mm:ss (quoted). Must differ from start; a window with equal start and end never opens.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Time of day the window closes, as HH:mm:ss (quoted). Must differ from start; a wi" +
+            "ndow with equal start and end never opens.")]
+        public string End
+        {
+            get
+            {
+                return _end;
+            }
+            set
+            {
+                _end = value;
+            }
+        }
+    
+        public System.IObservable<TaskAccessWindow> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new TaskAccessWindow(this)));
+        }
+    
+        public System.IObservable<TaskAccessWindow> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new TaskAccessWindow(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("Start = " + _start + ", ");
+            stringBuilder.Append("End = " + _end);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     [Bonsai.CombinatorAttribute(MethodName="Generate")]
@@ -405,10 +496,13 @@ namespace DataSchema
     
         private LightCycle _lightCycle;
     
+        private System.Collections.Generic.List<TaskAccessWindow> _taskAccess;
+    
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands;
     
         public HypnoseSession()
         {
+            _taskAccess = new System.Collections.Generic.List<TaskAccessWindow>();
             _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
         }
     
@@ -420,6 +514,7 @@ namespace DataSchema
             _eegProperties = other._eegProperties;
             _cameraProperties = other._cameraProperties;
             _lightCycle = other._lightCycle;
+            _taskAccess = other._taskAccess;
             _olfactometerCommands = other._olfactometerCommands;
         }
     
@@ -507,6 +602,23 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Daily time windows during which the task is available, checked against the PC clock once per second. New initiations stop 60 s before a window ends: a trial the animal has already initiated runs on, but no new trial or re-initiation can start, and a trial still waiting for initiation is stopped with its LED off. When the window ends, anything still running is stopped, all nose-poke port LEDs (DOPort0-2) are off and the olfactometer is set to Default; logging and the camera keep running. A window of 60 s or less never opens for initiation. Leave this section out (or empty) to make the task available all day.
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"Daily time windows during which the task is available, checked against the PC clock once per second. New initiations stop 60 s before a window ends: a trial the animal has already initiated runs on, but no new trial or re-initiation can start, and a trial still waiting for initiation is stopped with its LED off. When the window ends, anything still running is stopped, all nose-poke port LEDs (DOPort0-2) are off and the olfactometer is set to Default; logging and the camera keep running. A window of 60 s or less never opens for initiation. Leave this section out (or empty) to make the task available all day.")]
+        public System.Collections.Generic.List<TaskAccessWindow> TaskAccess
+        {
+            get
+            {
+                return _taskAccess;
+            }
+            set
+            {
+                _taskAccess = value;
+            }
+        }
+    
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public System.Collections.Generic.List<OlfactometerStateCommand> OlfactometerCommands
         {
@@ -538,6 +650,7 @@ namespace DataSchema
             stringBuilder.Append("EegProperties = " + _eegProperties + ", ");
             stringBuilder.Append("CameraProperties = " + _cameraProperties + ", ");
             stringBuilder.Append("LightCycle = " + _lightCycle + ", ");
+            stringBuilder.Append("TaskAccess = " + _taskAccess + ", ");
             stringBuilder.Append("OlfactometerCommands = " + _olfactometerCommands);
             return true;
         }
