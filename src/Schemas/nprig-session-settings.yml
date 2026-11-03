@@ -27,7 +27,7 @@ hardwarePorts:
 cameraProperties:
   cameraId: 24284790
   frameRate: 60
-  binning: 2
+  binning: 1
   exposure: 12000
   gain: 10
   threshold: 3
@@ -52,6 +52,26 @@ lightCycle:
 taskAccess:
   - {start: "23:00:00", end: "01:00:00"}
   - {start: "05:00:00", end: "07:00:00"}
+
+trackingProperties:
+  cropSourcePoints:
+    points:
+      - x: 180
+        y: 102
+      - x: 180
+        y: 947
+      - x: 1025
+        y: 947
+      - x: 1025
+        y: 102
+  minArea: 900
+  immobilityAlert:
+    radius: 20
+    alertAfterMinutes: 1
+    sendTestOnStart: true
+    notifyWhenMovingAgain: true
+    rigName: Hypnose NP Rig
+    webhookUrlFile: slack_webhook.txt
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
