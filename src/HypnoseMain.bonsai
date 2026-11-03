@@ -566,105 +566,228 @@
         <Workflow>
           <Nodes>
             <Expression xsi:type="SubscribeSubject">
-              <Name>SessionSettings</Name>
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>Metadata.LoggingRootPath</Selector>
-            </Expression>
-            <Expression xsi:type="PropertyMapping">
-              <PropertyMappings>
-                <Property Name="Path" />
-              </PropertyMappings>
-            </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
-              <Path>C:\temp</Path>
-              <ChunkSize>1</ChunkSize>
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>SessionSettings</Name>
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>BehaviorEvents</Name>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:SubscribeWhen" />
-            </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
-              <Name>BehaviorEvents</Name>
-            </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogJson.bonsai">
-              <Heartbeats />
-              <ClosingDuration xsi:nil="true" />
-              <LogName>SessionSettings</LogName>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:Take">
-                <rx:Count>1</rx:Count>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
               <Name>CurrentSequences</Name>
             </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>BehaviorEvents</Name>
+            <Expression xsi:type="rx:CreateObservable">
+              <Name>SequenceLogging</Name>
+              <Description>Restarts all data logging each time a new sequence is loaded (CurrentSequences). Each restart runs a new LogController, so each sequence is logged to its own timestamped folder inside Metadata.LoggingRootPath. Switch closes the previous sequence's files when the next one starts. Once the new folder is open, a SequenceStart:&lt;sequence file name&gt; event is sent to ExperimentEvents.</Description>
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SessionSettings</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Metadata.LoggingRootPath</Selector>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="Path" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogController.bonsai">
+                    <Path>C:\temp</Path>
+                    <ChunkSize>1</ChunkSize>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SessionSettings</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>BehaviorEvents</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:SubscribeWhen" />
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
+                    <Name>BehaviorEvents</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogJson.bonsai">
+                    <Heartbeats />
+                    <ClosingDuration xsi:nil="true" />
+                    <LogName>SessionSettings</LogName>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Take">
+                      <rx:Count>1</rx:Count>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>CurrentSequences</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>BehaviorEvents</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:SubscribeWhen" />
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
+                    <Name>BehaviorEvents</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogJson.bonsai">
+                    <Heartbeats />
+                    <ClosingDuration xsi:nil="true" />
+                    <LogName>Schema</LogName>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Take">
+                      <rx:Count>1</rx:Count>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>TimestampedEegStream</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+                    <Heartbeats>BehaviorEvents</Heartbeats>
+                    <ClosingDuration xsi:nil="true" />
+                    <LogName>EegStreamEvents</LogName>
+                    <Selector xsi:nil="true" />
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>EventsO0</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogHarpState.bonsai">
+                    <LogName>Olfactometer0</LogName>
+                    <Heartbeats>BehaviorEvents</Heartbeats>
+                    <ClosingDuration xsi:nil="true" />
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>EventsO1</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogHarpState.bonsai">
+                    <LogName>Olfactometer1</LogName>
+                    <Heartbeats>BehaviorEvents</Heartbeats>
+                    <ClosingDuration xsi:nil="true" />
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>BehaviorEvents</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogHarpState.bonsai">
+                    <LogName>Behavior</LogName>
+                    <Heartbeats>BehaviorEvents</Heartbeats>
+                    <ClosingDuration xsi:nil="true" />
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>TimestampedExperimentEvents</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+                    <Heartbeats>BehaviorEvents</Heartbeats>
+                    <ClosingDuration xsi:nil="true" />
+                    <LogName>ExperimentEvents</LogName>
+                    <Selector xsi:nil="true" />
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>TimestampedBehaviorCommands</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+                    <Heartbeats>BehaviorEvents</Heartbeats>
+                    <ClosingDuration xsi:nil="true" />
+                    <LogName>BehaviorCommands</LogName>
+                    <Selector xsi:nil="true" />
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>CameraStream</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SessionSettings</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>CameraProperties.FrameRate</Selector>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="FrameRate" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Video:LogVideo.bonsai">
+                    <Heartbeats>BehaviorEvents</Heartbeats>
+                    <ClosingDuration xsi:nil="true" />
+                    <LogName>VideoData</LogName>
+                    <FrameRate>60</FrameRate>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>TimestampedBehaviorNotifications</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+                    <Heartbeats>BehaviorEvents</Heartbeats>
+                    <ClosingDuration xsi:nil="true" />
+                    <LogName>BehaviorNotifications</LogName>
+                    <Selector xsi:nil="true" />
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>TimestampedDetectedObject</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+                    <Heartbeats>BehaviorEvents</Heartbeats>
+                    <ClosingDuration xsi:nil="true" />
+                    <LogName>DetectedObject</LogName>
+                    <Selector xsi:nil="true" />
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>CurrentSequencePath</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>BehaviorEvents</Name>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:SubscribeWhen" />
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="rx:Take">
+                      <rx:Count>1</rx:Count>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="scr:ExpressionTransform">
+                    <scr:Name>SequenceStartEvent</scr:Name>
+                    <scr:Expression>"SequenceStart:" + it.Substring(Math.Max(it.LastIndexOf(Convert.ToChar(47)), it.LastIndexOf(Convert.ToChar(92))) + 1).Replace(".yml", "")</scr:Expression>
+                  </Expression>
+                  <Expression xsi:type="MulticastSubject">
+                    <Name>ExperimentEvents</Name>
+                  </Expression>
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
+                  <Edge From="4" To="6" Label="Source1" />
+                  <Edge From="5" To="6" Label="Source2" />
+                  <Edge From="6" To="7" Label="Source1" />
+                  <Edge From="7" To="8" Label="Source1" />
+                  <Edge From="8" To="9" Label="Source1" />
+                  <Edge From="10" To="12" Label="Source1" />
+                  <Edge From="11" To="12" Label="Source2" />
+                  <Edge From="12" To="13" Label="Source1" />
+                  <Edge From="13" To="14" Label="Source1" />
+                  <Edge From="14" To="15" Label="Source1" />
+                  <Edge From="16" To="17" Label="Source1" />
+                  <Edge From="18" To="19" Label="Source1" />
+                  <Edge From="20" To="21" Label="Source1" />
+                  <Edge From="22" To="23" Label="Source1" />
+                  <Edge From="24" To="25" Label="Source1" />
+                  <Edge From="26" To="27" Label="Source1" />
+                  <Edge From="28" To="32" Label="Source1" />
+                  <Edge From="29" To="30" Label="Source1" />
+                  <Edge From="30" To="31" Label="Source1" />
+                  <Edge From="31" To="32" Label="Source2" />
+                  <Edge From="33" To="34" Label="Source1" />
+                  <Edge From="35" To="36" Label="Source1" />
+                  <Edge From="37" To="39" Label="Source1" />
+                  <Edge From="38" To="39" Label="Source2" />
+                  <Edge From="39" To="40" Label="Source1" />
+                  <Edge From="40" To="41" Label="Source1" />
+                  <Edge From="41" To="42" Label="Source1" />
+                </Edges>
+              </Workflow>
             </Expression>
             <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:SubscribeWhen" />
+              <Combinator xsi:type="rx:Switch" />
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>EegStream</Name>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
               <Name>BehaviorEvents</Name>
             </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogJson.bonsai">
-              <Heartbeats />
-              <ClosingDuration xsi:nil="true" />
-              <LogName>Schema</LogName>
-            </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="rx:Take">
-                <rx:Count>1</rx:Count>
-              </Combinator>
-            </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="SubscribeSubject">
-                <Name>EegStream</Name>
-              </Builder>
-            </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
-                <Name>BehaviorEvents</Name>
-              </Builder>
-            </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
-                <Heartbeats>BehaviorEvents</Heartbeats>
-                <ClosingDuration xsi:nil="true" />
-                <LogName>EegStreamEvents</LogName>
-                <Selector xsi:nil="true" />
-              </Builder>
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>EventsO0</Name>
-            </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogHarpState.bonsai">
-              <LogName>Olfactometer0</LogName>
-              <Heartbeats>BehaviorEvents</Heartbeats>
-              <ClosingDuration xsi:nil="true" />
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>EventsO1</Name>
-            </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogHarpState.bonsai">
-              <LogName>Olfactometer1</LogName>
-              <Heartbeats>BehaviorEvents</Heartbeats>
-              <ClosingDuration xsi:nil="true" />
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>BehaviorEvents</Name>
-            </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogHarpState.bonsai">
-              <LogName>Behavior</LogName>
-              <Heartbeats>BehaviorEvents</Heartbeats>
-              <ClosingDuration xsi:nil="true" />
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>TimestampedEegStream</Name>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>ExperimentEvents</Name>
@@ -672,11 +795,8 @@
             <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
               <Name>BehaviorEvents</Name>
             </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
-              <Heartbeats>BehaviorEvents</Heartbeats>
-              <ClosingDuration xsi:nil="true" />
-              <LogName>ExperimentEvents</LogName>
-              <Selector xsi:nil="true" />
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>TimestampedExperimentEvents</Name>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>BehaviorCommands</Name>
@@ -684,31 +804,8 @@
             <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
               <Name>BehaviorEvents</Name>
             </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
-              <Heartbeats>BehaviorEvents</Heartbeats>
-              <ClosingDuration xsi:nil="true" />
-              <LogName>BehaviorCommands</LogName>
-              <Selector xsi:nil="true" />
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>CameraStream</Name>
-            </Expression>
-            <Expression xsi:type="SubscribeSubject">
-              <Name>SessionSettings</Name>
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>CameraProperties.FrameRate</Selector>
-            </Expression>
-            <Expression xsi:type="PropertyMapping">
-              <PropertyMappings>
-                <Property Name="FrameRate" />
-              </PropertyMappings>
-            </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Video:LogVideo.bonsai">
-              <Heartbeats>BehaviorEvents</Heartbeats>
-              <ClosingDuration xsi:nil="true" />
-              <LogName>VideoData</LogName>
-              <FrameRate>60</FrameRate>
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>TimestampedBehaviorCommands</Name>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>BehaviorNotifications</Name>
@@ -716,11 +813,8 @@
             <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
               <Name>BehaviorEvents</Name>
             </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
-              <Heartbeats>BehaviorEvents</Heartbeats>
-              <ClosingDuration xsi:nil="true" />
-              <LogName>BehaviorNotifications</LogName>
-              <Selector xsi:nil="true" />
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>TimestampedBehaviorNotifications</Name>
             </Expression>
             <Expression xsi:type="SubscribeSubject">
               <Name>DetectedObject</Name>
@@ -728,44 +822,23 @@
             <Expression xsi:type="IncludeWorkflow" Path="Bonsai.Harp:WithLatestTimestamp.bonsai">
               <Name>BehaviorEvents</Name>
             </Expression>
-            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
-              <Heartbeats>BehaviorEvents</Heartbeats>
-              <ClosingDuration xsi:nil="true" />
-              <LogName>DetectedObject</LogName>
-              <Selector xsi:nil="true" />
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>TimestampedDetectedObject</Name>
             </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
             <Edge From="1" To="2" Label="Source1" />
-            <Edge From="2" To="3" Label="Source1" />
-            <Edge From="4" To="6" Label="Source1" />
-            <Edge From="5" To="6" Label="Source2" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
             <Edge From="6" To="7" Label="Source1" />
             <Edge From="7" To="8" Label="Source1" />
-            <Edge From="8" To="9" Label="Source1" />
-            <Edge From="10" To="12" Label="Source1" />
-            <Edge From="11" To="12" Label="Source2" />
+            <Edge From="9" To="10" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
             <Edge From="12" To="13" Label="Source1" />
             <Edge From="13" To="14" Label="Source1" />
-            <Edge From="14" To="15" Label="Source1" />
+            <Edge From="15" To="16" Label="Source1" />
             <Edge From="16" To="17" Label="Source1" />
-            <Edge From="17" To="18" Label="Source1" />
-            <Edge From="19" To="20" Label="Source1" />
-            <Edge From="21" To="22" Label="Source1" />
-            <Edge From="23" To="24" Label="Source1" />
-            <Edge From="25" To="26" Label="Source1" />
-            <Edge From="26" To="27" Label="Source1" />
-            <Edge From="28" To="29" Label="Source1" />
-            <Edge From="29" To="30" Label="Source1" />
-            <Edge From="31" To="35" Label="Source1" />
-            <Edge From="32" To="33" Label="Source1" />
-            <Edge From="33" To="34" Label="Source1" />
-            <Edge From="34" To="35" Label="Source2" />
-            <Edge From="36" To="37" Label="Source1" />
-            <Edge From="37" To="38" Label="Source1" />
-            <Edge From="39" To="40" Label="Source1" />
-            <Edge From="40" To="41" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1335,77 +1408,75 @@
           </Edges>
         </Workflow>
       </Expression>
-      <Expression xsi:type="Disable">
-        <Builder xsi:type="GroupWorkflow">
-          <Name>EEG</Name>
-          <Workflow>
-            <Nodes>
-              <Expression xsi:type="SubscribeSubject">
-                <Name>SessionSettings</Name>
-              </Expression>
-              <Expression xsi:type="MemberSelector">
-                <Selector>EegProperties.DeviceName</Selector>
-              </Expression>
-              <Expression xsi:type="PropertyMapping">
-                <PropertyMappings>
-                  <Property Name="DeviceName" />
-                </PropertyMappings>
-              </Expression>
-              <Expression xsi:type="Combinator">
-                <Combinator xsi:type="p1:UdpSource">
-                  <p1:GroupAddress>239.255.76.67</p1:GroupAddress>
-                  <p1:Port>8866</p1:Port>
-                  <p1:DeviceName>16514</p1:DeviceName>
-                </Combinator>
-              </Expression>
-              <Expression xsi:type="rx:Condition">
-                <Workflow>
-                  <Nodes>
-                    <Expression xsi:type="WorkflowInput">
-                      <Name>Source1</Name>
-                    </Expression>
-                    <Expression xsi:type="SubscribeSubject">
-                      <Name>SessionSettings</Name>
-                    </Expression>
-                    <Expression xsi:type="MemberSelector">
-                      <Selector>Metadata.EegRecordingEnabled</Selector>
-                    </Expression>
-                    <Expression xsi:type="PropertyMapping">
-                      <PropertyMappings>
-                        <Property Name="Value" />
-                      </PropertyMappings>
-                    </Expression>
-                    <Expression xsi:type="Combinator">
-                      <Combinator xsi:type="BooleanProperty">
-                        <Value>false</Value>
-                      </Combinator>
-                    </Expression>
-                    <Expression xsi:type="WorkflowOutput" />
-                  </Nodes>
-                  <Edges>
-                    <Edge From="0" To="4" Label="Source1" />
-                    <Edge From="1" To="2" Label="Source1" />
-                    <Edge From="2" To="3" Label="Source1" />
-                    <Edge From="3" To="4" Label="Source2" />
-                    <Edge From="4" To="5" Label="Source1" />
-                  </Edges>
-                </Workflow>
-              </Expression>
-              <Expression xsi:type="rx:PublishSubject">
-                <Name>EegStream</Name>
-              </Expression>
-              <Expression xsi:type="WorkflowOutput" />
-            </Nodes>
-            <Edges>
-              <Edge From="0" To="1" Label="Source1" />
-              <Edge From="1" To="2" Label="Source1" />
-              <Edge From="2" To="3" Label="Source1" />
-              <Edge From="3" To="4" Label="Source1" />
-              <Edge From="4" To="5" Label="Source1" />
-              <Edge From="5" To="6" Label="Source1" />
-            </Edges>
-          </Workflow>
-        </Builder>
+      <Expression xsi:type="GroupWorkflow">
+        <Name>EEG</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>SessionSettings</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>EegProperties.DeviceName</Selector>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="DeviceName" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="p1:UdpSource">
+                <p1:GroupAddress>239.255.76.67</p1:GroupAddress>
+                <p1:Port>8866</p1:Port>
+                <p1:DeviceName>Default</p1:DeviceName>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="rx:Condition">
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="WorkflowInput">
+                    <Name>Source1</Name>
+                  </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>SessionSettings</Name>
+                  </Expression>
+                  <Expression xsi:type="MemberSelector">
+                    <Selector>Metadata.EegRecordingEnabled</Selector>
+                  </Expression>
+                  <Expression xsi:type="PropertyMapping">
+                    <PropertyMappings>
+                      <Property Name="Value" />
+                    </PropertyMappings>
+                  </Expression>
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="BooleanProperty">
+                      <Value>false</Value>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="4" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="2" To="3" Label="Source1" />
+                  <Edge From="3" To="4" Label="Source2" />
+                  <Edge From="4" To="5" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>EegStream</Name>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="2" To="3" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="5" To="6" Label="Source1" />
+          </Edges>
+        </Workflow>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
         <Name>OlfactometerPurge</Name>
@@ -4661,7 +4732,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>0.00099199999931443017</Value>
+                            <Value>0.71459200000026613</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="scr:ExpressionTransform">
@@ -4674,7 +4745,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT4.999S</rx:DueTime>
+                            <rx:DueTime>PT4.285S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -6179,6 +6250,9 @@ it.Item2 as TrialComplete
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Merge" />
             </Expression>
+            <Expression xsi:type="rx:BehaviorSubject">
+              <Name>CurrentSequencePath</Name>
+            </Expression>
             <Expression xsi:type="rx:SelectMany">
               <Name>LoadSequence</Name>
               <Workflow>
@@ -6246,6 +6320,7 @@ it.Item2 as TrialComplete
             <Edge From="19" To="20" Label="Source2" />
             <Edge From="20" To="21" Label="Source1" />
             <Edge From="21" To="22" Label="Source1" />
+            <Edge From="22" To="23" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
