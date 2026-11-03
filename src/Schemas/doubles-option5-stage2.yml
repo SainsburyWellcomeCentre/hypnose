@@ -18,7 +18,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      performanceAverageWindow: 3,
+      decisionAccuracyWindow: 3,
+      completedTrialsWindow: 3,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 0},
@@ -43,7 +44,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      performanceAverageWindow: 3,
+      decisionAccuracyWindow: 3,
+      completedTrialsWindow: 3,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 0},
@@ -68,7 +70,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      performanceAverageWindow: 3,
+      decisionAccuracyWindow: 3,
+      completedTrialsWindow: 3,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 0},
@@ -93,7 +96,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      performanceAverageWindow: 3,
+      decisionAccuracyWindow: 3,
+      completedTrialsWindow: 3,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 0},
@@ -118,7 +122,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      performanceAverageWindow: 3,
+      decisionAccuracyWindow: 3,
+      completedTrialsWindow: 3,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 0},
@@ -143,7 +148,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      performanceAverageWindow: 3,
+      decisionAccuracyWindow: 3,
+      completedTrialsWindow: 3,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 1},
@@ -168,7 +174,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      performanceAverageWindow: 3,
+      decisionAccuracyWindow: 3,
+      completedTrialsWindow: 3,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 1},
@@ -193,7 +200,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      performanceAverageWindow: 3,
+      decisionAccuracyWindow: 3,
+      completedTrialsWindow: 3,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 1},
@@ -218,7 +226,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      performanceAverageWindow: 3,
+      decisionAccuracyWindow: 3,
+      completedTrialsWindow: 3,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 1},
@@ -243,7 +252,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      performanceAverageWindow: 3,
+      decisionAccuracyWindow: 3,
+      completedTrialsWindow: 3,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 1},

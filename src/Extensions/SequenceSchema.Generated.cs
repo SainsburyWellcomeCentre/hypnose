@@ -53,7 +53,9 @@ namespace SequenceSchema
     
         private double _maximumInterOdourPokeTime;
     
-        private int _performanceAverageWindow;
+        private int _decisionAccuracyWindow;
+    
+        private int _completedTrialsWindow;
     
         public Sequence()
         {
@@ -75,7 +77,8 @@ namespace SequenceSchema
             _sampleOffsetTime = 0.1D;
             _rewardVolume = 1D;
             _maximumInterOdourPokeTime = 0.5D;
-            _performanceAverageWindow = 10;
+            _decisionAccuracyWindow = 100;
+            _completedTrialsWindow = 100;
         }
     
         protected Sequence(Sequence other)
@@ -99,7 +102,8 @@ namespace SequenceSchema
             _sampleOffsetTime = other._sampleOffsetTime;
             _rewardVolume = other._rewardVolume;
             _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
-            _performanceAverageWindow = other._performanceAverageWindow;
+            _decisionAccuracyWindow = other._decisionAccuracyWindow;
+            _completedTrialsWindow = other._completedTrialsWindow;
         }
     
         /// <summary>
@@ -417,15 +421,31 @@ namespace SequenceSchema
         /// Size of the window to calculate performance average over
         /// </summary>
         [System.ComponentModel.DescriptionAttribute("Size of the window to calculate performance average over")]
-        public int PerformanceAverageWindow
+        public int DecisionAccuracyWindow
         {
             get
             {
-                return _performanceAverageWindow;
+                return _decisionAccuracyWindow;
             }
             set
             {
-                _performanceAverageWindow = value;
+                _decisionAccuracyWindow = value;
+            }
+        }
+    
+        /// <summary>
+        /// Size of the window to calculate completed trials average over
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Size of the window to calculate completed trials average over")]
+        public int CompletedTrialsWindow
+        {
+            get
+            {
+                return _completedTrialsWindow;
+            }
+            set
+            {
+                _completedTrialsWindow = value;
             }
         }
     
@@ -460,7 +480,8 @@ namespace SequenceSchema
             stringBuilder.Append("SampleOffsetTime = " + _sampleOffsetTime + ", ");
             stringBuilder.Append("RewardVolume = " + _rewardVolume + ", ");
             stringBuilder.Append("MaximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
-            stringBuilder.Append("PerformanceAverageWindow = " + _performanceAverageWindow);
+            stringBuilder.Append("DecisionAccuracyWindow = " + _decisionAccuracyWindow + ", ");
+            stringBuilder.Append("CompletedTrialsWindow = " + _completedTrialsWindow);
             return true;
         }
     
