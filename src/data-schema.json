@@ -267,6 +267,42 @@
             },
             "required": [ "roiSourcePoints"]
         },
+        "lightCycle": {
+            "description": "Daily light schedule for the LED driven by digital output DO2 on the behavior board. Times are on the 24 h clock as HH:mm:ss (quoted). Leave this section out to disable light control on this rig.",
+            "properties": {
+                "dawnStart": {
+                    "description": "Time of day the light starts fading in. Full brightness is reached at dawnStart + dawnDuration.",
+                    "default": "09:00:00",
+                    "type": "string",
+                    "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                },
+                "dawnDuration": {
+                    "description": "Length of the fade-in. Use 00:00:00 to switch on instantly. Must end before duskStart.",
+                    "default": "01:00:00",
+                    "type": "string",
+                    "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                },
+                "duskStart": {
+                    "description": "Time of day the light starts fading out. Fully off at duskStart + duskDuration.",
+                    "default": "21:00:00",
+                    "type": "string",
+                    "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                },
+                "duskDuration": {
+                    "description": "Length of the fade-out. Use 00:00:00 to switch off instantly. Must end before the next dawnStart.",
+                    "default": "01:00:00",
+                    "type": "string",
+                    "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                },
+                "pwmFrequency": {
+                    "description": "PWM frequency on DO2 during fades, in Hz (1-10000).",
+                    "default": 1000,
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10000
+                }
+            }
+        },
         "olfactometerCommands": {
             "items": {
                 "$ref": "#/definitions/olfactometerStateCommand"

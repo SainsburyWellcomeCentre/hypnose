@@ -403,6 +403,8 @@ namespace DataSchema
     
         private CameraProperties _cameraProperties;
     
+        private LightCycle _lightCycle;
+    
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands;
     
         public HypnoseSession()
@@ -417,6 +419,7 @@ namespace DataSchema
             _hardwarePorts = other._hardwarePorts;
             _eegProperties = other._eegProperties;
             _cameraProperties = other._cameraProperties;
+            _lightCycle = other._lightCycle;
             _olfactometerCommands = other._olfactometerCommands;
         }
     
@@ -485,6 +488,25 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Daily light schedule for the LED driven by digital output DO2 on the behavior board. Times are on the 24 h clock as HH:mm:ss (quoted). Leave this section out to disable light control on this rig.
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Daily light schedule for the LED driven by digital output DO2 on the behavior boa" +
+            "rd. Times are on the 24 h clock as HH:mm:ss (quoted). Leave this section out to " +
+            "disable light control on this rig.")]
+        public LightCycle LightCycle
+        {
+            get
+            {
+                return _lightCycle;
+            }
+            set
+            {
+                _lightCycle = value;
+            }
+        }
+    
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public System.Collections.Generic.List<OlfactometerStateCommand> OlfactometerCommands
         {
@@ -515,6 +537,7 @@ namespace DataSchema
             stringBuilder.Append("HardwarePorts = " + _hardwarePorts + ", ");
             stringBuilder.Append("EegProperties = " + _eegProperties + ", ");
             stringBuilder.Append("CameraProperties = " + _cameraProperties + ", ");
+            stringBuilder.Append("LightCycle = " + _lightCycle + ", ");
             stringBuilder.Append("OlfactometerCommands = " + _olfactometerCommands);
             return true;
         }
@@ -1298,6 +1321,158 @@ namespace DataSchema
             stringBuilder.Append("Threshold = " + _threshold + ", ");
             stringBuilder.Append("BinaryThreshold = " + _binaryThreshold + ", ");
             stringBuilder.Append("RoiSourcePoints = " + _roiSourcePoints);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class LightCycle
+    {
+    
+        private string _dawnStart;
+    
+        private string _dawnDuration;
+    
+        private string _duskStart;
+    
+        private string _duskDuration;
+    
+        private int _pwmFrequency;
+    
+        public LightCycle()
+        {
+            _dawnStart = "09:00:00";
+            _dawnDuration = "01:00:00";
+            _duskStart = "21:00:00";
+            _duskDuration = "01:00:00";
+            _pwmFrequency = 1000;
+        }
+    
+        protected LightCycle(LightCycle other)
+        {
+            _dawnStart = other._dawnStart;
+            _dawnDuration = other._dawnDuration;
+            _duskStart = other._duskStart;
+            _duskDuration = other._duskDuration;
+            _pwmFrequency = other._pwmFrequency;
+        }
+    
+        /// <summary>
+        /// Time of day the light starts fading in. Full brightness is reached at dawnStart + dawnDuration.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Time of day the light starts fading in. Full brightness is reached at dawnStart +" +
+            " dawnDuration.")]
+        public string DawnStart
+        {
+            get
+            {
+                return _dawnStart;
+            }
+            set
+            {
+                _dawnStart = value;
+            }
+        }
+    
+        /// <summary>
+        /// Length of the fade-in. Use 00:00:00 to switch on instantly. Must end before duskStart.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Length of the fade-in. Use 00:00:00 to switch on instantly. Must end before duskS" +
+            "tart.")]
+        public string DawnDuration
+        {
+            get
+            {
+                return _dawnDuration;
+            }
+            set
+            {
+                _dawnDuration = value;
+            }
+        }
+    
+        /// <summary>
+        /// Time of day the light starts fading out. Fully off at duskStart + duskDuration.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Time of day the light starts fading out. Fully off at duskStart + duskDuration.")]
+        public string DuskStart
+        {
+            get
+            {
+                return _duskStart;
+            }
+            set
+            {
+                _duskStart = value;
+            }
+        }
+    
+        /// <summary>
+        /// Length of the fade-out. Use 00:00:00 to switch off instantly. Must end before the next dawnStart.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Length of the fade-out. Use 00:00:00 to switch off instantly. Must end before the" +
+            " next dawnStart.")]
+        public string DuskDuration
+        {
+            get
+            {
+                return _duskDuration;
+            }
+            set
+            {
+                _duskDuration = value;
+            }
+        }
+    
+        /// <summary>
+        /// PWM frequency on DO2 during fades, in Hz (1-10000).
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("PWM frequency on DO2 during fades, in Hz (1-10000).")]
+        public int PwmFrequency
+        {
+            get
+            {
+                return _pwmFrequency;
+            }
+            set
+            {
+                _pwmFrequency = value;
+            }
+        }
+    
+        public System.IObservable<LightCycle> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new LightCycle(this)));
+        }
+    
+        public System.IObservable<LightCycle> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new LightCycle(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("DawnStart = " + _dawnStart + ", ");
+            stringBuilder.Append("DawnDuration = " + _dawnDuration + ", ");
+            stringBuilder.Append("DuskStart = " + _duskStart + ", ");
+            stringBuilder.Append("DuskDuration = " + _duskDuration + ", ");
+            stringBuilder.Append("PwmFrequency = " + _pwmFrequency);
             return true;
         }
     

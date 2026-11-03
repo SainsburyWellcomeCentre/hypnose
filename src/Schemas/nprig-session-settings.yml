@@ -40,6 +40,13 @@ cameraProperties:
       - x: 1050
         y: 650
 
+lightCycle:
+  dawnStart: "09:00:00"
+  dawnDuration: "01:00:00"
+  duskStart: "21:00:00"
+  duskDuration: "01:00:00"
+  pwmFrequency: 1000
+
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
   - {name: Zero, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], targetFlowO0: [0, 0, 0, 0, 1], targetFlowO1: [0, 0, 0, 0, 1]}
