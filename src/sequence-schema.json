@@ -100,9 +100,14 @@
                     "default": 0.5,
                     "type": "number"
                 },
-                "performanceAverageWindow": {
+                "decisionAccuracyWindow": {
                     "description": "Size of the window to calculate performance average over",
-                    "default": 10,
+                    "default": 100,
+                    "type": "integer"
+                },
+                "completedTrialsWindow": {
+                    "description": "Size of the window to calculate completed trials average over",
+                    "default": 100,
                     "type": "integer"
                 }
             }
