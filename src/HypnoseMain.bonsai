@@ -4479,7 +4479,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Subtract">
                           <Operand xsi:type="DoubleProperty">
-                            <Value>0.74326400004792958</Value>
+                            <Value>0.73513599997386336</Value>
                           </Operand>
                         </Expression>
                         <Expression xsi:type="scr:ExpressionTransform">
@@ -4492,7 +4492,7 @@ it.Item2 as TrialComplete
                         </Expression>
                         <Expression xsi:type="Combinator">
                           <Combinator xsi:type="rx:Timer">
-                            <rx:DueTime>PT4.257S</rx:DueTime>
+                            <rx:DueTime>PT4.265S</rx:DueTime>
                           </Combinator>
                         </Expression>
                         <Expression xsi:type="Combinator">
@@ -5009,7 +5009,7 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="MulticastSubject">
                     <Name>LoadNewSequence</Name>
                   </Expression>
-                  <Expression xsi:type="rx:PublishSubject" TypeArguments="sys:Boolean">
+                  <Expression xsi:type="rx:BehaviorSubject" TypeArguments="sys:Boolean">
                     <rx:Name>TrialCorrectResult</rx:Name>
                   </Expression>
                   <Expression xsi:type="scr:ExpressionTransform">
@@ -5063,7 +5063,7 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>DecisionAccuracyAverage</Name>
                   </Expression>
-                  <Expression xsi:type="rx:PublishSubject" TypeArguments="sys:Boolean">
+                  <Expression xsi:type="rx:BehaviorSubject" TypeArguments="sys:Boolean">
                     <rx:Name>TrialCompletionResult</rx:Name>
                   </Expression>
                   <Expression xsi:type="scr:ExpressionTransform">
