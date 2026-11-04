@@ -27,20 +27,21 @@ hardwarePorts:
 cameraProperties:
   cameraId: 24284790
   frameRate: 60
-  binning: 1
+  binning: 2
   exposure: 12000
-  gain: 10
-  threshold: 3
+  gain: 0
+  threshold: 5
+  binaryThreshold: 140
   roiSourcePoints:
     points:
-      - x: 180
-        y: 650
-      - x: 180
-        y: 750
-      - x: 1050
-        y: 750
-      - x: 1050
-        y: 650
+      - x: 108
+        y: 325
+      - x: 108
+        y: 375
+      - x: 548
+        y: 375
+      - x: 548
+        y: 325
 
 eegProperties:
   deviceName: Default
@@ -59,19 +60,19 @@ taskAccess:
 trackingProperties:
   cropSourcePoints:
     points:
-      - x: 180
-        y: 102
-      - x: 180
-        y: 947
-      - x: 1025
-        y: 947
-      - x: 1025
-        y: 102
-  minArea: 900
+      - x: 105 #Top left
+        y: 30
+      - x: 105 #Bottom left
+        y: 470
+      - x: 550 #Bottom right
+        y: 470
+      - x: 550 #Top right
+        y: 30
+  minArea: 550
   immobilityAlert:
-    radius: 20
-    alertAfterMinutes: 1
-    sendTestOnStart: true
+    radius: 13
+    alertAfterMinutes: 100
+    sendTestOnStart: false
     notifyWhenMovingAgain: true
     rigName: Hypnose NP Rig
     webhookUrlFile: slack_webhook.txt
