@@ -2,8 +2,10 @@
 ---
 # yaml-language-server: $schema=sequence-schema.json
 
-nextSequence: Schemas/rig1-odourdiscrimination-stage5-test.yml
-decisionAccuracyCriterion: 1.1
+nextSequence: Schemas/odourdiscrimination-stage3.yml
+decisionAccuracyCriterion: 0.5
+sequenceCompletionCriterion: 1
+rewardedTrialsCriterion: 200
 sequences: [
     [{name: OdourDiscriminationA_Stage2,
     defaultCommand: Default,
@@ -24,7 +26,7 @@ sequences: [
     rewardVolume: 8,
     maximumInterOdourPokeTime: 3,
     decisionAccuracyWindow: 5,
-    completedTrialsWindow: 100
+    completedTrialsWindow: 5
     },
     {name: OdourDiscriminationB_Stage2,
     defaultCommand: Default,
@@ -45,6 +47,6 @@ sequences: [
     rewardVolume: 8,
     maximumInterOdourPokeTime: 3,
     decisionAccuracyWindow: 5,
-    completedTrialsWindow: 100
+    completedTrialsWindow: 5
     }]
 ]

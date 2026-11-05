@@ -4,6 +4,8 @@
 
 nextSequence: Schemas/stage7-test.yml
 decisionAccuracyCriterion: 1.1
+sequenceCompletionCriterion: 1
+rewardedTrialsCriterion: 10000
 sequences: [
   [
     {

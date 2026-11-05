@@ -16,6 +16,7 @@
     </VisualizerSettings>
   </WindowSettings>
   <WindowSettings Index="7">
+    <Visible>false</Visible>
     <Location>
       <X>244</X>
       <Y>798</Y>
@@ -30,6 +31,7 @@
     </VisualizerSettings>
   </WindowSettings>
   <WindowSettings Index="8">
+    <Visible>false</Visible>
     <Location>
       <X>838</X>
       <Y>822</Y>
@@ -44,6 +46,7 @@
     </VisualizerSettings>
   </WindowSettings>
   <WindowSettings Index="9">
+    <Visible>false</Visible>
     <Location>
       <X>724</X>
       <Y>406</Y>
@@ -99,6 +102,20 @@
           </VisualizerSettings>
         </MashupSettings>
       </TableLayoutPanelVisualizer>
+    </VisualizerSettings>
+  </WindowSettings>
+  <WindowSettings Index="17">
+    <Location>
+      <X>872</X>
+      <Y>501</Y>
+    </Location>
+    <Size>
+      <Width>336</Width>
+      <Height>221</Height>
+    </Size>
+    <VisualizerTypeName>Bonsai.Design.ObjectTextVisualizer</VisualizerTypeName>
+    <VisualizerSettings>
+      <ObjectTextVisualizer />
     </VisualizerSettings>
   </WindowSettings>
 </VisualizerLayout>
