@@ -47,6 +47,21 @@ cameraProperties:
       - x: 500
         y: 330
 
+trackingProperties:
+  cropSourcePoints:
+    points:
+      - x: 180
+        y: 102
+      - x: 180
+        y: 947
+      - x: 1025
+        y: 947
+      - x: 1025
+        y: 102
+  minArea: 900
+
+
+
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
   - {name: Zero, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 1], targetFlowO1: [0, 0, 0, 0, 1]}
