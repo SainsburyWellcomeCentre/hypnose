@@ -15,6 +15,26 @@
                 }
             }
         },
+        "TrackingProperties": {
+            "type": "object",
+            "properties": {
+                "cropSourcePoints": {
+                    "type": "object",
+                    "description": "Four corner points (clockwise from top-left) of the area used for centroid tracking.",
+                    "properties": {
+                        "points": {
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/point2d" },
+                            "minItems": 4,
+                            "maxItems": 4
+                        }
+                    },
+                    "required": [ "points" ]
+                },
+                "minArea": { "type": "number", "default": 900 }
+            }
+        },
+
         "olfactometerStateCommand": {
             "properties": {
                 "name": {
@@ -267,6 +287,8 @@
             },
             "required": [ "roiSourcePoints"]
         },
+        "trackingProperties": { "$ref": "#/definitions/TrackingProperties" },
+
         "olfactometerCommands": {
             "items": {
                 "$ref": "#/definitions/olfactometerStateCommand"

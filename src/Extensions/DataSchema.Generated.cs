@@ -88,6 +88,89 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class TrackingProperties
+    {
+    
+        private CropSourcePoints _cropSourcePoints;
+    
+        private double _minArea;
+    
+        public TrackingProperties()
+        {
+            _minArea = 900D;
+        }
+    
+        protected TrackingProperties(TrackingProperties other)
+        {
+            _cropSourcePoints = other._cropSourcePoints;
+            _minArea = other._minArea;
+        }
+    
+        /// <summary>
+        /// Four corner points (clockwise from top-left) of the area used for centroid tracking.
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Four corner points (clockwise from top-left) of the area used for centroid tracki" +
+            "ng.")]
+        public CropSourcePoints CropSourcePoints
+        {
+            get
+            {
+                return _cropSourcePoints;
+            }
+            set
+            {
+                _cropSourcePoints = value;
+            }
+        }
+    
+        public double MinArea
+        {
+            get
+            {
+                return _minArea;
+            }
+            set
+            {
+                _minArea = value;
+            }
+        }
+    
+        public System.IObservable<TrackingProperties> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new TrackingProperties(this)));
+        }
+    
+        public System.IObservable<TrackingProperties> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new TrackingProperties(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("CropSourcePoints = " + _cropSourcePoints + ", ");
+            stringBuilder.Append("MinArea = " + _minArea);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class OlfactometerStateCommand
     {
     
@@ -403,6 +486,8 @@ namespace DataSchema
     
         private CameraProperties _cameraProperties;
     
+        private TrackingProperties _trackingProperties;
+    
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands;
     
         public HypnoseSession()
@@ -417,6 +502,7 @@ namespace DataSchema
             _hardwarePorts = other._hardwarePorts;
             _eegProperties = other._eegProperties;
             _cameraProperties = other._cameraProperties;
+            _trackingProperties = other._trackingProperties;
             _olfactometerCommands = other._olfactometerCommands;
         }
     
@@ -486,6 +572,19 @@ namespace DataSchema
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public TrackingProperties TrackingProperties
+        {
+            get
+            {
+                return _trackingProperties;
+            }
+            set
+            {
+                _trackingProperties = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
         public System.Collections.Generic.List<OlfactometerStateCommand> OlfactometerCommands
         {
             get
@@ -515,7 +614,70 @@ namespace DataSchema
             stringBuilder.Append("HardwarePorts = " + _hardwarePorts + ", ");
             stringBuilder.Append("EegProperties = " + _eegProperties + ", ");
             stringBuilder.Append("CameraProperties = " + _cameraProperties + ", ");
+            stringBuilder.Append("TrackingProperties = " + _trackingProperties + ", ");
             stringBuilder.Append("OlfactometerCommands = " + _olfactometerCommands);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class CropSourcePoints
+    {
+    
+        private System.Collections.Generic.List<Point2d> _points;
+    
+        public CropSourcePoints()
+        {
+            _points = new System.Collections.Generic.List<Point2d>();
+        }
+    
+        protected CropSourcePoints(CropSourcePoints other)
+        {
+            _points = other._points;
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Collections.Generic.List<Point2d> Points
+        {
+            get
+            {
+                return _points;
+            }
+            set
+            {
+                _points = value;
+            }
+        }
+    
+        public System.IObservable<CropSourcePoints> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new CropSourcePoints(this)));
+        }
+    
+        public System.IObservable<CropSourcePoints> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new CropSourcePoints(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("Points = " + _points);
             return true;
         }
     

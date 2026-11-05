@@ -728,6 +728,15 @@
               <LogName>DetectedObject</LogName>
               <Selector xsi:nil="true" />
             </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>TrackedCentroid</Name>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+              <Heartbeats>BehaviorEvents</Heartbeats>
+              <ClosingDuration xsi:nil="true" />
+              <LogName>Centroid</LogName>
+              <Selector>Seconds,Value.Centroid.X,Value.Centroid.Y,Value.Area</Selector>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -760,6 +769,7 @@
             <Edge From="37" To="38" Label="Source1" />
             <Edge From="39" To="40" Label="Source1" />
             <Edge From="40" To="41" Label="Source1" />
+            <Edge From="42" To="43" Label="Source1" />
           </Edges>
         </Workflow>
       </Expression>
@@ -1150,6 +1160,11 @@
                   <Edge From="9" To="10" Label="Source1" />
                 </Edges>
               </Workflow>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\CentroidTracking.bonsai">
+              <CameraStream>CameraStream</CameraStream>
+              <SessionSettings>SessionSettings</SessionSettings>
+              <TrackedCentroid>TrackedCentroid</TrackedCentroid>
             </Expression>
           </Nodes>
           <Edges>
