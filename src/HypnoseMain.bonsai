@@ -742,6 +742,15 @@
                   <Expression xsi:type="MulticastSubject">
                     <Name>ExperimentEvents</Name>
                   </Expression>
+                  <Expression xsi:type="SubscribeSubject">
+                    <Name>TrackedCentroid</Name>
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="Aeon.Acquisition:LogData.bonsai">
+                    <Heartbeats>BehaviorEvents</Heartbeats>
+                    <ClosingDuration xsi:nil="true" />
+                    <LogName>Centroid</LogName>
+                    <Selector>Seconds,Value.Centroid.X,Value.Centroid.Y,Value.Area</Selector>
+                  </Expression>
                 </Nodes>
                 <Edges>
                   <Edge From="0" To="1" Label="Source1" />
@@ -774,6 +783,7 @@
                   <Edge From="39" To="40" Label="Source1" />
                   <Edge From="40" To="41" Label="Source1" />
                   <Edge From="41" To="42" Label="Source1" />
+                  <Edge From="43" To="44" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -851,105 +861,10 @@
               <Workflow>
                 <Nodes>
                   <Expression xsi:type="SubscribeSubject">
-                    <Name>ThresholdOutput</Name>
-                  </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>SessionSettings</Name>
+                    <Name>TrackedCentroid</Name>
                   </Expression>
                   <Expression xsi:type="MemberSelector">
-                    <Selector>TrackingProperties</Selector>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>CropSourcePoints</Selector>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Points</Selector>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="p1:ConvertPoints" />
-                  </Expression>
-                  <Expression xsi:type="PropertyMapping">
-                    <PropertyMappings>
-                      <Property Name="Regions" />
-                    </PropertyMappings>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="cv:CropPolygon">
-                      <cv:Regions>
-                        <cv:ArrayOfPoint>
-                          <cv:Point>
-                            <cv:X>180</cv:X>
-                            <cv:Y>102</cv:Y>
-                          </cv:Point>
-                          <cv:Point>
-                            <cv:X>180</cv:X>
-                            <cv:Y>947</cv:Y>
-                          </cv:Point>
-                          <cv:Point>
-                            <cv:X>1025</cv:X>
-                            <cv:Y>947</cv:Y>
-                          </cv:Point>
-                          <cv:Point>
-                            <cv:X>1025</cv:X>
-                            <cv:Y>102</cv:Y>
-                          </cv:Point>
-                        </cv:ArrayOfPoint>
-                      </cv:Regions>
-                      <cv:MaskType>ToZero</cv:MaskType>
-                      <cv:FillValue>
-                        <cv:Val0>0</cv:Val0>
-                        <cv:Val1>0</cv:Val1>
-                        <cv:Val2>0</cv:Val2>
-                        <cv:Val3>0</cv:Val3>
-                      </cv:FillValue>
-                    </Combinator>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="cv:MorphologicalOperator">
-                      <cv:Size>
-                        <cv:Width>5</cv:Width>
-                        <cv:Height>5</cv:Height>
-                      </cv:Size>
-                      <cv:Anchor>
-                        <cv:X>-1</cv:X>
-                        <cv:Y>-1</cv:Y>
-                      </cv:Anchor>
-                      <cv:Shape>Ellipse</cv:Shape>
-                      <cv:Iterations>1</cv:Iterations>
-                      <cv:Operation>Open</cv:Operation>
-                    </Combinator>
-                  </Expression>
-                  <Expression xsi:type="SubscribeSubject">
-                    <Name>SessionSettings</Name>
-                  </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>TrackingProperties.MinArea</Selector>
-                  </Expression>
-                  <Expression xsi:type="PropertyMapping">
-                    <PropertyMappings>
-                      <Property Name="MinArea" />
-                    </PropertyMappings>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="cv:FindContours">
-                      <cv:Mode>External</cv:Mode>
-                      <cv:Method>ChainApproxNone</cv:Method>
-                      <cv:Offset>
-                        <cv:X>0</cv:X>
-                        <cv:Y>0</cv:Y>
-                      </cv:Offset>
-                      <cv:MinArea>900</cv:MinArea>
-                      <cv:MaxArea xsi:nil="true" />
-                    </Combinator>
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="cv:BinaryRegionAnalysis" />
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="cv:LargestBinaryRegion" />
-                  </Expression>
-                  <Expression xsi:type="Combinator">
-                    <Combinator xsi:type="cv:Centroid" />
+                    <Selector>Value.Centroid</Selector>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>SessionSettings</Name>
@@ -980,25 +895,11 @@
                   </Expression>
                 </Nodes>
                 <Edges>
-                  <Edge From="0" To="7" Label="Source1" />
-                  <Edge From="1" To="2" Label="Source1" />
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="5" Label="Source1" />
                   <Edge From="2" To="3" Label="Source1" />
                   <Edge From="3" To="4" Label="Source1" />
-                  <Edge From="4" To="5" Label="Source1" />
-                  <Edge From="5" To="6" Label="Source1" />
-                  <Edge From="6" To="7" Label="Source2" />
-                  <Edge From="7" To="8" Label="Source1" />
-                  <Edge From="8" To="12" Label="Source1" />
-                  <Edge From="9" To="10" Label="Source1" />
-                  <Edge From="10" To="11" Label="Source1" />
-                  <Edge From="11" To="12" Label="Source2" />
-                  <Edge From="12" To="13" Label="Source1" />
-                  <Edge From="13" To="14" Label="Source1" />
-                  <Edge From="14" To="15" Label="Source1" />
-                  <Edge From="15" To="19" Label="Source1" />
-                  <Edge From="16" To="17" Label="Source1" />
-                  <Edge From="17" To="18" Label="Source1" />
-                  <Edge From="18" To="19" Label="Source2" />
+                  <Edge From="4" To="5" Label="Source2" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -1032,9 +933,6 @@
                       <cv:MaxValue>255</cv:MaxValue>
                       <cv:ThresholdType>BinaryInv</cv:ThresholdType>
                     </Combinator>
-                  </Expression>
-                  <Expression xsi:type="rx:PublishSubject">
-                    <Name>ThresholdOutput</Name>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>SessionSettings</Name>
@@ -1106,9 +1004,6 @@
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>RoiIntensity</Name>
                   </Expression>
-                  <Expression xsi:type="MemberSelector">
-                    <Selector>Size</Selector>
-                  </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>RoiIntensity</Name>
                   </Expression>
@@ -1145,35 +1040,33 @@
                 <Edges>
                   <Edge From="0" To="1" Label="Source1" />
                   <Edge From="1" To="2" Label="Source1" />
-                  <Edge From="1" To="22" Label="Source1" />
                   <Edge From="2" To="6" Label="Source1" />
                   <Edge From="3" To="4" Label="Source1" />
                   <Edge From="4" To="5" Label="Source1" />
                   <Edge From="5" To="6" Label="Source2" />
-                  <Edge From="6" To="7" Label="Source1" />
-                  <Edge From="7" To="14" Label="Source1" />
+                  <Edge From="6" To="13" Label="Source1" />
+                  <Edge From="7" To="8" Label="Source1" />
                   <Edge From="8" To="9" Label="Source1" />
                   <Edge From="9" To="10" Label="Source1" />
                   <Edge From="10" To="11" Label="Source1" />
                   <Edge From="11" To="12" Label="Source1" />
-                  <Edge From="12" To="13" Label="Source1" />
-                  <Edge From="13" To="14" Label="Source2" />
+                  <Edge From="12" To="13" Label="Source2" />
+                  <Edge From="13" To="14" Label="Source1" />
                   <Edge From="14" To="15" Label="Source1" />
                   <Edge From="15" To="16" Label="Source1" />
+                  <Edge From="15" To="20" Label="Source1" />
                   <Edge From="16" To="17" Label="Source1" />
-                  <Edge From="16" To="21" Label="Source1" />
                   <Edge From="17" To="18" Label="Source1" />
                   <Edge From="18" To="19" Label="Source1" />
-                  <Edge From="19" To="20" Label="Source1" />
-                  <Edge From="23" To="25" Label="Source1" />
-                  <Edge From="24" To="25" Label="Source2" />
+                  <Edge From="21" To="23" Label="Source1" />
+                  <Edge From="22" To="23" Label="Source2" />
+                  <Edge From="23" To="24" Label="Source1" />
+                  <Edge From="24" To="29" Label="Source1" />
                   <Edge From="25" To="26" Label="Source1" />
-                  <Edge From="26" To="31" Label="Source1" />
+                  <Edge From="26" To="27" Label="Source1" />
                   <Edge From="27" To="28" Label="Source1" />
-                  <Edge From="28" To="29" Label="Source1" />
+                  <Edge From="28" To="29" Label="Source2" />
                   <Edge From="29" To="30" Label="Source1" />
-                  <Edge From="30" To="31" Label="Source2" />
-                  <Edge From="31" To="32" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -1393,6 +1286,11 @@
                   <Edge From="9" To="10" Label="Source1" />
                 </Edges>
               </Workflow>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="Extensions\CentroidTracking.bonsai">
+              <CameraStream>CameraStream</CameraStream>
+              <SessionSettings>SessionSettings</SessionSettings>
+              <TrackedCentroid>TrackedCentroid</TrackedCentroid>
             </Expression>
           </Nodes>
           <Edges>
