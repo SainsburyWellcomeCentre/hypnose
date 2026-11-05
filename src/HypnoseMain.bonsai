@@ -2651,7 +2651,7 @@
                                 </Combinator>
                               </Expression>
                               <Expression xsi:type="SubscribeSubject">
-                                <Name>ProtocolSettings</Name>
+                                <Name>SequenceInfo</Name>
                               </Expression>
                               <Expression xsi:type="MemberSelector">
                                 <Selector>MaximumInterOdourPokeTime</Selector>
@@ -4340,10 +4340,10 @@ it.Item2 as TrialComplete
                           <Selector>Metadata.RewardTime</Selector>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
-                          <Name>ProtocolSettings</Name>
+                          <Name>RewardInfo</Name>
                         </Expression>
                         <Expression xsi:type="MemberSelector">
-                          <Selector>RewardVolume</Selector>
+                          <Selector>Sequence.RewardVolume</Selector>
                         </Expression>
                         <Expression xsi:type="PropertyMapping">
                           <PropertyMappings>
@@ -4483,10 +4483,10 @@ it.Item2 as TrialComplete
                           <Selector>Metadata.RewardTime</Selector>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
-                          <Name>ProtocolSettings</Name>
+                          <Name>RewardInfo</Name>
                         </Expression>
                         <Expression xsi:type="MemberSelector">
-                          <Selector>RewardVolume</Selector>
+                          <Selector>Sequence.RewardVolume</Selector>
                         </Expression>
                         <Expression xsi:type="PropertyMapping">
                           <PropertyMappings>
@@ -5217,10 +5217,10 @@ it.Item2 as TrialComplete
                           <scr:Expression>Convert.ToInt32(it)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
-                          <Name>ProtocolSettings</Name>
+                          <Name>CurrentSequences</Name>
                         </Expression>
-                        <Expression xsi:type="MemberSelector">
-                          <Selector>CompletedTrialsWindow</Selector>
+                        <Expression xsi:type="scr:ExpressionTransform">
+                          <scr:Expression>Sequences[0][0].CompletedTrialsWindow</scr:Expression>
                         </Expression>
                         <Expression xsi:type="PropertyMapping">
                           <PropertyMappings>
@@ -5301,10 +5301,10 @@ it.Item2 as TrialComplete
                           <scr:Expression>Convert.ToInt32(it)</scr:Expression>
                         </Expression>
                         <Expression xsi:type="SubscribeSubject">
-                          <Name>ProtocolSettings</Name>
+                          <Name>CurrentSequences</Name>
                         </Expression>
-                        <Expression xsi:type="MemberSelector">
-                          <Selector>DecisionAccuracyWindow</Selector>
+                        <Expression xsi:type="scr:ExpressionTransform">
+                          <scr:Expression>Sequences[0][0].DecisionAccuracyWindow</scr:Expression>
                         </Expression>
                         <Expression xsi:type="PropertyMapping">
                           <PropertyMappings>
