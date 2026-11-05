@@ -5573,6 +5573,9 @@ it.Item2 as TrialComplete
                   <Expression xsi:type="rx:BehaviorSubject">
                     <Name>TotalRewards</Name>
                   </Expression>
+                  <Expression xsi:type="rx:BehaviorSubject">
+                    <Name>RewardCounts</Name>
+                  </Expression>
                 </Nodes>
                 <Edges>
                   <Edge From="0" To="1" Label="Source1" />
@@ -5588,6 +5591,7 @@ it.Item2 as TrialComplete
                   <Edge From="8" To="9" Label="Source1" />
                   <Edge From="9" To="10" Label="Source2" />
                   <Edge From="10" To="11" Label="Source1" />
+                  <Edge From="10" To="29" Label="Source1" />
                   <Edge From="11" To="12" Label="Source1" />
                   <Edge From="13" To="14" Label="Source1" />
                   <Edge From="13" To="16" Label="Source1" />
@@ -6238,6 +6242,128 @@ it.Item2 as TrialComplete
         <Name>RewardCounter</Name>
       </Expression>
       <Expression xsi:type="GroupWorkflow">
+        <Name>ProtocolRewardCounter</Name>
+        <Description>Rewards in the current protocol, in the same format as RewardCounter, which counts since the workflow started. Each time a new protocol is loaded (CurrentSequences) the running since-start counts are stored, and this node shows the difference from them. Nothing restarts at a protocol change, so a reward cannot be lost between two protocols.</Description>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>RewardCounts</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Take">
+                <rx:Count>1</rx:Count>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>CurrentSequences</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Skip">
+                <rx:Count>1</rx:Count>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:WithLatestFrom" />
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>Item2</Selector>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:CombineLatest" />
+            </Expression>
+            <Expression xsi:type="scr:ExpressionTransform">
+              <scr:Expression>new(Item1.Item1 - Item2.Item1 as R1, Item1.Item2 - Item2.Item2 as R2)</scr:Expression>
+            </Expression>
+            <Expression xsi:type="Format">
+              <Format>R1: {0}, R2: {1}</Format>
+              <Selector>R1,R2</Selector>
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="1" Label="Source1" />
+            <Edge From="0" To="4" Label="Source2" />
+            <Edge From="0" To="7" Label="Source1" />
+            <Edge From="1" To="6" Label="Source1" />
+            <Edge From="2" To="3" Label="Source1" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="5" To="6" Label="Source2" />
+            <Edge From="6" To="7" Label="Source2" />
+            <Edge From="7" To="8" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="9" To="10" Label="Source1" />
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="GroupWorkflow">
+        <Name>WaterLast24h</Name>
+        <Description>Water received in the last 24 h, shown to the nearest 0.1 ml. Each reward adds its own volume, taken from RewardCommand (RewardTime / Metadata.RewardTime, so the volume the valve was actually asked to deliver), and the same volume is removed again 24 h later. The sum is kept in nanolitres so that it stays exact. Manual flush pulses do not go through RewardCommand, so they are not counted. The total starts at 0.0 ml when the workflow starts, so rewards from before a restart are not included.</Description>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>RewardCommand</Name>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>SessionSettings</Name>
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>Metadata.RewardTime</Selector>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:WithLatestFrom" />
+            </Expression>
+            <Expression xsi:type="scr:ExpressionTransform">
+              <scr:Expression>Convert.ToInt32(Math.Round(Item1.RewardTime / Item2 * 1000.0))</scr:Expression>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Delay">
+                <rx:DueTime>P1D</rx:DueTime>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Negate" />
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="IntProperty">
+                <Value>0</Value>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="rx:Accumulate" />
+            <Expression xsi:type="scr:ExpressionTransform">
+              <scr:Expression>it / 1000000.0</scr:Expression>
+            </Expression>
+            <Expression xsi:type="Format">
+              <Format>{0:0.0} ml</Format>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:DistinctUntilChanged" />
+            </Expression>
+            <Expression xsi:type="WorkflowOutput" />
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="3" Label="Source1" />
+            <Edge From="1" To="2" Label="Source1" />
+            <Edge From="2" To="3" Label="Source2" />
+            <Edge From="3" To="4" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="4" To="8" Label="Source1" />
+            <Edge From="5" To="6" Label="Source1" />
+            <Edge From="6" To="8" Label="Source2" />
+            <Edge From="7" To="8" Label="Source3" />
+            <Edge From="8" To="9" Label="Source1" />
+            <Edge From="9" To="10" Label="Source1" />
+            <Edge From="10" To="11" Label="Source1" />
+            <Edge From="11" To="12" Label="Source1" />
+            <Edge From="12" To="13" Label="Source1" />
+          </Edges>
+        </Workflow>
+      </Expression>
+      <Expression xsi:type="GroupWorkflow">
         <Name>EndSessionCommands</Name>
         <Workflow>
           <Nodes>
@@ -6806,7 +6932,7 @@ it.Item2 as TrialComplete
     <Edges>
       <Edge From="7" To="8" Label="Source1" />
       <Edge From="9" To="10" Label="Source1" />
-      <Edge From="14" To="15" Label="Source1" />
+      <Edge From="16" To="17" Label="Source1" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
