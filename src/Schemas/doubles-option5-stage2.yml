@@ -3,9 +3,9 @@
 # yaml-language-server: $schema=sequence-schema.json
 
 nextSequence: Schemas/triples-option5.yml
-decisionAccuracyCriterion: 0.8
-sequenceCompletionCriterion: 0.8
-rewardedTrialsCriterion: 3
+decisionAccuracyCriterion: 0.9
+sequenceCompletionCriterion: 0.6
+rewardedTrialsCriterion: 50
 sequences: [
   [
     {
@@ -18,8 +18,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      decisionAccuracyWindow: 3,
-      completedTrialsWindow: 3,
+      decisionAccuracyWindow: 50,
+      completedTrialsWindow: 30,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 0},
@@ -44,8 +44,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      decisionAccuracyWindow: 3,
-      completedTrialsWindow: 3,
+      decisionAccuracyWindow: 50,
+      completedTrialsWindow: 30,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 0},
@@ -70,8 +70,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      decisionAccuracyWindow: 3,
-      completedTrialsWindow: 3,
+      decisionAccuracyWindow: 50,
+      completedTrialsWindow: 30,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 0},
@@ -96,8 +96,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      decisionAccuracyWindow: 3,
-      completedTrialsWindow: 3,
+      decisionAccuracyWindow: 50,
+      completedTrialsWindow: 30,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 0},
@@ -122,8 +122,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      decisionAccuracyWindow: 3,
-      completedTrialsWindow: 3,
+      decisionAccuracyWindow: 50,
+      completedTrialsWindow: 30,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 0},
@@ -148,8 +148,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      decisionAccuracyWindow: 3,
-      completedTrialsWindow: 3,
+      decisionAccuracyWindow: 50,
+      completedTrialsWindow: 30,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorC, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 1},
@@ -174,8 +174,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      decisionAccuracyWindow: 3,
-      completedTrialsWindow: 3,
+      decisionAccuracyWindow: 50,
+      completedTrialsWindow: 30,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorD, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 1},
@@ -200,8 +200,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      decisionAccuracyWindow: 3,
-      completedTrialsWindow: 3,
+      decisionAccuracyWindow: 50,
+      completedTrialsWindow: 30,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorE, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 1},
@@ -226,8 +226,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      decisionAccuracyWindow: 3,
-      completedTrialsWindow: 3,
+      decisionAccuracyWindow: 50,
+      completedTrialsWindow: 30,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorF, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 1},
@@ -252,8 +252,8 @@ sequences: [
       sampleOffsetTime: 0.5,
       rewardVolume: 8,
       maximumInterOdourPokeTime: 5,
-      decisionAccuracyWindow: 3,
-      completedTrialsWindow: 3,
+      decisionAccuracyWindow: 50,
+      completedTrialsWindow: 30,
       completionRequiresEngagement: False,
       rewardConditions: [
         {command: OdorG, rewarded: False, index: 0, minimumSamplingTime: 0.001, maximumSamplingTime: 2, position: 1},

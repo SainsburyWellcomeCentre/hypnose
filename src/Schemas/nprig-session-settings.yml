@@ -6,11 +6,11 @@ metadata:
   animalId: plimbo
   rootPath: test
   minimumSampleTime: 0.05
-  loggingRootPath: C:\temp
+  loggingRootPath: C:\hypnose\rawdata\sub-072_id-467\ses-001_date-20261104\behav
   rewardTime: 0.014875
-  initialSequence: Schemas/doubles-option5-stage2.yml
+  initialSequence: Schemas/odourdiscrimination-stage1.yml
   eegRecordingEnabled: False
-  maximumRewardsAvailable: 200
+  maximumRewardsAvailable: 99999
 
 shortcutKeys:
   endSessionKey: Ctrl+4
@@ -28,7 +28,7 @@ cameraProperties:
   cameraId: 24284790
   frameRate: 60
   binning: 2
-  exposure: 12000
+  exposure: 10000
   gain: 0
   threshold: 5
   binaryThreshold: 140
@@ -54,7 +54,7 @@ lightCycle:
   pwmFrequency: 1000
 
 taskAccess:
-  - {start: "16:00:00", end: "01:00:00"}
+  - {start: "23:00:00", end: "01:00:00"}
   - {start: "05:00:00", end: "07:00:00"}
 
 trackingProperties:
@@ -71,8 +71,8 @@ trackingProperties:
   minArea: 550
   immobilityAlert:
     radius: 13
-    alertAfterMinutes: 100
-    sendTestOnStart: false
+    alertAfterMinutes: 90
+    sendTestOnStart: true
     notifyWhenMovingAgain: true
     rigName: Hypnose NP Rig
     webhookUrlFile: slack_webhook.txt
@@ -81,11 +81,11 @@ olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
   - {name: Zero, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], targetFlowO0: [0, 0, 0, 0, 1], targetFlowO1: [0, 0, 0, 0, 1]}
   - {name: Purge, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [100, 0, 0, 0, 810], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorB, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [100, 0, 0, 0, 400]}
-  - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 100, 0, 825], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 100, 820], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorE, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 100, 0, 0, 850], targetFlowO1: [0, 0, 0, 0, 400]}
-  - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 100, 0, 0, 400]}
-  - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 100, 0, 400]}
-  - {name: OdorH, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}
+  - {name: OdorA, valvesOpenO0: [0], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [100, 0, 0, 0, 290], targetFlowO1: [0, 0, 0, 0, 400]}
+  - {name: OdorB, valvesOpenO0: [], valvesOpenO1: [0], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 295], targetFlowO1: [100, 0, 0, 0, 400]}
+  - {name: OdorC, valvesOpenO0: [2], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 100, 0, 295], targetFlowO1: [0, 0, 0, 0, 400]}
+  - {name: OdorD, valvesOpenO0: [3], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 100, 300], targetFlowO1: [0, 0, 0, 0, 400]}
+  - {name: OdorE, valvesOpenO0: [1], valvesOpenO1: [], endValvesOpenO0: [0], targetFlowO0: [0, 100, 0, 0, 300], targetFlowO1: [0, 0, 0, 0, 400]}
+  - {name: OdorF, valvesOpenO0: [], valvesOpenO1: [1], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 300], targetFlowO1: [0, 100, 0, 0, 400]}
+  - {name: OdorG, valvesOpenO0: [], valvesOpenO1: [2], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 300], targetFlowO1: [0, 0, 100, 0, 400]}
+  - {name: OdorH, valvesOpenO0: [], valvesOpenO1: [3], endValvesOpenO0: [0], targetFlowO0: [0, 0, 0, 0, 300], targetFlowO1: [0, 0, 0, 100, 400]}

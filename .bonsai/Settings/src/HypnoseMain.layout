@@ -19,8 +19,8 @@
         <NestedLayout>
           <WindowSettings Index="7">
             <Location>
-              <X>656</X>
-              <Y>610</Y>
+              <X>255</X>
+              <Y>370</Y>
             </Location>
             <Size>
               <Width>336</Width>
@@ -63,8 +63,8 @@
           </WindowSettings>
           <WindowSettings Index="13">
             <Location>
-              <X>997</X>
-              <Y>791</Y>
+              <X>851</X>
+              <Y>644</Y>
             </Location>
             <Size>
               <Width>336</Width>
@@ -77,8 +77,8 @@
           </WindowSettings>
           <WindowSettings Index="14">
             <Location>
-              <X>682</X>
-              <Y>317</Y>
+              <X>632</X>
+              <Y>372</Y>
             </Location>
             <Size>
               <Width>336</Width>
@@ -91,8 +91,8 @@
           </WindowSettings>
           <WindowSettings Index="15">
             <Location>
-              <X>798</X>
-              <Y>189</Y>
+              <X>740</X>
+              <Y>232</Y>
             </Location>
             <Size>
               <Width>336</Width>
@@ -105,8 +105,8 @@
           </WindowSettings>
           <WindowSettings Index="19">
             <Location>
-              <X>1142</X>
-              <Y>239</Y>
+              <X>628</X>
+              <Y>959</Y>
             </Location>
             <Size>
               <Width>416</Width>
@@ -128,8 +128,8 @@
         <NestedLayout>
           <WindowSettings Index="6">
             <Location>
-              <X>1670</X>
-              <Y>428</Y>
+              <X>404</X>
+              <Y>73</Y>
             </Location>
             <Size>
               <Width>336</Width>
@@ -142,8 +142,8 @@
           </WindowSettings>
           <WindowSettings Index="14">
             <Location>
-              <X>1688</X>
-              <Y>746</Y>
+              <X>57</X>
+              <Y>108</Y>
             </Location>
             <Size>
               <Width>336</Width>
@@ -175,12 +175,12 @@
   </WindowSettings>
   <WindowSettings Index="10">
     <Location>
-      <X>1278</X>
-      <Y>533</Y>
+      <X>24</X>
+      <Y>870</Y>
     </Location>
     <Size>
-      <Width>336</Width>
-      <Height>279</Height>
+      <Width>550</Width>
+      <Height>485</Height>
     </Size>
     <VisualizerTypeName>Bonsai.Vision.Design.IplImageVisualizer</VisualizerTypeName>
     <VisualizerSettings>
@@ -203,8 +203,8 @@
   </WindowSettings>
   <WindowSettings Index="12">
     <Location>
-      <X>171</X>
-      <Y>677</Y>
+      <X>114</X>
+      <Y>641</Y>
     </Location>
     <Size>
       <Width>336</Width>
