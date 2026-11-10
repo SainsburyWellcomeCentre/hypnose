@@ -8,7 +8,7 @@ metadata:
   minimumSampleTime: 0.05
   loggingRootPath: C:\temp
   rewardTime: 0.014875
-  initialSequence: Schemas/ge-discrimination-stage1.yml
+  initialSequence: Schemas/quintuples-option6.yml
   eegRecordingEnabled: False
   maximumRewardsAvailable: 100
 
@@ -46,6 +46,21 @@ cameraProperties:
         y: 360
       - x: 540
         y: 310
+
+
+trackingProperties:
+  cropSourcePoints:
+    points:
+      - x: 180
+        y: 102
+      - x: 180
+        y: 947
+      - x: 1025
+        y: 947
+      - x: 1025
+        y: 102
+  minArea: 900
+
 
 olfactometerCommands:
   - {name: Default, valvesOpenO0: [], valvesOpenO1: [], endValvesOpenO0: [], endValvesOpenO1: [], targetFlowO0: [0, 0, 0, 0, 400], targetFlowO1: [0, 0, 0, 100, 400]}

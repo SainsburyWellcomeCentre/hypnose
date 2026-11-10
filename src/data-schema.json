@@ -15,6 +15,39 @@
                 }
             }
         },
+
+        "TrackingProperties": {
+            "type": "object",
+            "properties": {
+                "cropSourcePoints": {
+                    "type": "object",
+                    "description": "Four corner points (clockwise from top-left) of the area used for immobility tracking.",
+                    "properties": {
+                        "points": {
+                            "type": "array",
+                            "items": { "$ref": "#/definitions/point2d" },
+                            "minItems": 4,
+                            "maxItems": 4
+                        }
+                    },
+                    "required": [ "points" ]
+                },
+                "minArea": { "type": "number", "default": 900 },
+                "immobilityAlert": { "$ref": "#/definitions/ImmobilityAlertSettings" }
+            }
+        },
+        "ImmobilityAlertSettings": {
+            "type": "object",
+            "properties": {
+                "radius": { "type": "number", "default": 20 },
+                "alertAfterMinutes": { "type": "number", "default": 90 },
+                "sendTestOnStart": { "type": "boolean", "default": true },
+                "notifyWhenMovingAgain": { "type": "boolean", "default": true },
+                "rigName": { "type": "string", "default": "Hypnose rig" },
+                "webhookUrlFile": { "type": "string", "default": "slack_webhook.txt" }
+            }
+        },
+
         "olfactometerStateCommand": {
             "properties": {
                 "name": {
@@ -100,6 +133,26 @@
             "required": [
                 "x",
                 "y"
+            ]
+        },
+        "taskAccessWindow": {
+            "description": "A daily time window on the 24 h clock, open from start (inclusive) to end (exclusive). If end is earlier than start, the window runs past midnight (e.g. 22:00:00 to 02:00:00).",
+            "type": "object",
+            "properties": {
+                "start": {
+                    "description": "Time of day the window opens, as HH:mm:ss (quoted).",
+                    "type": "string",
+                    "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                },
+                "end": {
+                    "description": "Time of day the window closes, as HH:mm:ss (quoted). Must differ from start; a window with equal start and end never opens.",
+                    "type": "string",
+                    "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                }
+            },
+            "required": [
+                "start",
+                "end"
             ]
         }
     },
@@ -267,6 +320,52 @@
             },
             "required": [ "roiSourcePoints"]
         },
+        "lightCycle": {
+            "description": "Daily light schedule for the LED driven by digital output DO2 on the behavior board. Times are on the 24 h clock as HH:mm:ss (quoted). Leave this section out to disable light control on this rig.",
+            "properties": {
+                "dawnStart": {
+                    "description": "Time of day the light starts fading in. Full brightness is reached at dawnStart + dawnDuration.",
+                    "default": "09:00:00",
+                    "type": "string",
+                    "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                },
+                "dawnDuration": {
+                    "description": "Length of the fade-in. Use 00:00:00 to switch on instantly. Must end before duskStart.",
+                    "default": "01:00:00",
+                    "type": "string",
+                    "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                },
+                "duskStart": {
+                    "description": "Time of day the light starts fading out. Fully off at duskStart + duskDuration.",
+                    "default": "21:00:00",
+                    "type": "string",
+                    "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                },
+                "duskDuration": {
+                    "description": "Length of the fade-out. Use 00:00:00 to switch off instantly. Must end before the next dawnStart.",
+                    "default": "01:00:00",
+                    "type": "string",
+                    "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+                },
+                "pwmFrequency": {
+                    "description": "PWM frequency on DO2 during fades, in Hz (1-10000).",
+                    "default": 1000,
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10000
+                }
+            }
+        },
+        "taskAccess": {
+            "description": "Daily time windows during which the task is available, checked against the PC clock once per second. New initiations stop 60 s before a window ends: a trial the animal has already initiated runs on, but no new trial or re-initiation can start, and a trial still waiting for initiation is stopped with its LED off. When the window ends, anything still running is stopped, all nose-poke port LEDs (DOPort0-2) are off and the olfactometer is set to Default; logging and the camera keep running. A window of 60 s or less never opens for initiation. Leave this section out (or empty) to make the task available all day.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/taskAccessWindow"
+            }
+        },
+
+        "trackingProperties": { "$ref": "#/definitions/TrackingProperties" },
+
         "olfactometerCommands": {
             "items": {
                 "$ref": "#/definitions/olfactometerStateCommand"

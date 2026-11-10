@@ -53,7 +53,9 @@ namespace SequenceSchema
     
         private double _maximumInterOdourPokeTime;
     
-        private int _performanceAverageWindow;
+        private int _decisionAccuracyWindow;
+    
+        private int _completedTrialsWindow;
     
         public Sequence()
         {
@@ -75,7 +77,8 @@ namespace SequenceSchema
             _sampleOffsetTime = 0.1D;
             _rewardVolume = 1D;
             _maximumInterOdourPokeTime = 0.5D;
-            _performanceAverageWindow = 10;
+            _decisionAccuracyWindow = 100;
+            _completedTrialsWindow = 100;
         }
     
         protected Sequence(Sequence other)
@@ -99,7 +102,8 @@ namespace SequenceSchema
             _sampleOffsetTime = other._sampleOffsetTime;
             _rewardVolume = other._rewardVolume;
             _maximumInterOdourPokeTime = other._maximumInterOdourPokeTime;
-            _performanceAverageWindow = other._performanceAverageWindow;
+            _decisionAccuracyWindow = other._decisionAccuracyWindow;
+            _completedTrialsWindow = other._completedTrialsWindow;
         }
     
         /// <summary>
@@ -417,15 +421,31 @@ namespace SequenceSchema
         /// Size of the window to calculate performance average over
         /// </summary>
         [System.ComponentModel.DescriptionAttribute("Size of the window to calculate performance average over")]
-        public int PerformanceAverageWindow
+        public int DecisionAccuracyWindow
         {
             get
             {
-                return _performanceAverageWindow;
+                return _decisionAccuracyWindow;
             }
             set
             {
-                _performanceAverageWindow = value;
+                _decisionAccuracyWindow = value;
+            }
+        }
+    
+        /// <summary>
+        /// Size of the window to calculate completed trials average over
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Size of the window to calculate completed trials average over")]
+        public int CompletedTrialsWindow
+        {
+            get
+            {
+                return _completedTrialsWindow;
+            }
+            set
+            {
+                _completedTrialsWindow = value;
             }
         }
     
@@ -460,7 +480,8 @@ namespace SequenceSchema
             stringBuilder.Append("SampleOffsetTime = " + _sampleOffsetTime + ", ");
             stringBuilder.Append("RewardVolume = " + _rewardVolume + ", ");
             stringBuilder.Append("MaximumInterOdourPokeTime = " + _maximumInterOdourPokeTime + ", ");
-            stringBuilder.Append("PerformanceAverageWindow = " + _performanceAverageWindow);
+            stringBuilder.Append("DecisionAccuracyWindow = " + _decisionAccuracyWindow + ", ");
+            stringBuilder.Append("CompletedTrialsWindow = " + _completedTrialsWindow);
             return true;
         }
     
@@ -646,19 +667,27 @@ namespace SequenceSchema
     
         private string _nextSequence;
     
-        private double _performaceCriterion;
+        private double _decisionAccuracyCriterion;
+    
+        private double _sequenceCompletionCriterion;
+    
+        private int _rewardedTrialsCriterion;
     
         public HypnoseSequence()
         {
             _sequences = new System.Collections.Generic.List<System.Collections.Generic.List<Sequence>>();
-            _performaceCriterion = 0.8D;
+            _decisionAccuracyCriterion = 1D;
+            _sequenceCompletionCriterion = 1D;
+            _rewardedTrialsCriterion = 1000;
         }
     
         protected HypnoseSequence(HypnoseSequence other)
         {
             _sequences = other._sequences;
             _nextSequence = other._nextSequence;
-            _performaceCriterion = other._performaceCriterion;
+            _decisionAccuracyCriterion = other._decisionAccuracyCriterion;
+            _sequenceCompletionCriterion = other._sequenceCompletionCriterion;
+            _rewardedTrialsCriterion = other._rewardedTrialsCriterion;
         }
     
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -694,15 +723,48 @@ namespace SequenceSchema
         /// Performance that must be reached before advancing to the next sequence.
         /// </summary>
         [System.ComponentModel.DescriptionAttribute("Performance that must be reached before advancing to the next sequence.")]
-        public double PerformaceCriterion
+        public double DecisionAccuracyCriterion
         {
             get
             {
-                return _performaceCriterion;
+                return _decisionAccuracyCriterion;
             }
             set
             {
-                _performaceCriterion = value;
+                _decisionAccuracyCriterion = value;
+            }
+        }
+    
+        /// <summary>
+        /// Proprtion of trials that must be completed before advancing to the next sequence.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Proprtion of trials that must be completed before advancing to the next sequence." +
+            "")]
+        public double SequenceCompletionCriterion
+        {
+            get
+            {
+                return _sequenceCompletionCriterion;
+            }
+            set
+            {
+                _sequenceCompletionCriterion = value;
+            }
+        }
+    
+        /// <summary>
+        /// Number of trials that must be rewarded before advancing to the next sequence.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Number of trials that must be rewarded before advancing to the next sequence.")]
+        public int RewardedTrialsCriterion
+        {
+            get
+            {
+                return _rewardedTrialsCriterion;
+            }
+            set
+            {
+                _rewardedTrialsCriterion = value;
             }
         }
     
@@ -720,7 +782,9 @@ namespace SequenceSchema
         {
             stringBuilder.Append("Sequences = " + _sequences + ", ");
             stringBuilder.Append("NextSequence = " + _nextSequence + ", ");
-            stringBuilder.Append("PerformaceCriterion = " + _performaceCriterion);
+            stringBuilder.Append("DecisionAccuracyCriterion = " + _decisionAccuracyCriterion + ", ");
+            stringBuilder.Append("SequenceCompletionCriterion = " + _sequenceCompletionCriterion + ", ");
+            stringBuilder.Append("RewardedTrialsCriterion = " + _rewardedTrialsCriterion);
             return true;
         }
     

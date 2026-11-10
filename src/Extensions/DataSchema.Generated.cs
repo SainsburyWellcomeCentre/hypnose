@@ -88,6 +88,252 @@ namespace DataSchema
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class TrackingProperties
+    {
+    
+        private CropSourcePoints _cropSourcePoints;
+    
+        private double _minArea;
+    
+        private ImmobilityAlertSettings _immobilityAlert;
+    
+        public TrackingProperties()
+        {
+            _minArea = 900D;
+        }
+    
+        protected TrackingProperties(TrackingProperties other)
+        {
+            _cropSourcePoints = other._cropSourcePoints;
+            _minArea = other._minArea;
+            _immobilityAlert = other._immobilityAlert;
+        }
+    
+        /// <summary>
+        /// Four corner points (clockwise from top-left) of the area used for immobility tracking.
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Four corner points (clockwise from top-left) of the area used for immobility trac" +
+            "king.")]
+        public CropSourcePoints CropSourcePoints
+        {
+            get
+            {
+                return _cropSourcePoints;
+            }
+            set
+            {
+                _cropSourcePoints = value;
+            }
+        }
+    
+        public double MinArea
+        {
+            get
+            {
+                return _minArea;
+            }
+            set
+            {
+                _minArea = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public ImmobilityAlertSettings ImmobilityAlert
+        {
+            get
+            {
+                return _immobilityAlert;
+            }
+            set
+            {
+                _immobilityAlert = value;
+            }
+        }
+    
+        public System.IObservable<TrackingProperties> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new TrackingProperties(this)));
+        }
+    
+        public System.IObservable<TrackingProperties> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new TrackingProperties(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("CropSourcePoints = " + _cropSourcePoints + ", ");
+            stringBuilder.Append("MinArea = " + _minArea + ", ");
+            stringBuilder.Append("ImmobilityAlert = " + _immobilityAlert);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class ImmobilityAlertSettings
+    {
+    
+        private double _radius;
+    
+        private double _alertAfterMinutes;
+    
+        private bool _sendTestOnStart;
+    
+        private bool _notifyWhenMovingAgain;
+    
+        private string _rigName;
+    
+        private string _webhookUrlFile;
+    
+        public ImmobilityAlertSettings()
+        {
+            _radius = 20D;
+            _alertAfterMinutes = 90D;
+            _sendTestOnStart = true;
+            _notifyWhenMovingAgain = true;
+            _rigName = "Hypnose rig";
+            _webhookUrlFile = "slack_webhook.txt";
+        }
+    
+        protected ImmobilityAlertSettings(ImmobilityAlertSettings other)
+        {
+            _radius = other._radius;
+            _alertAfterMinutes = other._alertAfterMinutes;
+            _sendTestOnStart = other._sendTestOnStart;
+            _notifyWhenMovingAgain = other._notifyWhenMovingAgain;
+            _rigName = other._rigName;
+            _webhookUrlFile = other._webhookUrlFile;
+        }
+    
+        public double Radius
+        {
+            get
+            {
+                return _radius;
+            }
+            set
+            {
+                _radius = value;
+            }
+        }
+    
+        public double AlertAfterMinutes
+        {
+            get
+            {
+                return _alertAfterMinutes;
+            }
+            set
+            {
+                _alertAfterMinutes = value;
+            }
+        }
+    
+        public bool SendTestOnStart
+        {
+            get
+            {
+                return _sendTestOnStart;
+            }
+            set
+            {
+                _sendTestOnStart = value;
+            }
+        }
+    
+        public bool NotifyWhenMovingAgain
+        {
+            get
+            {
+                return _notifyWhenMovingAgain;
+            }
+            set
+            {
+                _notifyWhenMovingAgain = value;
+            }
+        }
+    
+        public string RigName
+        {
+            get
+            {
+                return _rigName;
+            }
+            set
+            {
+                _rigName = value;
+            }
+        }
+    
+        public string WebhookUrlFile
+        {
+            get
+            {
+                return _webhookUrlFile;
+            }
+            set
+            {
+                _webhookUrlFile = value;
+            }
+        }
+    
+        public System.IObservable<ImmobilityAlertSettings> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new ImmobilityAlertSettings(this)));
+        }
+    
+        public System.IObservable<ImmobilityAlertSettings> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new ImmobilityAlertSettings(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("Radius = " + _radius + ", ");
+            stringBuilder.Append("AlertAfterMinutes = " + _alertAfterMinutes + ", ");
+            stringBuilder.Append("SendTestOnStart = " + _sendTestOnStart + ", ");
+            stringBuilder.Append("NotifyWhenMovingAgain = " + _notifyWhenMovingAgain + ", ");
+            stringBuilder.Append("RigName = " + _rigName + ", ");
+            stringBuilder.Append("WebhookUrlFile = " + _webhookUrlFile);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
     public partial class OlfactometerStateCommand
     {
     
@@ -387,6 +633,97 @@ namespace DataSchema
     }
 
 
+    /// <summary>
+    /// A daily time window on the 24 h clock, open from start (inclusive) to end (exclusive). If end is earlier than start, the window runs past midnight (e.g. 22:00:00 to 02:00:00).
+    /// </summary>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [System.ComponentModel.DescriptionAttribute("A daily time window on the 24 h clock, open from start (inclusive) to end (exclus" +
+        "ive). If end is earlier than start, the window runs past midnight (e.g. 22:00:00" +
+        " to 02:00:00).")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class TaskAccessWindow
+    {
+    
+        private string _start;
+    
+        private string _end;
+    
+        public TaskAccessWindow()
+        {
+        }
+    
+        protected TaskAccessWindow(TaskAccessWindow other)
+        {
+            _start = other._start;
+            _end = other._end;
+        }
+    
+        /// <summary>
+        /// Time of day the window opens, as HH:mm:ss (quoted).
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Time of day the window opens, as HH:mm:ss (quoted).")]
+        public string Start
+        {
+            get
+            {
+                return _start;
+            }
+            set
+            {
+                _start = value;
+            }
+        }
+    
+        /// <summary>
+        /// Time of day the window closes, as HH:mm:ss (quoted). Must differ from start; a window with equal start and end never opens.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Time of day the window closes, as HH:mm:ss (quoted). Must differ from start; a wi" +
+            "ndow with equal start and end never opens.")]
+        public string End
+        {
+            get
+            {
+                return _end;
+            }
+            set
+            {
+                _end = value;
+            }
+        }
+    
+        public System.IObservable<TaskAccessWindow> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new TaskAccessWindow(this)));
+        }
+    
+        public System.IObservable<TaskAccessWindow> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new TaskAccessWindow(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("Start = " + _start + ", ");
+            stringBuilder.Append("End = " + _end);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
     [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
     [Bonsai.CombinatorAttribute(MethodName="Generate")]
@@ -403,10 +740,17 @@ namespace DataSchema
     
         private CameraProperties _cameraProperties;
     
+        private LightCycle _lightCycle;
+    
+        private System.Collections.Generic.List<TaskAccessWindow> _taskAccess;
+    
+        private TrackingProperties _trackingProperties;
+    
         private System.Collections.Generic.List<OlfactometerStateCommand> _olfactometerCommands;
     
         public HypnoseSession()
         {
+            _taskAccess = new System.Collections.Generic.List<TaskAccessWindow>();
             _olfactometerCommands = new System.Collections.Generic.List<OlfactometerStateCommand>();
         }
     
@@ -417,6 +761,9 @@ namespace DataSchema
             _hardwarePorts = other._hardwarePorts;
             _eegProperties = other._eegProperties;
             _cameraProperties = other._cameraProperties;
+            _lightCycle = other._lightCycle;
+            _taskAccess = other._taskAccess;
+            _trackingProperties = other._trackingProperties;
             _olfactometerCommands = other._olfactometerCommands;
         }
     
@@ -485,6 +832,55 @@ namespace DataSchema
             }
         }
     
+        /// <summary>
+        /// Daily light schedule for the LED driven by digital output DO2 on the behavior board. Times are on the 24 h clock as HH:mm:ss (quoted). Leave this section out to disable light control on this rig.
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [System.ComponentModel.DescriptionAttribute("Daily light schedule for the LED driven by digital output DO2 on the behavior boa" +
+            "rd. Times are on the 24 h clock as HH:mm:ss (quoted). Leave this section out to " +
+            "disable light control on this rig.")]
+        public LightCycle LightCycle
+        {
+            get
+            {
+                return _lightCycle;
+            }
+            set
+            {
+                _lightCycle = value;
+            }
+        }
+    
+        /// <summary>
+        /// Daily time windows during which the task is available, checked against the PC clock once per second. New initiations stop 60 s before a window ends: a trial the animal has already initiated runs on, but no new trial or re-initiation can start, and a trial still waiting for initiation is stopped with its LED off. When the window ends, anything still running is stopped, all nose-poke port LEDs (DOPort0-2) are off and the olfactometer is set to Default; logging and the camera keep running. A window of 60 s or less never opens for initiation. Leave this section out (or empty) to make the task available all day.
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"Daily time windows during which the task is available, checked against the PC clock once per second. New initiations stop 60 s before a window ends: a trial the animal has already initiated runs on, but no new trial or re-initiation can start, and a trial still waiting for initiation is stopped with its LED off. When the window ends, anything still running is stopped, all nose-poke port LEDs (DOPort0-2) are off and the olfactometer is set to Default; logging and the camera keep running. A window of 60 s or less never opens for initiation. Leave this section out (or empty) to make the task available all day.")]
+        public System.Collections.Generic.List<TaskAccessWindow> TaskAccess
+        {
+            get
+            {
+                return _taskAccess;
+            }
+            set
+            {
+                _taskAccess = value;
+            }
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public TrackingProperties TrackingProperties
+        {
+            get
+            {
+                return _trackingProperties;
+            }
+            set
+            {
+                _trackingProperties = value;
+            }
+        }
+    
         [System.Xml.Serialization.XmlIgnoreAttribute()]
         public System.Collections.Generic.List<OlfactometerStateCommand> OlfactometerCommands
         {
@@ -515,7 +911,72 @@ namespace DataSchema
             stringBuilder.Append("HardwarePorts = " + _hardwarePorts + ", ");
             stringBuilder.Append("EegProperties = " + _eegProperties + ", ");
             stringBuilder.Append("CameraProperties = " + _cameraProperties + ", ");
+            stringBuilder.Append("LightCycle = " + _lightCycle + ", ");
+            stringBuilder.Append("TaskAccess = " + _taskAccess + ", ");
+            stringBuilder.Append("TrackingProperties = " + _trackingProperties + ", ");
             stringBuilder.Append("OlfactometerCommands = " + _olfactometerCommands);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class CropSourcePoints
+    {
+    
+        private System.Collections.Generic.List<Point2d> _points;
+    
+        public CropSourcePoints()
+        {
+            _points = new System.Collections.Generic.List<Point2d>();
+        }
+    
+        protected CropSourcePoints(CropSourcePoints other)
+        {
+            _points = other._points;
+        }
+    
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public System.Collections.Generic.List<Point2d> Points
+        {
+            get
+            {
+                return _points;
+            }
+            set
+            {
+                _points = value;
+            }
+        }
+    
+        public System.IObservable<CropSourcePoints> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new CropSourcePoints(this)));
+        }
+    
+        public System.IObservable<CropSourcePoints> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new CropSourcePoints(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("Points = " + _points);
             return true;
         }
     
@@ -1298,6 +1759,158 @@ namespace DataSchema
             stringBuilder.Append("Threshold = " + _threshold + ", ");
             stringBuilder.Append("BinaryThreshold = " + _binaryThreshold + ", ");
             stringBuilder.Append("RoiSourcePoints = " + _roiSourcePoints);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class LightCycle
+    {
+    
+        private string _dawnStart;
+    
+        private string _dawnDuration;
+    
+        private string _duskStart;
+    
+        private string _duskDuration;
+    
+        private int _pwmFrequency;
+    
+        public LightCycle()
+        {
+            _dawnStart = "09:00:00";
+            _dawnDuration = "01:00:00";
+            _duskStart = "21:00:00";
+            _duskDuration = "01:00:00";
+            _pwmFrequency = 1000;
+        }
+    
+        protected LightCycle(LightCycle other)
+        {
+            _dawnStart = other._dawnStart;
+            _dawnDuration = other._dawnDuration;
+            _duskStart = other._duskStart;
+            _duskDuration = other._duskDuration;
+            _pwmFrequency = other._pwmFrequency;
+        }
+    
+        /// <summary>
+        /// Time of day the light starts fading in. Full brightness is reached at dawnStart + dawnDuration.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Time of day the light starts fading in. Full brightness is reached at dawnStart +" +
+            " dawnDuration.")]
+        public string DawnStart
+        {
+            get
+            {
+                return _dawnStart;
+            }
+            set
+            {
+                _dawnStart = value;
+            }
+        }
+    
+        /// <summary>
+        /// Length of the fade-in. Use 00:00:00 to switch on instantly. Must end before duskStart.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Length of the fade-in. Use 00:00:00 to switch on instantly. Must end before duskS" +
+            "tart.")]
+        public string DawnDuration
+        {
+            get
+            {
+                return _dawnDuration;
+            }
+            set
+            {
+                _dawnDuration = value;
+            }
+        }
+    
+        /// <summary>
+        /// Time of day the light starts fading out. Fully off at duskStart + duskDuration.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Time of day the light starts fading out. Fully off at duskStart + duskDuration.")]
+        public string DuskStart
+        {
+            get
+            {
+                return _duskStart;
+            }
+            set
+            {
+                _duskStart = value;
+            }
+        }
+    
+        /// <summary>
+        /// Length of the fade-out. Use 00:00:00 to switch off instantly. Must end before the next dawnStart.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Length of the fade-out. Use 00:00:00 to switch off instantly. Must end before the" +
+            " next dawnStart.")]
+        public string DuskDuration
+        {
+            get
+            {
+                return _duskDuration;
+            }
+            set
+            {
+                _duskDuration = value;
+            }
+        }
+    
+        /// <summary>
+        /// PWM frequency on DO2 during fades, in Hz (1-10000).
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("PWM frequency on DO2 during fades, in Hz (1-10000).")]
+        public int PwmFrequency
+        {
+            get
+            {
+                return _pwmFrequency;
+            }
+            set
+            {
+                _pwmFrequency = value;
+            }
+        }
+    
+        public System.IObservable<LightCycle> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new LightCycle(this)));
+        }
+    
+        public System.IObservable<LightCycle> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new LightCycle(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("DawnStart = " + _dawnStart + ", ");
+            stringBuilder.Append("DawnDuration = " + _dawnDuration + ", ");
+            stringBuilder.Append("DuskStart = " + _duskStart + ", ");
+            stringBuilder.Append("DuskDuration = " + _duskDuration + ", ");
+            stringBuilder.Append("PwmFrequency = " + _pwmFrequency);
             return true;
         }
     
