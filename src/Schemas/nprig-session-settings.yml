@@ -53,6 +53,11 @@ lightCycle:
   duskDuration: "01:00:00"
   pwmFrequency: 1000
 
+syncPulse:
+  pulseWidth: 50
+  minInterval: 0.5
+  maxInterval: 1.5
+
 taskAccess:
   - {start: "23:00:00", end: "01:00:00"}
   - {start: "05:00:00", end: "07:00:00"}

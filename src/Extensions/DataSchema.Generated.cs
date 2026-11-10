@@ -742,6 +742,8 @@ namespace DataSchema
     
         private LightCycle _lightCycle;
     
+        private SyncPulse _syncPulse;
+    
         private System.Collections.Generic.List<TaskAccessWindow> _taskAccess;
     
         private TrackingProperties _trackingProperties;
@@ -762,6 +764,7 @@ namespace DataSchema
             _eegProperties = other._eegProperties;
             _cameraProperties = other._cameraProperties;
             _lightCycle = other._lightCycle;
+            _syncPulse = other._syncPulse;
             _taskAccess = other._taskAccess;
             _trackingProperties = other._trackingProperties;
             _olfactometerCommands = other._olfactometerCommands;
@@ -852,6 +855,23 @@ namespace DataSchema
         }
     
         /// <summary>
+        /// Sync pulses for lining this session up with another recording, such as Neuropixels data on an NI breakout board. Behavior board output DO3 goes high for pulseWidth ms at random intervals between minInterval and maxInterval s; wire DO3 and ground to a spare NI digital input. The random spacing lets the two pulse trains be matched even when the recordings start at different times. The board's Harp timestamp for each pulse is logged to SyncPulse. If the values break the limits below (minInterval at least 0.1 s, maxInterval at least minInterval, pulseWidth shorter than minInterval), no pulses are sent and SyncPulseInvalidSettings is logged to ExperimentEvents. Leave this section out to disable sync pulses on this rig.
+        /// </summary>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [System.ComponentModel.DescriptionAttribute(@"Sync pulses for lining this session up with another recording, such as Neuropixels data on an NI breakout board. Behavior board output DO3 goes high for pulseWidth ms at random intervals between minInterval and maxInterval s; wire DO3 and ground to a spare NI digital input. The random spacing lets the two pulse trains be matched even when the recordings start at different times. The board's Harp timestamp for each pulse is logged to SyncPulse. If the values break the limits below (minInterval at least 0.1 s, maxInterval at least minInterval, pulseWidth shorter than minInterval), no pulses are sent and SyncPulseInvalidSettings is logged to ExperimentEvents. Leave this section out to disable sync pulses on this rig.")]
+        public SyncPulse SyncPulse
+        {
+            get
+            {
+                return _syncPulse;
+            }
+            set
+            {
+                _syncPulse = value;
+            }
+        }
+    
+        /// <summary>
         /// Daily time windows during which the task is available, checked against the PC clock once per second. New initiations stop 60 s before a window ends: a trial the animal has already initiated runs on, but no new trial or re-initiation can start, and a trial still waiting for initiation is stopped with its LED off. When the window ends, anything still running is stopped, all nose-poke port LEDs (DOPort0-2) are off and the olfactometer is set to Default; logging and the camera keep running. A window of 60 s or less never opens for initiation. Leave this section out (or empty) to make the task available all day.
         /// </summary>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
@@ -912,6 +932,7 @@ namespace DataSchema
             stringBuilder.Append("EegProperties = " + _eegProperties + ", ");
             stringBuilder.Append("CameraProperties = " + _cameraProperties + ", ");
             stringBuilder.Append("LightCycle = " + _lightCycle + ", ");
+            stringBuilder.Append("SyncPulse = " + _syncPulse + ", ");
             stringBuilder.Append("TaskAccess = " + _taskAccess + ", ");
             stringBuilder.Append("TrackingProperties = " + _trackingProperties + ", ");
             stringBuilder.Append("OlfactometerCommands = " + _olfactometerCommands);
@@ -1911,6 +1932,115 @@ namespace DataSchema
             stringBuilder.Append("DuskStart = " + _duskStart + ", ");
             stringBuilder.Append("DuskDuration = " + _duskDuration + ", ");
             stringBuilder.Append("PwmFrequency = " + _pwmFrequency);
+            return true;
+        }
+    
+        public override string ToString()
+        {
+            System.Text.StringBuilder stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.Append(GetType().Name);
+            stringBuilder.Append(" { ");
+            if (PrintMembers(stringBuilder))
+            {
+                stringBuilder.Append(" ");
+            }
+            stringBuilder.Append("}");
+            return stringBuilder.ToString();
+        }
+    }
+
+
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Bonsai.Sgen", "0.9.0.0")]
+    [Bonsai.WorkflowElementCategoryAttribute(Bonsai.ElementCategory.Source)]
+    [Bonsai.CombinatorAttribute(MethodName="Generate")]
+    public partial class SyncPulse
+    {
+    
+        private int _pulseWidth;
+    
+        private double _minInterval;
+    
+        private double _maxInterval;
+    
+        public SyncPulse()
+        {
+            _pulseWidth = 50;
+            _minInterval = 0.5D;
+            _maxInterval = 1.5D;
+        }
+    
+        protected SyncPulse(SyncPulse other)
+        {
+            _pulseWidth = other._pulseWidth;
+            _minInterval = other._minInterval;
+            _maxInterval = other._maxInterval;
+        }
+    
+        /// <summary>
+        /// How long DO3 stays high for each pulse, in ms (1-1000). Must be shorter than minInterval.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("How long DO3 stays high for each pulse, in ms (1-1000). Must be shorter than minI" +
+            "nterval.")]
+        public int PulseWidth
+        {
+            get
+            {
+                return _pulseWidth;
+            }
+            set
+            {
+                _pulseWidth = value;
+            }
+        }
+    
+        /// <summary>
+        /// Shortest time between the starts of two pulses, in s.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Shortest time between the starts of two pulses, in s.")]
+        public double MinInterval
+        {
+            get
+            {
+                return _minInterval;
+            }
+            set
+            {
+                _minInterval = value;
+            }
+        }
+    
+        /// <summary>
+        /// Longest time between the starts of two pulses, in s. Must be at least minInterval.
+        /// </summary>
+        [System.ComponentModel.DescriptionAttribute("Longest time between the starts of two pulses, in s. Must be at least minInterval" +
+            ".")]
+        public double MaxInterval
+        {
+            get
+            {
+                return _maxInterval;
+            }
+            set
+            {
+                _maxInterval = value;
+            }
+        }
+    
+        public System.IObservable<SyncPulse> Generate()
+        {
+            return System.Reactive.Linq.Observable.Defer(() => System.Reactive.Linq.Observable.Return(new SyncPulse(this)));
+        }
+    
+        public System.IObservable<SyncPulse> Generate<TSource>(System.IObservable<TSource> source)
+        {
+            return System.Reactive.Linq.Observable.Select(source, _ => new SyncPulse(this));
+        }
+    
+        protected virtual bool PrintMembers(System.Text.StringBuilder stringBuilder)
+        {
+            stringBuilder.Append("PulseWidth = " + _pulseWidth + ", ");
+            stringBuilder.Append("MinInterval = " + _minInterval + ", ");
+            stringBuilder.Append("MaxInterval = " + _maxInterval);
             return true;
         }
     

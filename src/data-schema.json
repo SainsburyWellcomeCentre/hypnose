@@ -356,6 +356,30 @@
                 }
             }
         },
+        "syncPulse": {
+            "description": "Sync pulses for lining this session up with another recording, such as Neuropixels data on an NI breakout board. Behavior board output DO3 goes high for pulseWidth ms at random intervals between minInterval and maxInterval s; wire DO3 and ground to a spare NI digital input. The random spacing lets the two pulse trains be matched even when the recordings start at different times. The board's Harp timestamp for each pulse is logged to SyncPulse. If the values break the limits below (minInterval at least 0.1 s, maxInterval at least minInterval, pulseWidth shorter than minInterval), no pulses are sent and SyncPulseInvalidSettings is logged to ExperimentEvents. Leave this section out to disable sync pulses on this rig.",
+            "properties": {
+                "pulseWidth": {
+                    "description": "How long DO3 stays high for each pulse, in ms (1-1000). Must be shorter than minInterval.",
+                    "default": 50,
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1000
+                },
+                "minInterval": {
+                    "description": "Shortest time between the starts of two pulses, in s.",
+                    "default": 0.5,
+                    "type": "number",
+                    "minimum": 0.1
+                },
+                "maxInterval": {
+                    "description": "Longest time between the starts of two pulses, in s. Must be at least minInterval.",
+                    "default": 1.5,
+                    "type": "number",
+                    "minimum": 0.1
+                }
+            }
+        },
         "taskAccess": {
             "description": "Daily time windows during which the task is available, checked against the PC clock once per second. New initiations stop 60 s before a window ends: a trial the animal has already initiated runs on, but no new trial or re-initiation can start, and a trial still waiting for initiation is stopped with its LED off. When the window ends, anything still running is stopped, all nose-poke port LEDs (DOPort0-2) are off and the olfactometer is set to Default; logging and the camera keep running. A window of 60 s or less never opens for initiation. Leave this section out (or empty) to make the task available all day.",
             "type": "array",
